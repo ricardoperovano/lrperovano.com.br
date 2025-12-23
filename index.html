@@ -1,15 +1,785 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>LR Perovano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JSON to TOON - Otimize seus prompts de IA economizando até 80% em tokens. App Android com gamificação e conversão bidirecional.">
+    <meta name="keywords" content="JSON, TOON, AI prompts, token optimization, LLM, Android app">
+    <title>JSON to TOON - AI Prompt Optimizer | Economize até 80% em Tokens</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6750A4;
+            --primary-dark: #4F378B;
+            --secondary: #625B71;
+            --accent: #7D5260;
+            --success: #4CAF50;
+            --bg-light: #FFFBFE;
+            --bg-dark: #1C1B1F;
+            --surface: #FEF7FF;
+            --on-surface: #1C1B1F;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--on-surface);
+            background: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out 0.4s backwards;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.6s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Gamification Section */
+        .gamification {
+            background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .gamification-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .gamification-features {
+            list-style: none;
+        }
+
+        .gamification-features li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .gamification-features li::before {
+            content: attr(data-emoji);
+            font-size: 2rem;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: var(--gradient);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .highlight {
+            background: #e8f5e9;
+            font-weight: bold;
+            color: var(--success);
+        }
+
+        /* Example Section */
+        .example {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-label {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .savings-badge {
+            background: var(--success);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            background: var(--gradient);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 24px;
+        }
+
+        .download-section h2 {
+            color: white;
+        }
+
+        .platform-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--on-surface);
+            transition: transform 0.3s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .badge:hover {
+            transform: scale(1.05);
+        }
+
+        .badge-icon {
+            font-size: 2.5rem;
+        }
+
+        .badge-text {
+            text-align: left;
+        }
+
+        .badge-label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .badge-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gamification-content {
+                grid-template-columns: 1fr;
+            }
+
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>LR Perovano</h1>
-  <p>Aplicativos e projetos.</p>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                🚀 JSON to TOON
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Funcionalidades</a></li>
+                <li><a href="#gamification">Gamificação</a></li>
+                <li><a href="#example">Exemplo</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <p>
-    <a href="/privacy.html">Política de Privacidade</a>
-  </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Otimize seus Prompts de IA</h1>
+            <p>Economize até 80% em tokens convertendo JSON para TOON. Mais eficiente, mais legível, mais econômico.</p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">Economia de Tokens</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2×</span>
+                    <span class="stat-label">Mais Rápido</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Gratuito</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#download" class="btn btn-primary">
+                    📱 Baixar App Android
+                </a>
+                <a href="modern.html" class="btn btn-secondary">
+                    🌐 Testar Online
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Funcionalidades Poderosas</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Conversão Bidirecional</h3>
+                <p>Converta JSON → TOON e TOON → JSON com um clique. Totalmente reversível.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3>Histórico Completo</h3>
+                <p>Acompanhe todas as suas conversões com estatísticas detalhadas de economia.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Economia em Tempo Real</h3>
+                <p>Veja quanto você está economizando em tokens instantaneamente.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <h3>Importar Arquivos</h3>
+                <p>Carregue arquivos JSON diretamente do seu dispositivo.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Multi-idioma</h3>
+                <p>Interface em Português e Inglês para maior acessibilidade.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Material Design 3</h3>
+                <p>Interface moderna, bonita e intuitiva seguindo as diretrizes do Google.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamification Section -->
+    <section id="gamification">
+        <div class="gamification">
+            <h2>Sistema de Gamificação 🎮</h2>
+            <div class="gamification-content">
+                <div>
+                    <h3 style="margin-bottom: 2rem; font-size: 1.8rem;">Torne a otimização divertida!</h3>
+                    <ul class="gamification-features">
+                        <li data-emoji="⚡">
+                            <div>
+                                <strong>Sistema de XP e Níveis</strong>
+                                <p style="margin: 0; opacity: 0.8;">Ganhe experiência a cada conversão e suba de nível</p>
+                            </div>
+                        </li>
+                        <li data-emoji="🏆">
+                            <div>
+                                <strong>14 Conquistas para Desbloquear</strong>
+                                <p style="margin: 0; opacity: 0.8;">Marcos de conversões, tokens economizados e muito mais</p>
+                            </div>
+                        </li>
+                        <li data-emoji="🔥">
+                            <div>
+                                <strong>Sistema de Streaks</strong>
+                                <p style="margin: 0; opacity: 0.8;">Mantenha uma sequência diária e ganhe bônus de XP</p>
+                            </div>
+                        </li>
+                        <li data-emoji="📊">
+                            <div>
+                                <strong>Perfil com Estatísticas</strong>
+                                <p style="margin: 0; opacity: 0.8;">Acompanhe seu progresso e todas as suas conquistas</p>
+                            </div>
+                        </li>
+                        <li data-emoji="🎉">
+                            <div>
+                                <strong>Animações Divertidas</strong>
+                                <p style="margin: 0; opacity: 0.8;">Celebre cada conquista e nível alcançado</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 8rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">8 Níveis de Progressão</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.8;">
+                        De 🌱 Rookie até 🚀 Godlike<br>
+                        Complete conversões, economize tokens e evolua!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Section -->
+    <section id="example">
+        <h2>Veja a Diferença</h2>
+        <div class="example">
+            <div class="example-grid">
+                <div>
+                    <div class="code-label">
+                        JSON (Original)
+                    </div>
+                    <div class="code-block">{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "role": "admin",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "role": "user",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "role": "user",
+      "active": false
+    }
+  ],
+  "total": 3
+}</div>
+                </div>
+                <div>
+                    <div class="code-label">
+                        TOON (Otimizado)
+                        <span class="savings-badge">-60% tokens</span>
+                    </div>
+                    <div class="code-block">users[3]{id,name,role,active}:
+  1,Alice,admin,true
+  2,Bob,user,true
+  3,Charlie,user,false
+total: 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <h3 style="text-align: center; margin-bottom: 2rem;">Comparação Detalhada</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>JSON</th>
+                        <th>TOON</th>
+                        <th>Economia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Caracteres</td>
+                        <td>245</td>
+                        <td>98</td>
+                        <td class="highlight">-60%</td>
+                    </tr>
+                    <tr>
+                        <td>Tokens (aprox.)</td>
+                        <td>~61</td>
+                        <td>~25</td>
+                        <td class="highlight">-59%</td>
+                    </tr>
+                    <tr>
+                        <td>Legibilidade</td>
+                        <td>Boa</td>
+                        <td>Excelente</td>
+                        <td class="highlight">+100%</td>
+                    </tr>
+                    <tr>
+                        <td>Custo por Uso</td>
+                        <td>$$$</td>
+                        <td>$</td>
+                        <td class="highlight">-66%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <h2>Baixe Agora Gratuitamente</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+            Disponível para Android. Versão web também disponível!
+        </p>
+
+        <div class="platform-badges">
+            <a href="#" class="badge" onclick="alert('Em breve na Google Play Store!'); return false;">
+                <div class="badge-icon">📱</div>
+                <div class="badge-text">
+                    <div class="badge-label">Baixar no</div>
+                    <div class="badge-name">Google Play</div>
+                </div>
+            </a>
+
+            <a href="modern.html" class="badge">
+                <div class="badge-icon">🌐</div>
+                <div class="badge-text">
+                    <div class="badge-label">Usar no</div>
+                    <div class="badge-name">Navegador</div>
+                </div>
+            </a>
+
+            <a href="https://github.com/toon-format/toon" class="badge" target="_blank">
+                <div class="badge-icon">📖</div>
+                <div class="badge-text">
+                    <div class="badge-label">Ver no</div>
+                    <div class="badge-name">GitHub</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="android-app/legal-docs/privacy-policy.html">Política de Privacidade</a>
+            <a href="android-app/legal-docs/terms-of-service.html">Termos de Serviço</a>
+            <a href="https://github.com/toon-format/toon" target="_blank">Documentação TOON</a>
+            <a href="mailto:contato@toonformat.com">Contato</a>
+        </div>
+        <p style="opacity: 0.7;">
+            &copy; 2024 JSON to TOON. Feito com ❤️ para a comunidade de IA.
+        </p>
+        <p style="opacity: 0.5; font-size: 0.9rem; margin-top: 1rem;">
+            TOON Format - Token-Oriented Object Notation
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .gamification-features li').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
