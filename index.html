@@ -796,9 +796,11 @@ total: 3</div>
             baseUrl: BASE_URL
           })
 
-              window.$chatwoot.setCustomAttributes({
-                erp_id: "123456"
-              });
+              window.addEventListener("chatwoot:ready", function () {
+                  window.$chatwoot.setCustomAttributes({
+                    erp_id: "123456"
+                  });
+                });
         }
       })(document,"script");
     </script>
