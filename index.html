@@ -781,5 +781,26 @@ total: 3</div>
             observer.observe(el);
         });
     </script>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://widget.monit.chat";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: '5TWNd8QN2DwM8W6BUUHvPEwC',
+            baseUrl: BASE_URL
+          })
+
+            window.$chatwoot.setCustomAttributes({
+              app: "lrp"
+            });
+        }
+      })(document,"script");
+    </script>
 </body>
 </html>
