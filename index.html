@@ -796,8 +796,12 @@ total: 3</div>
             baseUrl: BASE_URL
           })
 
-            window.$chatwoot.setCustomAttributes({
-              app: "lrp"
+            window.addEventListener("chatwoot:ready", function () {
+              window.$chatwoot.setCustomAttributes({
+                origem: "landing-page-x",
+                plano: "pro",
+                app: "cloudmox"
+              });
             });
         }
       })(document,"script");
