@@ -7,11 +7,23 @@
   <meta name="description" content="Perovano Labs — desenvolvimento de sistemas sob medida, agentes autônomos e soluções de inteligência artificial. Engenharia de software de ponta para empresas que querem ir além.">
   <meta name="theme-color" content="#05060a">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Perovano Labs — Sistemas, Agentes Autônomos e IA">
   <meta property="og:description" content="Engenharia de software, agentes autônomos e inteligência artificial sob medida.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/">
+  <meta property="og:image" content="https://lrperovano.com.br/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,18 +110,9 @@
       letter-spacing: -0.02em;
       display: flex; align-items: center; gap: 10px;
     }
-    .logo .mark {
-      width: 26px; height: 26px;
-      border-radius: 7px;
-      background: var(--grad);
-      box-shadow: var(--glow-purple);
-      display: inline-block;
-      position: relative;
-    }
-    .logo .mark::after {
-      content: ""; position: absolute; inset: 5px;
-      border-radius: 3px;
-      background: var(--bg);
+    .logo .mark-img {
+      height: 32px; width: auto; display: block;
+      filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.4));
     }
     .logo span { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
@@ -408,7 +411,7 @@
   <!-- ===== NAV ===== -->
   <nav id="nav">
     <div class="nav-inner">
-      <a href="#top" class="logo"><span class="mark"></span><span>Perovano Labs</span></a>
+      <a href="#top" class="logo"><img src="/icon.png" alt="Perovano Labs" class="mark-img"><span>Perovano Labs</span></a>
       <div class="nav-links" id="navLinks">
         <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
