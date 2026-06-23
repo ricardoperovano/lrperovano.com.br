@@ -1,131 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - TOON Converter</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        h1 {
-            color: #6750A4;
-            border-bottom: 3px solid #6750A4;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #6750A4;
-            margin-top: 30px;
-        }
-        .updated {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .highlight {
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-left: 4px solid #6750A4;
-            margin: 20px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Perovano Labs</title>
+  <meta name="description" content="Política de Privacidade da Perovano Labs — como tratamos (e protegemos) os dados em nosso site e aplicativos.">
+  <meta name="theme-color" content="#05060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #05060a; --panel: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08);
+      --text: #e8ecf4; --muted: #8b93a7; --cyan: #22d3ee; --purple: #a855f7; --pink: #ec4899;
+      --grad: linear-gradient(120deg, #22d3ee 0%, #a855f7 55%, #ec4899 100%);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    ::selection { background: rgba(168,85,247,.4); color: #fff; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .glow-orb { position: fixed; border-radius: 50%; filter: blur(100px); opacity: .4; z-index: 0; pointer-events: none; }
+    .orb-1 { width: 460px; height: 460px; background: #7c3aed; top: -160px; right: -140px; }
+    .orb-2 { width: 420px; height: 420px; background: #0891b2; bottom: -180px; left: -120px; opacity: .3; }
+
+    .container { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: 0 24px 100px; }
+
+    .topbar { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: 28px 24px; }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; color: var(--text); }
+    .logo:hover { text-decoration: none; }
+    .logo .mark { width: 24px; height: 24px; border-radius: 7px; background: var(--grad); position: relative; box-shadow: 0 0 30px rgba(168,85,247,.4); }
+    .logo .mark::after { content: ""; position: absolute; inset: 5px; border-radius: 3px; background: var(--bg); }
+    .logo span { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .hero {
+      padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 40px;
+    }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 2.8rem);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+    h1 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .updated { color: var(--muted); font-size: .9rem; margin-top: 16px; font-family: 'JetBrains Mono', monospace; }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 600;
+      margin: 44px 0 14px; letter-spacing: -0.01em;
+    }
+    h2 .n { color: var(--purple); font-family: 'JetBrains Mono', monospace; font-size: 1rem; margin-right: 10px; }
+    p { color: var(--muted); margin-bottom: 14px; }
+    p strong, li strong { color: var(--text); }
+    ul { list-style: none; margin: 14px 0; }
+    ul li { color: var(--muted); padding-left: 26px; position: relative; margin-bottom: 10px; }
+    ul li.yes::before { content: "✓"; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+    ul li.no::before { content: "✕"; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    ul li.dot::before { content: "▹"; position: absolute; left: 0; color: var(--purple); }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(34,211,238,.06), rgba(168,85,247,.08));
+      border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      padding: 20px 22px; border-radius: 14px; margin: 24px 0; color: var(--text);
+    }
+    .footer { border-top: 1px solid var(--border); margin-top: 60px; padding-top: 30px; text-align: center; color: var(--muted); font-size: .85rem; }
+    .footer a { color: var(--muted); }
+  </style>
 </head>
 <body>
-    <h1>Política de Privacidade - TOON Converter</h1>
-    <p class="updated"><strong>Última atualização:</strong> 22 de dezembro de 2024</p>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
 
-    <div class="highlight">
-        <strong>Resumo:</strong> O TOON Converter NÃO coleta, armazena ou compartilha nenhum dado pessoal. Todas as conversões são feitas localmente no seu dispositivo.
+  <div class="topbar">
+    <a href="/" class="logo"><span class="mark"></span><span>Perovano Labs</span></a>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div class="eyebrow">// legal</div>
+      <h1>Política de <span class="grad">Privacidade</span></h1>
+      <p class="updated">Última atualização: 22 de junho de 2026</p>
     </div>
 
-    <h2>1. Informações Gerais</h2>
-    <p>Esta Política de Privacidade descreve como o aplicativo <strong>TOON Converter</strong> ("nós", "nosso" ou "aplicativo") trata informações relacionadas ao uso do aplicativo.</p>
+    <div class="highlight">
+      <strong>Resumo:</strong> A Perovano Labs respeita totalmente a sua privacidade. Nosso site não usa rastreadores e nossos aplicativos são projetados para funcionar sem coletar dados pessoais. Quando você nos contata, usamos suas informações apenas para responder.
+    </div>
 
-    <p>O TOON Converter é um aplicativo de conversão de JSON para formato TOON, desenvolvido com foco total na privacidade do usuário.</p>
+    <h2><span class="n">1.</span>Informações Gerais</h2>
+    <p>Esta Política de Privacidade descreve como a <strong>Perovano Labs</strong> ("nós", "nosso") trata informações relacionadas ao uso do nosso site (<strong>lrperovano.com.br</strong>) e dos nossos aplicativos e produtos.</p>
 
-    <h2>2. Coleta de Dados</h2>
-    <p><strong>O TOON Converter NÃO coleta nenhum dado pessoal.</strong> Especificamente:</p>
+    <h2><span class="n">2.</span>Dados no Nosso Site</h2>
+    <p>O site da Perovano Labs é majoritariamente estático e voltado à apresentação dos nossos serviços. Especificamente:</p>
     <ul>
-        <li>❌ Não coletamos nome, email ou informações de contato</li>
-        <li>❌ Não coletamos dados de localização</li>
-        <li>❌ Não coletamos identificadores de dispositivo</li>
-        <li>❌ Não rastreamos seu uso do aplicativo</li>
-        <li>❌ Não utilizamos cookies ou tecnologias de rastreamento</li>
-        <li>❌ Não acessamos a câmera, microfone ou galeria de fotos</li>
-        <li>❌ Não compartilhamos dados com terceiros</li>
+      <li class="no">Não usamos cookies de rastreamento</li>
+      <li class="no">Não utilizamos ferramentas de análise invasivas</li>
+      <li class="no">Não vendemos nem compartilhamos dados com terceiros</li>
+      <li class="yes">Coletamos apenas o que você envia voluntariamente ao nos contatar (ex.: e-mail)</li>
     </ul>
 
-    <h2>3. Como Funcionam as Conversões</h2>
-    <p>Todas as conversões de JSON para TOON são realizadas <strong>localmente no seu dispositivo</strong>. Os dados que você insere no aplicativo:</p>
+    <h2><span class="n">3.</span>Quando Você Entra em Contato</h2>
+    <p>Ao nos contatar por e-mail, WhatsApp ou redes sociais, você compartilha conosco as informações que decidir enviar (como nome, e-mail e a descrição do seu projeto). Usamos esses dados <strong>exclusivamente</strong> para responder e dar andamento ao seu atendimento — nunca para spam ou venda a terceiros.</p>
+
+    <h2><span class="n">4.</span>Nossos Aplicativos</h2>
+    <p>Nossos aplicativos são desenvolvidos com foco em privacidade. Em especial, o <strong>TOON Converter</strong> (conversor de JSON para o formato TOON) <strong>não coleta nenhum dado pessoal</strong>:</p>
     <ul>
-        <li>✅ Permanecem apenas na memória do aplicativo durante o uso</li>
-        <li>✅ NÃO são enviados para nenhum servidor</li>
-        <li>✅ NÃO são armazenados permanentemente (a menos que você salve manualmente)</li>
-        <li>✅ São apagados quando você fecha o aplicativo</li>
+      <li class="no">Não coleta nome, e-mail ou informações de contato</li>
+      <li class="no">Não coleta localização nem identificadores do dispositivo</li>
+      <li class="no">Não rastreia o uso, não usa cookies nem SDKs de rastreamento</li>
+      <li class="no">Não acessa câmera, microfone ou galeria</li>
+      <li class="yes">Todo o processamento é feito <strong>localmente</strong>, no seu dispositivo</li>
+      <li class="yes">Os dados permanecem apenas em memória e são apagados ao fechar o app</li>
     </ul>
 
-    <h2>4. Permissões do Aplicativo</h2>
-    <p>O TOON Converter pode solicitar as seguintes permissões do sistema Android:</p>
-    <ul>
-        <li><strong>Acesso à área de transferência:</strong> Para colar JSON e copiar resultados TOON</li>
-        <li><strong>Nenhuma permissão adicional é solicitada</strong></li>
-    </ul>
+    <h2><span class="n">5.</span>Permissões e Compartilhamento</h2>
+    <p>Quando um aplicativo oferece função de "Compartilhar", o envio do conteúdo para outros apps (WhatsApp, e-mail, etc.) é controlado por <strong>você</strong> e usa o sistema nativo do dispositivo. Não temos acesso aos dados compartilhados.</p>
 
-    <h2>5. Armazenamento Local</h2>
-    <p>O aplicativo não salva nenhuma informação de forma permanente. Todo o processamento é feito em tempo real na memória do dispositivo.</p>
+    <h2><span class="n">6.</span>Serviços de Terceiros</h2>
+    <p>Para carregar fontes web, nosso site pode utilizar a CDN do Google Fonts. Fora isso, não utilizamos redes de publicidade, SDKs de rastreamento ou serviços de análise comportamental.</p>
 
-    <h2>6. Serviços de Terceiros</h2>
-    <p>O TOON Converter NÃO utiliza:</p>
-    <ul>
-        <li>❌ Google Analytics ou serviços de análise</li>
-        <li>❌ Redes de publicidade</li>
-        <li>❌ SDKs de rastreamento</li>
-        <li>❌ Serviços de nuvem</li>
-        <li>❌ APIs externas</li>
-    </ul>
+    <h2><span class="n">7.</span>Segurança</h2>
+    <p>Adotamos boas práticas de engenharia para proteger qualquer informação que você nos envie. Como minimizamos a coleta de dados, reduzimos drasticamente o risco de exposição de informações pessoais.</p>
 
-    <h2>7. Compartilhamento de Dados</h2>
-    <p>O aplicativo oferece uma funcionalidade de "Compartilhar" que permite enviar o resultado TOON para outros aplicativos (WhatsApp, Email, etc.). Este compartilhamento é controlado por VOCÊ e utiliza o sistema nativo do Android. Nós não temos acesso aos dados compartilhados.</p>
+    <h2><span class="n">8.</span>Privacidade de Crianças</h2>
+    <p>Não coletamos intencionalmente informações de menores de 13 anos. Nossos produtos são seguros para todas as idades.</p>
 
-    <h2>8. Segurança</h2>
-    <p>Como não coletamos dados, não há risco de vazamento de informações pessoais. Todo o processamento ocorre offline no seu dispositivo.</p>
-
-    <h2>9. Privacidade de Crianças</h2>
-    <p>O aplicativo não coleta intencionalmente informações de menores de 13 anos. Como não coletamos nenhum dado, o aplicativo é seguro para todas as idades.</p>
-
-    <h2>10. Conformidade Legal</h2>
+    <h2><span class="n">9.</span>Conformidade Legal</h2>
     <p>Esta política está em conformidade com:</p>
     <ul>
-        <li><strong>LGPD</strong> (Lei Geral de Proteção de Dados - Brasil)</li>
-        <li><strong>GDPR</strong> (General Data Protection Regulation - Europa)</li>
-        <li><strong>COPPA</strong> (Children's Online Privacy Protection Act - EUA)</li>
+      <li class="dot"><strong>LGPD</strong> — Lei Geral de Proteção de Dados (Brasil)</li>
+      <li class="dot"><strong>GDPR</strong> — General Data Protection Regulation (Europa)</li>
+      <li class="dot"><strong>COPPA</strong> — Children's Online Privacy Protection Act (EUA)</li>
     </ul>
 
-    <h2>11. Alterações nesta Política</h2>
-    <p>Podemos atualizar esta Política de Privacidade ocasionalmente. Recomendamos que você revise esta página periodicamente. As alterações entram em vigor imediatamente após a publicação.</p>
+    <h2><span class="n">10.</span>Seus Direitos</h2>
+    <p>Você pode, a qualquer momento, solicitar acesso, correção ou exclusão de quaisquer dados que tenha nos enviado. Basta entrar em contato pelo e-mail abaixo.</p>
 
-    <h2>12. Contato</h2>
-    <p>Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+    <h2><span class="n">11.</span>Alterações nesta Política</h2>
+    <p>Podemos atualizar esta Política ocasionalmente. Recomendamos revisar esta página periodicamente; as alterações entram em vigor após a publicação.</p>
+
+    <h2><span class="n">12.</span>Contato</h2>
+    <p>Dúvidas sobre esta Política de Privacidade? Fale com a gente:</p>
     <ul>
-        <li><strong>Email:</strong> [SEU-EMAIL-AQUI]</li>
-        <li><strong>Website:</strong> [SEU-WEBSITE-AQUI]</li>
+      <li class="dot"><strong>E-mail:</strong> <a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+      <li class="dot"><strong>Website:</strong> <a href="https://lrperovano.com.br">lrperovano.com.br</a></li>
     </ul>
-
-    <h2>13. Seus Direitos</h2>
-    <p>Como não coletamos dados, não há informações para acessar, corrigir ou excluir. Você tem controle total sobre qualquer dado que insere no aplicativo.</p>
 
     <div class="highlight">
-        <p><strong>Resumo Final:</strong> O TOON Converter é um aplicativo 100% offline que respeita totalmente sua privacidade. Nenhum dado sai do seu dispositivo.</p>
+      <strong>Resumo final:</strong> Privacidade não é um recurso — é o padrão. Coletamos o mínimo, protegemos o resto e nunca vendemos seus dados.
     </div>
 
-    <hr style="margin-top: 40px; border: none; border-top: 1px solid #ddd;">
-    <p style="text-align: center; color: #666; font-size: 14px;">
-        © 2024 TOON Converter. Todos os direitos reservados.
-    </p>
+    <div class="footer">
+      © <span id="year"></span> Perovano Labs · <a href="/">Voltar ao site</a>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
