@@ -6,7 +6,7 @@
 :root {
   /* Tokens de marca (valores exatos do guia) */
   --brand-primary: #143C3A;
-  --brand-background: #F4F2EB;
+  --brand-background: #e4dfcf;
   --brand-text: #1D2424;
   --brand-accent: #D7E6A5;
 
@@ -14,7 +14,7 @@
   --brand-primary-hover: #0E2D2B;
   --brand-accent-hover: #E4EFC0;
   --text-muted: #56615F;
-  --on-dark: #F4F2EB;
+  --on-dark: #e4dfcf;
   --on-dark-muted: rgba(244, 242, 235, 0.78);
   --line: rgba(29, 36, 36, 0.14);
   --line-on-dark: rgba(244, 242, 235, 0.2);
