@@ -59,6 +59,10 @@ Markdown aceito: `##`, `###`, parágrafos, listas `-` e `1.`, `**negrito**`, `*i
 Uma seção `## Perguntas frequentes` com perguntas em `###` vira dados estruturados de FAQ automaticamente.
 O gerador avisa sobre links internos quebrados.
 
+O gerador também cria uma página por categoria (`/blog/categoria/<categoria>/`), com breadcrumb e dados estruturados, e a busca do índice do blog.
+
+**Agendamento:** um artigo com `date` no futuro fica fora do site, do sitemap e do RSS até essa data. Links de outros artigos para ele aparecem como texto simples até lá. No dia, rode o build de novo e publique.
+
 ## Pendências
 
 1. **Logo definitivo.** O guia (proposta inicial v1) informa que SVG, versões monocromáticas e PNGs isolados ainda serão finalizados.
@@ -76,5 +80,5 @@ O gerador avisa sobre links internos quebrados.
 9. **`modern.html`** mantém o visual antigo (roxo) e não é linkado pelo site.
 10. **Portfólio.** Confirmar, para cada site (PaceOn, VipDesk, Portal da Igreja, Estudatta, MinhaOS App, Safe Offshore), se é produto próprio ou projeto de cliente, e se há autorização para exibir. As capturas são de 30/10/2026; quando os sites mudarem, refaça as imagens em `assets/img/portfolio/`.
 11. **Google Search Console.** Verificar a propriedade `lrperovano.com.br` e enviar `https://lrperovano.com.br/sitemap.xml`. Opcional: Bing Webmaster Tools.
-12. **Artigos.** Revisar os textos antes de publicar e manter um ritmo de publicação (ex.: 1 artigo por semana) — conteúdo novo e atualizado pesa mais que volume publicado de uma vez.
+12. **Artigos (30).** Revisar os textos antes de publicar — em especial LGPD, WhatsApp, Pix, domínio/Registro.br, SEO local e os pontos jurídicos de escopo/contratação, cujas regras de terceiros mudam com o tempo e manter um ritmo de publicação (ex.: 1 artigo por semana) — conteúdo novo e atualizado pesa mais que volume publicado de uma vez.
 13. **Google Analytics (G-KGNMPTML28).** Só carrega depois de "Aceitar" no aviso de cookies (Consent Mode do Google, com padrão negado). A escolha fica em `localStorage` (`perovano-cookies`) e pode ser revista em "Preferências de cookies", no rodapé. Cliques em WhatsApp e e-mail geram o evento `generate_lead`; marque-o como evento-chave no GA4 para medir conversões. O código do GA está no `<head>` de `index.html`, `privacy.html` e em `GA_TAG` de `scripts/build_blog.py`. A política de privacidade foi atualizada para refletir isso — vale uma revisão jurídica.
