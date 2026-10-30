@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog da PEROVANO</title>
+    <link>https://lrperovano.com.br/blog/</link>
+    <atom:link href="https://lrperovano.com.br/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Sites, sistemas sob medida, integrações, automação e inteligência artificial para empresas.</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Fri, 30 Oct 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Velocidade do site e Core Web Vitals: o que corrigir</title>
+      <link>https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sites</category>
+      <description>Entenda como a velocidade do site afeta vendas e SEO, o que medem LCP, INP e CLS, como avaliar no PageSpeed Insights e quais correções priorizar.</description>
+    </item>
+    <item>
+      <title>Sistema sob medida ou software pronto: como decidir</title>
+      <link>https://lrperovano.com.br/blog/sistema-sob-medida-ou-software-pronto/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/sistema-sob-medida-ou-software-pronto/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sistemas</category>
+      <description>Sistema sob medida ou software pronto? Compare custos ao longo do tempo, aderência ao processo, dependência de fornecedor e quando o caminho híbrido é melhor.</description>
+    </item>
+    <item>
+      <title>SEO para sites de empresas: o que é preciso para aparecer</title>
+      <link>https://lrperovano.com.br/blog/seo-para-sites-de-empresas/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/seo-para-sites-de-empresas/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sites</category>
+      <description>Saiba o que um site de empresa precisa para aparecer no Google: indexação, Search Console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa.</description>
+    </item>
+    <item>
+      <title>Quanto custa um site profissional e o que define o preço</title>
+      <link>https://lrperovano.com.br/blog/quanto-custa-um-site-profissional/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/quanto-custa-um-site-profissional/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sites</category>
+      <description>Veja o que forma o preço de um site profissional: tipo, páginas, conteúdo, design, integrações, SEO e manutenção, e como comparar propostas com segurança.</description>
+    </item>
+    <item>
+      <title>O que é landing page e quando usar na sua empresa</title>
+      <link>https://lrperovano.com.br/blog/o-que-e-landing-page/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/o-que-e-landing-page/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sites</category>
+      <description>Landing page é uma página com um único objetivo, como gerar contatos ou vendas. Veja a diferença para o site, quando usar, elementos essenciais e como medir.</description>
+    </item>
+    <item>
+      <title>MVP: como tirar uma ideia de sistema do papel</title>
+      <link>https://lrperovano.com.br/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Gestão de projetos</category>
+      <description>Entenda o que é MVP, como definir o escopo mínimo de um sistema, validar com usuários reais, o que deixar para depois e como evoluir após o lançamento.</description>
+    </item>
+    <item>
+      <title>LGPD em sites e sistemas: o que a lei exige na prática</title>
+      <link>https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Sistemas</category>
+      <description>O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.</description>
+    </item>
+    <item>
+      <title>Integração de sistemas via API: guia para gestores</title>
+      <link>https://lrperovano.com.br/blog/integracao-de-sistemas-api/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/integracao-de-sistemas-api/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automação</category>
+      <description>Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.</description>
+    </item>
+    <item>
+      <title>Integração com a API do WhatsApp Business: como funciona</title>
+      <link>https://lrperovano.com.br/blog/whatsapp-business-api-integracao/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/whatsapp-business-api-integracao/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automação</category>
+      <description>Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</description>
+    </item>
+    <item>
+      <title>Como usar inteligência artificial na empresa, na prática</title>
+      <link>https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Inteligência artificial</category>
+      <description>Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.</description>
+    </item>
+    <item>
+      <title>Como fazer briefing de site ou sistema: modelo e erros</title>
+      <link>https://lrperovano.com.br/blog/como-fazer-briefing-de-software/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-fazer-briefing-de-software/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Gestão de projetos</category>
+      <description>Saiba como fazer um briefing de site ou sistema: o que informar, um modelo pronto para copiar e os erros que geram orçamentos imprecisos e retrabalho.</description>
+    </item>
+    <item>
+      <title>Como automatizar processos na empresa, passo a passo</title>
+      <link>https://lrperovano.com.br/blog/como-automatizar-processos-na-empresa/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-automatizar-processos-na-empresa/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automação</category>
+      <description>Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</description>
+    </item>
+  </channel>
+</rss>

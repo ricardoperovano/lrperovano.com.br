@@ -1,3 +1,5 @@
-# GitHub Pages: mantém a documentação técnica fora do site publicado.
+# GitHub Pages: mantém a documentação técnica e o gerador fora do site publicado.
+# (Pastas iniciadas por "_", como _conteudo/, já são ignoradas pelo Jekyll.)
 exclude:
   - README.md
+  - scripts/

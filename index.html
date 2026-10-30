@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KGNMPTML28');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PEROVANO — Engenharia de software</title>
-  <meta name="description" content="PEROVANO — engenharia de software. Sistemas sob medida, integrações, automações e inteligência artificial aplicada a desafios reais de negócio.">
+  <title>PEROVANO — Sites e sistemas sob medida</title>
+  <meta name="description" content="PEROVANO — engenharia de software. Sites, sistemas sob medida, integrações, automações e inteligência artificial, desenvolvidos sob demanda para desafios reais de negócio.">
   <meta name="theme-color" content="#143C3A">
   <link rel="canonical" href="https://lrperovano.com.br/">
 
@@ -14,8 +23,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:site_name" content="PEROVANO">
-  <meta property="og:title" content="PEROVANO — Engenharia de software">
-  <meta property="og:description" content="Software bem construído. Negócios preparados para crescer. Sistemas, automações e inteligência artificial.">
+  <meta property="og:title" content="PEROVANO — Sites e sistemas sob medida">
+  <meta property="og:description" content="Software bem construído. Negócios preparados para crescer. Sites, sistemas, automações e inteligência artificial sob demanda.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://lrperovano.com.br/">
@@ -26,9 +35,42 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://lrperovano.com.br/og-image.png">
 
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://lrperovano.com.br/#organizacao",
+        "name": "PEROVANO",
+        "legalName": "L R PEROVANO LTDA",
+        "url": "https://lrperovano.com.br/",
+        "logo": "https://lrperovano.com.br/apple-touch-icon.png",
+        "email": "ricardoperovano@gmail.com",
+        "description": "Engenharia de software: sites, sistemas sob medida, integrações, automações e inteligência artificial aplicada.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-27-99986-3591",
+          "contactType": "sales",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": ["https://www.linkedin.com/in/xhricardo/", "https://github.com/ricardoperovano"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lrperovano.com.br/#site",
+        "url": "https://lrperovano.com.br/",
+        "name": "PEROVANO",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://lrperovano.com.br/#organizacao" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script>document.documentElement.classList.add('js');</script>
   <script src="/assets/js/site.js" defer></script>
@@ -51,61 +93,203 @@
 
       <nav class="site-nav" id="menu-principal" aria-label="Principal">
         <ul class="site-nav__list">
+          <li><a href="#projetos">Projetos</a></li>
           <li><a href="#solucoes">Soluções</a></li>
           <li><a href="#como-trabalhamos">Como trabalhamos</a></li>
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="/blog/">Blog</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
-        <a class="btn btn--primary btn--small" href="#contato">Vamos conversar</a>
+        <a class="btn btn--accent btn--small" href="#contato">Vamos conversar</a>
       </nav>
     </div>
   </header>
 
   <main id="conteudo">
     <!-- ===== Abertura ===== -->
-    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+    <section class="hero on-dark" id="inicio" aria-labelledby="titulo-principal">
+      <!-- Parede decorativa com capturas reais dos projetos do portfólio. -->
+      <div class="wall" aria-hidden="true">
+        <div class="wall__plane">
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+        </div>
+      </div>
+
       <div class="container hero__inner">
         <div class="hero__content">
-          <span class="eyebrow">Engenharia de software</span>
-          <h1 id="titulo-principal">
-            <span>Software bem construído.</span>
-            <span>Negócios preparados para crescer.</span>
+          <h1 class="hero__title" id="titulo-principal">
+            <span class="hero__line"><span>Software bem construído.</span></span>
+            <span class="hero__line"><span>Negócios preparados para crescer.</span></span>
           </h1>
-          <p class="lead">Desenvolvemos sistemas, conectamos operações e aplicamos inteligência artificial para resolver desafios reais do seu negócio.</p>
+          <p class="hero__lead">Sites, sistemas sob medida, integrações e inteligência artificial, desenvolvidos sob demanda para resolver os desafios reais do seu negócio.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contato">
-              Vamos conversar
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn--secondary" href="#solucoes">Conheça nossas soluções</a>
+            <a class="btn btn--accent" href="#contato">Vamos conversar</a>
+            <a class="btn btn--outline-light" href="#projetos">Ver projetos no ar</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Composição abstrata inspirada no chanfro e nas curvas da identidade; não é o símbolo. -->
-        <div class="hero__graphic" aria-hidden="true">
-          <svg viewBox="0 0 520 640" preserveAspectRatio="xMaxYMax slice" focusable="false">
-            <path class="shape-primary" d="M0 400 200 200H520V340H290Q250 340 222 368L0 590Z"/>
-            <path class="shape-accent" d="M170 640V520Q170 430 260 430H520V640Z"/>
-          </svg>
+    <!-- ===== Portfólio (âncora #projetos preservada do site anterior) ===== -->
+    <section class="section" id="projetos" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Portfólio</span>
+          <h2 id="titulo-projetos">Projetos no ar, em uso todos os dias.</h2>
+          <p class="lead">Plataformas e sites desenvolvidos pela PEROVANO. Conforme você rola a página, cada janela percorre o site real de cima a baixo.</p>
+        </div>
+
+        <div class="works">
+          <article class="work">
+            <a class="work__frame" href="https://paceon.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>paceon.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/paceon-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site do PaceOn (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Plataforma com IA</p>
+              <h3>PaceOn</h3>
+              <p>Treinador de corrida com inteligência artificial. Conecta ao Strava, monta a planilha a partir do histórico do corredor e recalcula o plano a cada treino.</p>
+              <a class="work__link" href="https://paceon.com.br/" target="_blank" rel="noopener">Visitar paceon.com.br<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://vipdesk.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>vipdesk.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/vipdesk-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site do VipDesk (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Plataforma de atendimento</p>
+              <h3>VipDesk</h3>
+              <p>Atendimento omnichannel com CRM e IA. Centraliza WhatsApp, Instagram, e-mail e telefonia, organiza a equipe, acompanha vendas e automatiza respostas.</p>
+              <a class="work__link" href="https://vipdesk.com.br/" target="_blank" rel="noopener">Visitar vipdesk.com.br<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://portaldaigreja.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>portaldaigreja.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/portaldaigreja-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site do Portal da Igreja (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Sistema de gestão</p>
+              <h3>Portal da Igreja</h3>
+              <p>Gestão completa para igrejas: dízimos e ofertas por Pix com QR Code, membros, financeiro, fechamento do mês e site da igreja incluso.</p>
+              <a class="work__link" href="https://portaldaigreja.com.br/" target="_blank" rel="noopener">Visitar portaldaigreja.com.br<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://estudatta.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>estudatta.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/estudatta-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site do Estudatta (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Aplicativo de estudos</p>
+              <h3>Estudatta</h3>
+              <p>Plano diário com meta de minutos, cronômetro, revisões espaçadas, questões e simulados. Quando o aluno atrasa, o tempo pendente vira recuperação.</p>
+              <a class="work__link" href="https://estudatta.com.br/" target="_blank" rel="noopener">Visitar estudatta.com.br<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://minhaos.app/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>minhaos.app</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/minhaos-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site do MinhaOS App (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Aplicativo para autônomos</p>
+              <h3>MinhaOS App</h3>
+              <p>Registro dos serviços executados, fechamento do mês por cliente e demonstrativo de cobrança com link e confirmação de recebimento.</p>
+              <a class="work__link" href="https://minhaos.app/" target="_blank" rel="noopener">Visitar minhaos.app<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://safeoffshore.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>safeoffshore.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/safeoffshore-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Abrir o site da Safe Offshore (nova aba)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Site institucional</p>
+              <h3>Safe Offshore</h3>
+              <p>Site da empresa especializada em sinalização náutica, balizamento, apoio subaquático e serviços marítimos no Espírito Santo.</p>
+              <a class="work__link" href="https://safeoffshore.com.br/" target="_blank" rel="noopener">Visitar safeoffshore.com.br<span class="sr-only"> (abre em nova aba)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="works-more">
+          <p><strong>Também no portfólio:</strong> TOON Converter, aplicativo Android próprio que converte JSON para o formato TOON totalmente offline, sem coletar dados pessoais.</p>
+          <a class="text-link" href="/privacy.html">Política de privacidade do app</a>
         </div>
       </div>
     </section>
 
     <!-- ===== Soluções ===== -->
-    <section class="section section--ruled" id="solucoes" aria-labelledby="titulo-solucoes">
-      <div class="container split">
-        <div class="split__aside split__aside--sticky reveal">
-          <span class="eyebrow">Soluções</span>
-          <h2 id="titulo-solucoes">Três frentes para o que trava a sua operação.</h2>
+    <section class="section section--surface" id="solucoes" aria-labelledby="titulo-solucoes">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Soluções</span>
+          <h2 id="titulo-solucoes">Do site que apresenta ao sistema que faz a empresa rodar.</h2>
           <p class="lead">Cada projeto começa pelo problema, não pela tecnologia. A solução é definida a partir do que a sua empresa precisa resolver.</p>
         </div>
 
-        <div class="split__main">
-          <article class="solution reveal">
-            <span class="solution__index" aria-hidden="true">01</span>
+        <div>
+          <article class="solution">
+            <h3>Sites e páginas de venda</h3>
             <div>
-              <h3>Sistemas sob medida</h3>
-              <p>Aplicações web, APIs e ferramentas internas desenhadas para o jeito como a sua empresa trabalha — quando planilhas e sistemas de prateleira já não dão conta do processo.</p>
+              <p>Sites institucionais e landing pages rápidos, bem estruturados para o Google e pensados para transformar visita em contato.</p>
+              <div class="solution__when">
+                <span class="solution__when-label">Indicado quando</span>
+                <ul>
+                  <li>a empresa ainda não tem site, ou tem um que não transmite confiança;</li>
+                  <li>um produto ou serviço novo precisa de uma página de apresentação e venda;</li>
+                  <li>o site atual quase não gera contatos.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="solution">
+            <h3>Sistemas sob medida</h3>
+            <div>
+              <p>Aplicações web, painéis, APIs e plataformas completas — com login, área do cliente e pagamentos — desenhadas para o jeito como a sua empresa trabalha.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
                 <ul>
@@ -117,10 +301,9 @@
             </div>
           </article>
 
-          <article class="solution reveal">
-            <span class="solution__index" aria-hidden="true">02</span>
+          <article class="solution">
+            <h3>Integrações e automações</h3>
             <div>
-              <h3>Integrações e automações</h3>
               <p>Conectamos os sistemas que a sua empresa já usa para que a informação circule sem redigitação, e automatizamos tarefas repetitivas que consomem o tempo da equipe.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -133,10 +316,9 @@
             </div>
           </article>
 
-          <article class="solution reveal">
-            <span class="solution__index" aria-hidden="true">03</span>
+          <article class="solution">
+            <h3>Inteligência artificial aplicada</h3>
             <div>
-              <h3>Inteligência artificial aplicada</h3>
               <p>Assistentes, busca em documentos e bases de conhecimento da empresa e automações com IA — adotados quando são o caminho adequado para o problema.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -156,13 +338,13 @@
     <!-- ===== Como trabalhamos ===== -->
     <section class="section section--dark on-dark" id="como-trabalhamos" aria-labelledby="titulo-processo">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Como trabalhamos</span>
+        <div class="section__head">
+          <span class="kicker">Como trabalhamos</span>
           <h2 id="titulo-processo">Do diagnóstico à evolução, com clareza em cada etapa.</h2>
         </div>
 
         <ol class="steps">
-          <li class="step reveal">
+          <li class="step">
             <span class="step__index" aria-hidden="true">01</span>
             <h3>Diagnóstico do desafio</h3>
             <p>Começamos entendendo a operação, o problema e o que precisa mudar.</p>
@@ -171,7 +353,7 @@
               <dd>Um entendimento compartilhado do desafio e das prioridades.</dd>
             </dl>
           </li>
-          <li class="step reveal">
+          <li class="step">
             <span class="step__index" aria-hidden="true">02</span>
             <h3>Definição da solução</h3>
             <p>Traduzimos o diagnóstico em uma proposta de escopo: o que será construído, em que ordem e por quê.</p>
@@ -180,7 +362,7 @@
               <dd>Uma proposta de escopo para decidir com clareza.</dd>
             </dl>
           </li>
-          <li class="step reveal">
+          <li class="step">
             <span class="step__index" aria-hidden="true">03</span>
             <h3>Desenvolvimento e validação</h3>
             <p>Construímos em entregas que você acompanha e testa, ajustando o rumo com base no uso real.</p>
@@ -189,7 +371,7 @@
               <dd>Software funcionando, validado com quem vai usar.</dd>
             </dl>
           </li>
-          <li class="step reveal">
+          <li class="step">
             <span class="step__index" aria-hidden="true">04</span>
             <h3>Evolução</h3>
             <p>Depois da entrega, a solução evolui conforme o escopo combinado, à medida que o negócio muda.</p>
@@ -200,48 +382,20 @@
           </li>
         </ol>
 
-        <p class="steps-note reveal">Prazos, formato de acompanhamento e condições são definidos em cada proposta, de acordo com o escopo.</p>
-      </div>
-    </section>
-
-    <!-- ===== Produto próprio (âncora #projetos preservada do site anterior) ===== -->
-    <section class="section" id="projetos" aria-labelledby="titulo-produto">
-      <div class="container split">
-        <div class="split__aside reveal">
-          <span class="tag">Produto próprio</span>
-          <h2 id="titulo-produto">TOON Converter</h2>
-          <p class="lead">Aplicativo Android desenvolvido pela PEROVANO.</p>
-        </div>
-        <div class="split__main reveal">
-          <dl class="facts">
-            <div>
-              <dt>Desafio</dt>
-              <dd>Converter JSON para o formato TOON sem enviar o conteúdo a serviços externos.</dd>
-            </div>
-            <div>
-              <dt>Solução</dt>
-              <dd>Um conversor que funciona totalmente offline: o processamento acontece no próprio dispositivo e nenhum dado pessoal é coletado.</dd>
-            </div>
-            <div>
-              <dt>Participação</dt>
-              <dd>Concepção e desenvolvimento próprios.</dd>
-            </div>
-          </dl>
-          <p><a class="text-link" href="/privacy.html">Política de privacidade do aplicativo</a></p>
-        </div>
+        <p class="steps-note">Prazos, formato de acompanhamento e condições são definidos em cada proposta, de acordo com o escopo.</p>
       </div>
     </section>
 
     <!-- ===== Sobre ===== -->
-    <section class="section section--ruled" id="sobre" aria-labelledby="titulo-sobre">
+    <section class="section" id="sobre" aria-labelledby="titulo-sobre">
       <div class="container split">
-        <div class="split__aside reveal">
-          <span class="eyebrow">Sobre</span>
+        <div class="split__aside">
+          <span class="kicker">Sobre</span>
           <h2 id="titulo-sobre">Uma parceira técnica próxima, do problema à solução.</h2>
         </div>
-        <div class="split__main reveal">
+        <div class="split__main">
           <div class="prose">
-            <p>A PEROVANO é uma empresa de engenharia de software. Desenvolvemos sistemas sob medida, integrações, automações e soluções de inteligência artificial aplicada para empresas que precisam criar ou evoluir suas soluções digitais.</p>
+            <p>A PEROVANO é uma empresa de engenharia de software. Desenvolvemos sites, sistemas sob medida, integrações, automações e soluções de inteligência artificial para empresas que precisam criar ou evoluir suas soluções digitais.</p>
             <p>Trabalhamos com critério: explicamos o problema, a abordagem e o benefício esperado em uma linguagem que quem contrata entende — e só recomendamos uma tecnologia quando ela é adequada ao desafio.</p>
           </div>
 
@@ -273,16 +427,48 @@
       </div>
     </section>
 
+    <!-- ===== Blog: bloco gerado por scripts/build_blog.py ===== -->
+    <!-- artigos:inicio -->
+    <section class="section section--surface" id="blog" aria-labelledby="titulo-blog">
+      <div class="container">
+        <div class="home-blog__head">
+          <div>
+            <span class="kicker">Blog</span>
+            <h2 id="titulo-blog">Tecnologia explicada para quem decide.</h2>
+          </div>
+          <a class="btn btn--secondary" href="/blog/">Ver todos os artigos</a>
+        </div>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sites">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/velocidade-do-site-core-web-vitals/">Velocidade do site e Core Web Vitals: o que corrigir</a></h3>
+            <p class="post-card__excerpt">Entenda como a velocidade do site afeta vendas e SEO, o que medem LCP, INP e CLS, como avaliar no PageSpeed Insights e quais correções priorizar.</p>
+          </article>
+          <article class="post-card" data-category="Sistemas">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/sistema-sob-medida-ou-software-pronto/">Sistema sob medida ou software pronto: como decidir</a></h3>
+            <p class="post-card__excerpt">Sistema sob medida ou software pronto? Compare custos ao longo do tempo, aderência ao processo, dependência de fornecedor e quando o caminho híbrido é melhor.</p>
+          </article>
+          <article class="post-card" data-category="Sites">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/seo-para-sites-de-empresas/">SEO para sites de empresas: o que é preciso para aparecer</a></h3>
+            <p class="post-card__excerpt">Saiba o que um site de empresa precisa para aparecer no Google: indexação, Search Console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- artigos:fim -->
+
     <!-- ===== Contato ===== -->
     <section class="section section--dark on-dark contact" id="contato" aria-labelledby="titulo-contato">
       <div class="container">
-        <div class="contact__inner reveal">
-          <span class="eyebrow">Contato</span>
-          <h2 id="titulo-contato">Vamos conversar sobre o seu desafio.</h2>
-          <p class="lead">Conte o que a sua empresa precisa resolver. A primeira conversa serve para entender o contexto e avaliar se e como podemos ajudar.</p>
+        <div class="contact__inner">
+          <span class="kicker">Contato</span>
+          <h2 class="contact__title" id="titulo-contato">Tem um projeto em mente? Vamos conversar.</h2>
+          <p class="lead">Conte o que você precisa — um site, um sistema ou a automação de um processo. A primeira conversa serve para entender o contexto e indicar o melhor caminho.</p>
 
           <div class="contact__actions">
-            <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20um%20desafio%20da%20minha%20empresa." target="_blank" rel="noopener">
+            <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">
               Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span>
             </a>
             <a class="btn btn--outline-light" href="mailto:ricardoperovano@gmail.com?subject=Conversa%20sobre%20um%20projeto">Enviar um e-mail</a>
@@ -319,9 +505,11 @@
         <nav aria-label="Rodapé">
           <h2>Navegação</h2>
           <ul>
+            <li><a href="#projetos">Projetos</a></li>
             <li><a href="#solucoes">Soluções</a></li>
             <li><a href="#como-trabalhamos">Como trabalhamos</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="/blog/">Blog</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="/privacy.html">Política de Privacidade</a></li>
           </ul>

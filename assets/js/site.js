@@ -6,6 +6,8 @@
   var root = document.documentElement;
   root.classList.add('js');
 
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Âncoras do site anterior que podem ter links externos.
   var legacyAnchors = { '#servicos': '#solucoes', '#top': '#inicio' };
   var redirectLegacyAnchor = function () {
@@ -57,24 +59,133 @@
         setOpen(false);
       }
     });
-    window.matchMedia('(min-width: 881px)').addEventListener('change', function (mq) {
+    window.matchMedia('(min-width: 961px)').addEventListener('change', function (mq) {
       if (mq.matches) setOpen(false);
     });
   }
 
-  // Entrada discreta das seções.
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var targets = document.querySelectorAll('.reveal');
-  if (!reduceMotion && 'IntersectionObserver' in window && targets.length) {
-    root.classList.add('motion-ok');
+  // Analytics: cliques em WhatsApp e e-mail viram conversões (evento generate_lead do GA4).
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link || typeof window.gtag !== 'function') return;
+    var href = link.getAttribute('href');
+    var method = /wa\.me\//.test(href) ? 'whatsapp' : /^mailto:/.test(href) ? 'email' : '';
+    if (!method) return;
+    var section = link.closest('section, header, footer');
+    window.gtag('event', 'generate_lead', {
+      method: method,
+      link_text: (link.textContent || '').trim().slice(0, 100),
+      page_location: location.href,
+      cta_section: section ? (section.id || section.className.split(' ')[0]) : ''
+    });
+  });
+
+  // Blog: filtro por categoria (sem JS, os chips são âncoras para cada grupo).
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.blog-group'));
+  if (chips.length && groups.length) {
+    var applyFilter = function (category) {
+      chips.forEach(function (chip) {
+        chip.setAttribute('aria-pressed', String(chip.getAttribute('data-filter') === category));
+      });
+      groups.forEach(function (group) {
+        var title = group.querySelector('.blog-group__title');
+        group.hidden = Boolean(category) && title && title.textContent !== category;
+      });
+    };
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function (event) {
+        event.preventDefault();
+        var category = chip.getAttribute('data-filter');
+        applyFilter(category);
+        history.replaceState(null, '', category ? chip.getAttribute('href') : location.pathname);
+      });
+    });
+    var initial = chips.filter(function (chip) { return chip.getAttribute('href') === location.hash; })[0];
+    applyFilter(initial ? initial.getAttribute('data-filter') : '');
+  }
+
+  // Artigo: destaca no índice a seção em leitura.
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.post__toc a[href^="#"]'));
+  if (tocLinks.length && 'IntersectionObserver' in window) {
+    var byId = {};
+    tocLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        tocLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var link = byId[entry.target.id];
+        if (link) link.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '0px 0px -70% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var heading = document.getElementById(id);
+      if (heading) tocObserver.observe(heading);
+    });
+  }
+
+  if (reduceMotion) return;
+
+  // Parede da abertura: inclina levemente seguindo o ponteiro (apenas mouse).
+  var hero = document.querySelector('.hero');
+  var plane = document.querySelector('.wall__plane');
+  if (hero && plane && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    hero.addEventListener('pointermove', function (event) {
+      var r = hero.getBoundingClientRect();
+      var x = (event.clientX - r.left) / r.width - 0.5;
+      var y = (event.clientY - r.top) / r.height - 0.5;
+      plane.style.setProperty('--tilt-x', (38 - y * 6).toFixed(2) + 'deg');
+      plane.style.setProperty('--tilt-y', (x * 6).toFixed(2) + 'deg');
+    });
+    hero.addEventListener('pointerleave', function () {
+      plane.style.removeProperty('--tilt-x');
+      plane.style.removeProperty('--tilt-y');
+    });
+  }
+
+  // Portfólio: cada janela percorre o site real conforme a rolagem.
+  var frames = Array.prototype.slice.call(document.querySelectorAll('[data-pan]'));
+  if (!frames.length) return;
+
+  var items = frames.map(function (frame) {
+    return { screen: frame.querySelector('.work__screen'), img: frame.querySelector('.work__screen img'), visible: false };
+  }).filter(function (item) { return item.screen && item.img; });
+
+  var ticking = false;
+  var update = function () {
+    ticking = false;
+    var vh = window.innerHeight;
+    items.forEach(function (item) {
+      if (!item.visible) return;
+      var r = item.screen.getBoundingClientRect();
+      var distance = item.img.offsetHeight - item.screen.clientHeight;
+      if (distance <= 0) return;
+      // 0 quando a janela entra por baixo; 1 quando chega ao terço superior da tela.
+      var progress = (vh - r.top) / (vh * 0.85 + r.height * 0.4);
+      progress = Math.min(1, Math.max(0, progress));
+      var eased = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      item.img.style.transform = 'translate3d(0,' + (-eased * distance).toFixed(1) + 'px,0)';
+    });
+  };
+  var requestUpdate = function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  };
+
+  if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
+        items.forEach(function (item) {
+          if (item.screen === entry.target) item.visible = entry.isIntersecting;
+        });
       });
-    }, { threshold: 0.1 });
-    targets.forEach(function (el) { observer.observe(el); });
+      requestUpdate();
+    }, { rootMargin: '10% 0px' });
+    items.forEach(function (item) { observer.observe(item.screen); });
+  } else {
+    items.forEach(function (item) { item.visible = true; });
   }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  items.forEach(function (item) { item.img.addEventListener('load', requestUpdate); });
 })();

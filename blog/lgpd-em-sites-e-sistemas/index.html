@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KGNMPTML28');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGPD em sites e sistemas: o que a lei exige na prática | PEROVANO</title>
+  <meta name="description" content="O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="LGPD em sites e sistemas: o que a lei exige na prática | PEROVANO">
+  <meta property="og:description" content="O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Sistemas">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LGPD em sites e sistemas: o que a lei exige na prática",
+  "description": "O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Sistemas",
+  "keywords": "LGPD em sites e sistemas, LGPD para sites, adequação à LGPD, LGPD no desenvolvimento de software",
+  "wordCount": 1561,
+  "image": "https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/",
+  "url": "https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LGPD em sites e sistemas: o que a lei exige na prática",
+      "item": "https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Um site institucional simples precisa se adequar à LGPD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, se ele coleta qualquer dado pessoal, mesmo que seja só nome e e-mail em um formulário de contato, ou se usa cookies de análise e publicidade. O esforço é menor do que em um sistema, mas política de privacidade, coleta mínima e banner de cookies continuam necessários."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Basta publicar uma política de privacidade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A política descreve o que acontece, mas o site e o sistema precisam funcionar de acordo com ela. Se a política diz que os cookies de marketing dependem de consentimento, eles não podem ser carregados antes do aceite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem é responsável se o fornecedor do sistema vazar os dados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lei distribui responsabilidades entre controlador e operador conforme o papel de cada um. Por isso, contratos claros e fornecedores com boas práticas são importantes. A análise de um caso concreto deve ser feita com orientação jurídica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso apagar todos os dados quando o cliente pedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem sempre. Alguns dados precisam ser mantidos por obrigação legal, como registros fiscais. O sistema deve excluir ou anonimizar o que pode ser eliminado e guardar, protegido, o que a lei exige. Se você está planejando um site ou sistema e quer que a proteção de dados esteja no desenho desde o início, podemos conversar sobre o projeto. Fale conosco e conte o que precisa ser construído."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/#sistemas">Sistemas</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">LGPD em sites e sistemas: o que a lei exige na prática</h1>
+          <p class="post__lead">O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#conceitos-basicos-para-entender-a-lei">Conceitos básicos para entender a lei</a></li>
+              <li><a href="#bases-legais-toda-coleta-precisa-de-uma-justificativa">Bases legais: toda coleta precisa de uma justificativa</a></li>
+              <li><a href="#coletar-so-o-necessario">Coletar só o necessário</a></li>
+              <li><a href="#politica-de-privacidade-clara">Política de privacidade clara</a></li>
+              <li><a href="#consentimento-e-banner-de-cookies">Consentimento e banner de cookies</a></li>
+              <li><a href="#direitos-do-titular">Direitos do titular</a></li>
+              <li><a href="#seguranca-e-controle-de-acesso">Segurança e controle de acesso</a></li>
+              <li><a href="#incidentes-de-seguranca">Incidentes de segurança</a></li>
+              <li><a href="#o-papel-do-encarregado-dpo">O papel do encarregado (DPO)</a></li>
+              <li><a href="#operadores-e-fornecedores">Operadores e fornecedores</a></li>
+              <li><a href="#privacidade-desde-o-projeto">Privacidade desde o projeto</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>A LGPD (Lei Geral de Proteção de Dados Pessoais, Lei nº 13.709/2018) se aplica aos sites e sistemas de empresas que coletem ou usem dados de pessoas físicas, como nome, e-mail, telefone, CPF, endereço ou histórico de compras. Na prática, ela exige que a empresa saiba quais dados coleta, por que coleta, com qual justificativa legal, por quanto tempo guarda, com quem compartilha e como protege essas informações.</p>
+<p>Para um site, isso significa formulários que pedem só o necessário, política de privacidade clara, banner de cookies que funcione de verdade e um canal para o titular exercer seus direitos. Para um sistema, entram também controle de acesso, registro de quem acessa o quê, plano para incidentes e contratos com fornecedores que tratam dados em nome da empresa.</p>
+<p>Este artigo tem caráter informativo e técnico. Ele não substitui a orientação de um profissional jurídico, que deve avaliar o caso concreto da sua empresa.</p>
+<h2 id="conceitos-basicos-para-entender-a-lei">Conceitos básicos para entender a lei</h2>
+<p>Alguns termos aparecem o tempo todo quando se fala de LGPD:</p>
+<ul>
+<li><strong>Dado pessoal:</strong> qualquer informação que identifique ou permita identificar uma pessoa.</li>
+<li><strong>Dado pessoal sensível:</strong> dados sobre saúde, origem racial ou étnica, religião, opinião política, filiação sindical, vida sexual, dados genéticos ou biométricos. Exigem cuidado redobrado.</li>
+<li><strong>Titular:</strong> a pessoa a quem os dados se referem.</li>
+<li><strong>Tratamento:</strong> qualquer operação com dados, como coletar, armazenar, consultar, compartilhar ou excluir.</li>
+<li><strong>Controlador:</strong> quem decide sobre o tratamento. Em geral, a empresa dona do site ou do sistema.</li>
+<li><strong>Operador:</strong> quem trata os dados em nome do controlador, como a empresa de hospedagem, a plataforma de e-mail marketing ou o fornecedor do software.</li>
+</ul>
+<h2 id="bases-legais-toda-coleta-precisa-de-uma-justificativa">Bases legais: toda coleta precisa de uma justificativa</h2>
+<p>A LGPD lista hipóteses que autorizam o tratamento de dados, chamadas de <strong>bases legais</strong>. Entre elas estão o consentimento do titular, a execução de um contrato, o cumprimento de obrigação legal ou regulatória e o legítimo interesse do controlador, além de outras previstas na lei.</p>
+<p>O ponto prático é este: cada finalidade de uso precisa estar ligada a uma base legal adequada. O endereço de entrega de um pedido se justifica pela execução do contrato. A emissão de nota fiscal, por obrigação legal. O envio de newsletter costuma depender de consentimento. A escolha da base legal certa para cada caso é uma decisão que deve envolver orientação jurídica.</p>
+<p>Um erro comum é tratar o consentimento como resposta para tudo. Ele é uma das bases, nem sempre a mais adequada.</p>
+<h2 id="coletar-so-o-necessario">Coletar só o necessário</h2>
+<p>O princípio da necessidade pede que se colete o mínimo de dados para cumprir a finalidade. Em um site, isso significa revisar cada formulário:</p>
+<ul>
+<li>Um formulário de contato precisa de CPF? Quase nunca.</li>
+<li>Data de nascimento é usada para alguma coisa? Se não for, retire do formulário.</li>
+<li>O telefone é obrigatório ou opcional?</li>
+</ul>
+<p>Menos dados coletados significa menos risco em caso de vazamento. Essa revisão é mais fácil no planejamento, por isso vale incluí-la no <a href="/blog/como-fazer-briefing-de-software/">briefing do projeto</a>.</p>
+<h2 id="politica-de-privacidade-clara">Política de privacidade clara</h2>
+<p>A política de privacidade explica ao titular, em linguagem compreensível, como os dados são tratados. Ela deve dizer, no mínimo:</p>
+<ul>
+<li>quais dados são coletados e de que forma;</li>
+<li>para quais finalidades;</li>
+<li>com quem são compartilhados, como fornecedores e parceiros;</li>
+<li>por quanto tempo são guardados;</li>
+<li>quais são os direitos do titular e como exercê-los;</li>
+<li>quem é o controlador e como entrar em contato com o encarregado.</li>
+</ul>
+<p>Copiar a política de outro site é um problema: ela precisa descrever o que o seu site faz de fato, incluindo ferramentas de análise de tráfego e pixels de anúncios.</p>
+<h2 id="consentimento-e-banner-de-cookies">Consentimento e banner de cookies</h2>
+<p>Quando o consentimento for a base legal aplicável, ele precisa ser livre, informado e inequívoco, para uma finalidade específica. Caixas já marcadas e textos vagos como "aceito tudo" não atendem a esse padrão. O titular também precisa conseguir revogar o consentimento com facilidade.</p>
+<p>Cookies são pequenos arquivos que o site grava no navegador. Alguns são necessários ao funcionamento, como manter o usuário logado. Outros servem para análise de audiência ou publicidade e, em geral, dependem de consentimento.</p>
+<p>Um banner de cookies que funciona de verdade:</p>
+<ul>
+<li>separa os cookies por categoria (necessários, análise, marketing);</li>
+<li>só carrega os scripts opcionais depois que o visitante aceita;</li>
+<li>permite recusar com a mesma facilidade com que permite aceitar;</li>
+<li>deixa o visitante mudar a escolha depois.</li>
+</ul>
+<p>O erro mais frequente é o banner decorativo, que aparece quando os scripts de rastreamento já foram carregados. Controlar esses scripts também ajuda na <a href="/blog/velocidade-do-site-core-web-vitals/">velocidade do site</a>.</p>
+<h2 id="direitos-do-titular">Direitos do titular</h2>
+<p>A lei garante ao titular uma série de direitos, entre eles: confirmar se a empresa trata seus dados, acessar esses dados, corrigir informações incorretas, pedir a eliminação de dados tratados com base em consentimento, solicitar a portabilidade, saber com quem os dados foram compartilhados e revogar o consentimento.</p>
+<p>Para o sistema, isso significa conseguir localizar todos os dados de uma pessoa, exportá-los, corrigi-los e excluí-los ou anonimizá-los quando for o caso. Com dados espalhados em planilhas e sistemas sem ligação, um pedido simples vira trabalho manual demorado. Uma boa <a href="/blog/integracao-de-sistemas-api/">integração de sistemas via API</a> ajuda a manter os dados organizados e rastreáveis.</p>
+<h2 id="seguranca-e-controle-de-acesso">Segurança e controle de acesso</h2>
+<p>A LGPD exige medidas técnicas e administrativas para proteger os dados. Em um sistema, isso inclui, entre outros pontos:</p>
+<ul>
+<li><strong>Controle de acesso por perfil:</strong> cada pessoa vê só o que precisa para o seu trabalho. O atendente não precisa ver dados financeiros, por exemplo.</li>
+<li><strong>Autenticação forte:</strong> senhas armazenadas com hash, usando algoritmos próprios para isso (nunca em texto puro) e, para acessos administrativos, verificação em duas etapas.</li>
+<li><strong>Criptografia em trânsito:</strong> HTTPS em todo o site e em todas as integrações.</li>
+<li><strong>Backups protegidos</strong> e testados.</li>
+<li><strong>Atualizações de segurança</strong> do servidor, do framework e das bibliotecas.</li>
+</ul>
+<h3 id="registro-de-quem-acessa">Registro de quem acessa</h3>
+<p>Manter <strong>logs de acesso</strong>, ou seja, registros de quem consultou ou alterou determinado dado e quando, ajuda a investigar incidentes, identificar acessos indevidos e comprovar boas práticas. Esses registros também precisam ser protegidos.</p>
+<h2 id="incidentes-de-seguranca">Incidentes de segurança</h2>
+<p>Incidente é qualquer evento que comprometa a confidencialidade, a integridade ou a disponibilidade dos dados, como um vazamento, um acesso não autorizado ou a perda de um banco de dados.</p>
+<p>Quando um incidente pode causar risco ou dano relevante aos titulares, a lei prevê a comunicação à ANPD (Autoridade Nacional de Proteção de Dados) e aos titulares afetados. Por isso, o plano precisa existir antes: quem é acionado, como conter o problema, como avaliar o impacto e como registrar o ocorrido.</p>
+<h2 id="o-papel-do-encarregado-dpo">O papel do encarregado (DPO)</h2>
+<p>O <strong>encarregado</strong>, também chamado de DPO (<em>Data Protection Officer</em>), é a pessoa ou empresa indicada pelo controlador como canal de comunicação com os titulares e com a ANPD. Ele recebe pedidos e reclamações e orienta a equipe sobre boas práticas.</p>
+<p>A identidade e o contato do encarregado devem estar disponíveis de forma clara, normalmente na política de privacidade. Existem regras específicas e simplificadas para empresas de pequeno porte, que devem ser verificadas com orientação jurídica.</p>
+<h2 id="operadores-e-fornecedores">Operadores e fornecedores</h2>
+<p>Quase todo site e sistema depende de terceiros: hospedagem, e-mail, gateway de pagamento, CRM, serviço de IA. Cada um que trata dados em nome da empresa é um operador.</p>
+<p>Na prática, é preciso:</p>
+<ul>
+<li>mapear quais fornecedores recebem dados pessoais;</li>
+<li>verificar onde esses dados ficam armazenados e se há transferência para outros países;</li>
+<li>ter cláusulas contratuais sobre proteção de dados;</li>
+<li>confirmar as medidas de segurança do fornecedor.</li>
+</ul>
+<p>O mesmo vale para quem desenvolve o software. Ao escolher entre <a href="/blog/sistema-sob-medida-ou-software-pronto/">sistema sob medida ou software pronto</a>, pergunte quem tem acesso ao ambiente de produção e como funcionam os backups. Projetos com <a href="/blog/inteligencia-artificial-nas-empresas/">inteligência artificial</a> pedem o mesmo cuidado.</p>
+<h2 id="privacidade-desde-o-projeto">Privacidade desde o projeto</h2>
+<p>Adequar um sistema pronto costuma ser mais trabalhoso do que construir já com a privacidade em mente. Definir perfis de acesso, prazos de retenção e logs na fase de desenho evita retrabalho. Conheça as <a href="/#solucoes">soluções</a> que desenvolvemos para sites e sistemas.</p>
+<blockquote><p>Adequação à LGPD não é um documento publicado no rodapé do site. É a soma de decisões técnicas e de processo que precisam se sustentar no dia a dia.</p></blockquote>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="um-site-institucional-simples-precisa-se-adequar-a-lgpd">Um site institucional simples precisa se adequar à LGPD?</h3>
+<p>Sim, se ele coleta qualquer dado pessoal, mesmo que seja só nome e e-mail em um formulário de contato, ou se usa cookies de análise e publicidade. O esforço é menor do que em um sistema, mas política de privacidade, coleta mínima e banner de cookies continuam necessários.</p>
+<h3 id="basta-publicar-uma-politica-de-privacidade">Basta publicar uma política de privacidade?</h3>
+<p>Não. A política descreve o que acontece, mas o site e o sistema precisam funcionar de acordo com ela. Se a política diz que os cookies de marketing dependem de consentimento, eles não podem ser carregados antes do aceite.</p>
+<h3 id="quem-e-responsavel-se-o-fornecedor-do-sistema-vazar-os-dados">Quem é responsável se o fornecedor do sistema vazar os dados?</h3>
+<p>A lei distribui responsabilidades entre controlador e operador conforme o papel de cada um. Por isso, contratos claros e fornecedores com boas práticas são importantes. A análise de um caso concreto deve ser feita com orientação jurídica.</p>
+<h3 id="preciso-apagar-todos-os-dados-quando-o-cliente-pedir">Preciso apagar todos os dados quando o cliente pedir?</h3>
+<p>Nem sempre. Alguns dados precisam ser mantidos por obrigação legal, como registros fiscais. O sistema deve excluir ou anonimizar o que pode ser eliminado e guardar, protegido, o que a lei exige.</p>
+<p>Se você está planejando um site ou sistema e quer que a proteção de dados esteja no desenho desde o início, podemos conversar sobre o projeto. <a href="/#contato">Fale conosco</a> e conte o que precisa ser construído.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22LGPD%20em%20sites%20e%20sistemas%3A%20o%20que%20a%20lei%20exige%20na%20pr%C3%A1tica%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sistemas">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/sistema-sob-medida-ou-software-pronto/">Sistema sob medida ou software pronto: como decidir</a></h3>
+            <p class="post-card__excerpt">Sistema sob medida ou software pronto? Compare custos ao longo do tempo, aderência ao processo, dependência de fornecedor e quando o caminho híbrido é melhor.</p>
+          </article>
+          <article class="post-card" data-category="Automação">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-automatizar-processos-na-empresa/">Como automatizar processos na empresa, passo a passo</a></h3>
+            <p class="post-card__excerpt">Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</p>
+          </article>
+          <article class="post-card" data-category="Automação">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/whatsapp-business-api-integracao/">Integração com a API do WhatsApp Business: como funciona</a></h3>
+            <p class="post-card__excerpt">Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

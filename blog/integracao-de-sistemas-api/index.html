@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KGNMPTML28');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integração de sistemas via API: guia para gestores | PEROVANO</title>
+  <meta name="description" content="Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/integracao-de-sistemas-api/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Integração de sistemas via API: guia para gestores | PEROVANO">
+  <meta property="og:description" content="Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/integracao-de-sistemas-api/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/integracao-de-sistemas-api/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/integracao-de-sistemas-api/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Automação">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Integração de sistemas via API: guia para gestores",
+  "description": "Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Automação",
+  "keywords": "integração de sistemas via API, integração de sistemas, integração via API, webhook, API REST",
+  "wordCount": 1501,
+  "image": "https://lrperovano.com.br/blog/integracao-de-sistemas-api/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/integracao-de-sistemas-api/",
+  "url": "https://lrperovano.com.br/blog/integracao-de-sistemas-api/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Integração de sistemas via API: guia para gestores",
+      "item": "https://lrperovano.com.br/blog/integracao-de-sistemas-api/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Todo sistema pode ser integrado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quase sempre existe alguma forma, mas o esforço varia muito. Sistemas com API documentada são os mais simples. Sem API, pode ser preciso trocar arquivos, o que é menos confiável. A análise das APIs disponíveis é o que define a viabilidade antes de qualquer orçamento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre API e webhook?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Com a API, o seu sistema pergunta ao outro quando precisa de algo. Com o webhook, o outro sistema avisa o seu automaticamente quando um evento acontece. Os dois costumam ser usados juntos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que define o custo de uma integração?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O número de sistemas e de fluxos de dados, a qualidade da documentação das APIs, o volume de dados, as regras de transformação entre os sistemas e as exigências de monitoramento e reprocessamento. Integrações de mão dupla, em que os dois sistemas podem alterar o mesmo dado, são mais complexas que as de mão única."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Plataformas de automação sem código resolvem integrações?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para fluxos simples entre ferramentas populares, podem resolver bem. Para volume alto, regras complexas, sistemas sem conector pronto ou necessidade de controle fino sobre falhas, uma integração desenvolvida sob medida costuma ser mais adequada. Se a sua equipe ainda copia dados de um sistema para outro, provavelmente há espaço para integrar. A PEROVANO desenvolve integrações, automações e sistemas sob medida, apresentados em nossas soluções. Entre em contato para conversar sobre os sistemas envolvidos."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/#automacao">Automação</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Integração de sistemas via API: guia para gestores</h1>
+          <p class="post__lead">Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#o-que-e-uma-api-em-linguagem-simples">O que é uma API, em linguagem simples</a></li>
+              <li><a href="#por-que-integrar-sistemas">Por que integrar sistemas</a></li>
+              <li><a href="#tipos-de-integracao">Tipos de integração</a></li>
+              <li><a href="#o-que-perguntar-ao-fornecedor-do-sistema-atual">O que perguntar ao fornecedor do sistema atual</a></li>
+              <li><a href="#riscos-e-como-lidar-com-eles">Riscos e como lidar com eles</a></li>
+              <li><a href="#como-o-projeto-de-integracao-costuma-ser-conduzido">Como o projeto de integração costuma ser conduzido</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Integração de sistemas via API é a forma de fazer dois softwares trocarem dados automaticamente, sem ninguém copiar informação de uma tela para outra. Quando um pedido entra na loja virtual, por exemplo, ele pode aparecer no ERP (sistema de gestão), gerar a nota fiscal e atualizar o estoque sem redigitação.</p>
+<p>Para o gestor, o benefício é direto: menos trabalho manual, menos erros e dados iguais em todos os sistemas. A viabilidade depende principalmente de uma coisa: se os sistemas envolvidos oferecem uma API documentada e estável.</p>
+<p>Antes de contratar o projeto, vale entender como uma API funciona, quais tipos de integração existem, o que perguntar ao fornecedor e quais riscos prever.</p>
+<h2 id="o-que-e-uma-api-em-linguagem-simples">O que é uma API, em linguagem simples</h2>
+<p>API é a sigla em inglês para interface de programação de aplicações. É um conjunto de regras que um sistema oferece para que outros sistemas conversem com ele.</p>
+<p>Funciona como o balcão de atendimento de uma empresa. Quem chega não entra no depósito: faz o pedido no balcão, em um formato combinado, e recebe uma resposta. Na integração, o sistema A envia uma requisição ao sistema B, como "envie os pedidos de hoje" ou "cadastre este cliente", e o sistema B responde com os dados ou com uma confirmação. Tudo acontece pela internet, sem intervenção humana.</p>
+<p>A documentação da API é o manual que descreve quais pedidos são aceitos, quais dados precisam ser enviados e o que volta como resposta. Sem documentação clara, a integração fica mais lenta de construir e mais arriscada.</p>
+<h2 id="por-que-integrar-sistemas">Por que integrar sistemas</h2>
+<ul>
+<li><strong>Eliminar redigitação</strong>: o mesmo dado deixa de ser digitado em dois ou três lugares.</li>
+<li><strong>Dados consistentes</strong>: preço, estoque, cadastro e status de pedido ficam iguais em todos os sistemas, sem versões divergentes.</li>
+<li><strong>Velocidade</strong>: a informação chega ao outro sistema em pouco tempo, em vez de esperar alguém fazer a transferência.</li>
+<li><strong>Menos erros</strong>: digitação manual gera números trocados, campos esquecidos e cadastros duplicados.</li>
+<li><strong>Base para automação</strong>: integrações permitem automatizar processos que atravessam vários sistemas. O guia sobre <a href="/blog/como-automatizar-processos-na-empresa/">como automatizar processos na empresa</a> traz exemplos.</li>
+</ul>
+<p>Integrações também tornam viável o caminho híbrido: manter softwares prontos de mercado e desenvolver sob medida só o que falta, como discutido em <a href="/blog/sistema-sob-medida-ou-software-pronto/">sistema sob medida ou software pronto</a>.</p>
+<p>Um exemplo de produto que depende de integração é o PaceOn, treinador de corrida com IA desenvolvido pela PEROVANO. Ele se conecta ao Strava e recalcula o plano de treinos a cada treino realizado. Veja outros <a href="/#projetos">projetos</a>.</p>
+<h2 id="tipos-de-integracao">Tipos de integração</h2>
+<h3 id="api-rest">API REST</h3>
+<p>REST é o estilo de API mais comum em sistemas web. O sistema disponibiliza endereços, chamados <em>endpoints</em>, como um para clientes e outro para pedidos. O outro sistema consulta ou envia dados a esses endereços usando o mesmo protocolo da web, o HTTP. Os dados costumam trafegar em JSON, um formato de texto estruturado fácil de processar por programas.</p>
+<p>Nesse modelo, um sistema pergunta ao outro quando precisa. Quando a pergunta é repetida de tempos em tempos para verificar se há novidades, a técnica é chamada de consulta periódica, ou <em>polling</em>.</p>
+<h3 id="webhooks">Webhooks</h3>
+<p>Webhook é o caminho inverso. Em vez de o seu sistema perguntar o tempo todo, o sistema de origem avisa automaticamente quando algo acontece. Por exemplo: a plataforma de pagamento envia um aviso ao seu sistema assim que um pagamento é confirmado.</p>
+<p>É mais eficiente que a consulta periódica, mas exige que o sistema que recebe esteja preparado para isso: estar disponível para receber os avisos, validar que vieram mesmo do remetente esperado e lidar com avisos repetidos ou fora de ordem.</p>
+<p>Muitas integrações combinam os dois: o webhook avisa que algo mudou e a API REST é usada para buscar os detalhes.</p>
+<h3 id="arquivos-e-planilhas-como-ultimo-recurso">Arquivos e planilhas, como último recurso</h3>
+<p>Quando o sistema não tem API, resta a troca de arquivos. Um sistema exporta uma planilha ou um arquivo CSV, e o outro importa, manualmente ou por uma rotina agendada.</p>
+<p>Funciona, mas tem limitações: os dados não chegam em tempo real, o formato do arquivo pode mudar sem aviso e as falhas são mais difíceis de detectar. Use como solução temporária ou quando não houver alternativa. Acessar diretamente o banco de dados de outro sistema também costuma ser desaconselhado, porque ignora as regras de negócio do sistema de origem e pode quebrar a cada atualização.</p>
+<h2 id="o-que-perguntar-ao-fornecedor-do-sistema-atual">O que perguntar ao fornecedor do sistema atual</h2>
+<ol>
+<li>O sistema tem API? Ela está incluída no plano contratado ou é cobrada à parte?</li>
+<li>Onde está a documentação, e ela cobre as operações necessárias, como consultar, criar e atualizar registros?</li>
+<li>Existem webhooks para os eventos importantes, como novo pedido, pagamento confirmado ou alteração de cadastro?</li>
+<li>Quais são os limites de uso, como o número de requisições por minuto ou por dia?</li>
+<li>Como funciona a autenticação, ou seja, como a integração prova que tem permissão para acessar os dados?</li>
+<li>Existe ambiente de testes (<em>sandbox</em>), separado dos dados reais?</li>
+<li>Como são comunicadas as mudanças de versão da API, e com que antecedência versões antigas são desativadas?</li>
+</ol>
+<p>As respostas mudam bastante o esforço do projeto. Uma API bem documentada, com ambiente de testes e webhooks, reduz o trabalho.</p>
+<h2 id="riscos-e-como-lidar-com-eles">Riscos e como lidar com eles</h2>
+<h3 id="limites-de-uso">Limites de uso</h3>
+<p>A maioria das APIs limita quantas requisições podem ser feitas em determinado período, o chamado <em>rate limit</em>. Uma integração que ignora esses limites pode ser bloqueada temporariamente, às vezes justo no pico de movimento. O projeto precisa respeitar os limites, organizar o envio em filas e evitar consultas desnecessárias.</p>
+<h3 id="mudancas-de-versao">Mudanças de versão</h3>
+<p>Fornecedores evoluem suas APIs e, de tempos em tempos, desativam versões antigas. Se ninguém acompanha esses avisos, a integração pode parar de funcionar de um dia para o outro. Essa atualização precisa estar no plano de manutenção.</p>
+<h3 id="falhas-e-reprocessamento">Falhas e reprocessamento</h3>
+<p>Sistemas ficam fora do ar, a conexão cai, um dado chega em formato inesperado. Uma integração bem construída registra cada tentativa, tenta de novo quando a falha é temporária e guarda o que não pôde ser processado para tratamento posterior.</p>
+<p>Ela também precisa evitar duplicidade. Se um pedido for reenviado por causa de uma nova tentativa, ele não pode ser criado duas vezes. Esse cuidado tem nome técnico: idempotência.</p>
+<h3 id="seguranca-de-credenciais">Segurança de credenciais</h3>
+<p>Para acessar uma API, a integração usa credenciais, como chaves de acesso ou <em>tokens</em>. Elas dão acesso aos dados da empresa e devem ser tratadas como senhas: guardadas em local seguro, nunca em planilhas ou mensagens, com o mínimo de permissões necessárias e trocadas quando alguém com acesso deixa o projeto. Como integrações costumam trafegar dados pessoais, vale considerar também a <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a>.</p>
+<blockquote><p>Uma integração não termina na entrega. Ela depende de sistemas de terceiros que mudam, e precisa de monitoramento e manutenção contínuos.</p></blockquote>
+<h2 id="como-o-projeto-de-integracao-costuma-ser-conduzido">Como o projeto de integração costuma ser conduzido</h2>
+<ol>
+<li><strong>Levantamento</strong>: quais dados precisam circular, entre quais sistemas, em qual direção e com que frequência.</li>
+<li><strong>Análise das APIs</strong>: leitura da documentação e verificação de limites, autenticação e lacunas. É aqui que aparecem as surpresas, como um dado que a API não fornece.</li>
+<li><strong>Mapeamento de dados</strong>: definição de como cada campo de um sistema corresponde ao do outro. Um "cliente" pode ter estruturas bem diferentes em cada sistema.</li>
+<li><strong>Desenvolvimento e testes</strong>: construção da integração e testes no ambiente de testes, incluindo cenários de erro.</li>
+<li><strong>Carga inicial</strong>: quando necessário, sincronização dos dados que já existem antes de a integração entrar em operação.</li>
+<li><strong>Entrada em produção acompanhada</strong>: liberação gradual, com monitoramento próximo nos primeiros dias.</li>
+<li><strong>Monitoramento e manutenção</strong>: alertas para falhas, forma de reprocessar o que deu errado e atualização quando as APIs mudarem.</li>
+</ol>
+<p>Um <a href="/blog/como-fazer-briefing-de-software/">briefing bem feito</a> acelera as primeiras etapas. Para integrações com o WhatsApp, há particularidades descritas no artigo sobre <a href="/blog/whatsapp-business-api-integracao/">integração com a API do WhatsApp Business</a>.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="todo-sistema-pode-ser-integrado">Todo sistema pode ser integrado?</h3>
+<p>Quase sempre existe alguma forma, mas o esforço varia muito. Sistemas com API documentada são os mais simples. Sem API, pode ser preciso trocar arquivos, o que é menos confiável. A análise das APIs disponíveis é o que define a viabilidade antes de qualquer orçamento.</p>
+<h3 id="qual-a-diferenca-entre-api-e-webhook">Qual a diferença entre API e webhook?</h3>
+<p>Com a API, o seu sistema pergunta ao outro quando precisa de algo. Com o webhook, o outro sistema avisa o seu automaticamente quando um evento acontece. Os dois costumam ser usados juntos.</p>
+<h3 id="o-que-define-o-custo-de-uma-integracao">O que define o custo de uma integração?</h3>
+<p>O número de sistemas e de fluxos de dados, a qualidade da documentação das APIs, o volume de dados, as regras de transformação entre os sistemas e as exigências de monitoramento e reprocessamento.</p>
+<p>Integrações de mão dupla, em que os dois sistemas podem alterar o mesmo dado, são mais complexas que as de mão única.</p>
+<h3 id="plataformas-de-automacao-sem-codigo-resolvem-integracoes">Plataformas de automação sem código resolvem integrações?</h3>
+<p>Para fluxos simples entre ferramentas populares, podem resolver bem. Para volume alto, regras complexas, sistemas sem conector pronto ou necessidade de controle fino sobre falhas, uma integração desenvolvida sob medida costuma ser mais adequada.</p>
+<p>Se a sua equipe ainda copia dados de um sistema para outro, provavelmente há espaço para integrar. A PEROVANO desenvolve integrações, automações e sistemas sob medida, apresentados em <a href="/#solucoes">nossas soluções</a>. <a href="/#contato">Entre em contato</a> para conversar sobre os sistemas envolvidos.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Integra%C3%A7%C3%A3o%20de%20sistemas%20via%20API%3A%20guia%20para%20gestores%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Automação">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-automatizar-processos-na-empresa/">Como automatizar processos na empresa, passo a passo</a></h3>
+            <p class="post-card__excerpt">Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</p>
+          </article>
+          <article class="post-card" data-category="Automação">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/whatsapp-business-api-integracao/">Integração com a API do WhatsApp Business: como funciona</a></h3>
+            <p class="post-card__excerpt">Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</p>
+          </article>
+          <article class="post-card" data-category="Inteligência artificial">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/inteligencia-artificial-nas-empresas/">Como usar inteligência artificial na empresa, na prática</a></h3>
+            <p class="post-card__excerpt">Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

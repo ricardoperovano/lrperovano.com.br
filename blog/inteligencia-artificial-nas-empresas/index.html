@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KGNMPTML28');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como usar inteligência artificial na empresa, na prática | PEROVANO</title>
+  <meta name="description" content="Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Como usar inteligência artificial na empresa, na prática | PEROVANO">
+  <meta property="og:description" content="Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Inteligência artificial">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Como usar inteligência artificial na empresa, na prática",
+  "description": "Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Inteligência artificial",
+  "keywords": "como usar inteligência artificial na empresa, inteligência artificial nas empresas, IA aplicada a negócios, IA para atendimento",
+  "wordCount": 1542,
+  "image": "https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/",
+  "url": "https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Como usar inteligência artificial na empresa, na prática",
+      "item": "https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Preciso treinar um modelo próprio para usar IA na empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na maioria dos casos, não. Modelos prontos, combinados com RAG e boas instruções, resolvem a maior parte das necessidades de empresas. Treinar ou ajustar um modelo só faz sentido em situações específicas, com muito dado próprio e um objetivo bem definido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A IA vai substituir minha equipe de atendimento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O uso mais comum é tirar das pessoas as tarefas repetitivas, como classificar, resumir e responder dúvidas simples. Casos complexos, negociações e situações sensíveis continuam precisando de atendimento humano. O resultado esperado é a equipe dedicar mais tempo ao que exige julgamento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa implementar inteligência artificial na empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do escopo, da integração com os sistemas existentes e do volume de uso. Há o custo de desenvolvimento, que é concentrado no início, e o custo recorrente de uso do modelo, que varia com o volume. Um piloto pequeno ajuda a estimar os dois antes de um investimento maior. Se você tem um processo que parece bom candidato para IA e quer avaliar se faz sentido, podemos conversar sobre o cenário e o formato de um piloto. Entre em contato e conte como o processo funciona hoje."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/#inteligencia-artificial">Inteligência artificial</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Como usar inteligência artificial na empresa, na prática</h1>
+          <p class="post__lead">Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#o-que-a-ia-generativa-faz-bem">O que a IA generativa faz bem</a></li>
+              <li><a href="#casos-praticos-de-ia-na-empresa">Casos práticos de IA na empresa</a></li>
+              <li><a href="#quando-nao-usar-inteligencia-artificial">Quando não usar inteligência artificial</a></li>
+              <li><a href="#cuidados-antes-de-colocar-ia-em-producao">Cuidados antes de colocar IA em produção</a></li>
+              <li><a href="#como-comecar-com-um-piloto-pequeno">Como começar com um piloto pequeno</a></li>
+              <li><a href="#ia-dentro-do-sistema-nao-ao-lado-dele">IA dentro do sistema, não ao lado dele</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Usar inteligência artificial na empresa dá resultado quando ela resolve uma tarefa específica, repetitiva e baseada em texto: responder dúvidas com base nos documentos internos, resumir e classificar atendimentos, extrair dados de documentos e ajudar na redação. Nesses casos, a IA reduz o trabalho manual e deixa as pessoas com as decisões que exigem contexto.</p>
+<p>Ela não é a melhor escolha para tudo. Processos com regras fixas, baixo volume ou alto risco sem revisão humana costumam funcionar melhor com automação tradicional ou com o processo atual bem organizado.</p>
+<p>O caminho mais seguro é começar com um piloto pequeno, em um único processo, com uma métrica definida de antemão. Se o piloto mostrar ganho real, aí sim faz sentido ampliar.</p>
+<h2 id="o-que-a-ia-generativa-faz-bem">O que a IA generativa faz bem</h2>
+<p>Quando se fala em IA nas empresas hoje, quase sempre se trata de <strong>modelos de linguagem</strong> (LLMs, na sigla em inglês): sistemas treinados com grandes volumes de texto que leem, resumem, classificam e escrevem em linguagem natural. Eles lidam bem com informação desorganizada, como e-mails, mensagens e contratos.</p>
+<p>Por outro lado, eles não "sabem" nada sobre a sua empresa, a menos que essa informação seja entregue a eles no momento da pergunta. Também podem errar com muita confiança. Esses dois pontos definem onde a IA ajuda e onde exige cuidado.</p>
+<h2 id="casos-praticos-de-ia-na-empresa">Casos práticos de IA na empresa</h2>
+<h3 id="assistente-que-responde-com-base-nos-documentos-da-empresa">Assistente que responde com base nos documentos da empresa</h3>
+<p>Um dos usos mais úteis é um assistente que responde perguntas usando manuais, políticas, tabelas de preço, contratos-padrão e a base de conhecimento do suporte. A técnica mais comum para isso se chama <strong>RAG</strong> (<em>retrieval-augmented generation</em>, ou geração aumentada por recuperação).</p>
+<p>Em linguagem simples, funciona assim:</p>
+<ol>
+<li>Os documentos da empresa são divididos em trechos e indexados para busca.</li>
+<li>Quando alguém faz uma pergunta, o sistema busca os trechos mais relevantes.</li>
+<li>Esses trechos são enviados ao modelo junto com a pergunta, com a instrução de responder só com base neles.</li>
+<li>A resposta pode indicar de qual documento veio a informação, para conferência.</li>
+</ol>
+<p>A vantagem é que o modelo responde com o conteúdo atualizado da empresa, sem precisar ser treinado de novo. Se a política mudar, basta atualizar o documento. O ponto de atenção é a qualidade da base: documentos desatualizados ou contraditórios geram respostas desatualizadas ou contraditórias.</p>
+<h3 id="triagem-e-resumo-de-atendimentos">Triagem e resumo de atendimentos</h3>
+<p>Em canais com muito volume, como WhatsApp, e-mail e chat, a IA pode ler a mensagem que chega, identificar o assunto, sugerir a prioridade e encaminhar para a fila certa. Ao final do atendimento, pode gerar um resumo para o histórico do cliente.</p>
+<p>Isso aparece em plataformas como o VipDesk, desenvolvido pela PEROVANO, que centraliza WhatsApp, Instagram, e-mail e telefonia com CRM e automação com IA (veja em <a href="/#projetos">projetos</a>). Se o canal principal da empresa é o WhatsApp, vale entender antes como funciona a <a href="/blog/whatsapp-business-api-integracao/">integração com a API do WhatsApp Business</a>.</p>
+<h3 id="extracao-de-dados-de-documentos">Extração de dados de documentos</h3>
+<p>Notas fiscais, pedidos, comprovantes, currículos e formulários preenchidos chegam em formatos variados. A IA consegue ler esses documentos e devolver os campos que interessam em formato estruturado, prontos para entrar no sistema. O ganho está em eliminar a digitação manual.</p>
+<p>O cuidado aqui é validar o que foi extraído. Campos críticos, como valores e CNPJ, devem passar por regras de conferência automática (soma, dígito verificador, formato) e, quando houver divergência, por revisão humana.</p>
+<h3 id="apoio-a-redacao">Apoio à redação</h3>
+<p>Rascunhos de propostas, respostas a e-mails, descrições de produtos e relatórios internos são tarefas em que a IA economiza tempo. A pessoa revisa, ajusta o tom e aprova. Funciona bem quando há modelos de referência e orientações claras sobre o estilo da empresa.</p>
+<h2 id="quando-nao-usar-inteligencia-artificial">Quando não usar inteligência artificial</h2>
+<p>Nem todo problema precisa de IA. Em alguns casos, ela adiciona custo e incerteza sem benefício.</p>
+<ul>
+<li><strong>Regras determinísticas.</strong> Se a decisão segue regras fixas ("pedido acima de tal valor vai para aprovação"), um código simples resolve de forma previsível e auditável. Isso é <a href="/blog/como-automatizar-processos-na-empresa/">automação de processos</a> tradicional, não IA.</li>
+<li><strong>Baixo volume.</strong> Se a tarefa acontece poucas vezes por semana, o esforço de construir, testar e manter a solução pode não se pagar.</li>
+<li><strong>Risco alto sem revisão humana.</strong> Decisões de crédito, diagnósticos, pareceres jurídicos ou mensagens enviadas a clientes sem conferência não devem depender só da resposta de um modelo.</li>
+<li><strong>Dados que já estão estruturados.</strong> Se a informação já está em um banco de dados ou em outro sistema, o caminho mais confiável costuma ser uma <a href="/blog/integracao-de-sistemas-api/">integração via API</a>, não um modelo interpretando texto.</li>
+</ul>
+<p>Uma pergunta útil para decidir: se a resposta errada chegar ao cliente, qual é o impacto? Quanto maior o impacto, mais forte precisa ser o controle.</p>
+<h2 id="cuidados-antes-de-colocar-ia-em-producao">Cuidados antes de colocar IA em produção</h2>
+<h3 id="erros-e-alucinacoes">Erros e alucinações</h3>
+<p>Modelos de linguagem podem gerar respostas plausíveis e erradas, o que se chama de <strong>alucinação</strong>. Isso é reduzido com boas técnicas, como RAG, instruções claras e limitação do escopo, mas não é eliminado. O sistema precisa ser desenhado considerando que erros vão acontecer: permitir que o assistente diga "não sei", mostrar a fonte da resposta e registrar as interações para análise.</p>
+<h3 id="revisao-humana">Revisão humana</h3>
+<p>Em tarefas sensíveis, a IA deve sugerir e a pessoa deve decidir. Um padrão comum é a IA preparar o rascunho ou a classificação e um atendente aprovar com um clique. Com o tempo, os dados de aprovação e correção mostram onde o modelo acerta e onde precisa de ajustes.</p>
+<h3 id="dados-sensiveis-e-lgpd">Dados sensíveis e LGPD</h3>
+<p>Enviar dados de clientes para um serviço de IA é um tratamento de dados pessoais e precisa seguir a LGPD. Isso envolve saber quais dados são enviados, se o fornecedor usa esses dados para treinar modelos, onde eles ficam armazenados e por quanto tempo. Sempre que possível, envie só o necessário e remova informações que não fazem diferença para a tarefa. O tema é tratado com mais detalhe no artigo sobre <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a>.</p>
+<h3 id="custo-por-uso">Custo por uso</h3>
+<p>A maioria dos serviços de IA cobra por uso, geralmente pelo volume de texto processado na entrada e na saída. O custo cresce com o número de requisições, o tamanho dos documentos enviados e o modelo escolhido. Modelos maiores costumam ser mais caros e nem sempre são necessários. Estimar o volume no piloto evita surpresas quando a solução for ampliada.</p>
+<h2 id="como-comecar-com-um-piloto-pequeno">Como começar com um piloto pequeno</h2>
+<p>Um piloto bem feito responde a uma pergunta simples: essa solução economiza tempo ou melhora a qualidade o suficiente para justificar o custo?</p>
+<ol>
+<li><strong>Escolha um processo.</strong> Prefira algo repetitivo, com volume razoável e risco controlado, como a triagem de mensagens ou as respostas internas sobre políticas da empresa.</li>
+<li><strong>Meça a situação atual.</strong> Tempo médio por tarefa, volume mensal, taxa de erro ou retrabalho. Sem esse número, não há como comparar depois.</li>
+<li><strong>Defina o critério de sucesso.</strong> Por exemplo: reduzir o tempo de triagem, ou aumentar a proporção de dúvidas internas resolvidas sem acionar outra pessoa.</li>
+<li><strong>Limite o escopo.</strong> Um tipo de documento, uma fila de atendimento, um grupo de usuários.</li>
+<li><strong>Mantenha revisão humana no início.</strong> Isso protege o cliente e gera dados para avaliar a qualidade.</li>
+<li><strong>Avalie e decida.</strong> Ao final do período combinado, compare com a situação inicial e decida se amplia, ajusta ou encerra.</li>
+</ol>
+<p>Um piloto assim segue a mesma lógica de um <a href="/blog/mvp-como-tirar-ideia-de-sistema-do-papel/">MVP</a>: construir o mínimo que permite aprender, com dados reais. Para alinhar expectativas com quem vai desenvolver, um bom <a href="/blog/como-fazer-briefing-de-software/">briefing</a> ajuda a registrar o processo atual, os dados disponíveis e o resultado esperado.</p>
+<blockquote><p>A pergunta certa não é "onde dá para usar IA?", e sim "qual tarefa custa mais tempo hoje e pode ser verificada com facilidade?".</p></blockquote>
+<h2 id="ia-dentro-do-sistema-nao-ao-lado-dele">IA dentro do sistema, não ao lado dele</h2>
+<p>As soluções que funcionam melhor ficam integradas ao fluxo de trabalho. Um resumo de atendimento é mais útil no histórico do cliente, dentro do CRM, do que em uma ferramenta separada.</p>
+<p>Um exemplo é o PaceOn, treinador de corrida com IA desenvolvido pela PEROVANO, que se conecta ao Strava e recalcula o plano a cada treino. A IA não fica isolada: ela usa os dados que chegam pela integração e devolve um resultado dentro do próprio produto. Você pode conhecer outras <a href="/#solucoes">soluções</a> com essa abordagem.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="preciso-treinar-um-modelo-proprio-para-usar-ia-na-empresa">Preciso treinar um modelo próprio para usar IA na empresa?</h3>
+<p>Na maioria dos casos, não. Modelos prontos, combinados com RAG e boas instruções, resolvem a maior parte das necessidades de empresas. Treinar ou ajustar um modelo só faz sentido em situações específicas, com muito dado próprio e um objetivo bem definido.</p>
+<h3 id="a-ia-vai-substituir-minha-equipe-de-atendimento">A IA vai substituir minha equipe de atendimento?</h3>
+<p>O uso mais comum é tirar das pessoas as tarefas repetitivas, como classificar, resumir e responder dúvidas simples. Casos complexos, negociações e situações sensíveis continuam precisando de atendimento humano. O resultado esperado é a equipe dedicar mais tempo ao que exige julgamento.</p>
+<h3 id="quanto-custa-implementar-inteligencia-artificial-na-empresa">Quanto custa implementar inteligência artificial na empresa?</h3>
+<p>Depende do escopo, da integração com os sistemas existentes e do volume de uso. Há o custo de desenvolvimento, que é concentrado no início, e o custo recorrente de uso do modelo, que varia com o volume. Um piloto pequeno ajuda a estimar os dois antes de um investimento maior.</p>
+<p>Se você tem um processo que parece bom candidato para IA e quer avaliar se faz sentido, podemos conversar sobre o cenário e o formato de um piloto. <a href="/#contato">Entre em contato</a> e conte como o processo funciona hoje.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Como%20usar%20intelig%C3%AAncia%20artificial%20na%20empresa%2C%20na%20pr%C3%A1tica%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sites">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/o-que-e-landing-page/">O que é landing page e quando usar na sua empresa</a></h3>
+            <p class="post-card__excerpt">Landing page é uma página com um único objetivo, como gerar contatos ou vendas. Veja a diferença para o site, quando usar, elementos essenciais e como medir.</p>
+          </article>
+          <article class="post-card" data-category="Sites">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/quanto-custa-um-site-profissional/">Quanto custa um site profissional e o que define o preço</a></h3>
+            <p class="post-card__excerpt">Veja o que forma o preço de um site profissional: tipo, páginas, conteúdo, design, integrações, SEO e manutenção, e como comparar propostas com segurança.</p>
+          </article>
+          <article class="post-card" data-category="Sites">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/seo-para-sites-de-empresas/">SEO para sites de empresas: o que é preciso para aparecer</a></h3>
+            <p class="post-card__excerpt">Saiba o que um site de empresa precisa para aparecer no Google: indexação, Search Console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
