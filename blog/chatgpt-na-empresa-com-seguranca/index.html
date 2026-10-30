@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como usar o ChatGPT na empresa com segurança | PEROVANO</title>
+  <meta name="description" content="Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Como usar o ChatGPT na empresa com segurança | PEROVANO">
+  <meta property="og:description" content="Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Inteligência artificial">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Como usar o ChatGPT na empresa com segurança",
+  "description": "Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Inteligência artificial",
+  "keywords": "ChatGPT na empresa com segurança, política de uso de IA na empresa, riscos do ChatGPT para empresas, uso seguro de inteligência artificial",
+  "wordCount": 1446,
+  "image": "https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/",
+  "url": "https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inteligência artificial",
+      "item": "https://lrperovano.com.br/blog/categoria/inteligencia-artificial/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Como usar o ChatGPT na empresa com segurança",
+      "item": "https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Devo proibir o ChatGPT na empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A proibição total costuma levar ao uso escondido, em contas pessoais e sem orientação. Em geral, funciona melhor liberar usos seguros, definir o que não pode ser enviado e oferecer uma ferramenta aprovada para o trabalho."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O plano corporativo resolve todos os riscos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Ele melhora o controle das contas e as condições contratuais sobre os dados, mas não impede respostas erradas, nem que alguém envie uma informação que não deveria. A política de uso e a revisão humana continuam necessárias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso usar IA para analisar dados de clientes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode, desde que haja base legal na LGPD, que a ferramenta tenha condições contratuais adequadas e que só os dados necessários sejam enviados. Sempre que possível, anonimize os dados antes da análise. Se a sua empresa quer organizar o uso de IA ou levar esse uso para dentro dos sistemas, com controle de dados e de acesso, podemos ajudar a avaliar o cenário. Conheça nossas soluções ou entre em contato para conversar."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/inteligencia-artificial/">Inteligência artificial</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Como usar o ChatGPT na empresa com segurança</h1>
+          <p class="post__lead">Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#usos-produtivos-no-dia-a-dia">Usos produtivos no dia a dia</a></li>
+              <li><a href="#os-riscos-de-usar-ia-sem-orientacao">Os riscos de usar IA sem orientação</a></li>
+              <li><a href="#politica-interna-de-uso-de-ia">Política interna de uso de IA</a></li>
+              <li><a href="#conta-pessoal-gratuita-ou-plano-corporativo">Conta pessoal gratuita ou plano corporativo</a></li>
+              <li><a href="#lgpd-e-o-uso-de-ia">LGPD e o uso de IA</a></li>
+              <li><a href="#quando-faz-sentido-integrar-a-ia-aos-sistemas">Quando faz sentido integrar a IA aos sistemas</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Usar o ChatGPT e outras ferramentas de IA na empresa com segurança depende de três decisões: o que pode e o que não pode ser enviado a essas ferramentas, quais ferramentas e planos são aprovados para uso profissional e em que situações a resposta precisa de revisão humana antes de ser usada.</p>
+<p>A maioria das empresas já usa IA, com ou sem autorização. Colaboradores colam e-mails, planilhas e contratos em ferramentas públicas para ganhar tempo. Proibir tudo raramente funciona e empurra o uso para a informalidade. O caminho mais eficaz é orientar: liberar os usos produtivos, bloquear os arriscados e oferecer ferramentas adequadas.</p>
+<p>Isso se resolve com uma política interna curta, um treinamento rápido e, quando o uso cresce, com a escolha de planos corporativos ou com a integração da IA aos sistemas da empresa.</p>
+<h2 id="usos-produtivos-no-dia-a-dia">Usos produtivos no dia a dia</h2>
+<p>Ferramentas como ChatGPT, Claude, Gemini e Copilot são baseadas em modelos de linguagem, sistemas treinados com grandes volumes de texto que leem, resumem e escrevem em linguagem natural. No trabalho do dia a dia, elas ajudam em tarefas como:</p>
+<ul>
+<li>Rascunhar e-mails, comunicados e respostas a clientes.</li>
+<li>Resumir textos longos, atas e relatórios.</li>
+<li>Revisar gramática, clareza e tom de um texto.</li>
+<li>Gerar ideias para campanhas, títulos e roteiros.</li>
+<li>Explicar um conceito técnico ou uma fórmula de planilha.</li>
+<li>Traduzir textos e adaptar a linguagem para públicos diferentes.</li>
+<li>Apoiar a escrita de código, com revisão de quem conhece o sistema.</li>
+</ul>
+<p>O ponto em comum é que a pessoa continua responsável pelo resultado. A IA produz um rascunho, e quem usa revisa, ajusta e decide. O artigo sobre <a href="/blog/inteligencia-artificial-nas-empresas/">inteligência artificial nas empresas</a> mostra os usos que vão além do uso individual, integrados aos processos.</p>
+<h2 id="os-riscos-de-usar-ia-sem-orientacao">Os riscos de usar IA sem orientação</h2>
+<h3 id="vazamento-de-dados-confidenciais-e-pessoais">Vazamento de dados confidenciais e pessoais</h3>
+<p>É o risco mais imediato. Quando alguém cola em uma ferramenta pública o contrato de um cliente, a planilha de salários, a estratégia comercial ou o código-fonte do sistema, essa informação sai do controle da empresa. Dependendo do plano e das configurações, ela pode ficar armazenada pelo fornecedor e, em alguns casos, ser usada para melhorar os modelos.</p>
+<p>Quando o texto contém dados pessoais, como nome, CPF, telefone ou informações de saúde de clientes e colaboradores, o problema também é legal: enviar esses dados a um serviço externo é um tratamento de dados pessoais e precisa seguir a LGPD.</p>
+<h3 id="respostas-erradas-apresentadas-com-confianca">Respostas erradas apresentadas com confiança</h3>
+<p>Modelos de linguagem podem gerar informações falsas com aparência de verdade, o que se chama de alucinação. Podem citar uma lei que não existe, errar um cálculo ou inventar uma referência. O texto parece correto, e isso faz com que o erro passe despercebido. Em temas jurídicos, fiscais, financeiros e técnicos, a revisão por quem conhece o assunto é obrigatória.</p>
+<h3 id="direitos-autorais-e-propriedade-intelectual">Direitos autorais e propriedade intelectual</h3>
+<p>Textos, imagens e códigos gerados por IA podem se parecer com conteúdo protegido. O tema ainda está em discussão em vários países, e as regras dos fornecedores mudam. Para materiais de uso público, como campanhas, peças de marketing e produtos, vale revisar a originalidade e conferir os termos de uso da ferramenta. Enviar a uma IA material de terceiros protegido por contrato de confidencialidade também pode violar esse contrato.</p>
+<h3 id="dependencia-e-perda-de-conhecimento">Dependência e perda de conhecimento</h3>
+<p>Se uma tarefa importante passa a depender de alguém que "pede para a IA" sem entender o resultado, a empresa perde a capacidade de conferir o que está sendo entregue. A IA deve acelerar quem sabe fazer, e não substituir o conhecimento necessário para revisar.</p>
+<h2 id="politica-interna-de-uso-de-ia">Política interna de uso de IA</h2>
+<p>Uma política de uso não precisa ser longa. Uma ou duas páginas, em linguagem simples, resolvem a maior parte dos casos. Ela deve responder a quatro perguntas.</p>
+<h3 id="o-que-pode-ser-enviado">O que pode ser enviado</h3>
+<ul>
+<li>Textos públicos ou de uso geral, sem identificação de clientes.</li>
+<li>Rascunhos próprios para revisão de escrita.</li>
+<li>Dúvidas conceituais e pedidos de explicação.</li>
+<li>Dados anonimizados, em que não é possível identificar pessoas nem clientes.</li>
+</ul>
+<h3 id="o-que-nao-pode-ser-enviado">O que não pode ser enviado</h3>
+<ul>
+<li>Dados pessoais de clientes, colaboradores ou fornecedores.</li>
+<li>Contratos, propostas e documentos marcados como confidenciais.</li>
+<li>Informações financeiras não divulgadas, estratégias e dados de vendas.</li>
+<li>Senhas, chaves de acesso, tokens e credenciais de sistemas.</li>
+<li>Código-fonte de sistemas internos, salvo em ferramenta aprovada para isso.</li>
+</ul>
+<h3 id="quais-ferramentas-sao-aprovadas">Quais ferramentas são aprovadas</h3>
+<p>Liste as ferramentas e os planos autorizados. Defina se o uso deve ser feito com conta corporativa e quem administra essas contas. Ferramentas fora da lista devem passar por avaliação antes do uso com informações da empresa.</p>
+<h3 id="quando-a-revisao-humana-e-obrigatoria">Quando a revisão humana é obrigatória</h3>
+<p>Todo conteúdo enviado a clientes, publicado ou usado em decisão deve ser revisado por uma pessoa. Em temas jurídicos, fiscais, de saúde e de segurança, a revisão deve ser feita por alguém com conhecimento técnico na área.</p>
+<blockquote><p>Uma regra prática para a equipe: se você não colaria esse texto em um e-mail para alguém de fora da empresa, não cole em uma ferramenta de IA que não seja aprovada.</p></blockquote>
+<p>Além do documento, vale um treinamento curto com exemplos reais do dia a dia da empresa e um canal para tirar dúvidas.</p>
+<h2 id="conta-pessoal-gratuita-ou-plano-corporativo">Conta pessoal gratuita ou plano corporativo</h2>
+<p>Há uma diferença importante entre um colaborador usando uma conta pessoal gratuita e a empresa contratando um plano corporativo ou usando a API, que é a interface pela qual outros sistemas acessam o modelo.</p>
+<p>Planos corporativos costumam oferecer administração centralizada das contas, controle de quem tem acesso, condições contratuais específicas sobre uso e retenção de dados e, em muitos casos, recursos de segurança como login único. Contas pessoais ficam fora do controle da empresa: quando o colaborador sai, o histórico de conversas vai com ele.</p>
+<p>As regras de retenção de dados, de uso para treinamento e de privacidade variam entre fornecedores, entre planos e mudam com o tempo. Por isso, antes de aprovar uma ferramenta:</p>
+<ul>
+<li>Leia os termos e a política de privacidade do plano que será contratado, não do plano gratuito.</li>
+<li>Verifique se os dados enviados podem ser usados para treinar modelos e se isso pode ser desativado.</li>
+<li>Confira por quanto tempo os dados ficam armazenados e onde são processados.</li>
+<li>Veja se o fornecedor oferece contrato de tratamento de dados compatível com a LGPD.</li>
+</ul>
+<h2 id="lgpd-e-o-uso-de-ia">LGPD e o uso de IA</h2>
+<p>Para a LGPD, o fornecedor da ferramenta de IA atua, em geral, como operador dos dados que a empresa envia. A empresa continua responsável por ter uma base legal para o tratamento, por enviar só o necessário e por garantir a segurança. Se houver transferência de dados para fora do país, ela também precisa estar coberta.</p>
+<p>Na prática, o mais seguro é evitar enviar dados pessoais a ferramentas genéricas e, quando o processo exigir, usar uma solução com contrato adequado e controle de acesso. O artigo sobre <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a> detalha bases legais, operadores e responsabilidades.</p>
+<h2 id="quando-faz-sentido-integrar-a-ia-aos-sistemas">Quando faz sentido integrar a IA aos sistemas</h2>
+<p>O uso por meio de chat resolve tarefas individuais. Quando o mesmo tipo de tarefa se repete muitas vezes, com os mesmos dados, faz sentido levar a IA para dentro dos sistemas da empresa. Alguns sinais:</p>
+<ul>
+<li>A equipe copia dados de um sistema, cola na IA e devolve o resultado para outro sistema.</li>
+<li>Várias pessoas fazem a mesma pergunta sobre documentos internos. Nesse caso, um assistente com <a href="/blog/o-que-e-rag/">RAG</a> responde com base nos documentos e indica a fonte.</li>
+<li>O atendimento recebe perguntas repetidas que poderiam ser respondidas por um <a href="/blog/chatbot-com-ia-para-atendimento/">chatbot com IA</a>.</li>
+<li>Há tarefas com várias etapas em sistemas diferentes, que podem ser candidatas a <a href="/blog/agentes-de-ia-para-empresas/">agentes de IA</a>.</li>
+</ul>
+<p>A integração via API permite controlar quais dados são enviados, registrar cada uso, aplicar regras de permissão e medir o custo. Também elimina o copiar e colar, que é onde muitos vazamentos acontecem.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="devo-proibir-o-chatgpt-na-empresa">Devo proibir o ChatGPT na empresa?</h3>
+<p>A proibição total costuma levar ao uso escondido, em contas pessoais e sem orientação. Em geral, funciona melhor liberar usos seguros, definir o que não pode ser enviado e oferecer uma ferramenta aprovada para o trabalho.</p>
+<h3 id="o-plano-corporativo-resolve-todos-os-riscos">O plano corporativo resolve todos os riscos?</h3>
+<p>Não. Ele melhora o controle das contas e as condições contratuais sobre os dados, mas não impede respostas erradas, nem que alguém envie uma informação que não deveria. A política de uso e a revisão humana continuam necessárias.</p>
+<h3 id="posso-usar-ia-para-analisar-dados-de-clientes">Posso usar IA para analisar dados de clientes?</h3>
+<p>Pode, desde que haja base legal na LGPD, que a ferramenta tenha condições contratuais adequadas e que só os dados necessários sejam enviados. Sempre que possível, anonimize os dados antes da análise.</p>
+<p>Se a sua empresa quer organizar o uso de IA ou levar esse uso para dentro dos sistemas, com controle de dados e de acesso, podemos ajudar a avaliar o cenário. Conheça nossas <a href="/#solucoes">soluções</a> ou <a href="/#contato">entre em contato</a> para conversar.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Como%20usar%20o%20ChatGPT%20na%20empresa%20com%20seguran%C3%A7a%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Inteligência artificial" data-search="agentes de ia: o que são e como usar na empresa o que são agentes de ia, a diferença para um chat, exemplos práticos em empresas, como se conectam aos sistemas, riscos, controles e como começar com um piloto. agentes de ia para empresas, o que são agentes de ia, agente de inteligência artificial, ia que executa tarefas">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/agentes-de-ia-para-empresas/">Agentes de IA: o que são e como usar na empresa</a></h3>
+            <p class="post-card__excerpt">O que são agentes de IA, a diferença para um chat, exemplos práticos em empresas, como se conectam aos sistemas, riscos, controles e como começar com um piloto.</p>
+          </article>
+          <article class="post-card" data-category="Inteligência artificial" data-search="chatbot com ia para atendimento: o que resolve e os limites como funciona um chatbot com ia para atendimento no whatsapp e no site, o que ele resolve, quando passar para um humano, como medir resultados e cuidar da lgpd. chatbot com ia para atendimento, chatbot com inteligência artificial, chatbot para whatsapp, assistente virtual de atendimento">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/chatbot-com-ia-para-atendimento/">Chatbot com IA para atendimento: o que resolve e os limites</a></h3>
+            <p class="post-card__excerpt">Como funciona um chatbot com IA para atendimento no WhatsApp e no site, o que ele resolve, quando passar para um humano, como medir resultados e cuidar da LGPD.</p>
+          </article>
+          <article class="post-card" data-category="Inteligência artificial" data-search="como usar inteligência artificial na empresa, na prática casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, lgpd e custo, e como começar com um piloto pequeno e mensurável. como usar inteligência artificial na empresa, inteligência artificial nas empresas, ia aplicada a negócios, ia para atendimento">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/inteligencia-artificial-nas-empresas/">Como usar inteligência artificial na empresa, na prática</a></h3>
+            <p class="post-card__excerpt">Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

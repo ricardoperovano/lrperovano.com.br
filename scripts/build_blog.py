@@ -35,6 +35,9 @@ AUTHOR = "Ricardo Perovano"
 WHATSAPP = "5527999863591"
 EMAIL = "ricardoperovano@gmail.com"
 CATEGORIES = ["Sites", "Sistemas", "Automação", "Inteligência artificial", "Gestão de projetos"]
+# Artigos com data futura ficam fora até o dia da publicação (rode o build de novo nesse dia).
+SCHEDULED: list["Article"] = []
+PUBLISHED: set[str] = set()
 MONTHS = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
           "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
@@ -116,6 +119,9 @@ def load_articles() -> list[Article]:
         )
         if meta.get("draft", "").lower() in ("true", "sim", "yes"):
             continue
+        if published > date.today():
+            SCHEDULED.append(art)
+            continue
         articles.append(art)
     articles.sort(key=lambda a: (a.date, a.title), reverse=True)
     return articles
@@ -142,6 +148,9 @@ def inline(text: str) -> str:
 
     def link(m: re.Match) -> str:
         label, href = m.group(1), html.unescape(m.group(2))
+        target = re.match(r"^/blog/([a-z0-9-]+)/$", href)
+        if target and PUBLISHED and target.group(1) not in PUBLISHED:
+            return label
         attrs = f'href="{html.escape(href)}"'
         if re.match(r"https?://", href) and not href.startswith(SITE):
             attrs += ' target="_blank" rel="noopener"'
@@ -410,8 +419,21 @@ ORG = {
 }
 
 
+def category_url(category: str) -> str:
+    return f"/blog/categoria/{slugify(category)}/"
+
+
+CATEGORY_INTRO = {
+    "Sites": "Sites institucionais, landing pages, SEO, velocidade e tudo o que faz um site gerar contatos.",
+    "Sistemas": "Sistemas sob medida, aplicativos, SaaS e as decisões para tirar um software do papel.",
+    "Automação": "Integrações entre sistemas, APIs, pagamentos e automações que eliminam trabalho repetitivo.",
+    "Inteligência artificial": "Como aplicar IA na empresa com critério: assistentes, agentes, chatbots e busca em documentos.",
+    "Gestão de projetos": "Como contratar, acompanhar e manter um projeto de software sem surpresas.",
+}
+
+
 def article_card(art: Article, heading: str = "h3") -> str:
-    return f"""          <article class="post-card" data-category="{e(art.category)}">
+    return f"""          <article class="post-card" data-category="{e(art.category)}" data-search="{e((art.title + ' ' + art.description + ' ' + art.keywords).lower())}">
             <p class="post-card__meta"><span>{e(art.category)}</span><span>{art.reading_minutes} min de leitura</span></p>
             <{heading} class="post-card__title"><a href="{art.url}">{e(art.title)}</a></{heading}>
             <p class="post-card__excerpt">{e(art.description)}</p>
@@ -451,7 +473,8 @@ def render_article(art: Article, articles: list[Article]) -> str:
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
                 {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
-                {"@type": "ListItem", "position": 3, "name": art.title, "item": canonical},
+                {"@type": "ListItem", "position": 3, "name": art.category, "item": f"{SITE}{category_url(art.category)}"},
+                {"@type": "ListItem", "position": 4, "name": art.title, "item": canonical},
             ],
         },
     ]
@@ -489,7 +512,7 @@ def render_article(art: Article, articles: list[Article]) -> str:
             <ol>
               <li><a href="/">Início</a></li>
               <li><a href="/blog/">Blog</a></li>
-              <li><a href="/blog/#{slugify(art.category)}">{e(art.category)}</a></li>
+              <li><a href="{category_url(art.category)}">{e(art.category)}</a></li>
             </ol>
           </nav>
           <h1 class="post__title">{e(art.title)}</h1>
@@ -544,10 +567,27 @@ def render_article(art: Article, articles: list[Article]) -> str:
     )
 
 
+def chips_nav(used: list[str], current: str | None, *, filters: bool) -> str:
+    """Chips de categoria. No índice (filters=True) também filtram a lista sem recarregar."""
+    def chip(label: str, href: str, value: str, anchor: str) -> str:
+        attrs = f' data-filter="{e(value)}" data-anchor="{anchor}"' if filters else ""
+        cur = ' aria-current="page"' if (current == value or (current is None and value == "" and not filters)) else ""
+        return f'          <a class="chip" href="{href}"{attrs}{cur}>{e(label)}</a>'
+    items = [chip("Todos", "/blog/", "", "#todos")]
+    items += [chip(c, category_url(c), c, f"#{slugify(c)}") for c in used]
+    return '        <nav class="chips" aria-label="Categorias">\n' + "\n".join(items) + "\n        </nav>"
+
+
+SEARCH = """        <div class="blog-search" hidden>
+          <label for="busca-artigos">Buscar artigos</label>
+          <input id="busca-artigos" type="search" autocomplete="off" placeholder="Ex.: aplicativo, Pix, chatbot, SEO">
+        </div>"""
+
+
 def render_index(articles: list[Article]) -> str:
     canonical = f"{SITE}/blog/"
     title = "Blog | PEROVANO — sites, sistemas, automação e IA"
-    description = ("Artigos práticos sobre sites, sistemas sob medida, integrações, automação e "
+    description = ("Artigos práticos sobre sites, sistemas sob medida, aplicativos, integrações, automação e "
                    "inteligência artificial para quem precisa decidir e contratar tecnologia.")
     ld = {
         "@context": "https://schema.org",
@@ -563,14 +603,15 @@ def render_index(articles: list[Article]) -> str:
         ],
     }
     used = [c for c in CATEGORIES if any(a.category == c for a in articles)]
-    filters = "\n".join(
-        f'          <a class="chip" href="#{slugify(c)}" data-filter="{e(c)}">{e(c)}</a>' for c in used
-    )
     groups = []
     for c in used:
-        cards = "\n".join(article_card(a, "h3") for a in articles if a.category == c)
-        groups.append(f"""      <section class="blog-group" id="{slugify(c)}" aria-labelledby="cat-{slugify(c)}">
-        <h2 class="blog-group__title" id="cat-{slugify(c)}">{e(c)}</h2>
+        items = [a for a in articles if a.category == c]
+        cards = "\n".join(article_card(a, "h3") for a in items)
+        groups.append(f"""      <section class="blog-group" id="{slugify(c)}" data-category="{e(c)}" aria-labelledby="cat-{slugify(c)}">
+        <div class="blog-group__head">
+          <h2 class="blog-group__title" id="cat-{slugify(c)}">{e(c)}</h2>
+          <a class="text-link" href="{category_url(c)}">{len(items)} artigos sobre {e(c.lower() if c != "Inteligência artificial" else c)}</a>
+        </div>
         <div class="post-grid">
 {cards}
         </div>
@@ -583,16 +624,80 @@ def render_index(articles: list[Article]) -> str:
     <header class="blog-hero on-dark">
       <div class="container">
         <h1 class="blog-hero__title">Tecnologia explicada para quem decide.</h1>
-        <p class="blog-hero__lead">Artigos práticos sobre sites, sistemas sob medida, integrações, automação e inteligência artificial — com critérios para decidir, contratar e acompanhar um projeto.</p>
-        <nav class="chips" aria-label="Categorias">
-          <a class="chip" href="#todos" data-filter="">Todos</a>
-{filters}
-        </nav>
+        <p class="blog-hero__lead">{len(articles)} artigos práticos sobre sites, sistemas sob medida, aplicativos, integrações, automação e inteligência artificial — com critérios para decidir, contratar e acompanhar um projeto.</p>
+{SEARCH}
+{chips_nav(used, "", filters=True)}
       </div>
     </header>
 
     <div class="container blog-list" id="todos">
+      <p class="blog-empty" role="status" hidden></p>
 {chr(10).join(groups)}
+    </div>
+  </main>
+
+"""
+        + FOOTER
+    )
+
+
+def render_category(category: str, articles: list[Article]) -> str:
+    items = [a for a in articles if a.category == category]
+    canonical = f"{SITE}{category_url(category)}"
+    intro = CATEGORY_INTRO.get(category, "")
+    title = f"{category}: artigos e guias práticos | PEROVANO"
+    description = f"{intro} {len(items)} artigos da PEROVANO sobre {category.lower() if category != 'Inteligência artificial' else category}."
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": f"{category} — Blog da PEROVANO",
+            "url": canonical,
+            "inLanguage": "pt-BR",
+            "publisher": ORG,
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": i + 1, "url": f"{SITE}{a.url}", "name": a.title}
+                    for i, a in enumerate(items)
+                ],
+            },
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
+                {"@type": "ListItem", "position": 3, "name": category, "item": canonical},
+            ],
+        },
+    ]
+    used = [c for c in CATEGORIES if any(a.category == c for a in articles)]
+    cards = "\n".join(article_card(a, "h2") for a in items)
+    return (
+        head(title, description, canonical, extra="".join(json_ld(x) for x in ld))
+        + HEADER.replace("{blog_current}", ' aria-current="page"')
+        + f"""
+  <main id="conteudo">
+    <header class="blog-hero on-dark">
+      <div class="container">
+        <nav class="breadcrumb breadcrumb--dark" aria-label="Você está em">
+          <ol>
+            <li><a href="/">Início</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ol>
+        </nav>
+        <h1 class="blog-hero__title">{e(category)}</h1>
+        <p class="blog-hero__lead">{e(intro)}</p>
+{chips_nav(used, category, filters=False)}
+      </div>
+    </header>
+
+    <div class="container blog-list">
+      <div class="post-grid">
+{cards}
+      </div>
     </div>
   </main>
 
@@ -655,6 +760,10 @@ def render_feed(articles: list[Article]) -> str:
 def render_sitemap(articles: list[Article]) -> str:
     last = max((a.updated for a in articles), default=date.today()).isoformat()
     urls = [(f"{SITE}/", last), (f"{SITE}/blog/", last), (f"{SITE}/privacy.html", None)]
+    for c in CATEGORIES:
+        dates = [a.updated for a in articles if a.category == c]
+        if dates:
+            urls.append((f"{SITE}{category_url(c)}", max(dates).isoformat()))
     urls += [(f"{SITE}{a.url}", a.updated.isoformat()) for a in articles]
     body = "\n".join(
         f"  <url><loc>{loc}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>"
@@ -709,6 +818,9 @@ def check_links(articles: list[Article]) -> list[str]:
     for a in articles:
         for target in re.findall(r"\]\((/blog/[^)]*)\)", a.body_md):
             m = re.match(r"^/blog/([a-z0-9-]+)/$", target)
+            scheduled = {x.slug for x in SCHEDULED}
+            if m and m.group(1) in scheduled:
+                continue  # vira texto simples até o artigo ser publicado
             if not m or m.group(1) not in slugs:
                 problems.append(f"{a.slug}: link interno quebrado {target}")
         for target in re.findall(r"\]\((/[^)]*)\)", a.body_md):
@@ -721,6 +833,7 @@ def main() -> None:
     articles = load_articles()
     if not articles:
         fail("nenhum artigo em _conteudo/artigos")
+    PUBLISHED.update(a.slug for a in articles)
     for a in articles:
         render_markdown(a)
 
@@ -735,13 +848,21 @@ def main() -> None:
     slugs = {a.slug for a in articles}
     if OUT.exists():
         for d in OUT.iterdir():
-            if d.is_dir() and d.name not in slugs:
+            if d.is_dir() and d.name not in slugs and d.name != "categoria":
                 shutil.rmtree(d)
     for a in articles:
         target = OUT / a.slug / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(render_article(a, articles), encoding="utf-8")
     (OUT / "index.html").write_text(render_index(articles), encoding="utf-8")
+    used = [c for c in CATEGORIES if any(x.category == c for x in articles)]
+    cat_root = OUT / "categoria"
+    if cat_root.exists():
+        shutil.rmtree(cat_root)
+    for c in used:
+        target = cat_root / slugify(c) / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(render_category(c, articles), encoding="utf-8")
     (OUT / "feed.xml").write_text(render_feed(articles), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(render_sitemap(articles), encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
@@ -756,7 +877,9 @@ def main() -> None:
 
     for a in articles:
         print(f"{a.url}  {a.words} palavras  {a.reading_minutes} min  {len(a.toc)} seções  {len(a.faq)} FAQ")
-    print(f"{len(articles)} artigos gerados; {len(problems)} avisos")
+    for a in sorted(SCHEDULED, key=lambda x: x.date):
+        print(f"agendado: {a.url} para {a.date.isoformat()} (rode o build nesse dia)")
+    print(f"{len(articles)} artigos gerados; {len(SCHEDULED)} agendados; {len(problems)} avisos")
 
 
 if __name__ == "__main__":

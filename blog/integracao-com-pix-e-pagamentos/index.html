@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como integrar Pix e pagamentos ao seu sistema | PEROVANO</title>
+  <meta name="description" content="Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Como integrar Pix e pagamentos ao seu sistema | PEROVANO">
+  <meta property="og:description" content="Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Automação">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Como integrar Pix e pagamentos ao seu sistema",
+  "description": "Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Automação",
+  "keywords": "integração com Pix, integrar pagamentos ao sistema, API Pix, gateway de pagamento",
+  "wordCount": 1538,
+  "image": "https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/",
+  "url": "https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automação",
+      "item": "https://lrperovano.com.br/blog/categoria/automacao/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Como integrar Pix e pagamentos ao seu sistema",
+      "item": "https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Preciso de gateway para receber Pix no sistema?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não necessariamente. É possível integrar direto com a API Pix do banco ou instituição de pagamento. O gateway faz mais sentido quando também são necessários cartão, boleto ou assinaturas em um só lugar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre QR Code estático e dinâmico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O estático é fixo e reutilizável, sem identificar a cobrança. O dinâmico é gerado para cada cobrança, com valor e identificador, o que permite a confirmação automática pelo sistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso guardar o cartão do cliente para cobranças futuras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode guardar o token gerado pelo gateway, não os dados do cartão. O token permite cobranças recorrentes sem que o número do cartão passe pelo seu sistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa integrar pagamentos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de quantos meios de pagamento entram, do tratamento de falhas, da conciliação e das regras de negócio envolvidas. As taxas por transação são definidas por cada fornecedor e devem ser comparadas à parte. Um sistema que gera a cobrança e dá baixa sozinho libera a equipe para o que importa e reduz erros no caixa. A PEROVANO desenvolve sistemas e integrações de pagamento e pode ajudar a escolher o caminho mais adequado ao seu volume e aos seus meios de recebimento. Fale conosco para conversar sobre o projeto."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/automacao/">Automação</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Como integrar Pix e pagamentos ao seu sistema</h1>
+          <p class="post__lead">Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#gateway-ou-integracao-direta-com-o-banco">Gateway ou integração direta com o banco</a></li>
+              <li><a href="#pix-com-qr-code-dinamico-e-confirmacao-automatica">Pix com QR Code dinâmico e confirmação automática</a></li>
+              <li><a href="#pix-automatico-para-cobrancas-recorrentes">Pix Automático para cobranças recorrentes</a></li>
+              <li><a href="#boleto-e-cartao">Boleto e cartão</a></li>
+              <li><a href="#conciliacao-automatica">Conciliação automática</a></li>
+              <li><a href="#estornos-e-falhas">Estornos e falhas</a></li>
+              <li><a href="#seguranca">Segurança</a></li>
+              <li><a href="#o-que-perguntar-ao-fornecedor">O que perguntar ao fornecedor</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Integrar Pix e pagamentos a um sistema significa fazer o próprio sistema gerar a cobrança, receber a confirmação do pagamento e dar baixa sozinho, sem ninguém conferir extrato. O cliente vê o QR Code ou o formulário de cartão na tela, paga, e o pedido, a mensalidade ou a ordem de serviço mudam de status automaticamente.</p>
+<p>Há dois caminhos principais. O primeiro é usar um gateway ou intermediador de pagamento, uma empresa que oferece Pix, boleto e cartão em uma única API (interface que permite que sistemas conversem entre si). O segundo é integrar diretamente com o banco ou a instituição de pagamento onde a empresa tem conta, usando a API Pix que essas instituições disponibilizam.</p>
+<p>O gateway costuma ser mais rápido de implantar e reúne vários meios de pagamento. A integração direta tende a dar mais controle sobre o Pix e pode ter outra estrutura de custos. A escolha depende dos meios de pagamento necessários, do volume e de quanto a empresa quer depender de um intermediário.</p>
+<h2 id="gateway-ou-integracao-direta-com-o-banco">Gateway ou integração direta com o banco</h2>
+<h3 id="gateway-ou-intermediador-de-pagamento">Gateway ou intermediador de pagamento</h3>
+<p>O gateway fica entre o sistema da empresa e as instituições financeiras. Uma integração só dá acesso a Pix, boleto, cartão de crédito e, em muitos casos, assinaturas recorrentes. Ele também cuida de boa parte da segurança do cartão e oferece painel para consultar transações.</p>
+<p>Pontos de atenção:</p>
+<ul>
+<li>As taxas e prazos de repasse variam bastante entre fornecedores e por meio de pagamento. Compare as condições atuais diretamente com cada um.</li>
+<li>Em alguns modelos, o dinheiro passa por uma conta do intermediador antes de chegar à conta da empresa.</li>
+<li>Trocar de gateway depois exige refazer parte da integração, então vale isolar esse código no sistema.</li>
+</ul>
+<h3 id="integracao-direta-com-o-banco-ou-instituicao-de-pagamento">Integração direta com o banco ou instituição de pagamento</h3>
+<p>O Pix foi criado pelo Banco Central do Brasil, que também definiu um padrão de API para as instituições participantes. Por isso, a integração direta segue uma estrutura parecida de banco para banco, embora cada um tenha detalhes próprios de credenciamento e autenticação.</p>
+<p>Em geral, ela exige conta jurídica na instituição, habilitação da API e um certificado digital para autenticar as chamadas. Faz sentido quando o Pix é o principal meio de recebimento e a empresa quer o dinheiro direto na própria conta. Para cartão, a integração direta com adquirentes é mais complexa e raramente compensa para empresas pequenas e médias.</p>
+<h2 id="pix-com-qr-code-dinamico-e-confirmacao-automatica">Pix com QR Code dinâmico e confirmação automática</h2>
+<p>Existem dois tipos de QR Code Pix. O <strong>estático</strong> é fixo, pode ser reutilizado e normalmente não identifica qual cobrança está sendo paga. Serve para doações ou balcão, mas obriga alguém a conferir o extrato.</p>
+<p>O <strong>dinâmico</strong> é gerado pelo sistema para cada cobrança, com valor, identificador único e, se necessário, data de validade. É ele que permite a automação completa:</p>
+<ol>
+<li>O sistema cria a cobrança na API do banco ou do gateway e recebe o QR Code e o código "copia e cola".</li>
+<li>O cliente paga pelo aplicativo do banco.</li>
+<li>A instituição envia um webhook, um aviso automático para um endereço do sistema, informando que aquela cobrança foi paga.</li>
+<li>O sistema confere os dados, dá baixa e dispara o próximo passo: liberar o acesso, emitir o recibo, avisar a equipe.</li>
+</ol>
+<p>O webhook pode falhar ou chegar mais de uma vez. Um sistema bem feito trata isso: registra cada aviso, ignora duplicados e consulta periodicamente as cobranças pendentes para não depender só do aviso. O artigo sobre <a href="/blog/integracao-de-sistemas-api/">integração de sistemas via API</a> explica webhooks e reprocessamento com mais detalhe.</p>
+<p>Um exemplo é o Portal da Igreja, desenvolvido pela PEROVANO, em que o dízimo é pago por Pix com QR Code dentro de uma plataforma de gestão com membros e financeiro. Ele está entre os <a href="/#projetos">projetos</a> da empresa.</p>
+<h2 id="pix-automatico-para-cobrancas-recorrentes">Pix Automático para cobranças recorrentes</h2>
+<p>O Pix Automático foi lançado pelo Banco Central em 2025 para cobranças que se repetem, como mensalidades, assinaturas e contas de consumo. Em termos gerais, o cliente autoriza uma única vez, no aplicativo do próprio banco, que aquela empresa faça cobranças periódicas. A partir daí, os pagamentos acontecem conforme as regras autorizadas, e o cliente pode consultar ou cancelar a autorização pelo banco.</p>
+<p>Para a empresa, é uma alternativa ao boleto mensal e ao cartão de crédito recorrente. A disponibilidade, os requisitos de adesão e as condições variam entre instituições, então vale confirmar com o banco ou o gateway como o recurso funciona hoje e o que o sistema precisa implementar.</p>
+<h2 id="boleto-e-cartao">Boleto e cartão</h2>
+<h3 id="boleto">Boleto</h3>
+<p>O boleto ainda é exigido por muitos clientes empresariais. O sistema registra o boleto pela API, envia o documento ao cliente e recebe a notificação de pagamento. A diferença em relação ao Pix é o prazo: a confirmação não é instantânea, o que precisa estar refletido nas regras de liberação de pedidos.</p>
+<h3 id="cartao-de-credito-e-tokenizacao">Cartão de crédito e tokenização</h3>
+<p>No cartão, o principal cuidado é não deixar os dados do cartão passarem pelo servidor da empresa. Os gateways oferecem formulários ou componentes próprios que enviam os dados diretamente para eles e devolvem um token, um código que representa aquele cartão sem revelar o número.</p>
+<p>O sistema guarda apenas o token. Com ele, é possível cobrar de novo, por exemplo em uma <strong>assinatura recorrente</strong>, sem pedir o cartão ao cliente a cada mês. Muitos gateways oferecem a gestão de assinaturas pronta, com novas tentativas automáticas quando a cobrança é recusada.</p>
+<h2 id="conciliacao-automatica">Conciliação automática</h2>
+<p>Conciliação é conferir se o que foi cobrado bate com o que entrou na conta. Feita à mão, consome horas e gera erros. Com a integração, o sistema faz isso sozinho:</p>
+<ul>
+<li>Cada cobrança tem um identificador único, ligado ao pedido ou cliente.</li>
+<li>O pagamento confirmado dá baixa no registro certo, sem digitação.</li>
+<li>Relatórios cruzam cobranças, pagamentos, taxas e repasses.</li>
+<li>Diferenças, como pagamento a menor ou em duplicidade, viram alertas para a equipe.</li>
+</ul>
+<p>A conciliação é uma das automações com retorno mais claro. O guia sobre <a href="/blog/como-automatizar-processos-na-empresa/">como automatizar processos na empresa</a> mostra como priorizar esse tipo de tarefa. Em produtos por assinatura, ela é parte essencial do faturamento, como discutido em <a href="/blog/como-criar-um-saas/">como criar um SaaS</a>.</p>
+<h2 id="estornos-e-falhas">Estornos e falhas</h2>
+<p>Pagamento nunca é só o caminho feliz. O sistema precisa prever:</p>
+<ul>
+<li><strong>Devoluções de Pix</strong>: total ou parcial, iniciadas pela empresa por meio da API.</li>
+<li><strong>Estornos e contestações de cartão</strong>: quando o portador contesta a compra junto ao banco emissor, o gateway informa e o sistema precisa atualizar o pedido.</li>
+<li><strong>Cobranças expiradas</strong>: QR Codes e boletos vencidos devem mudar de status e, se for o caso, gerar nova cobrança.</li>
+<li><strong>Instabilidade do fornecedor</strong>: se a API não responder, o sistema deve tentar de novo sem criar cobranças duplicadas.</li>
+<li><strong>Avisos ao cliente</strong>: confirmação, lembrete e falha de pagamento. Mensagens pelo WhatsApp podem ajudar, como mostra o artigo sobre <a href="/blog/whatsapp-business-api-integracao/">integração com a API do WhatsApp Business</a>.</li>
+</ul>
+<h2 id="seguranca">Segurança</h2>
+<p>Os dados de cartão são protegidos por um padrão internacional de segurança, o PCI DSS. Armazenar número, validade ou código de segurança exige certificação adequada e um nível de controle que raramente faz sentido para quem não é do setor de pagamentos. A regra prática é nunca armazenar dados de cartão no próprio sistema e usar a tokenização do gateway.</p>
+<p>Outros cuidados:</p>
+<ul>
+<li>Credenciais da API, chaves e certificados ficam em local seguro no servidor, nunca no código-fonte nem no aplicativo instalado no celular.</li>
+<li>O endereço que recebe webhooks deve validar a origem do aviso antes de dar baixa.</li>
+<li>Acesso ao painel do gateway e do banco com autenticação em dois fatores e usuários individuais.</li>
+<li>Dados pessoais de pagadores seguem a LGPD, como explicado em <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a>.</li>
+</ul>
+<blockquote><p>Uma integração de pagamento só está pronta quando trata bem as falhas, não apenas quando o primeiro pagamento funciona.</p></blockquote>
+<h2 id="o-que-perguntar-ao-fornecedor">O que perguntar ao fornecedor</h2>
+<ul>
+<li>Quais meios de pagamento estão disponíveis e quais são as taxas e prazos de repasse atuais?</li>
+<li>A API oferece webhooks? Como validar que o aviso é legítimo?</li>
+<li>Existe ambiente de testes para simular pagamentos, estornos e falhas?</li>
+<li>Como funcionam assinaturas, Pix Automático e novas tentativas de cobrança?</li>
+<li>Há relatórios ou API de extrato para conciliação?</li>
+</ul>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="preciso-de-gateway-para-receber-pix-no-sistema">Preciso de gateway para receber Pix no sistema?</h3>
+<p>Não necessariamente. É possível integrar direto com a API Pix do banco ou instituição de pagamento. O gateway faz mais sentido quando também são necessários cartão, boleto ou assinaturas em um só lugar.</p>
+<h3 id="qual-a-diferenca-entre-qr-code-estatico-e-dinamico">Qual a diferença entre QR Code estático e dinâmico?</h3>
+<p>O estático é fixo e reutilizável, sem identificar a cobrança. O dinâmico é gerado para cada cobrança, com valor e identificador, o que permite a confirmação automática pelo sistema.</p>
+<h3 id="posso-guardar-o-cartao-do-cliente-para-cobrancas-futuras">Posso guardar o cartão do cliente para cobranças futuras?</h3>
+<p>Pode guardar o token gerado pelo gateway, não os dados do cartão. O token permite cobranças recorrentes sem que o número do cartão passe pelo seu sistema.</p>
+<h3 id="quanto-custa-integrar-pagamentos">Quanto custa integrar pagamentos?</h3>
+<p>Depende de quantos meios de pagamento entram, do tratamento de falhas, da conciliação e das regras de negócio envolvidas. As taxas por transação são definidas por cada fornecedor e devem ser comparadas à parte.</p>
+<p>Um sistema que gera a cobrança e dá baixa sozinho libera a equipe para o que importa e reduz erros no caixa. A PEROVANO desenvolve sistemas e integrações de pagamento e pode ajudar a escolher o caminho mais adequado ao seu volume e aos seus meios de recebimento. <a href="/#contato">Fale conosco</a> para conversar sobre o projeto.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Como%20integrar%20Pix%20e%20pagamentos%20ao%20seu%20sistema%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Automação" data-search="no-code, low-code ou desenvolvimento sob medida? no-code, low-code ou desenvolvimento sob medida? veja quando cada um funciona, os limites de custo, dados e lgpd e os sinais de que é hora de migrar. no-code ou low-code, no-code vs desenvolvimento, quando migrar do no-code, ferramentas de automação sem código">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/no-code-low-code-ou-desenvolvimento/">No-code, low-code ou desenvolvimento sob medida?</a></h3>
+            <p class="post-card__excerpt">No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.</p>
+          </article>
+          <article class="post-card" data-category="Automação" data-search="como automatizar processos na empresa, passo a passo como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas. como automatizar processos na empresa, automação de processos, automação de tarefas repetitivas, automação empresarial">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-automatizar-processos-na-empresa/">Como automatizar processos na empresa, passo a passo</a></h3>
+            <p class="post-card__excerpt">Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</p>
+          </article>
+          <article class="post-card" data-category="Automação" data-search="integração com a api do whatsapp business: como funciona entenda a integração com a api do whatsapp business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais. integração com a api do whatsapp business, api oficial do whatsapp, whatsapp business platform, whatsapp integrado ao crm">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/whatsapp-business-api-integracao/">Integração com a API do WhatsApp Business: como funciona</a></h3>
+            <p class="post-card__excerpt">Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

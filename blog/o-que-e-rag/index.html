@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é RAG (geração aumentada por recuperação) | PEROVANO</title>
+  <meta name="description" content="O que é RAG: como a IA busca trechos nos documentos da empresa para responder com fonte, como funciona, casos de uso, cuidados e a diferença para fine-tuning.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/o-que-e-rag/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="O que é RAG (geração aumentada por recuperação) | PEROVANO">
+  <meta property="og:description" content="O que é RAG: como a IA busca trechos nos documentos da empresa para responder com fonte, como funciona, casos de uso, cuidados e a diferença para fine-tuning.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/o-que-e-rag/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/o-que-e-rag/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/o-que-e-rag/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Inteligência artificial">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "O que é RAG (geração aumentada por recuperação)",
+  "description": "O que é RAG: como a IA busca trechos nos documentos da empresa para responder com fonte, como funciona, casos de uso, cuidados e a diferença para fine-tuning.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Inteligência artificial",
+  "keywords": "o que é RAG, geração aumentada por recuperação, retrieval-augmented generation, IA com documentos da empresa",
+  "wordCount": 1546,
+  "image": "https://lrperovano.com.br/blog/o-que-e-rag/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/o-que-e-rag/",
+  "url": "https://lrperovano.com.br/blog/o-que-e-rag/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inteligência artificial",
+      "item": "https://lrperovano.com.br/blog/categoria/inteligencia-artificial/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "O que é RAG (geração aumentada por recuperação)",
+      "item": "https://lrperovano.com.br/blog/o-que-e-rag/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O RAG funciona com qualquer tipo de documento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Funciona com qualquer documento do qual seja possível extrair o texto. PDFs escaneados precisam de reconhecimento de texto antes. Tabelas complexas, imagens e diagramas exigem um tratamento específico e podem precisar ser descritos em texto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os documentos da empresa são usados para treinar a IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No RAG, os documentos não são usados para treinar o modelo: os trechos são enviados no momento de cada pergunta. O que acontece com esses dados no fornecedor depende do serviço e do plano contratado, e deve ser conferido nos termos do fornecedor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa um projeto de RAG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do volume e da variedade dos documentos, do trabalho de preparação, das integrações com os sistemas de origem, das regras de permissão e do volume de perguntas. Há o custo de desenvolvimento, concentrado no início, e o custo recorrente de uso do modelo e de infraestrutura. Um piloto com um conjunto pequeno de documentos ajuda a estimar os dois. Se a sua empresa tem manuais, políticas ou uma base de conhecimento que a equipe consulta com frequência, um assistente com RAG pode ser um bom primeiro projeto de IA. Conheça nossas soluções ou entre em contato para conversar sobre os documentos e o uso esperado."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/inteligencia-artificial/">Inteligência artificial</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">O que é RAG (geração aumentada por recuperação)</h1>
+          <p class="post__lead">O que é RAG: como a IA busca trechos nos documentos da empresa para responder com fonte, como funciona, casos de uso, cuidados e a diferença para fine-tuning.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#por-que-o-rag-reduz-respostas-inventadas">Por que o RAG reduz respostas inventadas</a></li>
+              <li><a href="#como-o-rag-funciona-por-dentro">Como o RAG funciona por dentro</a></li>
+              <li><a href="#casos-de-uso-de-rag-na-empresa">Casos de uso de RAG na empresa</a></li>
+              <li><a href="#cuidados-em-um-projeto-de-rag">Cuidados em um projeto de RAG</a></li>
+              <li><a href="#rag-ou-treinar-o-modelo-fine-tuning">RAG ou treinar o modelo (fine-tuning)</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>RAG, sigla de <em>retrieval-augmented generation</em> (geração aumentada por recuperação), é uma técnica em que a IA, antes de responder, busca os trechos mais relevantes nos documentos da empresa e usa esses trechos como base para a resposta. Em vez de responder só com o que aprendeu no treinamento, o modelo responde com o que está escrito nos seus manuais, políticas e contratos.</p>
+<p>Isso resolve um limite importante dos modelos de linguagem: eles não conhecem as informações internas da sua empresa e, quando não sabem, podem inventar. Com RAG, a resposta se apoia em um texto verificável, e o sistema pode mostrar de qual documento a informação veio.</p>
+<p>É a técnica mais usada para criar assistentes internos, bases de conhecimento consultáveis e chatbots de atendimento que respondem com as regras da própria empresa.</p>
+<h2 id="por-que-o-rag-reduz-respostas-inventadas">Por que o RAG reduz respostas inventadas</h2>
+<p>Um modelo de linguagem é treinado com grandes volumes de texto público até uma certa data. Ele sabe escrever bem e conhece muitos assuntos gerais, mas não sabe qual é o prazo de troca da sua loja, quais documentos o seu RH exige ou como funciona o seu processo de reembolso.</p>
+<p>Quando recebe uma pergunta sobre isso sem contexto, o modelo tende a gerar uma resposta plausível, baseada no que é comum em outras empresas. Esse comportamento se chama <strong>alucinação</strong>: uma resposta com aparência de correta, mas sem base real.</p>
+<p>Com RAG, o modelo recebe junto com a pergunta os trechos dos documentos que tratam do assunto e a instrução de responder apenas com base neles. Isso traz três vantagens:</p>
+<ul>
+<li><strong>Respostas fundamentadas.</strong> O modelo deixa de "chutar" e passa a resumir o que está escrito.</li>
+<li><strong>Fonte citável.</strong> O sistema sabe quais trechos usou e pode mostrar o documento e a seção, para que a pessoa confira.</li>
+<li><strong>Atualização simples.</strong> Mudou a política, atualiza-se o documento. Não é preciso treinar nada de novo.</li>
+</ul>
+<p>O RAG reduz as alucinações, mas não as elimina. O modelo ainda pode interpretar mal um trecho ou juntar informações de forma errada. Por isso, mostrar a fonte e permitir que o assistente diga "não encontrei essa informação" são partes importantes do projeto.</p>
+<h2 id="como-o-rag-funciona-por-dentro">Como o RAG funciona por dentro</h2>
+<p>O artigo sobre <a href="/blog/inteligencia-artificial-nas-empresas/">inteligência artificial nas empresas</a> resume o fluxo em quatro passos. Aqui, cada etapa em mais detalhe, em linguagem acessível.</p>
+<h3 id="1-preparar-os-documentos">1. Preparar os documentos</h3>
+<p>Os documentos chegam em formatos variados: PDF, Word, páginas internas, planilhas, artigos de uma central de ajuda. O primeiro passo é extrair o texto e limpar o que atrapalha, como cabeçalhos repetidos, rodapés e numeração de página. PDFs escaneados precisam de reconhecimento de texto antes.</p>
+<p>Nesta etapa também se registram os <strong>metadados</strong> de cada documento: título, data, área responsável, versão e quem pode acessá-lo. Eles serão usados depois para filtrar resultados e controlar permissões.</p>
+<h3 id="2-dividir-em-trechos">2. Dividir em trechos</h3>
+<p>Um manual de cem páginas não cabe inteiro em cada pergunta, e nem deveria. O texto é dividido em trechos menores, de alguns parágrafos cada, chamados em inglês de <em>chunks</em>. O ideal é que cada trecho trate de um assunto e faça sentido sozinho.</p>
+<p>A forma de dividir influencia muito a qualidade. Trechos pequenos demais perdem contexto. Grandes demais misturam assuntos e trazem informação irrelevante. Respeitar a estrutura do documento, como títulos e seções, costuma dar melhores resultados do que cortar por número de caracteres.</p>
+<h3 id="3-gerar-embeddings">3. Gerar embeddings</h3>
+<p>Cada trecho é convertido em um <strong>embedding</strong>: uma lista de números que representa o significado do texto. Trechos com significados parecidos geram listas de números parecidas, mesmo quando usam palavras diferentes. "Prazo para devolução" e "quantos dias tenho para trocar" ficam próximos, embora quase não tenham palavras em comum.</p>
+<p>Esses embeddings são guardados em um banco de dados preparado para esse tipo de busca, chamado banco vetorial, ou em uma extensão de um banco de dados já existente.</p>
+<h3 id="4-buscar-os-trechos-relevantes">4. Buscar os trechos relevantes</h3>
+<p>Quando alguém faz uma pergunta, ela também é convertida em embedding. O sistema procura os trechos cujos embeddings estão mais próximos do da pergunta. Isso é a <strong>busca semântica</strong>: uma busca pelo significado, e não pela palavra exata.</p>
+<p>Em muitos projetos, a busca semântica é combinada com a busca tradicional por palavras-chave, que funciona melhor para códigos de produto, nomes próprios e números de cláusulas. Também é comum aplicar filtros pelos metadados, como área ou data, e uma etapa de reordenação para colocar os trechos mais úteis no topo.</p>
+<h3 id="5-montar-a-resposta">5. Montar a resposta</h3>
+<p>Os trechos encontrados são enviados ao modelo junto com a pergunta e com instruções como: responda apenas com base nos trechos abaixo, indique a fonte e, se a informação não estiver neles, diga que não sabe. O modelo redige a resposta, e o sistema exibe os links para os documentos usados.</p>
+<h2 id="casos-de-uso-de-rag-na-empresa">Casos de uso de RAG na empresa</h2>
+<ul>
+<li><strong>Base de conhecimento interna.</strong> Colaboradores perguntam sobre processos, sistemas e procedimentos e recebem a resposta com o link para o documento. Reduz as interrupções para quem sempre sabe onde as coisas estão.</li>
+<li><strong>Atendimento ao cliente.</strong> Um <a href="/blog/chatbot-com-ia-para-atendimento/">chatbot com IA para atendimento</a> responde com base nas regras de entrega, troca e pagamento cadastradas, e não em suposições.</li>
+<li><strong>Manuais técnicos.</strong> Equipes de campo e suporte consultam manuais extensos de equipamentos ou sistemas com perguntas em linguagem natural.</li>
+<li><strong>Políticas e normas.</strong> RH, compliance e jurídico disponibilizam políticas internas em um assistente que responde e aponta a cláusula.</li>
+<li><strong>Apoio a agentes.</strong> <a href="/blog/agentes-de-ia-para-empresas/">Agentes de IA</a> que executam tarefas usam RAG para consultar regras antes de agir, como a política de descontos ao montar uma proposta.</li>
+</ul>
+<h2 id="cuidados-em-um-projeto-de-rag">Cuidados em um projeto de RAG</h2>
+<h3 id="qualidade-e-atualizacao-dos-documentos">Qualidade e atualização dos documentos</h3>
+<p>O assistente responde com o que está na base. Documentos desatualizados, duplicados ou contraditórios geram respostas desatualizadas ou contraditórias. Antes de começar, vale fazer uma limpeza: remover versões antigas, definir qual é o documento oficial de cada assunto e nomear um responsável por mantê-lo. Também é preciso definir como as atualizações entram no sistema, de forma automática ou periódica.</p>
+<h3 id="permissoes-de-acesso-por-usuario">Permissões de acesso por usuário</h3>
+<p>Se a base reúne documentos de várias áreas, nem todo mundo pode ver tudo. Um estagiário não deve receber, em uma resposta, trechos da planilha de salários. A busca precisa filtrar os trechos conforme as permissões de quem pergunta, de preferência respeitando as mesmas regras de acesso dos sistemas de origem. Esse controle deve ser feito na busca, antes de os trechos chegarem ao modelo.</p>
+<h3 id="avaliacao-das-respostas">Avaliação das respostas</h3>
+<p>Monte uma lista de perguntas reais com as respostas corretas e rode o sistema contra ela sempre que mudar algo: a forma de dividir os documentos, o modelo ou as instruções. Avalie se o sistema encontrou os trechos certos e se a resposta é fiel a eles. Em produção, colete a avaliação dos usuários e revise uma amostra das conversas.</p>
+<h3 id="dados-sensiveis">Dados sensíveis</h3>
+<p>Documentos com dados pessoais de clientes ou colaboradores exigem cuidado com a LGPD: saber o que está indexado, quem pode acessar, onde os dados são processados e por quanto tempo ficam guardados. Muitas vezes, a melhor decisão é não indexar esses documentos ou remover os dados pessoais antes. O artigo sobre <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a> aprofunda o tema.</p>
+<h2 id="rag-ou-treinar-o-modelo-fine-tuning">RAG ou treinar o modelo (fine-tuning)</h2>
+<p><strong>Fine-tuning</strong>, ou ajuste fino, é continuar o treinamento de um modelo com exemplos próprios para mudar o comportamento dele. É uma técnica diferente do RAG, com objetivos diferentes.</p>
+<p>O RAG serve para dar <strong>conhecimento</strong> ao modelo: fatos, regras, conteúdos que mudam. O fine-tuning serve para ajustar <strong>comportamento</strong>: um formato de resposta muito específico, um estilo de escrita, uma tarefa de classificação repetida em grande volume.</p>
+<p>Para responder com base em documentos da empresa, o RAG costuma ser a escolha certa porque:</p>
+<ul>
+<li>A informação é atualizada só trocando o documento, sem novo treinamento.</li>
+<li>A resposta pode citar a fonte, algo que um modelo ajustado não faz de forma confiável.</li>
+<li>As permissões podem ser controladas por usuário, já que a informação não fica "dentro" do modelo.</li>
+<li>O investimento inicial e a manutenção costumam ser menores.</li>
+</ul>
+<p>Os dois podem ser combinados, mas na maioria dos projetos empresariais o RAG com boas instruções resolve sem fine-tuning.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="o-rag-funciona-com-qualquer-tipo-de-documento">O RAG funciona com qualquer tipo de documento?</h3>
+<p>Funciona com qualquer documento do qual seja possível extrair o texto. PDFs escaneados precisam de reconhecimento de texto antes. Tabelas complexas, imagens e diagramas exigem um tratamento específico e podem precisar ser descritos em texto.</p>
+<h3 id="os-documentos-da-empresa-sao-usados-para-treinar-a-ia">Os documentos da empresa são usados para treinar a IA?</h3>
+<p>No RAG, os documentos não são usados para treinar o modelo: os trechos são enviados no momento de cada pergunta. O que acontece com esses dados no fornecedor depende do serviço e do plano contratado, e deve ser conferido nos termos do fornecedor.</p>
+<h3 id="quanto-custa-um-projeto-de-rag">Quanto custa um projeto de RAG?</h3>
+<p>Depende do volume e da variedade dos documentos, do trabalho de preparação, das integrações com os sistemas de origem, das regras de permissão e do volume de perguntas. Há o custo de desenvolvimento, concentrado no início, e o custo recorrente de uso do modelo e de infraestrutura. Um piloto com um conjunto pequeno de documentos ajuda a estimar os dois.</p>
+<p>Se a sua empresa tem manuais, políticas ou uma base de conhecimento que a equipe consulta com frequência, um assistente com RAG pode ser um bom primeiro projeto de IA. Conheça nossas <a href="/#solucoes">soluções</a> ou <a href="/#contato">entre em contato</a> para conversar sobre os documentos e o uso esperado.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22O%20que%20%C3%A9%20RAG%20%28gera%C3%A7%C3%A3o%20aumentada%20por%20recupera%C3%A7%C3%A3o%29%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Inteligência artificial" data-search="como usar o chatgpt na empresa com segurança como usar o chatgpt e outras ias na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e lgpd. chatgpt na empresa com segurança, política de uso de ia na empresa, riscos do chatgpt para empresas, uso seguro de inteligência artificial">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/chatgpt-na-empresa-com-seguranca/">Como usar o ChatGPT na empresa com segurança</a></h3>
+            <p class="post-card__excerpt">Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.</p>
+          </article>
+          <article class="post-card" data-category="Inteligência artificial" data-search="agentes de ia: o que são e como usar na empresa o que são agentes de ia, a diferença para um chat, exemplos práticos em empresas, como se conectam aos sistemas, riscos, controles e como começar com um piloto. agentes de ia para empresas, o que são agentes de ia, agente de inteligência artificial, ia que executa tarefas">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/agentes-de-ia-para-empresas/">Agentes de IA: o que são e como usar na empresa</a></h3>
+            <p class="post-card__excerpt">O que são agentes de IA, a diferença para um chat, exemplos práticos em empresas, como se conectam aos sistemas, riscos, controles e como começar com um piloto.</p>
+          </article>
+          <article class="post-card" data-category="Inteligência artificial" data-search="chatbot com ia para atendimento: o que resolve e os limites como funciona um chatbot com ia para atendimento no whatsapp e no site, o que ele resolve, quando passar para um humano, como medir resultados e cuidar da lgpd. chatbot com ia para atendimento, chatbot com inteligência artificial, chatbot para whatsapp, assistente virtual de atendimento">
+            <p class="post-card__meta"><span>Inteligência artificial</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/chatbot-com-ia-para-atendimento/">Chatbot com IA para atendimento: o que resolve e os limites</a></h3>
+            <p class="post-card__excerpt">Como funciona um chatbot com IA para atendimento no WhatsApp e no site, o que ele resolve, quando passar para um humano, como medir resultados e cuidar da LGPD.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

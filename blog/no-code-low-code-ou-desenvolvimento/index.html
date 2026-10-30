@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No-code, low-code ou desenvolvimento sob medida? | PEROVANO</title>
+  <meta name="description" content="No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="No-code, low-code ou desenvolvimento sob medida? | PEROVANO">
+  <meta property="og:description" content="No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Automação">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "No-code, low-code ou desenvolvimento sob medida?",
+  "description": "No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Automação",
+  "keywords": "no-code ou low-code, no-code vs desenvolvimento, quando migrar do no-code, ferramentas de automação sem código",
+  "wordCount": 1459,
+  "image": "https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/",
+  "url": "https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automação",
+      "item": "https://lrperovano.com.br/blog/categoria/automacao/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "No-code, low-code ou desenvolvimento sob medida?",
+      "item": "https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "No-code é coisa de amador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. São ferramentas legítimas, usadas por empresas de todos os tamanhos. O problema não é a ferramenta, e sim usá-la além do ponto em que ela é adequada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá para migrar do no-code para um sistema próprio sem parar a operação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na maioria dos casos, sim. O comum é construir o novo sistema em paralelo, migrar os dados e trocar os fluxos aos poucos, mantendo a ferramenta antiga até a nova estar validada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre no-code e low-code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No no-code, tudo é feito por configuração visual. No low-code, a base é visual, mas é possível escrever código para casos que a interface não cobre. O low-code oferece mais flexibilidade e exige mais conhecimento técnico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "n8n, Zapier ou Make: qual escolher?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende dos aplicativos que precisam ser conectados, do volume, do orçamento e de onde os dados podem ficar. O n8n pode ser instalado em servidor próprio, o que ajuda no controle dos dados. Compare as condições atuais de cada fornecedor antes de decidir. Se a sua empresa tem fluxos em ferramentas sem código que começaram a dar trabalho, vale olhar com calma o que deve continuar como está e o que merece um sistema próprio. A PEROVANO pode ajudar nessa avaliação. Fale conosco para conversar sobre o seu caso."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/automacao/">Automação</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">No-code, low-code ou desenvolvimento sob medida?</h1>
+          <p class="post__lead">No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#o-que-e-cada-opcao">O que é cada opção</a></li>
+              <li><a href="#quando-no-code-e-low-code-sao-otimos">Quando no-code e low-code são ótimos</a></li>
+              <li><a href="#os-limites-que-aparecem-com-o-tempo">Os limites que aparecem com o tempo</a></li>
+              <li><a href="#sinais-de-que-e-hora-de-migrar">Sinais de que é hora de migrar</a></li>
+              <li><a href="#o-caminho-hibrido">O caminho híbrido</a></li>
+              <li><a href="#o-que-perguntar-antes-de-decidir">O que perguntar antes de decidir</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>No-code e low-code são ótimos para validar ideias, montar automações simples e criar ferramentas internas com rapidez. Desenvolvimento sob medida passa a fazer mais sentido quando o volume cresce, as regras ficam complexas, o desempenho começa a incomodar ou a empresa precisa de controle total sobre dados, testes e custos.</p>
+<p>Não existe resposta certa para sempre. Muitas soluções nascem em uma ferramenta sem código, provam que funcionam e depois são reescritas quando viram parte central da operação. Outras continuam no no-code por anos, porque são pequenas, estáveis e baratas de manter. O erro mais comum não é escolher um ou outro, e sim não perceber o momento de mudar.</p>
+<p>A decisão fica mais simples quando se olha para três pontos: quanto o processo vai crescer, quanto ele é crítico para o negócio e quanto as regras são específicas da empresa.</p>
+<h2 id="o-que-e-cada-opcao">O que é cada opção</h2>
+<h3 id="no-code">No-code</h3>
+<p>No-code, ou "sem código", reúne ferramentas em que se monta uma solução arrastando blocos e preenchendo configurações, sem programar. Há duas famílias principais:</p>
+<ul>
+<li><strong>Automação visual</strong>: ferramentas como Zapier, Make e n8n conectam aplicativos por meio de fluxos do tipo "quando acontecer X, faça Y". Por exemplo, quando chega um formulário, criar o contato no CRM e avisar a equipe.</li>
+<li><strong>Construtores de aplicativos sem código</strong>: plataformas que geram telas, cadastros e fluxos a partir de uma interface visual, muitas vezes usando uma planilha ou um banco de dados da própria ferramenta.</li>
+</ul>
+<h3 id="low-code">Low-code</h3>
+<p>Low-code, ou "pouco código", combina a construção visual com a possibilidade de escrever trechos de programação quando o visual não basta. As plataformas low-code costumam mirar sistemas internos de empresas maiores, com mais opções de integração, permissões e implantação. Exigem alguém com algum conhecimento técnico para ir além do básico.</p>
+<h3 id="desenvolvimento-sob-medida">Desenvolvimento sob medida</h3>
+<p>No desenvolvimento sob medida, a solução é programada para o processo da empresa, com tecnologias de mercado. Há mais trabalho no início, mas não há limite imposto por uma plataforma: regras, telas, integrações e infraestrutura são decididas pelo projeto. A comparação mais ampla entre construir e assinar está em <a href="/blog/sistema-sob-medida-ou-software-pronto/">sistema sob medida ou software pronto</a>.</p>
+<h2 id="quando-no-code-e-low-code-sao-otimos">Quando no-code e low-code são ótimos</h2>
+<h3 id="validar-ideias">Validar ideias</h3>
+<p>Antes de investir em um sistema, uma versão montada em ferramenta sem código pode mostrar se as pessoas usam, se o fluxo faz sentido e o que realmente importa. É uma forma barata de aprender, no mesmo espírito de um <a href="/blog/mvp-como-tirar-ideia-de-sistema-do-papel/">MVP</a>.</p>
+<h3 id="automacoes-simples-entre-ferramentas-populares">Automações simples entre ferramentas populares</h3>
+<p>Enviar um aviso quando um pedido entra, copiar um contato de um formulário para a planilha, gerar uma tarefa quando um e-mail chega. Se os aplicativos envolvidos têm conectores prontos e o volume é moderado, a automação visual resolve em pouco tempo. O guia sobre <a href="/blog/como-automatizar-processos-na-empresa/">como automatizar processos na empresa</a> ajuda a escolher por onde começar.</p>
+<h3 id="ferramentas-internas-de-baixo-risco">Ferramentas internas de baixo risco</h3>
+<p>Um controle de empréstimo de equipamentos, um formulário de solicitação interna, um painel simples para a equipe. Quando poucos usuários usam, as regras são simples e uma falha não para a operação, uma ferramenta sem código costuma ser suficiente.</p>
+<h2 id="os-limites-que-aparecem-com-o-tempo">Os limites que aparecem com o tempo</h2>
+<h3 id="custo-por-volume-de-execucoes">Custo por volume de execuções</h3>
+<p>Muitas plataformas cobram por execução, por tarefa ou por usuário. No começo, a conta é pequena. Quando o volume cresce, ou quando um fluxo passa a ter muitos passos, o custo cresce junto e pode passar a ser maior que o de uma solução própria. Vale simular o volume esperado para os próximos anos, não só o atual.</p>
+<h3 id="dependencia-da-plataforma">Dependência da plataforma</h3>
+<p>A lógica do negócio fica guardada dentro da ferramenta, no formato dela. Se a plataforma mudar preços, regras, conectores ou deixar de existir, a empresa precisa se adaptar ou refazer tudo. Em construtores de aplicativos, exportar a solução para outro lugar costuma ser difícil ou impossível. Ferramentas que podem ser instaladas em servidor próprio, como o n8n, reduzem parte desse risco, mas trazem a responsabilidade de manter esse servidor.</p>
+<h3 id="desempenho">Desempenho</h3>
+<p>Fluxos com muitos passos, consultas a grandes volumes de dados e telas com muitas informações tendem a ficar lentos. Como o código da plataforma não é seu, há pouco a fazer além de simplificar o processo ou contornar o problema.</p>
+<h3 id="regras-complexas">Regras complexas</h3>
+<p>Cálculos de preço com muitas exceções, fluxos de aprovação com vários níveis, regras que dependem do histórico do cliente. Montar isso com blocos visuais gera fluxos enormes e difíceis de entender. Em código, a mesma regra costuma ser mais curta, testável e documentada.</p>
+<h3 id="controle-de-dados-e-lgpd">Controle de dados e LGPD</h3>
+<p>Cada ferramenta conectada é mais um lugar por onde passam dados de clientes. É preciso saber onde os dados ficam armazenados, quem tem acesso, por quanto tempo os registros de execução guardam informações pessoais e como apagá-las quando necessário. O artigo sobre <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a> detalha essas obrigações.</p>
+<h3 id="versionamento-e-testes">Versionamento e testes</h3>
+<p>Em desenvolvimento profissional, cada mudança fica registrada, pode ser revisada e desfeita, e testes automáticos verificam se nada quebrou. Muitas plataformas sem código oferecem recursos limitados para isso. Na prática, uma alteração feita às pressas em produção pode interromper um processo inteiro sem que ninguém perceba até o cliente reclamar.</p>
+<blockquote><p>O no-code reduz o custo de começar. O que precisa ser avaliado é o custo de continuar quando a solução fica importante.</p></blockquote>
+<h2 id="sinais-de-que-e-hora-de-migrar">Sinais de que é hora de migrar</h2>
+<ul>
+<li>A fatura da plataforma cresce todo mês junto com o volume de execuções.</li>
+<li>Os fluxos ficaram tão grandes que só uma pessoa entende como funcionam.</li>
+<li>Falhas acontecem sem aviso e são descobertas por clientes ou pela equipe.</li>
+<li>A equipe criou planilhas e controles paralelos para contornar limitações da ferramenta.</li>
+<li>O processo virou parte central da operação ou do produto vendido aos clientes.</li>
+<li>Clientes ou auditorias pedem garantias sobre dados que a plataforma não oferece.</li>
+<li>Uma nova funcionalidade importante simplesmente não é possível na ferramenta.</li>
+</ul>
+<p>Quando vários desses sinais aparecem juntos, a migração costuma compensar. Um bom ponto de partida é documentar o que a solução atual faz, inclusive as exceções que foram sendo remendadas. Esse levantamento serve de base para o novo projeto. O mesmo raciocínio vale para quem está pensando em <a href="/blog/trocar-planilha-por-sistema/">trocar planilha por sistema</a>.</p>
+<h2 id="o-caminho-hibrido">O caminho híbrido</h2>
+<p>Não é preciso migrar tudo de uma vez. Em muitas empresas, a combinação funciona bem:</p>
+<ul>
+<li>O núcleo do processo, com regras de negócio e dados sensíveis, fica em um sistema sob medida.</li>
+<li>O sistema oferece uma API, e a automação visual continua cuidando de tarefas periféricas, como avisos, cópias para planilhas e integrações com ferramentas de marketing.</li>
+<li>Ferramentas internas de baixo risco seguem em no-code enquanto atenderem bem.</li>
+</ul>
+<p>Esse arranjo aproveita a agilidade das ferramentas visuais sem colocar o coração da operação na mão delas. A peça que liga as duas pontas é a <a href="/blog/integracao-de-sistemas-api/">integração de sistemas via API</a>. Depois da migração, o sistema próprio também precisa de cuidado contínuo, como mostra o artigo sobre <a href="/blog/manutencao-de-software/">manutenção de software</a>.</p>
+<h2 id="o-que-perguntar-antes-de-decidir">O que perguntar antes de decidir</h2>
+<ol>
+<li>Quantas execuções ou usuários a solução terá hoje e daqui a dois ou três anos?</li>
+<li>O que acontece com a operação se a ferramenta ficar fora do ar por um dia?</li>
+<li>Onde ficam os dados e é possível exportá-los por completo?</li>
+<li>Quem vai manter os fluxos se a pessoa que os criou sair da empresa?</li>
+<li>As regras de negócio cabem nos blocos da ferramenta sem gambiarras?</li>
+</ol>
+<p>A PEROVANO desenvolve sistemas sob medida, integrações e automações, apresentados em <a href="/#solucoes">nossas soluções</a>, e pode trabalhar junto com as ferramentas que a empresa já usa.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="no-code-e-coisa-de-amador">No-code é coisa de amador?</h3>
+<p>Não. São ferramentas legítimas, usadas por empresas de todos os tamanhos. O problema não é a ferramenta, e sim usá-la além do ponto em que ela é adequada.</p>
+<h3 id="da-para-migrar-do-no-code-para-um-sistema-proprio-sem-parar-a-operacao">Dá para migrar do no-code para um sistema próprio sem parar a operação?</h3>
+<p>Na maioria dos casos, sim. O comum é construir o novo sistema em paralelo, migrar os dados e trocar os fluxos aos poucos, mantendo a ferramenta antiga até a nova estar validada.</p>
+<h3 id="qual-a-diferenca-entre-no-code-e-low-code">Qual a diferença entre no-code e low-code?</h3>
+<p>No no-code, tudo é feito por configuração visual. No low-code, a base é visual, mas é possível escrever código para casos que a interface não cobre. O low-code oferece mais flexibilidade e exige mais conhecimento técnico.</p>
+<h3 id="n8n-zapier-ou-make-qual-escolher">n8n, Zapier ou Make: qual escolher?</h3>
+<p>Depende dos aplicativos que precisam ser conectados, do volume, do orçamento e de onde os dados podem ficar. O n8n pode ser instalado em servidor próprio, o que ajuda no controle dos dados. Compare as condições atuais de cada fornecedor antes de decidir.</p>
+<p>Se a sua empresa tem fluxos em ferramentas sem código que começaram a dar trabalho, vale olhar com calma o que deve continuar como está e o que merece um sistema próprio. A PEROVANO pode ajudar nessa avaliação. <a href="/#contato">Fale conosco</a> para conversar sobre o seu caso.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22No-code%2C%20low-code%20ou%20desenvolvimento%20sob%20medida%3F%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Automação" data-search="como integrar pix e pagamentos ao seu sistema como integrar pix, boleto e cartão ao seu sistema: gateway ou banco, qr code dinâmico com webhook, pix automático, conciliação, estornos e segurança. integração com pix, integrar pagamentos ao sistema, api pix, gateway de pagamento">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/integracao-com-pix-e-pagamentos/">Como integrar Pix e pagamentos ao seu sistema</a></h3>
+            <p class="post-card__excerpt">Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.</p>
+          </article>
+          <article class="post-card" data-category="Automação" data-search="integração com a api do whatsapp business: como funciona entenda a integração com a api do whatsapp business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais. integração com a api do whatsapp business, api oficial do whatsapp, whatsapp business platform, whatsapp integrado ao crm">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/whatsapp-business-api-integracao/">Integração com a API do WhatsApp Business: como funciona</a></h3>
+            <p class="post-card__excerpt">Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</p>
+          </article>
+          <article class="post-card" data-category="Automação" data-search="como automatizar processos na empresa, passo a passo como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas. como automatizar processos na empresa, automação de processos, automação de tarefas repetitivas, automação empresarial">
+            <p class="post-card__meta"><span>Automação</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-automatizar-processos-na-empresa/">Como automatizar processos na empresa, passo a passo</a></h3>
+            <p class="post-card__excerpt">Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

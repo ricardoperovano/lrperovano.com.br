@@ -155,29 +155,60 @@
     });
   });
 
-  // Blog: filtro por categoria (sem JS, os chips são âncoras para cada grupo).
+  // Blog: filtro por categoria + busca. Sem JS, os chips levam às páginas de cada categoria.
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.blog-group'));
   if (chips.length && groups.length) {
-    var applyFilter = function (category) {
-      chips.forEach(function (chip) {
-        chip.setAttribute('aria-pressed', String(chip.getAttribute('data-filter') === category));
-      });
+    var searchBox = document.querySelector('.blog-search');
+    var searchInput = document.getElementById('busca-artigos');
+    var emptyMsg = document.querySelector('.blog-empty');
+    var state = { category: '', query: '' };
+    var normalize = function (text) {
+      return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    };
+    var apply = function () {
+      var terms = normalize(state.query).split(/\s+/).filter(Boolean);
+      var total = 0;
       groups.forEach(function (group) {
-        var title = group.querySelector('.blog-group__title');
-        group.hidden = Boolean(category) && title && title.textContent !== category;
+        var visible = 0;
+        var inCategory = !state.category || group.getAttribute('data-category') === state.category;
+        group.querySelectorAll('.post-card').forEach(function (card) {
+          var haystack = normalize(card.getAttribute('data-search') || card.textContent);
+          var match = inCategory && terms.every(function (t) { return haystack.indexOf(t) !== -1; });
+          card.hidden = !match;
+          if (match) visible++;
+        });
+        group.hidden = visible === 0;
+        total += visible;
       });
+      chips.forEach(function (chip) {
+        chip.setAttribute('aria-pressed', String(chip.getAttribute('data-filter') === state.category));
+      });
+      if (emptyMsg) {
+        emptyMsg.hidden = total !== 0;
+        emptyMsg.textContent = total === 0
+          ? 'Nenhum artigo encontrado para “' + state.query + '”. Tente outro termo ou escolha uma categoria.'
+          : '';
+      }
     };
     chips.forEach(function (chip) {
       chip.addEventListener('click', function (event) {
         event.preventDefault();
-        var category = chip.getAttribute('data-filter');
-        applyFilter(category);
-        history.replaceState(null, '', category ? chip.getAttribute('href') : location.pathname);
+        state.category = chip.getAttribute('data-filter');
+        apply();
+        history.replaceState(null, '', state.category ? chip.getAttribute('data-anchor') : location.pathname);
       });
     });
-    var initial = chips.filter(function (chip) { return chip.getAttribute('href') === location.hash; })[0];
-    applyFilter(initial ? initial.getAttribute('data-filter') : '');
+    if (searchBox && searchInput) {
+      searchBox.hidden = false;
+      searchInput.addEventListener('input', function () {
+        state.query = searchInput.value.trim();
+        apply();
+      });
+    }
+    var initial = chips.filter(function (chip) { return chip.getAttribute('data-anchor') === location.hash; })[0];
+    state.category = initial ? initial.getAttribute('data-filter') : '';
+    apply();
   }
 
   // Artigo: destaca no índice a seção em leitura.

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como criar um SaaS: do modelo à arquitetura | PEROVANO</title>
+  <meta name="description" content="Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/como-criar-um-saas/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Como criar um SaaS: do modelo à arquitetura | PEROVANO">
+  <meta property="og:description" content="Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/como-criar-um-saas/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/como-criar-um-saas/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/como-criar-um-saas/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Sistemas">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Como criar um SaaS: do modelo à arquitetura",
+  "description": "Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Sistemas",
+  "keywords": "como criar um saas, software como serviço, sistema multi-tenant, cobrança recorrente saas",
+  "wordCount": 1545,
+  "image": "https://lrperovano.com.br/blog/como-criar-um-saas/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/como-criar-um-saas/",
+  "url": "https://lrperovano.com.br/blog/como-criar-um-saas/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sistemas",
+      "item": "https://lrperovano.com.br/blog/categoria/sistemas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Como criar um SaaS: do modelo à arquitetura",
+      "item": "https://lrperovano.com.br/blog/como-criar-um-saas/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Posso transformar um sistema interno em SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É possível, mas raramente é só abrir para outros clientes. Isolamento de dados, cadastro, planos, cobrança e suporte precisam ser adicionados, e regras feitas para uma única empresa precisam virar configurações. Uma avaliação técnica do sistema atual indica se vale adaptar ou reconstruir partes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SaaS precisa ter aplicativo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Muitos SaaS funcionam apenas no navegador. PaceOn, Estudatta e Portal da Igreja são exemplos de produtos web desenvolvidos pela PEROVANO; veja os projetos. Um app faz sentido quando o uso no celular é central para o cliente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o maior erro técnico ao criar um SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deixar o isolamento de dados entre clientes para depois. Corrigir isso com o sistema em produção é caro e arriscado, porque envolve mexer em todas as consultas e migrar dados de todos os clientes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo leva para um SaaS dar retorno?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do mercado, do preço e da capacidade de reter clientes. Por ser baseado em assinaturas, o retorno costuma vir ao longo do tempo, e não no momento da venda. Se você tem uma ideia de SaaS e quer avaliar a base técnica e o escopo da primeira versão, vale começar por uma conversa sobre o problema e o público. Fale com a PEROVANO para discutir o projeto."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/sistemas/">Sistemas</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Como criar um SaaS: do modelo à arquitetura</h1>
+          <p class="post__lead">Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#o-que-e-saas">O que é SaaS</a></li>
+              <li><a href="#o-que-muda-em-relacao-a-um-sistema-interno">O que muda em relação a um sistema interno</a></li>
+              <li><a href="#decisoes-tecnicas-essenciais">Decisões técnicas essenciais</a></li>
+              <li><a href="#cobranca-recorrente-e-inadimplencia">Cobrança recorrente e inadimplência</a></li>
+              <li><a href="#lgpd-em-um-saas">LGPD em um SaaS</a></li>
+              <li><a href="#como-validar-antes-de-construir-tudo">Como validar antes de construir tudo</a></li>
+              <li><a href="#metricas-que-importam">Métricas que importam</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Criar um SaaS é construir um software que vários clientes usam ao mesmo tempo, pela internet, pagando uma assinatura. Por isso, ele exige decisões que um sistema interno não exige: como separar os dados de cada cliente, como cobrar todo mês e lidar com quem não paga, como permitir que alguém se cadastre e comece a usar sem falar com ninguém.</p>
+<p>O caminho mais seguro tem quatro partes. Validar que existe um problema pelo qual as pessoas pagam. Construir uma primeira versão enxuta, mas com a base técnica certa, principalmente o isolamento de dados entre clientes. Automatizar a cobrança recorrente. E acompanhar métricas de retenção desde o primeiro cliente.</p>
+<h2 id="o-que-e-saas">O que é SaaS</h2>
+<p>SaaS é a sigla em inglês para <em>Software as a Service</em>, ou software como serviço. Em vez de comprar uma licença e instalar o programa, o cliente acessa o sistema pelo navegador ou por um aplicativo e paga uma assinatura enquanto usa. O fornecedor cuida de servidores, atualizações, backups e segurança.</p>
+<p>Ferramentas de gestão financeira, atendimento, agendamento e assinatura eletrônica costumam seguir esse modelo. Para quem está do outro lado, avaliando se assina um produto pronto ou desenvolve o próprio, o artigo <a href="/blog/sistema-sob-medida-ou-software-pronto/">sistema sob medida ou software pronto</a> ajuda na decisão.</p>
+<h2 id="o-que-muda-em-relacao-a-um-sistema-interno">O que muda em relação a um sistema interno</h2>
+<h3 id="varios-clientes-no-mesmo-sistema">Vários clientes no mesmo sistema</h3>
+<p>Um sistema interno atende uma empresa. Um SaaS atende muitas, na mesma instalação. Cada empresa cliente é chamada de <strong>inquilino</strong>, ou <em>tenant</em>, e a arquitetura que atende vários deles é chamada de <strong>multi-inquilino</strong> ou <strong>multi-tenant</strong>. Os dados de um cliente nunca podem aparecer para outro.</p>
+<h3 id="cadastro-e-periodo-de-teste">Cadastro e período de teste</h3>
+<p>No SaaS, o cliente costuma se cadastrar sozinho, configurar a conta e testar antes de pagar. Isso exige um fluxo de entrada muito bem resolvido: criação de conta, confirmação de e-mail, configuração inicial e algum guia de primeiros passos. Se o cliente se perde nos primeiros minutos, dificilmente volta.</p>
+<h3 id="niveis-de-plano">Níveis de plano</h3>
+<p>Planos diferentes significam limites diferentes: número de usuários, de registros, de armazenamento ou acesso a certos módulos. O sistema precisa conhecer esses limites, aplicá-los e permitir trocar de plano sem intervenção manual.</p>
+<h3 id="cobranca-recorrente">Cobrança recorrente</h3>
+<p>A receita vem de pagamentos mensais ou anuais, automatizados. Isso envolve integração com meios de pagamento, notas fiscais e tratamento de falhas, assunto de uma seção própria mais abaixo.</p>
+<h3 id="suporte">Suporte</h3>
+<p>Com muitos clientes, o suporte precisa escalar. Base de ajuda, mensagens dentro do sistema e ferramentas internas para a equipe consultar a conta de um cliente, com registro de quem acessou o quê, fazem parte do produto.</p>
+<h2 id="decisoes-tecnicas-essenciais">Decisões técnicas essenciais</h2>
+<h3 id="isolamento-de-dados-entre-clientes">Isolamento de dados entre clientes</h3>
+<p>É a decisão mais importante e a mais cara de mudar depois. As abordagens mais comuns são:</p>
+<ul>
+<li><strong>Banco de dados separado por cliente:</strong> isolamento forte, mas operação mais trabalhosa à medida que os clientes aumentam.</li>
+<li><strong>Esquema separado por cliente:</strong> um banco com áreas separadas para cada inquilino. Fica no meio do caminho.</li>
+<li><strong>Tabelas compartilhadas com identificador do cliente:</strong> todos os dados ficam juntos, e cada registro carrega a qual inquilino pertence. É a opção mais simples de operar e escalar, mas exige disciplina rigorosa.</li>
+</ul>
+<p>Na terceira abordagem, o filtro por cliente não pode depender de cada programador lembrar de aplicá-lo em cada consulta. Ele deve ser imposto em uma camada central do sistema ou pelo próprio banco de dados. Alguns bancos, como o PostgreSQL, oferecem segurança em nível de linha, um recurso que aplica essa regra automaticamente. Testes automatizados que tentam acessar dados de outro inquilino também ajudam.</p>
+<h3 id="seguranca">Segurança</h3>
+<p>Além do isolamento, um SaaS precisa de autenticação robusta, com opção de verificação em duas etapas, controle de permissões por perfil dentro de cada cliente, criptografia na comunicação, backups testados e registro das ações importantes. Credenciais de integrações devem ficar fora do código.</p>
+<h3 id="escalabilidade-realista">Escalabilidade realista</h3>
+<p>Escalabilidade é a capacidade de atender mais clientes sem perder desempenho. Projetar desde o início para milhões de usuários costuma ser desperdício. O que importa é não criar obstáculos óbvios: consultas com índices adequados, tarefas demoradas executadas em segundo plano e uma arquitetura que permita adicionar capacidade quando os números pedirem.</p>
+<h3 id="observabilidade">Observabilidade</h3>
+<p>Observabilidade é a capacidade de saber o que está acontecendo no sistema em produção: registros de eventos, monitoramento de erros, tempo de resposta e alertas. Em um SaaS, um problema afeta muitos clientes ao mesmo tempo. Descobrir a falha pelo monitoramento, e não pela reclamação do cliente, faz diferença na confiança no produto.</p>
+<h2 id="cobranca-recorrente-e-inadimplencia">Cobrança recorrente e inadimplência</h2>
+<p>A cobrança recorrente costuma usar cartão de crédito com débito automático, boleto ou Pix. Gateways de pagamento oferecem recursos de assinatura que cuidam de parte do trabalho, mas o sistema ainda precisa reagir a cada evento: pagamento aprovado, recusado, estornado, assinatura cancelada. O artigo sobre <a href="/blog/integracao-com-pix-e-pagamentos/">integração com Pix e pagamentos</a> detalha como essas confirmações funcionam.</p>
+<p>A inadimplência faz parte do modelo. Cartões vencem, limites estouram, boletos são esquecidos. Uma política clara evita tanto a perda de receita quanto a perda de clientes por um problema pontual:</p>
+<ul>
+<li>Novas tentativas automáticas de cobrança em dias diferentes.</li>
+<li>Avisos por e-mail e dentro do sistema, com link para atualizar o meio de pagamento.</li>
+<li>Um período de tolerância antes de restringir o acesso.</li>
+<li>Restrição gradual, por exemplo, passando para somente leitura antes de bloquear.</li>
+<li>Regras claras sobre por quanto tempo os dados ficam guardados após o cancelamento.</li>
+</ul>
+<p>Confira com o gateway escolhido as condições atuais, os meios de pagamento recorrente disponíveis e as taxas.</p>
+<h2 id="lgpd-em-um-saas">LGPD em um SaaS</h2>
+<p>Em um SaaS, a empresa costuma ocupar dois papéis diante da LGPD, a Lei Geral de Proteção de Dados. Em relação aos dados dos próprios clientes, como cadastro e cobrança, ela decide como os dados são tratados. Em relação aos dados que os clientes colocam no sistema, como informações dos clientes deles, ela em geral trata em nome deles, seguindo suas instruções.</p>
+<p>Na prática, isso pede contrato e termos de uso que deixem esses papéis claros, controle de acesso, registro de quem consulta os dados, plano para incidentes e meios para exportar e excluir dados quando solicitado. O artigo sobre <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a> aprofunda cada um desses pontos.</p>
+<h2 id="como-validar-antes-de-construir-tudo">Como validar antes de construir tudo</h2>
+<p>O maior risco de um SaaS não é técnico. É construir algo que ninguém paga para usar. Antes de investir no produto completo:</p>
+<ul>
+<li>Converse com potenciais clientes sobre o problema, não sobre a solução. Pergunte como resolvem hoje e quanto isso custa em tempo ou dinheiro.</li>
+<li>Ofereça uma pré-venda ou lista de espera com preço definido. Interesse que não se converte em compromisso é um sinal fraco.</li>
+<li>Atenda os primeiros clientes de forma parcialmente manual, se possível, para entender o processo antes de automatizá-lo.</li>
+<li>Lance um <a href="/blog/mvp-como-tirar-ideia-de-sistema-do-papel/">MVP</a> com o fluxo principal funcionando de ponta a ponta.</li>
+</ul>
+<p>Mesmo enxuto, o MVP de um SaaS não deve abrir mão do isolamento de dados e da segurança. Funcionalidades podem esperar; a base, não. Ferramentas sem código podem servir para testar o interesse, e o artigo sobre <a href="/blog/no-code-low-code-ou-desenvolvimento/">no-code, low-code ou desenvolvimento</a> ajuda a entender até onde elas vão.</p>
+<h2 id="metricas-que-importam">Métricas que importam</h2>
+<p>Algumas métricas mostram se o SaaS está saudável:</p>
+<ul>
+<li><strong>Receita recorrente:</strong> quanto entra todo mês com as assinaturas ativas. Mostra a base previsível do negócio.</li>
+<li><strong>Cancelamento, ou churn:</strong> a proporção de clientes ou de receita perdida em um período. Um churn alto anula o esforço de vendas, porque os clientes saem tão rápido quanto entram.</li>
+<li><strong>Retenção:</strong> quantos clientes continuam usando e pagando ao longo do tempo. Acompanhar por grupos de clientes que entraram no mesmo mês mostra se o produto melhora.</li>
+<li><strong>Conversão do teste para pago:</strong> quantos dos que testam viram assinantes. Indica se o produto entrega valor rápido o suficiente.</li>
+<li><strong>Uso efetivo:</strong> quantos clientes usam de fato as funções principais. Clientes que pagam e não usam tendem a cancelar.</li>
+</ul>
+<p>Não existe um número ideal universal. Os valores variam conforme o mercado, o preço e o tipo de cliente. O importante é medir desde o início e acompanhar a tendência.</p>
+<blockquote><p>Em um SaaS, manter um cliente costuma ser tão importante quanto conquistar um novo.</p></blockquote>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="posso-transformar-um-sistema-interno-em-saas">Posso transformar um sistema interno em SaaS?</h3>
+<p>É possível, mas raramente é só abrir para outros clientes. Isolamento de dados, cadastro, planos, cobrança e suporte precisam ser adicionados, e regras feitas para uma única empresa precisam virar configurações. Uma avaliação técnica do sistema atual indica se vale adaptar ou reconstruir partes.</p>
+<h3 id="saas-precisa-ter-aplicativo">SaaS precisa ter aplicativo?</h3>
+<p>Não. Muitos SaaS funcionam apenas no navegador. PaceOn, Estudatta e Portal da Igreja são exemplos de produtos web desenvolvidos pela PEROVANO; veja os <a href="/#projetos">projetos</a>. Um app faz sentido quando o uso no celular é central para o cliente.</p>
+<h3 id="qual-o-maior-erro-tecnico-ao-criar-um-saas">Qual o maior erro técnico ao criar um SaaS?</h3>
+<p>Deixar o isolamento de dados entre clientes para depois. Corrigir isso com o sistema em produção é caro e arriscado, porque envolve mexer em todas as consultas e migrar dados de todos os clientes.</p>
+<h3 id="quanto-tempo-leva-para-um-saas-dar-retorno">Quanto tempo leva para um SaaS dar retorno?</h3>
+<p>Depende do mercado, do preço e da capacidade de reter clientes. Por ser baseado em assinaturas, o retorno costuma vir ao longo do tempo, e não no momento da venda.</p>
+<p>Se você tem uma ideia de SaaS e quer avaliar a base técnica e o escopo da primeira versão, vale começar por uma conversa sobre o problema e o público. <a href="/#contato">Fale com a PEROVANO</a> para discutir o projeto.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Como%20criar%20um%20SaaS%3A%20do%20modelo%20%C3%A0%20arquitetura%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sistemas" data-search="como criar um aplicativo para a sua empresa, passo a passo como criar um aplicativo para a sua empresa: etapas do objetivo à publicação na google play e na app store, quem participa, o que providenciar e erros comuns. como criar um aplicativo, criar aplicativo para empresa, etapas de desenvolvimento de app, publicar app na app store e google play">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-criar-um-aplicativo/">Como criar um aplicativo para a sua empresa, passo a passo</a></h3>
+            <p class="post-card__excerpt">Como criar um aplicativo para a sua empresa: etapas do objetivo à publicação na Google Play e na App Store, quem participa, o que providenciar e erros comuns.</p>
+          </article>
+          <article class="post-card" data-category="Sistemas" data-search="o que é pwa (progressive web app) e quando vale a pena entenda o que é pwa, o site que se instala como aplicativo e funciona offline. veja vantagens, limitações no android e no iphone e quando escolher app nativo. o que é pwa, progressive web app, pwa ou app nativo, aplicativo web progressivo">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/o-que-e-pwa/">O que é PWA (Progressive Web App) e quando vale a pena</a></h3>
+            <p class="post-card__excerpt">Entenda o que é PWA, o site que se instala como aplicativo e funciona offline. Veja vantagens, limitações no Android e no iPhone e quando escolher app nativo.</p>
+          </article>
+          <article class="post-card" data-category="Sistemas" data-search="quando trocar a planilha por um sistema saiba quando trocar a planilha por um sistema: sinais de gargalo, o que muda na operação, como migrar os dados sem parar a empresa e quais opções avaliar. trocar planilha por sistema, sair da planilha, substituir planilha excel por sistema, sistema de gestão para pequena empresa">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/trocar-planilha-por-sistema/">Quando trocar a planilha por um sistema</a></h3>
+            <p class="post-card__excerpt">Saiba quando trocar a planilha por um sistema: sinais de gargalo, o que muda na operação, como migrar os dados sem parar a empresa e quais opções avaliar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

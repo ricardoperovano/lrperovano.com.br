@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress ou site sob medida: como escolher | PEROVANO</title>
+  <meta name="description" content="WordPress ou site sob medida? Veja quando cada um faz sentido, os cuidados com plugins, segurança e desempenho, e as opções intermediárias, como CMS headless.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="WordPress ou site sob medida: como escolher | PEROVANO">
+  <meta property="og:description" content="WordPress ou site sob medida? Veja quando cada um faz sentido, os cuidados com plugins, segurança e desempenho, e as opções intermediárias, como CMS headless.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Sites">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPress ou site sob medida: como escolher",
+  "description": "WordPress ou site sob medida? Veja quando cada um faz sentido, os cuidados com plugins, segurança e desempenho, e as opções intermediárias, como CMS headless.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Sites",
+  "keywords": "wordpress ou site sob medida, site em wordpress vale a pena, site personalizado ou wordpress, cms headless",
+  "wordCount": 1561,
+  "image": "https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/",
+  "url": "https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sites",
+      "item": "https://lrperovano.com.br/blog/categoria/sites/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "WordPress ou site sob medida: como escolher",
+      "item": "https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Site em WordPress é inseguro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não por natureza. O núcleo do WordPress é mantido ativamente e recebe correções de segurança. O risco aparece quando o site acumula plugins desatualizados, senhas fracas e nenhuma rotina de manutenção. Com cuidados básicos e atualizações em dia, o WordPress pode ser bastante seguro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Site sob medida é sempre mais caro que WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No investimento inicial, geralmente sim, porque o design e o código são feitos para o projeto. Ao longo do tempo, a diferença tende a diminuir: um site estático costuma exigir menos manutenção, enquanto um WordPress com muitos plugins pede atualizações e testes contínuos, e alguns plugins são pagos por assinatura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá para migrar de WordPress para um site sob medida depois?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dá. O conteúdo pode ser exportado e reaproveitado. O cuidado principal é manter os mesmos endereços das páginas ou configurar redirecionamentos, para não perder o posicionamento já conquistado no Google."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "WordPress é bom para SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ele oferece uma boa base, e há plugins que facilitam títulos, descrições e sitemap. Mas SEO depende mais de conteúdo útil, estrutura e velocidade do que da plataforma. Se você está decidindo entre WordPress e um site sob medida, vale começar pelo uso que o site vai ter no dia a dia, e não pela tecnologia. A PEROVANO desenvolve sites e pode ajudar a avaliar qual caminho faz sentido para a sua empresa. Fale conosco para conversar sobre o projeto."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/sites/">Sites</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">WordPress ou site sob medida: como escolher</h1>
+          <p class="post__lead">WordPress ou site sob medida? Veja quando cada um faz sentido, os cuidados com plugins, segurança e desempenho, e as opções intermediárias, como CMS headless.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#o-que-e-o-wordpress">O que é o WordPress</a></li>
+              <li><a href="#quando-o-wordpress-e-a-melhor-escolha">Quando o WordPress é a melhor escolha</a></li>
+              <li><a href="#limites-e-cuidados-com-o-wordpress">Limites e cuidados com o WordPress</a></li>
+              <li><a href="#quando-um-site-sob-medida-ou-estatico-faz-mais-sentido">Quando um site sob medida ou estático faz mais sentido</a></li>
+              <li><a href="#opcoes-intermediarias">Opções intermediárias</a></li>
+              <li><a href="#perguntas-para-decidir">Perguntas para decidir</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>WordPress costuma ser a melhor escolha quando o site depende de conteúdo publicado com frequência, como um blog, uma área de notícias ou um catálogo editado pela própria equipe, e quando o orçamento pede uma base pronta com temas e plugins já existentes. A empresa ganha um painel conhecido, muitos profissionais no mercado e liberdade para editar sem chamar o desenvolvedor a cada mudança.</p>
+<p>Um site sob medida ou estático faz mais sentido quando o conteúdo muda pouco, quando o desempenho e o design próprio pesam na decisão ou quando o site precisa conversar com sistemas da empresa. Nesse caso, o site carrega só o que usa, tem menos peças para manter atualizadas e fica mais fácil de proteger.</p>
+<p>Entre os dois extremos existem caminhos intermediários, como o CMS headless e os construtores de páginas. A escolha certa depende menos da tecnologia e mais de quatro perguntas: quem vai editar, com que frequência, o que o site precisa integrar e quem vai cuidar dele depois de publicado.</p>
+<h2 id="o-que-e-o-wordpress">O que é o WordPress</h2>
+<p>WordPress é um sistema de gerenciamento de conteúdo, ou CMS (do inglês <em>content management system</em>), de código aberto. Na prática, é um software instalado em um servidor que oferece um painel administrativo para criar páginas, publicar posts, organizar menus e enviar imagens, sem mexer em código.</p>
+<p>Ele funciona com duas peças principais:</p>
+<ul>
+<li><strong>Temas</strong>, que definem a aparência do site: cores, tipografia, layout das páginas.</li>
+<li><strong>Plugins</strong>, que acrescentam funções: formulários, SEO, loja virtual, cache, backup, multilíngue e muito mais.</li>
+</ul>
+<p>O WordPress pode ser instalado em uma hospedagem própria, com controle total e responsabilidade total pelas atualizações, ou usado em serviços que o hospedam por você, com menos trabalho e mais limites sobre o que pode ser instalado. Confira as condições atuais de cada plano antes de decidir.</p>
+<h2 id="quando-o-wordpress-e-a-melhor-escolha">Quando o WordPress é a melhor escolha</h2>
+<ul>
+<li><strong>Blog ou área de conteúdo ativa.</strong> Se a estratégia inclui publicar artigos com regularidade para atrair visitas do Google, o editor do WordPress foi feito para isso. O artigo sobre <a href="/blog/seo-para-sites-de-empresas/">SEO para sites de empresas</a> explica por que esse conteúdo importa.</li>
+<li><strong>Conteúdo editado com frequência pela equipe.</strong> Cardápios, vagas, eventos, notícias, catálogo de produtos. Quando várias pessoas precisam atualizar o site toda semana, um painel de edição deixa de ser luxo.</li>
+<li><strong>Orçamento enxuto.</strong> Com um tema bem escolhido e poucos plugins, é possível colocar no ar um site funcional com investimento menor do que o de um projeto desenhado do zero. O artigo sobre <a href="/blog/quanto-custa-um-site-profissional/">quanto custa um site profissional</a> detalha o que entra nessa conta.</li>
+<li><strong>Autonomia em relação ao fornecedor.</strong> Como o WordPress é muito difundido, encontrar outro profissional para dar continuidade costuma ser simples.</li>
+</ul>
+<h2 id="limites-e-cuidados-com-o-wordpress">Limites e cuidados com o WordPress</h2>
+<p>O WordPress é uma boa ferramenta, mas não é "instalar e esquecer". Os problemas mais comuns aparecem depois da entrega.</p>
+<h3 id="atualizacoes-constantes">Atualizações constantes</h3>
+<p>O núcleo do WordPress, os temas e os plugins recebem atualizações frequentes, muitas delas de segurança, e cada uma pode gerar incompatibilidade entre peças de autores diferentes. Alguém precisa ser responsável por atualizar, testar e manter backups. O artigo sobre <a href="/blog/manutencao-de-software/">manutenção de software</a> aprofunda esse ponto.</p>
+<h3 id="seguranca-dos-plugins">Segurança dos plugins</h3>
+<p>Cada plugin é código de terceiros rodando no seu servidor. Plugins abandonados pelo autor, baixados de fontes não oficiais ou mantidos desatualizados são uma porta de entrada comum para invasões. Alguns cuidados básicos:</p>
+<ul>
+<li>Instalar só o necessário e remover o que não é usado.</li>
+<li>Preferir plugins com atualizações recentes e boa reputação.</li>
+<li>Nunca usar versões "pirateadas" de plugins ou temas pagos.</li>
+<li>Usar senhas fortes e autenticação em dois fatores no painel.</li>
+<li>Manter backups automáticos guardados fora do servidor do site.</li>
+</ul>
+<h3 id="desempenho-de-temas-pesados">Desempenho de temas pesados</h3>
+<p>Temas "multiuso", que prometem servir para qualquer tipo de negócio, costumam carregar muitos scripts, fontes e estilos que o site nunca usa. Somados a vários plugins, o resultado é um site lento, especialmente no celular. Isso afeta a experiência do visitante e as métricas que o Google acompanha, explicadas no artigo sobre <a href="/blog/velocidade-do-site-core-web-vitals/">velocidade do site e Core Web Vitals</a>. Um WordPress rápido é possível, mas exige tema leve, poucos plugins e cache bem configurado.</p>
+<h3 id="hospedagem">Hospedagem</h3>
+<p>O WordPress depende de PHP e de um banco de dados, o que pede uma hospedagem com recursos adequados. Planos muito baratos e superlotados deixam qualquer site lento, por melhor que seja o tema. Também vale saber quem cuida das atualizações do servidor e dos backups. O artigo sobre <a href="/blog/dominio-e-hospedagem/">domínio e hospedagem</a> ajuda a entender o que contratar.</p>
+<h2 id="quando-um-site-sob-medida-ou-estatico-faz-mais-sentido">Quando um site sob medida ou estático faz mais sentido</h2>
+<p>Site sob medida é aquele cujo código é escrito para o projeto, a partir de um design próprio. Uma variação comum é o <strong>site estático</strong>: as páginas são geradas antecipadamente como arquivos prontos e entregues ao visitante sem consultar banco de dados a cada acesso. Isso reduz o tempo de carregamento e elimina boa parte das brechas de segurança típicas de um painel exposto na internet.</p>
+<p>Esse caminho tende a ser melhor quando:</p>
+<ul>
+<li><strong>O desempenho é prioridade.</strong> O site carrega apenas o código que usa. Não há tema genérico nem dezenas de plugins competindo por recursos.</li>
+<li><strong>O design precisa ser próprio.</strong> A identidade visual da empresa é desenhada do zero, sem as limitações de adaptar um tema existente.</li>
+<li><strong>Há integrações.</strong> O site precisa consultar estoque, enviar leads direto para o CRM, mostrar dados de um sistema interno ou conectar com pagamentos. Integrações bem feitas, como as descritas no artigo sobre <a href="/blog/integracao-de-sistemas-api/">integração de sistemas via API</a>, são mais simples de controlar em código próprio.</li>
+<li><strong>O conteúdo muda pouco.</strong> Um site institucional que recebe ajustes algumas vezes por ano não precisa de um painel de edição que exige atualizações toda semana.</li>
+</ul>
+<p>Um exemplo é o site institucional da Safe Offshore, empresa de serviços marítimos, que está entre os <a href="/#projetos">projetos da PEROVANO</a>.</p>
+<p>O ponto de atenção é a edição: sem painel, cada mudança de texto passa pelo desenvolvedor. Para quem edita pouco, é aceitável. Para quem publica toda semana, vira gargalo.</p>
+<h2 id="opcoes-intermediarias">Opções intermediárias</h2>
+<h3 id="cms-headless">CMS headless</h3>
+<p>Em um <strong>CMS headless</strong>, o painel de edição fica separado do site. A equipe edita o conteúdo em um painel, e o site, construído sob medida, busca esse conteúdo por API (uma interface que permite que sistemas troquem dados). O próprio WordPress pode ser usado assim, e também existem CMS criados especificamente para esse modelo.</p>
+<p>A vantagem é juntar o melhor dos dois lados: design próprio e desempenho de um site sob medida, com a autonomia de edição de um CMS. A desvantagem é a complexidade maior, já que são duas peças para hospedar e manter. Faz sentido em sites com bastante conteúdo e exigência alta de desempenho ou integração.</p>
+<h3 id="construtor-de-paginas">Construtor de páginas</h3>
+<p>Os <strong>construtores de páginas</strong> permitem montar o layout arrastando blocos, seja como plugin dentro do WordPress, seja como plataforma de criação de sites hospedada. São rápidos para começar e dão autonomia para quem não programa.</p>
+<p>Em troca, costumam gerar páginas mais pesadas, prendem o site à ferramenta e limitam integrações. Servem bem para validar uma ideia ou para uma página de campanha simples, como as descritas no artigo sobre <a href="/blog/o-que-e-landing-page/">landing page</a>. O artigo sobre <a href="/blog/no-code-low-code-ou-desenvolvimento/">no-code, low-code ou desenvolvimento</a> compara esses caminhos com mais detalhe.</p>
+<h2 id="perguntas-para-decidir">Perguntas para decidir</h2>
+<ol>
+<li>Quem vai editar o site e com que frequência? Toda semana ou algumas vezes por ano?</li>
+<li>O site terá blog ou outra área de conteúdo publicada com regularidade?</li>
+<li>O design precisa ser exclusivo ou um tema adaptado atende?</li>
+<li>O site precisa se integrar a CRM, ERP, pagamentos ou outros sistemas da empresa?</li>
+<li>Quem vai cuidar das atualizações, da segurança e dos backups depois da entrega?</li>
+<li>Se trocar de fornecedor, quem fica com o código, o domínio e a hospedagem?</li>
+</ol>
+<p>Ao pedir orçamentos, pergunte ao fornecedor qual tecnologia ele propõe e por quê, quantos plugins serão usados, como será a manutenção e o que acontece se o contrato terminar. Uma boa proposta explica a escolha em função das respostas acima, não da preferência de quem desenvolve. O guia sobre <a href="/blog/como-escolher-empresa-de-desenvolvimento/">como escolher uma empresa de desenvolvimento</a> traz outros critérios.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="site-em-wordpress-e-inseguro">Site em WordPress é inseguro?</h3>
+<p>Não por natureza. O núcleo do WordPress é mantido ativamente e recebe correções de segurança. O risco aparece quando o site acumula plugins desatualizados, senhas fracas e nenhuma rotina de manutenção. Com cuidados básicos e atualizações em dia, o WordPress pode ser bastante seguro.</p>
+<h3 id="site-sob-medida-e-sempre-mais-caro-que-wordpress">Site sob medida é sempre mais caro que WordPress?</h3>
+<p>No investimento inicial, geralmente sim, porque o design e o código são feitos para o projeto. Ao longo do tempo, a diferença tende a diminuir: um site estático costuma exigir menos manutenção, enquanto um WordPress com muitos plugins pede atualizações e testes contínuos, e alguns plugins são pagos por assinatura.</p>
+<h3 id="da-para-migrar-de-wordpress-para-um-site-sob-medida-depois">Dá para migrar de WordPress para um site sob medida depois?</h3>
+<p>Dá. O conteúdo pode ser exportado e reaproveitado. O cuidado principal é manter os mesmos endereços das páginas ou configurar redirecionamentos, para não perder o posicionamento já conquistado no Google.</p>
+<h3 id="wordpress-e-bom-para-seo">WordPress é bom para SEO?</h3>
+<p>Ele oferece uma boa base, e há plugins que facilitam títulos, descrições e sitemap. Mas SEO depende mais de conteúdo útil, estrutura e velocidade do que da plataforma.</p>
+<p>Se você está decidindo entre WordPress e um site sob medida, vale começar pelo uso que o site vai ter no dia a dia, e não pela tecnologia. A PEROVANO desenvolve sites e pode ajudar a avaliar qual caminho faz sentido para a sua empresa. <a href="/#contato">Fale conosco</a> para conversar sobre o projeto.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22WordPress%20ou%20site%20sob%20medida%3A%20como%20escolher%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sites" data-search="o que um site institucional precisa ter: checklist checklist do que um site institucional precisa ter: proposta clara, serviços, provas, contato que funciona, celular, velocidade, seo, lgpd, https e medição. o que um site institucional precisa ter, site institucional, checklist de site institucional, site para empresa">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/o-que-um-site-institucional-precisa-ter/">O que um site institucional precisa ter: checklist</a></h3>
+            <p class="post-card__excerpt">Checklist do que um site institucional precisa ter: proposta clara, serviços, provas, contato que funciona, celular, velocidade, SEO, LGPD, HTTPS e medição.</p>
+          </article>
+          <article class="post-card" data-category="Sites" data-search="seo local: como aparecer no google maps como aparecer no google maps: configure o perfil da empresa no google, mantenha nome, endereço e telefone consistentes e trabalhe avaliações, fotos e site. seo local, como aparecer no google maps, google business profile, perfil da empresa no google">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/seo-local-google-business-profile/">SEO local: como aparecer no Google Maps</a></h3>
+            <p class="post-card__excerpt">Como aparecer no Google Maps: configure o Perfil da Empresa no Google, mantenha nome, endereço e telefone consistentes e trabalhe avaliações, fotos e site.</p>
+          </article>
+          <article class="post-card" data-category="Sites" data-search="domínio e hospedagem: o que são e como escolher entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é dns e quais cuidados exigir do fornecedor do site. domínio e hospedagem, diferença entre domínio e hospedagem, como registrar domínio com.br, tipos de hospedagem de site">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/dominio-e-hospedagem/">Domínio e hospedagem: o que são e como escolher</a></h3>
+            <p class="post-card__excerpt">Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

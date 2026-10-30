@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domínio e hospedagem: o que são e como escolher | PEROVANO</title>
+  <meta name="description" content="Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/dominio-e-hospedagem/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Domínio e hospedagem: o que são e como escolher | PEROVANO">
+  <meta property="og:description" content="Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/dominio-e-hospedagem/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/dominio-e-hospedagem/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/dominio-e-hospedagem/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Sites">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Domínio e hospedagem: o que são e como escolher",
+  "description": "Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Sites",
+  "keywords": "domínio e hospedagem, diferença entre domínio e hospedagem, como registrar domínio com.br, tipos de hospedagem de site",
+  "wordCount": 1565,
+  "image": "https://lrperovano.com.br/blog/dominio-e-hospedagem/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/dominio-e-hospedagem/",
+  "url": "https://lrperovano.com.br/blog/dominio-e-hospedagem/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sites",
+      "item": "https://lrperovano.com.br/blog/categoria/sites/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Domínio e hospedagem: o que são e como escolher",
+      "item": "https://lrperovano.com.br/blog/dominio-e-hospedagem/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Posso ter o domínio em uma empresa e a hospedagem em outra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode, e é comum. Basta configurar o DNS para apontar o domínio para a hospedagem. Essa separação até facilita trocar de hospedagem no futuro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu domínio está no nome da agência antiga. O que fazer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Peça a transferência de titularidade para o CNPJ da empresa. O processo depende do registrador e normalmente exige a autorização do titular atual. Quanto antes for resolvido, melhor, porque a dificuldade cresce se o contato com o fornecedor se perder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hospedagem mais barata serve para minha empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do site. Um site institucional simples pode funcionar bem em planos de entrada ou em hospedagem para sites estáticos. Sistemas, lojas e sites com muito tráfego precisam de mais recursos e de suporte técnico que atenda rápido. Se a sua empresa quer organizar domínio, hospedagem e e-mail ou está planejando um site novo, vale fazer isso desde o início com tudo em nome de vocês. A PEROVANO desenvolve sites e sistemas e entrega a estrutura documentada. Fale conosco para conversar sobre o seu caso."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/sites/">Sites</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Domínio e hospedagem: o que são e como escolher</h1>
+          <p class="post__lead">Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#qual-a-diferenca-entre-dominio-e-hospedagem">Qual a diferença entre domínio e hospedagem</a></li>
+              <li><a href="#dominio-com-br-como-registrar">Domínio .com.br: como registrar</a></li>
+              <li><a href="#renovacao-e-o-risco-de-perder-o-dominio">Renovação e o risco de perder o domínio</a></li>
+              <li><a href="#dns-em-linguagem-simples">DNS em linguagem simples</a></li>
+              <li><a href="#tipos-de-hospedagem">Tipos de hospedagem</a></li>
+              <li><a href="#e-mail-no-dominio">E-mail no domínio</a></li>
+              <li><a href="#https-e-certificado">HTTPS e certificado</a></li>
+              <li><a href="#backups">Backups</a></li>
+              <li><a href="#o-que-exigir-do-fornecedor">O que exigir do fornecedor</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Domínio é o endereço do site, como <code>suaempresa.com.br</code>. Hospedagem é o servidor onde os arquivos do site ficam guardados e de onde são entregues a quem visita. Um é o nome na placa; o outro é o imóvel. São contratados separadamente, podem estar em empresas diferentes e cada um tem a sua renovação.</p>
+<p>Para escolher bem, a regra principal é simples: o domínio deve estar registrado no nome da sua empresa, com acesso controlado por alguém de dentro. A hospedagem deve combinar com o tipo de site, ter HTTPS, backup e suporte. Preço importa, mas vem depois desses pontos.</p>
+<p>Os problemas mais comuns não são técnicos: domínio no nome de um ex-funcionário ou de uma agência antiga, renovação esquecida, senhas que ninguém sabe onde estão.</p>
+<h2 id="qual-a-diferenca-entre-dominio-e-hospedagem">Qual a diferença entre domínio e hospedagem</h2>
+<p>O <strong>domínio</strong> é um nome registrado por um período, que a empresa precisa renovar para continuar usando. Ele não guarda nenhum arquivo. Sozinho, só aponta para algum lugar.</p>
+<p>A <strong>hospedagem</strong> é o serviço que mantém o site funcionando: um computador ligado o tempo todo, conectado à internet, que responde quando alguém digita o endereço. Também pode guardar banco de dados, formulários e, em alguns planos, e-mails.</p>
+<p>Os dois se conectam pelo DNS, explicado mais abaixo. Por isso é possível trocar de hospedagem sem trocar de domínio, e o endereço que os clientes conhecem continua o mesmo.</p>
+<h2 id="dominio-com-br-como-registrar">Domínio .com.br: como registrar</h2>
+<p>Domínios terminados em <code>.br</code>, como <code>.com.br</code>, são registrados no Registro.br, a entidade responsável pelo domínio do Brasil. O registro pode ser feito diretamente lá ou por meio de empresas que oferecem o serviço. O titular precisa informar CPF ou CNPJ.</p>
+<p>Alguns cuidados no registro:</p>
+<ul>
+<li><strong>Registre no CNPJ da empresa.</strong> O domínio é um ativo do negócio. Se ficar no CPF de um sócio, de um funcionário ou do fornecedor, a transferência depende da boa vontade de quem é o titular.</li>
+<li><strong>Use um e-mail de contato que a empresa controla.</strong> Avisos de vencimento e pedidos de confirmação chegam nesse e-mail. Se ele for de uma pessoa que saiu, os avisos se perdem.</li>
+<li><strong>Guarde o acesso em local seguro.</strong> Login, senha e autenticação em dois fatores, quando disponível, devem ficar com a empresa. O fornecedor pode receber permissão técnica para configurar, sem ser o titular.</li>
+</ul>
+<p>Domínios como <code>.com</code> são registrados por outras empresas credenciadas, com regras próprias. Confira as condições atuais antes de contratar.</p>
+<h2 id="renovacao-e-o-risco-de-perder-o-dominio">Renovação e o risco de perder o domínio</h2>
+<p>O domínio é registrado por um período e precisa ser renovado. Quando a renovação não acontece, o site e os e-mails param de funcionar. Se a situação não for resolvida dentro do prazo previsto pelas regras do registro, o domínio pode voltar a ficar disponível e ser registrado por outra pessoa.</p>
+<p>Recuperar um domínio que já foi registrado por terceiros pode ser difícil, demorado ou impossível. Por isso:</p>
+<ul>
+<li>ative a renovação automática quando o registrador oferecer;</li>
+<li>registre por mais de um ano, se fizer sentido para o orçamento;</li>
+<li>coloque o vencimento no calendário de alguém responsável;</li>
+<li>revise uma vez por ano se os dados do titular e do contato estão corretos.</li>
+</ul>
+<h2 id="dns-em-linguagem-simples">DNS em linguagem simples</h2>
+<p>DNS (sistema de nomes de domínio) é a lista de contatos da internet. Ele traduz o nome <code>suaempresa.com.br</code> para o endereço numérico do servidor onde o site está. Essas informações ficam em registros, e os mais comuns são:</p>
+<ul>
+<li><strong>A:</strong> aponta o domínio para o endereço do servidor do site.</li>
+<li><strong>CNAME:</strong> aponta um nome para outro nome, como <code>www</code> apontando para o domínio principal.</li>
+<li><strong>MX:</strong> indica qual serviço recebe os e-mails do domínio.</li>
+<li><strong>TXT:</strong> guarda textos de verificação e configurações de segurança do e-mail.</li>
+</ul>
+<p>Quem gerencia o DNS pode mudar para onde o site e os e-mails apontam. Uma alteração errada derruba os dois. Por isso, o acesso ao DNS merece o mesmo cuidado que o acesso ao domínio. Depois de uma alteração, ela pode levar de minutos a algumas horas para valer em todos os lugares, porque os servidores guardam as respostas por um tempo.</p>
+<h2 id="tipos-de-hospedagem">Tipos de hospedagem</h2>
+<h3 id="compartilhada">Compartilhada</h3>
+<p>Vários sites dividem o mesmo servidor. É a opção mais simples de contratar e costuma vir com painel de controle pronto. Atende bem sites pequenos com pouco tráfego. A desvantagem é que o desempenho pode ser afetado por outros sites no mesmo servidor, e as configurações possíveis são limitadas.</p>
+<h3 id="vps">VPS</h3>
+<p>VPS (servidor virtual privado) é uma fatia de um servidor com recursos reservados para o seu site. Há mais controle e desempenho mais previsível. Em compensação, alguém precisa configurar e manter o sistema operacional, as atualizações de segurança e o monitoramento. Se ninguém fizer isso, o VPS fica pior do que uma hospedagem compartilhada bem administrada.</p>
+<h3 id="nuvem">Nuvem</h3>
+<p>Na hospedagem em nuvem, os recursos podem crescer ou diminuir conforme a demanda, e há serviços gerenciados de banco de dados, armazenamento e filas. É a escolha comum para sistemas web, lojas com variação de tráfego e aplicações que precisam de alta disponibilidade. Exige conhecimento técnico para configurar e acompanhar custos.</p>
+<h3 id="hospedagem-para-sites-estaticos">Hospedagem para sites estáticos</h3>
+<p>Site estático é aquele em que as páginas são geradas antes e entregues prontas, sem banco de dados a cada visita. Para esse tipo, existem serviços especializados que distribuem os arquivos por servidores em várias regiões. O resultado costuma ser um site rápido, com pouca manutenção e menos pontos de ataque. Sites institucionais e blogs se encaixam bem nesse modelo. A velocidade também ajuda no Google, como mostra o artigo sobre <a href="/blog/velocidade-do-site-core-web-vitals/">Core Web Vitals</a>.</p>
+<p>A escolha entre esses modelos depende de como o site é construído. Um site em WordPress precisa de servidor com PHP e banco de dados; um site estático não. O comparativo <a href="/blog/wordpress-ou-site-sob-medida/">WordPress ou site sob medida</a> ajuda a entender essa parte.</p>
+<h2 id="e-mail-no-dominio">E-mail no domínio</h2>
+<p>E-mail como <code>contato@suaempresa.com.br</code> transmite mais confiança do que um endereço gratuito e fica com a empresa quando um funcionário sai. Ele pode estar no mesmo lugar da hospedagem ou em um serviço de e-mail separado, apontado pelo registro MX.</p>
+<p>Separar e-mail e site costuma ser uma boa prática. Uma troca de hospedagem ou um problema no servidor do site não afeta os e-mails. Também vale configurar os registros de autenticação de e-mail (SPF, DKIM e DMARC), que ajudam a evitar que as mensagens caiam no spam e dificultam o uso do domínio por golpistas.</p>
+<h2 id="https-e-certificado">HTTPS e certificado</h2>
+<p>HTTPS é a versão segura do protocolo da web. Ele protege os dados entre o navegador do visitante e o servidor, e o navegador mostra o cadeado na barra de endereço. Para isso, o site precisa de um certificado digital válido.</p>
+<p>Hoje, HTTPS é obrigatório na prática para qualquer site. Navegadores alertam o visitante quando ele falta, e formulários sem proteção expõem dados pessoais, o que também é tema da <a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas</a>. Muitas hospedagens oferecem certificados gratuitos com renovação automática. Confirme que a renovação está funcionando, porque um certificado vencido gera alerta de segurança para todos os visitantes.</p>
+<h2 id="backups">Backups</h2>
+<p>Backup é uma cópia do site e dos dados guardada em outro lugar, que permite restaurar tudo após uma falha, invasão ou erro humano. Pergunte:</p>
+<ul>
+<li>Com que frequência o backup é feito?</li>
+<li>Por quanto tempo as cópias ficam guardadas?</li>
+<li>Elas ficam em local separado do servidor principal?</li>
+<li>Quem faz a restauração e em quanto tempo?</li>
+<li>Já foi feito um teste de restauração?</li>
+</ul>
+<p>Backup que nunca foi testado é uma suposição.</p>
+<h2 id="o-que-exigir-do-fornecedor">O que exigir do fornecedor</h2>
+<p>Ao contratar o site, peça por escrito:</p>
+<ol>
+<li>Domínio registrado no CNPJ da empresa, com acesso de titular sob controle de vocês.</li>
+<li>Conta de hospedagem em nome da empresa, ou acesso administrativo garantido.</li>
+<li>Lista de todos os serviços contratados, com vencimentos e responsáveis.</li>
+<li>HTTPS configurado com renovação automática.</li>
+<li>Política de backup com frequência, retenção e teste de restauração.</li>
+<li>Documentação das configurações de DNS e e-mail.</li>
+<li>Previsão de manutenção e atualizações de segurança após a entrega.</li>
+</ol>
+<p>Esses itens entram na comparação de propostas tanto quanto o design. O artigo sobre <a href="/blog/quanto-custa-um-site-profissional/">quanto custa um site profissional</a> explica os custos recorrentes, e o guia sobre <a href="/blog/o-que-um-site-institucional-precisa-ter/">o que um site institucional precisa ter</a> mostra o restante da lista.</p>
+<blockquote><p>Se o fornecedor desaparecer amanhã, a empresa consegue continuar com o site e os e-mails? Se a resposta for não, há algo para corrigir.</p></blockquote>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="posso-ter-o-dominio-em-uma-empresa-e-a-hospedagem-em-outra">Posso ter o domínio em uma empresa e a hospedagem em outra?</h3>
+<p>Pode, e é comum. Basta configurar o DNS para apontar o domínio para a hospedagem. Essa separação até facilita trocar de hospedagem no futuro.</p>
+<h3 id="meu-dominio-esta-no-nome-da-agencia-antiga-o-que-fazer">Meu domínio está no nome da agência antiga. O que fazer?</h3>
+<p>Peça a transferência de titularidade para o CNPJ da empresa. O processo depende do registrador e normalmente exige a autorização do titular atual. Quanto antes for resolvido, melhor, porque a dificuldade cresce se o contato com o fornecedor se perder.</p>
+<h3 id="hospedagem-mais-barata-serve-para-minha-empresa">Hospedagem mais barata serve para minha empresa?</h3>
+<p>Depende do site. Um site institucional simples pode funcionar bem em planos de entrada ou em hospedagem para sites estáticos. Sistemas, lojas e sites com muito tráfego precisam de mais recursos e de suporte técnico que atenda rápido.</p>
+<p>Se a sua empresa quer organizar domínio, hospedagem e e-mail ou está planejando um site novo, vale fazer isso desde o início com tudo em nome de vocês. A PEROVANO desenvolve <a href="/#solucoes">sites e sistemas</a> e entrega a estrutura documentada. <a href="/#contato">Fale conosco</a> para conversar sobre o seu caso.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Dom%C3%ADnio%20e%20hospedagem%3A%20o%20que%20s%C3%A3o%20e%20como%20escolher%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sites" data-search="o que é landing page e quando usar na sua empresa landing page é uma página com um único objetivo, como gerar contatos ou vendas. veja a diferença para o site, quando usar, elementos essenciais e como medir. o que é landing page, landing page para empresas, página de captura, landing page ou site institucional">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/o-que-e-landing-page/">O que é landing page e quando usar na sua empresa</a></h3>
+            <p class="post-card__excerpt">Landing page é uma página com um único objetivo, como gerar contatos ou vendas. Veja a diferença para o site, quando usar, elementos essenciais e como medir.</p>
+          </article>
+          <article class="post-card" data-category="Sites" data-search="seo local: como aparecer no google maps como aparecer no google maps: configure o perfil da empresa no google, mantenha nome, endereço e telefone consistentes e trabalhe avaliações, fotos e site. seo local, como aparecer no google maps, google business profile, perfil da empresa no google">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/seo-local-google-business-profile/">SEO local: como aparecer no Google Maps</a></h3>
+            <p class="post-card__excerpt">Como aparecer no Google Maps: configure o Perfil da Empresa no Google, mantenha nome, endereço e telefone consistentes e trabalhe avaliações, fotos e site.</p>
+          </article>
+          <article class="post-card" data-category="Sites" data-search="seo para sites de empresas: o que é preciso para aparecer saiba o que um site de empresa precisa para aparecer no google: indexação, search console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa. seo para sites de empresas, como aparecer no google, otimização de site para google, seo técnico">
+            <p class="post-card__meta"><span>Sites</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/seo-para-sites-de-empresas/">SEO para sites de empresas: o que é preciso para aparecer</a></h3>
+            <p class="post-card__excerpt">Saiba o que um site de empresa precisa para aparecer no Google: indexação, Search Console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

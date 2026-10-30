@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quanto custa desenvolver um aplicativo: o que define o preço | PEROVANO</title>
+  <meta name="description" content="Quanto custa desenvolver um aplicativo? Veja os fatores que formam o preço, os custos recorrentes depois do lançamento e como reduzir o valor com um MVP.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog da PEROVANO" href="/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Quanto custa desenvolver um aplicativo: o que define o preço | PEROVANO">
+  <meta property="og:description" content="Quanto custa desenvolver um aplicativo? Veja os fatores que formam o preço, os custos recorrentes depois do lançamento e como reduzir o valor com um MVP.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/">
+  <meta property="og:image" content="https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Sistemas">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Quanto custa desenvolver um aplicativo: o que define o preço",
+  "description": "Quanto custa desenvolver um aplicativo? Veja os fatores que formam o preço, os custos recorrentes depois do lançamento e como reduzir o valor com um MVP.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "pt-BR",
+  "articleSection": "Sistemas",
+  "keywords": "quanto custa desenvolver um aplicativo, custo de aplicativo, preço para criar um app, orçamento de aplicativo",
+  "wordCount": 1561,
+  "image": "https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/",
+  "url": "https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/#sobre"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://lrperovano.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sistemas",
+      "item": "https://lrperovano.com.br/blog/categoria/sistemas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Quanto custa desenvolver um aplicativo: o que define o preço",
+      "item": "https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Por que não dá para saber o preço de um app sem conversar antes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque o custo depende de decisões que só aparecem quando o projeto é detalhado: plataformas, perfis, regras, integrações e design. Um preço dado sem essas informações é um chute, e a diferença aparece depois, em aditivos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fazer só para Android sai pela metade do preço?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não necessariamente. Back-end, painel administrativo, design e regras de negócio são compartilhados pelas duas plataformas. Com tecnologia multiplataforma, a diferença entre publicar em uma ou nas duas tende a ser menor do que parece."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O app fica pronto e não tem mais custo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Servidores, serviços de terceiros, contas nas lojas e manutenção são custos contínuos. As atualizações anuais de Android e iOS exigem ajustes para o app continuar funcionando e sendo aceito nas lojas. Se você tem um aplicativo em mente e quer entender o que pesa no custo do seu caso, o primeiro passo é conversar sobre o problema que ele precisa resolver. Entre em contato para avaliar o escopo e o melhor caminho técnico."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="/#projetos">Projetos</a></li>
+          <li><a href="/#solucoes">Soluções</a></li>
+          <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <ol>
+              <li><a href="/">Início</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/categoria/sistemas/">Sistemas</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Quanto custa desenvolver um aplicativo: o que define o preço</h1>
+          <p class="post__lead">Quanto custa desenvolver um aplicativo? Veja os fatores que formam o preço, os custos recorrentes depois do lançamento e como reduzir o valor com um MVP.</p>
+          <p class="post__meta">
+            <span>Por Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">30 de outubro de 2026</time></span>
+            <span>8 min de leitura</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">Neste artigo</h2>
+          <ol>
+              <li><a href="#os-fatores-que-formam-o-custo-de-um-aplicativo">Os fatores que formam o custo de um aplicativo</a></li>
+              <li><a href="#manutencao-e-atualizacoes-de-sistema-operacional">Manutenção e atualizações de sistema operacional</a></li>
+              <li><a href="#custos-recorrentes-depois-do-lancamento">Custos recorrentes depois do lançamento</a></li>
+              <li><a href="#como-reduzir-o-custo-sem-comprometer-o-resultado">Como reduzir o custo sem comprometer o resultado</a></li>
+              <li><a href="#o-que-perguntar-ao-fornecedor">O que perguntar ao fornecedor</a></li>
+              <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Não existe um preço único para desenvolver um aplicativo. O custo é formado por um conjunto de fatores: em quais plataformas o app vai rodar, a tecnologia escolhida, a quantidade de telas e de regras de negócio, o back-end e o painel administrativo, as integrações, o design, a publicação nas lojas e a manutenção depois do lançamento. Dois apps com a mesma ideia podem ter orçamentos muito diferentes só por causa dessas escolhas.</p>
+<p>Além do desenvolvimento, todo aplicativo tem custos recorrentes: servidores, serviços de terceiros, contas de desenvolvedor nas lojas e atualizações para acompanhar novas versões do Android e do iOS. Um orçamento que mostra só o valor da construção está incompleto.</p>
+<p>A forma mais segura de chegar a um número confiável é definir o escopo antes de pedir propostas e começar por uma versão enxuta, com o essencial.</p>
+<h2 id="os-fatores-que-formam-o-custo-de-um-aplicativo">Os fatores que formam o custo de um aplicativo</h2>
+<h3 id="plataformas-android-ios-ou-ambos">Plataformas: Android, iOS ou ambos</h3>
+<p>Android e iOS são os dois sistemas operacionais de celular dominantes no mercado. Publicar nos dois amplia o alcance, mas aumenta o trabalho de testes, de ajustes de interface e de publicação, já que cada loja tem regras e processos próprios.</p>
+<p>Começar por uma plataforma só faz sentido quando o público está concentrado nela, como uma equipe interna que recebe aparelhos da empresa.</p>
+<h3 id="app-nativo-multiplataforma-ou-pwa">App nativo, multiplataforma ou PWA</h3>
+<p>Essa escolha tem grande peso no custo:</p>
+<ul>
+<li><strong>App nativo:</strong> desenvolvido separadamente para cada plataforma, com as linguagens e ferramentas oficiais de cada uma. Oferece acesso completo aos recursos do aparelho, mas significa, na prática, manter duas bases de código.</li>
+<li><strong>App multiplataforma:</strong> uma única base de código gera os apps de Android e iOS, com frameworks como Flutter ou React Native. Reduz o esforço de desenvolvimento e manutenção na maioria dos projetos, com pequenas partes específicas de cada sistema quando necessário.</li>
+<li><strong>PWA (aplicativo web progressivo):</strong> um site que se comporta como app, pode ser adicionado à tela inicial e funciona no navegador. Costuma ser o caminho mais econômico, mas tem limitações de acesso a recursos do aparelho e de presença nas lojas. O artigo sobre <a href="/blog/o-que-e-pwa/">o que é PWA</a> detalha quando ele resolve.</li>
+</ul>
+<p>Para a maioria dos apps de empresas, multiplataforma é um bom equilíbrio. O nativo se justifica quando o app depende muito de recursos específicos do aparelho ou de desempenho gráfico elevado.</p>
+<h3 id="numero-de-telas-e-regras-de-negocio">Número de telas e regras de negócio</h3>
+<p>Quantidade de telas é um indicador, mas o que pesa mais são as regras por trás delas. Uma tela de lista simples custa pouco. Uma tela que calcula preços, verifica estoque, aplica descontos por perfil e funciona sem internet custa muito mais.</p>
+<p>Por isso, ao descrever o projeto, vale listar não só as telas, mas o que cada uma precisa fazer e quais exceções existem. Um <a href="/blog/como-fazer-briefing-de-software/">briefing de software</a> bem feito ajuda a receber propostas comparáveis.</p>
+<h3 id="back-end-e-painel-administrativo">Back-end e painel administrativo</h3>
+<p>O app que aparece no celular é só uma parte do sistema. Quase sempre existe um <strong>back-end</strong>, a parte que roda em servidores, guarda os dados, aplica as regras e conversa com outros sistemas. E costuma existir um <strong>painel administrativo</strong>, normalmente web, onde a equipe da empresa cadastra conteúdo, acompanha pedidos, atende usuários e extrai relatórios.</p>
+<p>Em muitos projetos, back-end e painel representam uma parte grande do esforço total. Um orçamento que não menciona esses componentes deve ser questionado.</p>
+<h3 id="login-e-perfis-de-usuario">Login e perfis de usuário</h3>
+<p>Login com e-mail e senha, código por SMS, conta Google ou Apple: cada opção tem implementação e regras próprias. Recuperação de senha, verificação de e-mail e exclusão de conta também entram na conta.</p>
+<p>Perfis diferentes aumentam o escopo. Um app com cliente, entregador e administrador, cada um vendo telas e permissões distintas, é praticamente três produtos conectados.</p>
+<h3 id="integracoes-e-pagamentos">Integrações e pagamentos</h3>
+<p>Integrações conectam o app a sistemas que já existem: ERP, CRM, plataforma de e-commerce, sistemas de entrega. O custo depende da qualidade da documentação e da API (interface de programação) do outro sistema. O artigo sobre <a href="/blog/integracao-de-sistemas-api/">integração de sistemas via API</a> explica os tipos e os riscos.</p>
+<p>Pagamentos merecem atenção à parte. Cartão, Pix, assinatura e estorno exigem tratamento cuidadoso de falhas e de confirmação. Veja os detalhes em <a href="/blog/integracao-com-pix-e-pagamentos/">integração com Pix e pagamentos</a>. As lojas de aplicativos também têm regras sobre o que pode ser vendido dentro do app e por qual meio, e essas regras mudam com o tempo. Confirme as condições atuais antes de definir o modelo de cobrança.</p>
+<p>Notificações push, mapas, câmera, leitura de QR Code e geolocalização em segundo plano são outros itens que somam esforço.</p>
+<h3 id="design">Design</h3>
+<p>Usar componentes visuais padrão de cada plataforma é mais rápido. Um design próprio, com identidade da marca e animações, exige mais horas de design e de implementação. Um protótipo navegável, feito antes do desenvolvimento, evita retrabalho caro depois.</p>
+<h3 id="publicacao-nas-lojas-e-contas-de-desenvolvedor">Publicação nas lojas e contas de desenvolvedor</h3>
+<p>Para publicar na Google Play e na App Store, a empresa precisa de contas de desenvolvedor próprias. Em linhas gerais, a conta do Google tem uma taxa de registro e a da Apple tem uma anuidade. Os valores e as exigências de verificação mudam, então confira as condições vigentes direto com cada loja.</p>
+<p>A publicação em si envolve textos, imagens de divulgação, política de privacidade, declarações sobre os dados coletados e a análise de cada loja, que pode pedir ajustes antes de aprovar o app. Esse trabalho deve estar previsto no orçamento.</p>
+<h2 id="manutencao-e-atualizacoes-de-sistema-operacional">Manutenção e atualizações de sistema operacional</h2>
+<p>Um aplicativo não fica pronto para sempre. Todo ano, Android e iOS ganham versões novas, e as lojas passam a exigir que os apps sejam atualizados para ferramentas recentes. Bibliotecas usadas no projeto recebem correções de segurança. Sem manutenção, o app começa a apresentar falhas em aparelhos novos e pode até deixar de ser aceito nas lojas.</p>
+<p>Somam-se a isso correções de bugs e novas funcionalidades. O artigo sobre <a href="/blog/manutencao-de-software/">manutenção de software</a> explica como organizar esse trabalho e o que esperar de um contrato.</p>
+<h2 id="custos-recorrentes-depois-do-lancamento">Custos recorrentes depois do lançamento</h2>
+<p>Planeje desde o início os custos mensais ou anuais:</p>
+<ul>
+<li><strong>Servidores e banco de dados:</strong> hospedagem do back-end, do painel e dos arquivos enviados pelos usuários. Cresce com o volume de uso.</li>
+<li><strong>Serviços de terceiros:</strong> envio de e-mails e SMS, notificações push, mapas, armazenamento de imagens, monitoramento de erros e autenticação. Muitos têm faixa gratuita e passam a cobrar conforme o uso aumenta.</li>
+<li><strong>Pagamentos:</strong> gateways e intermediadores costumam cobrar taxas por transação.</li>
+<li><strong>Lojas:</strong> anuidade da conta da Apple e, quando há venda de conteúdo digital dentro do app, as comissões previstas nas regras de cada loja.</li>
+<li><strong>Manutenção:</strong> horas reservadas para atualizações, correções e suporte técnico.</li>
+</ul>
+<p>Peça ao fornecedor uma estimativa desses custos para o volume de usuários esperado no primeiro ano, mesmo que aproximada.</p>
+<h2 id="como-reduzir-o-custo-sem-comprometer-o-resultado">Como reduzir o custo sem comprometer o resultado</h2>
+<h3 id="comece-por-um-mvp">Comece por um MVP</h3>
+<p>O MVP, produto mínimo viável, é a primeira versão com o menor conjunto de funções que resolve o problema principal de ponta a ponta. Ele coloca o app nas mãos de usuários reais mais cedo e mostra o que vale a pena construir em seguida. O guia sobre <a href="/blog/mvp-como-tirar-ideia-de-sistema-do-papel/">MVP</a> mostra como definir esse escopo.</p>
+<h3 id="priorize-com-criterios">Priorize com critérios</h3>
+<p>Separe as funcionalidades em três grupos: sem isso o app não funciona; importante, mas pode esperar algumas semanas; desejável. Só o primeiro grupo entra na primeira versão. Perfis secundários, relatórios avançados e integrações não essenciais costumam ficar para depois.</p>
+<h3 id="use-servicos-prontos-onde-nao-ha-diferencial">Use serviços prontos onde não há diferencial</h3>
+<p>Autenticação, envio de e-mails, notificações e pagamentos já são resolvidos por serviços consolidados. O investimento deve ir para o que diferencia o seu app.</p>
+<h3 id="o-que-nao-cortar">O que não cortar</h3>
+<p>Testes em aparelhos reais, segurança dos dados, backups e a estrutura do back-end não devem ser sacrificados. Economizar nesses pontos costuma sair mais caro depois, com retrabalho ou incidentes.</p>
+<h2 id="o-que-perguntar-ao-fornecedor">O que perguntar ao fornecedor</h2>
+<ul>
+<li>O orçamento inclui back-end, painel administrativo e publicação nas lojas?</li>
+<li>Qual tecnologia será usada e por quê?</li>
+<li>Em quais aparelhos e versões de sistema o app será testado?</li>
+<li>Quem será o titular das contas nas lojas, do servidor e do código-fonte?</li>
+<li>Quais custos recorrentes devo esperar no primeiro ano?</li>
+<li>Como funciona a manutenção depois da entrega?</li>
+</ul>
+<p>Se quiser entender o processo completo, do objetivo à publicação, veja <a href="/blog/como-criar-um-aplicativo/">como criar um aplicativo para a sua empresa</a>. A PEROVANO desenvolve aplicativos, sistemas e integrações, e você pode conhecer as <a href="/#solucoes">soluções</a> oferecidas.</p>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="por-que-nao-da-para-saber-o-preco-de-um-app-sem-conversar-antes">Por que não dá para saber o preço de um app sem conversar antes?</h3>
+<p>Porque o custo depende de decisões que só aparecem quando o projeto é detalhado: plataformas, perfis, regras, integrações e design. Um preço dado sem essas informações é um chute, e a diferença aparece depois, em aditivos.</p>
+<h3 id="fazer-so-para-android-sai-pela-metade-do-preco">Fazer só para Android sai pela metade do preço?</h3>
+<p>Não necessariamente. Back-end, painel administrativo, design e regras de negócio são compartilhados pelas duas plataformas. Com tecnologia multiplataforma, a diferença entre publicar em uma ou nas duas tende a ser menor do que parece.</p>
+<h3 id="o-app-fica-pronto-e-nao-tem-mais-custo">O app fica pronto e não tem mais custo?</h3>
+<p>Não. Servidores, serviços de terceiros, contas nas lojas e manutenção são custos contínuos. As atualizações anuais de Android e iOS exigem ajustes para o app continuar funcionando e sendo aceito nas lojas.</p>
+<p>Se você tem um aplicativo em mente e quer entender o que pesa no custo do seu caso, o primeiro passo é conversar sobre o problema que ele precisa resolver. <a href="/#contato">Entre em contato</a> para avaliar o escopo e o melhor caminho técnico.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Quer aplicar isso na sua empresa?</h2>
+          <p>Conte o seu desafio. A primeira conversa serve para entender o contexto e indicar o melhor caminho — seja um site, um sistema ou uma automação.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527999863591?text=Ol%C3%A1%21%20Li%20o%20artigo%20%22Quanto%20custa%20desenvolver%20um%20aplicativo%3A%20o%20que%20define%20o%20pre%C3%A7o%22%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="btn btn--outline-light" href="/#projetos">Ver projetos no ar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Continue lendo</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Sistemas" data-search="como criar um saas: do modelo à arquitetura como criar um saas: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, lgpd, validação e métricas que importam. como criar um saas, software como serviço, sistema multi-tenant, cobrança recorrente saas">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/como-criar-um-saas/">Como criar um SaaS: do modelo à arquitetura</a></h3>
+            <p class="post-card__excerpt">Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.</p>
+          </article>
+          <article class="post-card" data-category="Sistemas" data-search="lgpd em sites e sistemas: o que a lei exige na prática o que a lgpd exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros. lgpd em sites e sistemas, lgpd para sites, adequação à lgpd, lgpd no desenvolvimento de software">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/lgpd-em-sites-e-sistemas/">LGPD em sites e sistemas: o que a lei exige na prática</a></h3>
+            <p class="post-card__excerpt">O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.</p>
+          </article>
+          <article class="post-card" data-category="Sistemas" data-search="quando trocar a planilha por um sistema saiba quando trocar a planilha por um sistema: sinais de gargalo, o que muda na operação, como migrar os dados sem parar a empresa e quais opções avaliar. trocar planilha por sistema, sair da planilha, substituir planilha excel por sistema, sistema de gestão para pequena empresa">
+            <p class="post-card__meta"><span>Sistemas</span><span>8 min de leitura</span></p>
+            <h3 class="post-card__title"><a href="/blog/trocar-planilha-por-sistema/">Quando trocar a planilha por um sistema</a></h3>
+            <p class="post-card__excerpt">Saiba quando trocar a planilha por um sistema: sinais de gargalo, o que muda na operação, como migrar os dados sem parar a empresa e quais opções avaliar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="PEROVANO — Engenharia de software, página inicial">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Engenharia de software</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="/#projetos">Projetos</a></li>
+            <li><a href="/#solucoes">Soluções</a></li>
+            <li><a href="/#como-trabalhamos">Como trabalhamos</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contato">Contato</a></li>
+            <li><a href="/privacy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="https://wa.me/5527999863591" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="mailto:ricardoperovano@gmail.com">ricardoperovano@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
