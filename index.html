@@ -271,19 +271,96 @@
       </div>
     </section>
 
-    <!-- ===== Soluções ===== -->
-    <section class="section section--surface" id="solucoes" aria-labelledby="titulo-solucoes">
+    <!-- ===== Manifesto: palavras acendem conforme a rolagem ===== -->
+    <section class="manifesto" aria-label="Como pensamos">
+      <div class="container">
+        <p class="manifesto__text" data-words>Cada projeto começa pelo problema, não pela tecnologia. Entendemos como a sua empresa funciona, escolhemos o caminho mais simples que resolve e construímos com o cuidado de quem vai manter o sistema depois.</p>
+      </div>
+    </section>
+
+    <!-- ===== Soluções: vitrine com mini-interfaces que mudam com a rolagem ===== -->
+    <section class="section section--surface solutions" id="solucoes" aria-labelledby="titulo-solucoes">
       <div class="container">
         <div class="section__head">
           <span class="kicker">Soluções</span>
           <h2 id="titulo-solucoes">Do site que apresenta ao sistema que faz a empresa rodar.</h2>
-          <p class="lead">Cada projeto começa pelo problema, não pela tecnologia. A solução é definida a partir do que a sua empresa precisa resolver.</p>
         </div>
 
-        <div>
-          <article class="solution">
-            <h3>Sites e páginas de venda</h3>
-            <div>
+        <div class="showcase">
+          <!-- Palco ilustrativo (decorativo): uma cena por frente de trabalho. -->
+          <div class="showcase__stage" aria-hidden="true">
+            <div class="scene scene--site is-active" data-scene="site">
+              <div class="mock-browser">
+                <div class="mock-browser__bar"><span></span><span></span><span></span><i>suaempresa.com.br</i></div>
+                <div class="mock-site">
+                  <div class="ms-nav"><b></b><span></span><span></span><span></span><em></em></div>
+                  <div class="ms-hero">
+                    <div class="ms-copy">
+                      <div class="ms-h1"></div>
+                      <div class="ms-h1 ms-h1--short"></div>
+                      <div class="ms-p"></div>
+                      <div class="ms-p ms-p--short"></div>
+                      <div class="ms-btn">Pedir orçamento</div>
+                    </div>
+                    <div class="ms-img"></div>
+                  </div>
+                  <div class="ms-cards"><div></div><div></div><div></div></div>
+                </div>
+                <div class="ms-cursor"></div>
+                <div class="ms-toast"><span></span>Novo pedido de orçamento recebido</div>
+              </div>
+            </div>
+
+            <div class="scene scene--app" data-scene="app">
+              <div class="mock-app">
+                <div class="ma-side"><b></b><span class="is-on"></span><span></span><span></span><span></span></div>
+                <div class="ma-main">
+                  <div class="ma-top"><strong>Painel de pedidos</strong><em>Hoje</em></div>
+                  <div class="ma-kpis">
+                    <div><small>Novos</small><strong data-count="128">128</strong></div>
+                    <div><small>Em produção</small><strong data-count="42">42</strong></div>
+                    <div><small>Entregues</small><strong data-count="86">86</strong></div>
+                  </div>
+                  <div class="ma-chart">
+                    <span style="--h:42%"></span><span style="--h:58%"></span><span style="--h:36%"></span><span style="--h:70%"></span><span style="--h:54%"></span><span style="--h:82%"></span><span style="--h:64%"></span><span style="--h:92%"></span>
+                  </div>
+                  <ul class="ma-rows">
+                    <li><b>#1042</b><span>Mercado Central</span><i class="ok">Aprovado</i></li>
+                    <li><b>#1041</b><span>Clínica Vida</span><i class="wait">Em análise</i></li>
+                    <li><b>#1040</b><span>Oficina Norte</span><i class="ok">Aprovado</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="scene scene--flow" data-scene="flow">
+              <ol class="flow">
+                <li><span class="flow__icon">1</span><div><strong>Novo pedido na loja</strong><small>recebido pela integração</small></div><em>✓</em></li>
+                <li><span class="flow__icon">2</span><div><strong>Estoque atualizado no ERP</strong><small>sem redigitação</small></div><em>✓</em></li>
+                <li><span class="flow__icon">3</span><div><strong>Nota fiscal emitida</strong><small>com os dados do pedido</small></div><em>✓</em></li>
+                <li><span class="flow__icon">4</span><div><strong>Cliente avisado no WhatsApp</strong><small>com o link de rastreio</small></div><em>✓</em></li>
+              </ol>
+            </div>
+
+            <div class="scene scene--ai" data-scene="ai">
+              <div class="mock-chat">
+                <div class="mc-head"><b></b><div><strong>Assistente da empresa</strong><small>responde com base nos documentos internos</small></div></div>
+                <div class="mc-body">
+                  <p class="mc-msg mc-msg--user">Qual é o prazo de garantia do modelo X200?</p>
+                  <p class="mc-typing"><span></span><span></span><span></span></p>
+                  <div class="mc-msg mc-msg--bot">
+                    <p class="mc-text">A garantia do X200 é de 12 meses a partir da data da nota fiscal e cobre defeitos de fabricação.</p>
+                    <p class="mc-source">Fonte: Manual do X200, seção 7</p>
+                  </div>
+                  <p class="mc-actions"><span>Abrir documento</span><span>Falar com um atendente</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase__list">
+            <article class="solution-item is-active" data-scene="site">
+              <h3>Sites e páginas de venda</h3>
               <p>Sites institucionais e landing pages rápidos, bem estruturados para o Google e pensados para transformar visita em contato.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -293,12 +370,10 @@
                   <li>o site atual quase não gera contatos.</li>
                 </ul>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="solution">
-            <h3>Sistemas sob medida</h3>
-            <div>
+            <article class="solution-item" data-scene="app">
+              <h3>Sistemas sob medida</h3>
               <p>Aplicações web, painéis, APIs e plataformas completas — com login, área do cliente e pagamentos — desenhadas para o jeito como a sua empresa trabalha.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -308,12 +383,10 @@
                   <li>é preciso oferecer dados ou serviços a parceiros por meio de uma API — a porta pela qual sistemas trocam informações entre si.</li>
                 </ul>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="solution">
-            <h3>Integrações e automações</h3>
-            <div>
+            <article class="solution-item" data-scene="flow">
+              <h3>Integrações e automações</h3>
               <p>Conectamos os sistemas que a sua empresa já usa para que a informação circule sem redigitação, e automatizamos tarefas repetitivas que consomem o tempo da equipe.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -323,12 +396,10 @@
                   <li>o repasse de informações entre áreas gera erros e retrabalho.</li>
                 </ul>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="solution">
-            <h3>Inteligência artificial aplicada</h3>
-            <div>
+            <article class="solution-item" data-scene="ai">
+              <h3>Inteligência artificial aplicada</h3>
               <p>Assistentes, busca em documentos e bases de conhecimento da empresa e automações com IA — adotados quando são o caminho adequado para o problema.</p>
               <div class="solution__when">
                 <span class="solution__when-label">Indicado quando</span>
@@ -339,8 +410,8 @@
                 </ul>
               </div>
               <p class="solution__note">Quando uma solução mais simples resolve, é ela que recomendamos.</p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -474,7 +545,7 @@
       <div class="container">
         <div class="contact__inner">
           <span class="kicker">Contato</span>
-          <h2 class="contact__title" id="titulo-contato">Tem um projeto em mente? Vamos conversar.</h2>
+          <h2 class="contact__title" id="titulo-contato">O próximo projeto no ar pode ser o seu.</h2>
           <p class="lead">Conte o que você precisa — um site, um sistema ou a automação de um processo. A primeira conversa serve para entender o contexto e indicar o melhor caminho.</p>
 
           <div class="contact__actions">
@@ -496,7 +567,30 @@
           </dl>
         </div>
       </div>
-      <svg class="contact__shape" viewBox="0 0 380 240" aria-hidden="true" focusable="false"><path d="M0 240V110Q0 0 110 0H380V240Z"/></svg>
+      <div class="wall wall--contact" aria-hidden="true">
+        <div class="wall__plane">
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+            </div></div>
+        </div>
+      </div>
     </section>
   </main>
 

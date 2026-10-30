@@ -230,7 +230,121 @@
     });
   }
 
+  // Soluções: o texto em foco escolhe a cena do palco.
+  var solutionItems = Array.prototype.slice.call(document.querySelectorAll('.solution-item[data-scene]'));
+  var scenes = Array.prototype.slice.call(document.querySelectorAll('.showcase__stage .scene[data-scene]'));
+  // No celular e no tablet cada item ganha a sua própria cena (cópia decorativa);
+  // ela anima quando aparece na tela.
+  var inlineScenes = [];
+  solutionItems.forEach(function (item) {
+    var source = scenes.filter(function (sc) { return sc.getAttribute('data-scene') === item.getAttribute('data-scene'); })[0];
+    if (!source) return;
+    var holder = document.createElement('div');
+    holder.className = 'solution-item__stage';
+    holder.setAttribute('aria-hidden', 'true');
+    var clone = source.cloneNode(true);
+    clone.classList.remove('is-active');
+    holder.appendChild(clone);
+    item.insertBefore(holder, item.firstChild);
+    inlineScenes.push(clone);
+  });
+  if (solutionItems.length && scenes.length && 'IntersectionObserver' in window) {
+    var countUp = function (scene) {
+      if (reduceMotion) return;
+      scene.querySelectorAll('[data-count]').forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var start = null;
+        var step = function (ts) {
+          if (start === null) start = ts;
+          var t = Math.min(1, (ts - start) / 1100);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+          if (t < 1) window.requestAnimationFrame(step);
+        };
+        window.requestAnimationFrame(step);
+      });
+    };
+    var activate = function (name) {
+      solutionItems.forEach(function (item) {
+        item.classList.toggle('is-active', item.getAttribute('data-scene') === name);
+      });
+      scenes.forEach(function (scene) {
+        var on = scene.getAttribute('data-scene') === name;
+        if (on && !scene.classList.contains('is-active')) {
+          scene.classList.add('is-active');
+          countUp(scene);
+        } else if (!on) {
+          scene.classList.remove('is-active');
+        }
+      });
+    };
+    var sceneObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) activate(entry.target.getAttribute('data-scene'));
+      });
+    }, { rootMargin: '-50% 0px -40% 0px' });
+    solutionItems.forEach(function (item) { sceneObserver.observe(item); });
+
+    var inlineObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting || entry.target.classList.contains('is-active')) return;
+        entry.target.classList.add('is-active');
+        countUp(entry.target);
+      });
+    }, { threshold: 0.55 });
+    inlineScenes.forEach(function (scene) { inlineObserver.observe(scene); });
+  }
+
   if (reduceMotion) return;
+
+  // Manifesto: as palavras acendem conforme a frase atravessa a tela.
+  var manifesto = document.querySelector('[data-words]');
+  var words = [];
+  if (manifesto) {
+    var text = manifesto.textContent.trim();
+    manifesto.setAttribute('aria-label', text);
+    manifesto.innerHTML = text.split(/\s+/).map(function (w) {
+      return '<span class="w" aria-hidden="true">' + w + '</span>';
+    }).join(' ');
+    words = Array.prototype.slice.call(manifesto.querySelectorAll('.w'));
+  }
+
+  // Como trabalhamos: a linha do tempo se desenha e as etapas acendem.
+  var stepsList = document.querySelector('.steps');
+  var steps = stepsList ? Array.prototype.slice.call(stepsList.querySelectorAll('.step')) : [];
+
+  var scrollTicking = false;
+  var onScrollEffects = function () {
+    scrollTicking = false;
+    var vh = window.innerHeight;
+    if (words.length) {
+      var r = manifesto.getBoundingClientRect();
+      var p = (vh * 0.85 - r.top) / (r.height + vh * 0.35);
+      var lit = Math.max(0, Math.min(1, p)) * words.length * 1.1;
+      words.forEach(function (w, i) {
+        w.style.opacity = (0.16 + 0.84 * Math.max(0, Math.min(1, lit - i))).toFixed(2);
+      });
+    }
+    if (steps.length) {
+      var sr = stepsList.getBoundingClientRect();
+      var progress = Math.max(0, Math.min(1, (vh * 0.8 - sr.top) / (vh * 0.45)));
+      stepsList.style.setProperty('--progress', progress.toFixed(3));
+      var horizontal = window.matchMedia('(min-width: 1025px)').matches;
+      steps.forEach(function (step, i) {
+        var lit = horizontal
+          ? progress >= (i + 0.35) / steps.length
+          : step.getBoundingClientRect().top < vh * 0.75;
+        step.classList.toggle('is-lit', lit);
+      });
+    }
+  };
+  var requestScrollEffects = function () {
+    if (!scrollTicking) { scrollTicking = true; window.requestAnimationFrame(onScrollEffects); }
+  };
+  if (words.length || steps.length) {
+    onScrollEffects();
+    window.addEventListener('scroll', requestScrollEffects, { passive: true });
+    window.addEventListener('resize', requestScrollEffects);
+  }
 
   // Parede da abertura: inclina levemente seguindo o ponteiro (apenas mouse).
   var hero = document.querySelector('.hero');
