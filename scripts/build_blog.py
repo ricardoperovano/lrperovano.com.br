@@ -32,8 +32,8 @@ SRC = ROOT / "_conteudo" / "artigos"
 OUT = ROOT / "blog"
 SITE = "https://lrperovano.com.br"
 AUTHOR = "Ricardo Perovano"
-WHATSAPP = "5527999863591"
-EMAIL = "ricardoperovano@gmail.com"
+WHATSAPP = "5527998553591"
+EMAIL = "contato@lrperovano.com.br"
 CATEGORIES = ["Sites", "Sistemas", "Automação", "Inteligência artificial", "Gestão de projetos"]
 # Artigos com data futura ficam fora até o dia da publicação (rode o build de novo nesse dia).
 SCHEDULED: list["Article"] = []
@@ -385,7 +385,7 @@ FOOTER = f"""  <footer class="site-footer">
         <div>
           <h2>Contato</h2>
           <ul>
-            <li><a href="https://wa.me/{WHATSAPP}" target="_blank" rel="noopener">WhatsApp: +55 27 99986-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a href="https://wa.me/{WHATSAPP}" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (abre em nova aba)</span></a></li>
             <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
             <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a></li>
             <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li>

@@ -17,7 +17,7 @@ Os caminhos são absolutos (`/assets/...`), então abra pelo servidor, não por 
 | Arquivo | Função |
 | --- | --- |
 | `index.html` | Página institucional (conteúdo e marcação) |
-| `privacy.html` | Política de privacidade (endereço preservado; usada pelo app TOON Converter) |
+| `privacy.html` | Política de privacidade (endereço preservado; também cobre o app Android TOON Converter) |
 | `assets/css/site.css` | Tokens da identidade (`--brand-*`) e todos os estilos |
 | `assets/js/site.js` | Menu mobile, ano do rodapé, âncoras antigas, entrada das seções |
 | `assets/img/favicon.svg` | Ícone provisório neutro (origem de `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`) |
@@ -26,7 +26,6 @@ Os caminhos são absolutos (`/assets/...`), então abra pelo servidor, não por 
 | `_conteudo/artigos/*.md` | Fonte dos artigos do blog (não é publicada) |
 | `scripts/build_blog.py` | Gera `blog/`, `sitemap.xml`, `robots.txt`, `blog/feed.xml` e o bloco de artigos da home |
 | `blog/` | Saída gerada — não edite à mão |
-| `modern.html`, `toon-converter.js` | Conversor JSON → TOON (preservados, sem alteração) |
 
 Contatos (WhatsApp, e-mail, LinkedIn, GitHub) aparecem em dois blocos do `index.html`: seção `#contato` e rodapé.
 Ao alterar um contato, busque pelo valor antigo no projeto para atualizar todas as ocorrências (inclusive `privacy.html`).
@@ -74,10 +73,10 @@ O gerador também cria uma página por categoria (`/blog/categoria/<categoria>/`
 3. **Casos detalhados.** O portfólio mostra os sites no ar com a descrição de cada um. Para casos completos faltam, por projeto: desafio, solução, participação da PEROVANO, resultado comprovável e autorização para citar nomes e depoimentos.
 4. **Processo comercial.** As etapas de "Como trabalhamos" seguem o roteiro do briefing; o item "O que você recebe" de cada etapa deve ser validado contra o processo real.
 5. **Sobre.** O nome "Ricardo Perovano" e os perfis vêm do site anterior e do guia. Tempo de mercado, formação, equipe e stack não foram publicados por falta de confirmação.
-6. **E-mail no domínio.** O guia recomenda um e-mail @lrperovano.com.br; o site mantém o endereço Gmail existente.
+6. **Contato.** E-mail `contato@lrperovano.com.br` e WhatsApp/telefone +55 27 99855-3591 (atualizados em 30/10/2026). Confirmar que a caixa de e-mail do domínio está recebendo mensagens e que o número tem WhatsApp.
 7. **Política de privacidade.** O nome "Perovano Labs" foi trocado por "PEROVANO (L R PEROVANO LTDA)" e o visual foi atualizado; o restante do texto e a data de "Última atualização" não foram alterados. Conferir se o nome do desenvolvedor na loja do app deve acompanhar a mudança e se a data deve ser atualizada.
 8. **Arquivos da marca anterior.** `logo.png` e `icon.png` ("Perovano Labs") não são mais referenciados e podem ser removidos.
-9. **`modern.html`** mantém o visual antigo (roxo) e não é linkado pelo site.
+9. **Conversor JSON → TOON removido.** `modern.html` e `toon-converter.js` saíram do site em 30/10/2026. A `privacy.html` ainda descreve o app Android TOON Converter; se o app não estiver mais publicado, essa seção pode sair da política.
 10. **Portfólio.** Confirmar, para cada site (PaceOn, VipDesk, Portal da Igreja, Estudatta, MinhaOS App, Safe Offshore), se é produto próprio ou projeto de cliente, e se há autorização para exibir. As capturas são de 30/10/2026; quando os sites mudarem, refaça as imagens em `assets/img/portfolio/`.
 11. **Google Search Console.** Verificar a propriedade `lrperovano.com.br` e enviar `https://lrperovano.com.br/sitemap.xml`. Opcional: Bing Webmaster Tools.
 12. **Artigos (30).** Revisar os textos antes de publicar — em especial LGPD, WhatsApp, Pix, domínio/Registro.br, SEO local e os pontos jurídicos de escopo/contratação, cujas regras de terceiros mudam com o tempo e manter um ritmo de publicação (ex.: 1 artigo por semana) — conteúdo novo e atualizado pesa mais que volume publicado de uma vez.
