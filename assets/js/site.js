@@ -64,10 +64,85 @@
     });
   }
 
+  // Aviso de cookies: o Google Analytics só é carregado depois de "Aceitar"
+  // (o carregador fica no <head> de cada página, em window.loadAnalytics).
+  var CONSENT_KEY = 'perovano-cookies';
+  var readConsent = function () {
+    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  };
+  var saveConsent = function (value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* sem armazenamento: vale só nesta visita */ }
+  };
+  var clearAnalyticsCookies = function () {
+    var host = location.hostname;
+    var domains = ['', host, '.' + host, '.' + host.split('.').slice(-3).join('.')];
+    document.cookie.split(';').forEach(function (cookie) {
+      var name = cookie.split('=')[0].trim();
+      if (!/^_ga/.test(name) && name !== '_gid') return;
+      domains.forEach(function (domain) {
+        document.cookie = name + '=; Max-Age=0; path=/' + (domain ? '; domain=' + domain : '');
+      });
+    });
+  };
+
+  var banner = null;
+  var closeBanner = function () {
+    if (!banner) return;
+    banner.remove();
+    banner = null;
+  };
+  var openBanner = function (focus) {
+    if (banner) return;
+    banner = document.createElement('section');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('aria-labelledby', 'cookie-titulo');
+    banner.innerHTML =
+      '<h2 class="cookie-banner__title" id="cookie-titulo">Cookies de medição</h2>' +
+      '<p class="cookie-banner__text">Usamos o Google Analytics para medir a audiência do site e entender quais conteúdos são úteis. ' +
+      'Esses cookies só são ativados se você aceitar. <a href="/privacy.html#cookies">Política de privacidade</a></p>' +
+      '<div class="cookie-banner__actions">' +
+      '<button type="button" class="btn btn--primary btn--small" data-consent="aceito">Aceitar</button>' +
+      '<button type="button" class="btn btn--secondary btn--small" data-consent="recusado">Recusar</button>' +
+      '</div>';
+    banner.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-consent]');
+      if (!button) return;
+      var value = button.getAttribute('data-consent');
+      var previous = readConsent();
+      saveConsent(value);
+      closeBanner();
+      if (value === 'aceito') {
+        if (typeof window.loadAnalytics === 'function') window.loadAnalytics();
+      } else {
+        if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        clearAnalyticsCookies();
+        // Se o Analytics já estava rodando nesta página, recarrega para desligá-lo de vez.
+        if (previous === 'aceito' && window.__gaLoaded) location.reload();
+      }
+    });
+    document.body.appendChild(banner);
+    if (focus) banner.querySelector('button').focus();
+  };
+
+  if (readConsent() !== 'aceito' && readConsent() !== 'recusado') openBanner(false);
+
+  // Rodapé: permite rever a escolha a qualquer momento.
+  document.querySelectorAll('.site-footer__bottom').forEach(function (bottom) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'link-button';
+    button.textContent = 'Preferências de cookies';
+    button.addEventListener('click', function () { openBanner(true); });
+    var holder = document.createElement('p');
+    holder.appendChild(button);
+    bottom.appendChild(holder);
+  });
+
   // Analytics: cliques em WhatsApp e e-mail viram conversões (evento generate_lead do GA4).
+  // Só registra quando o Analytics foi autorizado e carregado.
   document.addEventListener('click', function (event) {
     var link = event.target.closest && event.target.closest('a[href]');
-    if (!link || typeof window.gtag !== 'function') return;
+    if (!link || !window.__gaLoaded || typeof window.gtag !== 'function') return;
     var href = link.getAttribute('href');
     var method = /wa\.me\//.test(href) ? 'whatsapp' : /^mailto:/.test(href) ? 'email' : '';
     if (!method) return;

@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28"></script>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-KGNMPTML28');
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +61,7 @@
     </div>
 
     <div class="callout">
-    <strong>Resumo:</strong> A PEROVANO respeita totalmente a sua privacidade. Nosso site usa o Google Analytics apenas para medir audiência, e nossos aplicativos são projetados para funcionar sem coletar dados pessoais. Quando você nos contata, usamos suas informações apenas para responder.
+    <strong>Resumo:</strong> A PEROVANO respeita totalmente a sua privacidade. Nosso site usa o Google Analytics apenas para medir audiência, e só com a sua autorização, e nossos aplicativos são projetados para funcionar sem coletar dados pessoais. Quando você nos contata, usamos suas informações apenas para responder.
     </div>
 
     <h2>1. Informações Gerais</h2>
@@ -79,10 +93,10 @@
     <h2>5. Permissões e Compartilhamento</h2>
     <p>Quando um aplicativo oferece função de "Compartilhar", o envio do conteúdo para outros apps (WhatsApp, e-mail, etc.) é controlado por <strong>você</strong> e usa o sistema nativo do dispositivo. Não temos acesso aos dados compartilhados.</p>
 
-    <h2>6. Serviços de Terceiros</h2>
+    <h2 id="cookies">6. Serviços de Terceiros e Cookies</h2>
     <p>Para carregar fontes web, nosso site utiliza a CDN do Google Fonts.</p>
-    <p>Para medir a audiência, o site utiliza o <strong>Google Analytics</strong>, serviço do Google. Ele grava cookies no seu navegador (como <code>_ga</code>) e coleta informações técnicas de navegação, como páginas visitadas, tempo na página, origem da visita, tipo de dispositivo, navegador e localização aproximada. Usamos esses dados apenas em relatórios agregados, para melhorar o conteúdo e entender quais páginas geram contatos. Não usamos o Google Analytics para publicidade.</p>
-    <p>Você pode bloquear ou apagar esses cookies nas configurações do seu navegador, ou instalar o complemento oficial de desativação do Google Analytics. O site continua funcionando normalmente sem eles.</p>
+    <p>Para medir a audiência, o site utiliza o <strong>Google Analytics</strong>, serviço do Google, <strong>somente se você aceitar</strong> no aviso de cookies exibido na primeira visita. Antes disso, o Analytics não é carregado e nenhum dado é enviado a ele. Quando autorizado, ele grava cookies no seu navegador (como <code>_ga</code>) e coleta informações técnicas de navegação, como páginas visitadas, tempo na página, origem da visita, tipo de dispositivo, navegador e localização aproximada. Usamos esses dados apenas em relatórios agregados, para melhorar o conteúdo e entender quais páginas geram contatos. Não usamos o Google Analytics para publicidade.</p>
+    <p>Você pode mudar sua escolha a qualquer momento pelo link <strong>Preferências de cookies</strong>, no rodapé de todas as páginas; ao recusar, os cookies do Analytics são apagados. Também é possível bloqueá-los nas configurações do navegador. O site funciona normalmente sem eles.</p>
     <p>Não utilizamos redes de publicidade.</p>
 
     <h2>7. Segurança</h2>
