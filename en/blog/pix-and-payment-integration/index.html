@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to integrate Pix and payments into your system | PEROVANO</title>
+  <meta name="description" content="How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/pix-and-payment-integration/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/pix-and-payment-integration/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/pix-and-payment-integration/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="How to integrate Pix and payments into your system | PEROVANO">
+  <meta property="og:description" content="How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/pix-and-payment-integration/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/pix-and-payment-integration/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/pix-and-payment-integration/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Automation">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to integrate Pix and payments into your system",
+  "description": "How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Automation",
+  "keywords": "payment gateway integration, how to integrate payments into software, Pix API integration, recurring billing integration",
+  "wordCount": 1794,
+  "image": "https://lrperovano.com.br/en/blog/pix-and-payment-integration/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/pix-and-payment-integration/",
+  "url": "https://lrperovano.com.br/en/blog/pix-and-payment-integration/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automation",
+      "item": "https://lrperovano.com.br/en/blog/category/automation/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "How to integrate Pix and payments into your system",
+      "item": "https://lrperovano.com.br/en/blog/pix-and-payment-integration/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a gateway to accept Pix in my system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. You can integrate directly with the Pix API of your bank or payment institution. A gateway makes more sense when you also need cards, boleto or subscriptions in one place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a static and a dynamic QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A static code is fixed and reusable, and doesn't identify the charge. A dynamic code is generated for each charge, with an amount and an identifier, which lets the system confirm the payment automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I store a customer's card for future charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can store the token generated by the gateway, not the card data. The token enables recurring charges without the card number ever passing through your system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to integrate payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how many payment methods are included, how failures are handled, the reconciliation and the business rules involved. Per-transaction fees are set by each provider and should be compared separately. A system that creates the charge and records the payment on its own frees your team for what matters and reduces cash-handling errors. PEROVANO builds software and payment integrations and can help you choose the approach that best fits your volume and the payment methods you accept. We work remotely and can run projects in English. Get in touch to talk about your project."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/integracao-com-pix-e-pagamentos/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/automation/">Automation</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">How to integrate Pix and payments into your system</h1>
+          <p class="post__lead">How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#gateway-or-direct-integration-with-the-bank">Gateway or direct integration with the bank</a></li>
+              <li><a href="#pix-with-dynamic-qr-codes-and-automatic-confirmation">Pix with dynamic QR codes and automatic confirmation</a></li>
+              <li><a href="#pix-automatico-for-recurring-charges">Pix Automático for recurring charges</a></li>
+              <li><a href="#boleto-and-cards">Boleto and cards</a></li>
+              <li><a href="#automatic-reconciliation">Automatic reconciliation</a></li>
+              <li><a href="#refunds-and-failures">Refunds and failures</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#what-to-ask-the-provider">What to ask the provider</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Integrating Pix and other payments into a system means the system itself creates the charge, receives the payment confirmation and marks it as paid on its own, with nobody checking bank statements. The customer sees a QR code or a card form on screen, pays, and the order, monthly fee or work order changes status automatically.</p>
+<p>Pix is Brazil's instant payment system, created and run by the Central Bank of Brazil. Payments are made from the payer's banking app, usually by scanning a QR code, and settle within seconds. This article uses Brazil as its main example, where Pix sits alongside the boleto and credit cards. The payment methods available to you vary by country, but the principles that follow, from gateways and webhooks to recurring billing, reconciliation and security, apply to almost any payment integration.</p>
+<p>There are two main paths. The first is to use a payment gateway or payment facilitator, a company that offers Pix, boleto and cards through a single API (an interface that lets systems talk to each other). The second is to integrate directly with the bank or payment institution where the company holds its account, using the Pix API those institutions provide.</p>
+<p>A gateway is usually faster to set up and brings several payment methods together. A direct integration tends to give more control over Pix and may have a different cost structure. The choice depends on which payment methods you need, your volume and how much you want to depend on an intermediary.</p>
+<h2 id="gateway-or-direct-integration-with-the-bank">Gateway or direct integration with the bank</h2>
+<h3 id="payment-gateway-or-facilitator">Payment gateway or facilitator</h3>
+<p>The gateway sits between the company's system and the financial institutions. A single integration gives access to Pix, boleto, credit cards and, in many cases, recurring subscriptions. It also takes care of much of the card security and provides a dashboard for looking up transactions.</p>
+<p>Points to watch:</p>
+<ul>
+<li>Fees and payout times vary widely between providers and by payment method. Compare current terms directly with each one.</li>
+<li>In some models, the money passes through the facilitator's account before reaching the company's account.</li>
+<li>Switching gateways later means redoing part of the integration, so it's worth isolating that code within the system.</li>
+</ul>
+<h3 id="direct-integration-with-the-bank-or-payment-institution">Direct integration with the bank or payment institution</h3>
+<p>Pix was created by the Central Bank of Brazil, which also defined an API standard for participating institutions. Because of that, direct integrations follow a similar structure from bank to bank, although each one has its own onboarding and authentication details.</p>
+<p>In general, it requires a business account at the institution, API access to be enabled and a digital certificate to authenticate the calls. It makes sense when Pix is your main way of getting paid and you want the money going straight into your own account. For cards, integrating directly with acquirers (the companies that process card transactions for merchants) is more complex and rarely pays off for small and mid-sized businesses.</p>
+<h2 id="pix-with-dynamic-qr-codes-and-automatic-confirmation">Pix with dynamic QR codes and automatic confirmation</h2>
+<p>There are two kinds of Pix QR code. A <strong>static</strong> one is fixed, can be reused and usually doesn't identify which charge is being paid. It works for donations or a shop counter, but someone has to check the bank statement.</p>
+<p>A <strong>dynamic</strong> one is generated by the system for each charge, with an amount, a unique identifier and, if needed, an expiration date. This is what enables full automation:</p>
+<ol>
+<li>The system creates the charge through the bank's or gateway's API and receives the QR code and the "copy and paste" code (a text version the payer can paste into their banking app).</li>
+<li>The customer pays in their banking app.</li>
+<li>The institution sends a webhook, an automatic notice to an address in your system, reporting that the charge has been paid.</li>
+<li>The system checks the data, marks the charge as paid and triggers the next step: granting access, issuing the receipt, notifying the team.</li>
+</ol>
+<p>The webhook can fail or arrive more than once. A well-built system handles this: it logs every notice, ignores duplicates and periodically checks pending charges so it doesn't rely on the notice alone. The article on <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a> explains webhooks and reprocessing in more detail.</p>
+<p>One example is Portal da Igreja, a church management platform built by PEROVANO with member and finance management, where tithes are paid by Pix with a QR code. It is one of the company's <a href="/en/#projects">projects</a>.</p>
+<h2 id="pix-automatico-for-recurring-charges">Pix Automático for recurring charges</h2>
+<p>Pix Automático was launched by the Central Bank of Brazil in 2025 for charges that repeat, such as monthly fees, subscriptions and utility bills. Broadly, the customer authorizes once, in their own banking app, that a given company may collect periodic payments. From then on, payments happen according to the authorized rules, and the customer can review or cancel the authorization through their bank.</p>
+<p>For the company, it is an alternative to a monthly boleto and to recurring credit card billing. Availability, enrollment requirements and conditions vary between institutions, so confirm with your bank or gateway how the feature works today and what your system needs to implement.</p>
+<p>Outside Brazil, recurring billing usually relies on stored cards or on bank debit schemes that vary by country. The same questions apply: how the customer authorizes the charge, how they cancel it and how your system learns about each payment.</p>
+<h2 id="boleto-and-cards">Boleto and cards</h2>
+<h3 id="boleto">Boleto</h3>
+<p>The boleto is a Brazilian bank payment slip with a barcode, which the payer settles through a bank or banking app by the due date. Many business customers in Brazil still require it. The system registers the boleto through the API, sends the document to the customer and receives the payment notification. The difference from Pix is timing: confirmation isn't instant, and your order release rules need to reflect that. Other countries have their own delayed payment methods, such as bank transfers or invoices, and the same principle applies.</p>
+<h3 id="credit-cards-and-tokenization">Credit cards and tokenization</h3>
+<p>With cards, the main precaution is to keep card data from passing through the company's server. Gateways offer their own forms or components that send the data straight to them and return a token, a code that represents that card without revealing its number.</p>
+<p>The system stores only the token. With it, you can charge the card again, for example in a <strong>recurring subscription</strong>, without asking the customer for the card every month. Many gateways offer built-in subscription management, with automatic retries when a charge is declined.</p>
+<h2 id="automatic-reconciliation">Automatic reconciliation</h2>
+<p>Reconciliation means checking that what was charged matches what landed in the account. Done by hand, it takes hours and leads to errors. With an integration, the system does it on its own:</p>
+<ul>
+<li>Each charge has a unique identifier, linked to the order or customer.</li>
+<li>A confirmed payment is applied to the right record, with no typing.</li>
+<li>Reports cross-check charges, payments, fees and payouts.</li>
+<li>Discrepancies, such as underpayments or duplicate payments, become alerts for the team.</li>
+</ul>
+<p>Reconciliation is one of the automations with the clearest return. The guide on <a href="/en/blog/how-to-automate-business-processes/">how to automate business processes</a> shows how to prioritize this kind of task. In subscription products, it is an essential part of billing, as discussed in <a href="/en/blog/how-to-build-a-saas/">how to build a SaaS</a>.</p>
+<h2 id="refunds-and-failures">Refunds and failures</h2>
+<p>Payments are never just the happy path. The system needs to plan for:</p>
+<ul>
+<li><strong>Pix refunds</strong>: full or partial, initiated by the company through the API.</li>
+<li><strong>Card refunds and chargebacks</strong>: when the cardholder disputes the purchase with their issuing bank, the gateway reports it and the system needs to update the order.</li>
+<li><strong>Expired charges</strong>: expired QR codes and boletos should change status and, if appropriate, trigger a new charge.</li>
+<li><strong>Provider instability</strong>: if the API doesn't respond, the system should retry without creating duplicate charges.</li>
+<li><strong>Customer notices</strong>: confirmation, reminders and failed payments. WhatsApp messages can help, as shown in the article on <a href="/en/blog/whatsapp-business-api-integration/">WhatsApp Business API integration</a>.</li>
+</ul>
+<h2 id="security">Security</h2>
+<p>Card data is protected by an international security standard, PCI DSS. Storing card numbers, expiration dates or security codes requires proper certification and a level of control that rarely makes sense outside the payments industry. The practical rule is never to store card data in your own system and to use the gateway's tokenization instead.</p>
+<p>Other precautions:</p>
+<ul>
+<li>API credentials, keys and certificates are kept in a secure place on the server, never in the source code or in an app installed on a phone.</li>
+<li>The address that receives webhooks must verify where the notice came from before marking anything as paid.</li>
+<li>Access to the gateway and bank dashboards uses two-factor authentication and individual user accounts.</li>
+<li>Payers' personal data falls under data protection law. In Brazil, that is the LGPD (Lei Geral de Proteção de Dados), similar in spirit to Europe's GDPR, as explained in <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD for websites and software</a>. Elsewhere, check the rules that apply in your country.</li>
+</ul>
+<blockquote><p>A payment integration is only ready when it handles failures well, not just when the first payment goes through.</p></blockquote>
+<h2 id="what-to-ask-the-provider">What to ask the provider</h2>
+<ul>
+<li>Which payment methods are available, and what are the current fees and payout times?</li>
+<li>Does the API offer webhooks? How do you verify that a notice is legitimate?</li>
+<li>Is there a test environment to simulate payments, refunds and failures?</li>
+<li>How do subscriptions, recurring payment authorizations such as Pix Automático, and charge retries work?</li>
+<li>Are there reports or a statement API for reconciliation?</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="do-i-need-a-gateway-to-accept-pix-in-my-system">Do I need a gateway to accept Pix in my system?</h3>
+<p>Not necessarily. You can integrate directly with the Pix API of your bank or payment institution. A gateway makes more sense when you also need cards, boleto or subscriptions in one place.</p>
+<h3 id="what-s-the-difference-between-a-static-and-a-dynamic-qr-code">What's the difference between a static and a dynamic QR code?</h3>
+<p>A static code is fixed and reusable, and doesn't identify the charge. A dynamic code is generated for each charge, with an amount and an identifier, which lets the system confirm the payment automatically.</p>
+<h3 id="can-i-store-a-customer-s-card-for-future-charges">Can I store a customer's card for future charges?</h3>
+<p>You can store the token generated by the gateway, not the card data. The token enables recurring charges without the card number ever passing through your system.</p>
+<h3 id="how-much-does-it-cost-to-integrate-payments">How much does it cost to integrate payments?</h3>
+<p>It depends on how many payment methods are included, how failures are handled, the reconciliation and the business rules involved. Per-transaction fees are set by each provider and should be compared separately.</p>
+<p>A system that creates the charge and records the payment on its own frees your team for what matters and reduces cash-handling errors. PEROVANO builds software and payment integrations and can help you choose the approach that best fits your volume and the payment methods you accept. We work remotely and can run projects in English. <a href="/en/#contact">Get in touch</a> to talk about your project.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22How%20to%20integrate%20Pix%20and%20payments%20into%20your%20system%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Automation" data-search="no-code, low-code or custom development? no-code, low-code or custom development? see when each one works, the limits on cost, data and privacy, and the signs that it is time to migrate. no-code vs low-code, no-code vs custom development, when to move off no-code, no-code automation tools">
+            <p class="post-card__meta"><span>Automation</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/no-code-low-code-or-custom-development/">No-code, low-code or custom development?</a></h3>
+            <p class="post-card__excerpt">No-code, low-code or custom development? See when each one works, the limits on cost, data and privacy, and the signs that it is time to migrate.</p>
+          </article>
+          <article class="post-card" data-category="Automation" data-search="how to automate business processes, step by step how to automate business processes: pick what to automate, map it first, start small, see practical examples, measure the gains and avoid common pitfalls. how to automate business processes, business process automation, automate repetitive tasks, workflow automation for small business">
+            <p class="post-card__meta"><span>Automation</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-automate-business-processes/">How to automate business processes, step by step</a></h3>
+            <p class="post-card__excerpt">How to automate business processes: pick what to automate, map it first, start small, see practical examples, measure the gains and avoid common pitfalls.</p>
+          </article>
+          <article class="post-card" data-category="Automation" data-search="system integration with apis: a guide for managers understand system integration with apis: what it is, why integrate, rest and webhooks, what to ask your vendor and the risks the project has to plan for. system integration with apis, api integration, how to integrate two systems, what is a webhook, rest api explained">
+            <p class="post-card__meta"><span>Automation</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/system-integration-with-apis/">System integration with APIs: a guide for managers</a></h3>
+            <p class="post-card__excerpt">Understand system integration with APIs: what it is, why integrate, REST and webhooks, what to ask your vendor and the risks the project has to plan for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software maintenance: what it includes and why you need it | PEROVANO</title>
+  <meta name="description" content="Software maintenance explained: corrective, adaptive, perfective and preventive work, monitoring, backups, contract models and what to define in the agreement.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/software-maintenance/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/manutencao-de-software/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/software-maintenance/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/software-maintenance/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Software maintenance: what it includes and why you need it | PEROVANO">
+  <meta property="og:description" content="Software maintenance explained: corrective, adaptive, perfective and preventive work, monitoring, backups, contract models and what to define in the agreement.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/software-maintenance/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/software-maintenance/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/software-maintenance/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Project management">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Software maintenance: what it includes and why you need it",
+  "description": "Software maintenance explained: corrective, adaptive, perfective and preventive work, monitoring, backups, contract models and what to define in the agreement.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Project management",
+  "keywords": "software maintenance, software maintenance contract, types of software maintenance, application support and maintenance, website maintenance",
+  "wordCount": 1493,
+  "image": "https://lrperovano.com.br/en/blog/software-maintenance/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/software-maintenance/",
+  "url": "https://lrperovano.com.br/en/blog/software-maintenance/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/manutencao-de-software/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Project management",
+      "item": "https://lrperovano.com.br/en/blog/category/project-management/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Software maintenance: what it includes and why you need it",
+      "item": "https://lrperovano.com.br/en/blog/software-maintenance/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a simple business website need maintenance too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on a smaller scale. Even a simple website depends on hosting, a certificate, a domain and, often, a content management system with plugins that need updating. The article on WordPress vs. a custom website discusses how the choice of platform affects that routine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the project warranty replace maintenance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The warranty covers defects in what was delivered, for a defined period. Maintenance covers what changes afterward: updates, security, adaptations and new features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of maintenance can be predicted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monitoring, backups and routine updates are predictable. Changes in third-party APIs and urgent security fixes are not always. That is why it is worth combining a fixed part with a reserve for the unexpected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch maintenance vendors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as long as your company has the access and the documentation. An initial assessment of the system, like the one described above, is the safest way to make the transition. PEROVANO builds websites, custom software and apps, like the ones in our projects, and can help assess the state of yours. If nobody is looking after your system or you want to organize its maintenance, talk to us. We work remotely and can run the work in English."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/manutencao-de-software/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/project-management/">Project management</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Software maintenance: what it includes and why you need it</h1>
+          <p class="post__lead">Software maintenance explained: corrective, adaptive, perfective and preventive work, monitoring, backups, contract models and what to define in the agreement.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#the-four-types-of-maintenance">The four types of maintenance</a></li>
+              <li><a href="#monitoring-and-backups">Monitoring and backups</a></li>
+              <li><a href="#what-happens-to-a-system-without-maintenance">What happens to a system without maintenance</a></li>
+              <li><a href="#common-contract-models">Common contract models</a></li>
+              <li><a href="#what-to-define-in-the-agreement">What to define in the agreement</a></li>
+              <li><a href="#how-to-assess-the-health-of-an-inherited-system">How to assess the health of an inherited system</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Software maintenance is the ongoing work that keeps a website, system or app running, secure and useful after it goes live. It includes fixing defects, updating libraries and components, adapting the system to changes in browsers, operating systems and third-party services, applying security patches, monitoring how it runs and making sure there are backups.</p>
+<p>It is necessary because software does not live in isolation. It depends on dozens of components that change all the time, and the business itself changes. A system nobody updates does not stand still: it ages, piles up known security flaws and, sooner or later, stops working somewhere.</p>
+<p>For whoever is paying, the practical question is not whether there will be maintenance, but how it will be organized: who does it, what is included, how quickly problems are handled and how it is billed.</p>
+<h2 id="the-four-types-of-maintenance">The four types of maintenance</h2>
+<h3 id="corrective">Corrective</h3>
+<p>This is fixing defects: a button that does not respond, a wrong calculation, a report that freezes with large amounts of data. Some appear right after delivery, others only when usage grows or a combination of data nobody anticipated shows up. Defects found during the warranty period are usually fixed at no cost, according to the project contract.</p>
+<h3 id="adaptive">Adaptive</h3>
+<p>This is maintenance that adjusts the system to external changes, even when nothing has changed in the business. Common examples:</p>
+<ul>
+<li><strong>Libraries and frameworks.</strong> Almost all software uses ready-made components, called dependencies. They get new versions with fixes, and old versions stop being maintained.</li>
+<li><strong>Browsers.</strong> Chrome, Safari, Firefox and Edge are updated frequently. Features change behavior or disappear.</li>
+<li><strong>Operating systems.</strong> New versions of Android and iOS bring different permission and privacy rules. The app stores also update their requirements for publishing and keeping apps from time to time.</li>
+<li><strong>Third-party APIs.</strong> An API is the interface through which one system talks to another. Payment gateways, messaging platforms, map services and social networks release new versions and retire old ones. When that happens, the integration needs to be adjusted. The article on <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a> explains how this works.</li>
+<li><strong>Legal and tax rules.</strong> Changes in obligations, such as how documents must be issued or how personal data must be handled, may require adjustments.</li>
+</ul>
+<h3 id="perfective-evolutionary">Perfective (evolutionary)</h3>
+<p>This is adding new features or changing existing ones to keep up with the business: a new report, an extra step in an approval workflow, an integration with another system. It is the part of maintenance that creates new value, and it is usually handled as small projects, with an estimate and prior approval.</p>
+<h3 id="preventive-and-security">Preventive and security</h3>
+<p>This is work done before a problem appears: applying security patches, reviewing access permissions, improving fragile parts of the code, optimizing slow database queries, renewing certificates. Users barely see it, but it is what prevents incidents.</p>
+<h2 id="monitoring-and-backups">Monitoring and backups</h2>
+<p>Monitoring means watching the system in production so you learn about a problem before a customer complains. The basics include:</p>
+<ul>
+<li>Uptime checks that alert you when the website or API goes down.</li>
+<li>Error logging, with alerts when errors increase.</li>
+<li>Tracking of server, database and storage usage.</li>
+<li>Expiration alerts for the domain and for the security certificate, which is behind the padlock shown in the browser.</li>
+</ul>
+<p>A backup is a copy of the data and, when applicable, of the files users upload. A good backup plan defines how often copies are made, how long they are kept, where they are stored (preferably somewhere separate from the main server) and, above all, when restoring them is tested. A backup that has never been restored is an assumption, not a guarantee.</p>
+<h2 id="what-happens-to-a-system-without-maintenance">What happens to a system without maintenance</h2>
+<ul>
+<li><strong>Known vulnerabilities.</strong> Security flaws in popular libraries are published and fixed. If you do not update, you stay exposed to exactly the flaws that are public knowledge, which are the easiest to exploit.</li>
+<li><strong>Incompatibilities.</strong> A browser or phone operating system update breaks a screen. A payment API retires the version in use and billing stops working.</li>
+<li><strong>Unsupported dependencies.</strong> Old versions of languages and frameworks stop receiving fixes. Over time, updating requires big jumps, which cost far more than small, regular updates.</li>
+<li><strong>Slowness and rising costs.</strong> Data volume grows, queries slow down and the server needs more resources.</li>
+<li><strong>Lost knowledge.</strong> With nobody looking after the system, the people who knew the details move on. When a problem appears, someone has to relearn everything in a hurry.</li>
+</ul>
+<p>On websites, the effect also shows up in Google: slow pages or pages with errors perform worse, as the article on <a href="/en/blog/website-speed-core-web-vitals/">website speed and Core Web Vitals</a> explains.</p>
+<blockquote><p>Postponed maintenance does not go away: it piles up and comes back more expensive, usually at a worse moment.</p></blockquote>
+<h2 id="common-contract-models">Common contract models</h2>
+<p>Models vary between vendors, but three come up often:</p>
+<ul>
+<li><strong>Block of hours.</strong> The company buys a number of hours per month or per period, used for fixes, adjustments and small improvements. It is important to define what happens to unused hours and to anything beyond the block.</li>
+<li><strong>Monthly fee with a defined scope.</strong> A fixed amount covers agreed activities, such as monitoring, backups, security updates and a volume of fixes. New features are usually quoted separately.</li>
+<li><strong>On demand.</strong> Each need is quoted and approved separately. This works for simple, stable systems, but offers no guaranteed response time and no preventive care.</li>
+</ul>
+<p>Many contracts combine these models: a monthly fee for the basics and hours or quotes for new features. The billing logic resembles the one used to contract the project itself, discussed in <a href="/en/blog/fixed-price-vs-hourly-software-development/">fixed-price vs. hourly development</a>.</p>
+<h2 id="what-to-define-in-the-agreement">What to define in the agreement</h2>
+<ul>
+<li><strong>What is included and what is not.</strong> Monitoring, backups, dependency updates, fixes, small adjustments, new features, user support.</li>
+<li><strong>Priorities.</strong> A simple classification, for example: critical (system down or billing stopped), high (an important function failing with no workaround), normal and low.</li>
+<li><strong>Response time and resolution time by priority.</strong> Response time is how long it takes to start working on a ticket. Resolution time is how long it takes to solve it. They are different things and should be stated separately.</li>
+<li><strong>Support hours.</strong> Business days, business hours, or on-call coverage for critical cases.</li>
+<li><strong>The channel for opening tickets</strong> and how the history is recorded.</li>
+<li><strong>The client company's responsibilities</strong>, such as keeping third-party accounts active and reporting changes in the business.</li>
+<li><strong>Access and ownership.</strong> Who has access to the server, the repository and the backups, and how that is handed back if the contract ends.</li>
+<li><strong>A periodic report</strong> with what was done, the hours used and the risks identified.</li>
+</ul>
+<h2 id="how-to-assess-the-health-of-an-inherited-system">How to assess the health of an inherited system</h2>
+<p>An inherited system is one built by another team that now needs a new owner. Before taking over maintenance, an initial assessment usually answers these questions:</p>
+<ol>
+<li>Is there full access to the code, repository, server, database, domain and third-party accounts?</li>
+<li>Is the code in the repository the same as what is running in production?</li>
+<li>Which versions of the language, framework and libraries are in use, and which have already lost support?</li>
+<li>Are there known vulnerabilities in the dependencies?</li>
+<li>Are there recent backups, and have they ever been restored successfully?</li>
+<li>Are there automated tests? How much of the system do they cover?</li>
+<li>Is there documentation for installation, deployment and business rules?</li>
+<li>Which external integrations does the system use, and are those API versions still active?</li>
+<li>How is personal data protected? The guide on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD, Brazil's data protection law, for websites and software</a> helps with this part. Outside Brazil, check the rules that apply in your country.</li>
+</ol>
+<p>The result is a prioritized list of risks and a plan: what to fix now, what can wait, and whether it makes more sense to maintain the system, refactor it piece by piece or rewrite a module.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="does-a-simple-business-website-need-maintenance-too">Does a simple business website need maintenance too?</h3>
+<p>Yes, on a smaller scale. Even a simple website depends on hosting, a certificate, a domain and, often, a content management system with plugins that need updating. The article on <a href="/en/blog/wordpress-vs-custom-website/">WordPress vs. a custom website</a> discusses how the choice of platform affects that routine.</p>
+<h3 id="does-the-project-warranty-replace-maintenance">Does the project warranty replace maintenance?</h3>
+<p>No. The warranty covers defects in what was delivered, for a defined period. Maintenance covers what changes afterward: updates, security, adaptations and new features.</p>
+<h3 id="how-much-of-maintenance-can-be-predicted">How much of maintenance can be predicted?</h3>
+<p>Monitoring, backups and routine updates are predictable. Changes in third-party APIs and urgent security fixes are not always. That is why it is worth combining a fixed part with a reserve for the unexpected.</p>
+<h3 id="can-i-switch-maintenance-vendors">Can I switch maintenance vendors?</h3>
+<p>Yes, as long as your company has the access and the documentation. An initial assessment of the system, like the one described above, is the safest way to make the transition.</p>
+<p>PEROVANO builds websites, custom software and apps, like the ones in our <a href="/en/#projects">projects</a>, and can help assess the state of yours. If nobody is looking after your system or you want to organize its maintenance, <a href="/en/#contact">talk to us</a>. We work remotely and can run the work in English.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22Software%20maintenance%3A%20what%20it%20includes%20and%20why%20you%20need%20it%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Project management" data-search="how to choose a software development company how to choose a software or web development company: what to evaluate, red flags, questions for the first call, and why your company must own the code. how to choose a software development company, hiring a web development company, how to evaluate a software vendor, questions to ask a software development company">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-choose-a-software-development-company/">How to choose a software development company</a></h3>
+            <p class="post-card__excerpt">How to choose a software or web development company: what to evaluate, red flags, questions for the first call, and why your company must own the code.</p>
+          </article>
+          <article class="post-card" data-category="Project management" data-search="how to write a software project brief: template and mistakes learn how to write a brief for a website or software project: what to include, a template you can copy, and the mistakes that lead to inaccurate quotes. how to write a software project brief, software project brief template, website brief template, project brief for software development">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-write-a-software-project-brief/">How to write a software project brief: template and mistakes</a></h3>
+            <p class="post-card__excerpt">Learn how to write a brief for a website or software project: what to include, a template you can copy, and the mistakes that lead to inaccurate quotes.</p>
+          </article>
+          <article class="post-card" data-category="Project management" data-search="mvp: how to turn a software idea into a real product learn what an mvp is, how to define the minimum scope of a software product, validate it with real users, what to leave for later and how to grow after launch. what is an mvp, minimum viable product, how to build an mvp, turn a software idea into a product">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP: how to turn a software idea into a real product</a></h3>
+            <p class="post-card__excerpt">Learn what an MVP is, how to define the minimum scope of a software product, validate it with real users, what to leave for later and how to grow after launch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

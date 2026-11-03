@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress vs. custom website: how to choose | PEROVANO</title>
+  <meta name="description" content="WordPress or a custom website? See when each makes sense, what to watch with plugins, security and performance, and middle-ground options like a headless CMS.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="WordPress vs. custom website: how to choose | PEROVANO">
+  <meta property="og:description" content="WordPress or a custom website? See when each makes sense, what to watch with plugins, security and performance, and middle-ground options like a headless CMS.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Websites">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPress vs. custom website: how to choose",
+  "description": "WordPress or a custom website? See when each makes sense, what to watch with plugins, security and performance, and middle-ground options like a headless CMS.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Websites",
+  "keywords": "wordpress vs custom website, is wordpress worth it, custom website or wordpress, headless cms",
+  "wordCount": 1547,
+  "image": "https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/",
+  "url": "https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Websites",
+      "item": "https://lrperovano.com.br/en/blog/category/websites/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "WordPress vs. custom website: how to choose",
+      "item": "https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a WordPress site insecure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by nature. WordPress core is actively maintained and receives security fixes. The risk appears when the site piles up outdated plugins, weak passwords and no maintenance routine. With basic precautions and timely updates, WordPress can be quite secure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a custom website always more expensive than WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the upfront investment, usually yes, because the design and code are made for the project. Over time, the gap tends to narrow: a static site usually needs less maintenance, while a WordPress site with many plugins requires ongoing updates and testing, and some plugins are paid by subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I migrate from WordPress to a custom website later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The content can be exported and reused. The main precaution is to keep the same page addresses or set up redirects, so you do not lose the Google rankings you have already earned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WordPress good for SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It provides a good foundation, and there are plugins that make titles, descriptions and sitemaps easier. But SEO depends more on useful content, structure and speed than on the platform. If you are deciding between WordPress and a custom website, start with how the site will be used day to day, not with the technology. PEROVANO builds websites, works remotely and can help you assess, in English, which path makes sense for your company. Contact us to talk about your project."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/wordpress-ou-site-sob-medida/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/websites/">Websites</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">WordPress vs. custom website: how to choose</h1>
+          <p class="post__lead">WordPress or a custom website? See when each makes sense, what to watch with plugins, security and performance, and middle-ground options like a headless CMS.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#what-wordpress-is">What WordPress is</a></li>
+              <li><a href="#when-wordpress-is-the-best-choice">When WordPress is the best choice</a></li>
+              <li><a href="#limits-and-precautions-with-wordpress">Limits and precautions with WordPress</a></li>
+              <li><a href="#when-a-custom-or-static-website-makes-more-sense">When a custom or static website makes more sense</a></li>
+              <li><a href="#middle-ground-options">Middle-ground options</a></li>
+              <li><a href="#questions-to-help-you-decide">Questions to help you decide</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>WordPress is often the best choice when the website depends on content published frequently, such as a blog, a news section or a catalog edited by the team itself, and when the budget calls for a ready-made foundation with existing themes and plugins. The company gets a familiar dashboard, plenty of professionals on the market and the freedom to edit without calling a developer for every change.</p>
+<p>A custom or static website makes more sense when the content changes little, when performance and original design weigh on the decision, or when the site needs to talk to the company's systems. In that case, the site loads only what it uses, has fewer pieces to keep updated and is easier to secure.</p>
+<p>Between the two extremes there are middle paths, such as a headless CMS and page builders. The right choice depends less on technology and more on four questions: who will edit the site, how often, what it needs to integrate with and who will look after it once it is live.</p>
+<h2 id="what-wordpress-is">What WordPress is</h2>
+<p>WordPress is an open-source content management system, or CMS. In practice, it is software installed on a server that provides an admin dashboard to create pages, publish posts, organize menus and upload images, without touching code.</p>
+<p>It works with two main pieces:</p>
+<ul>
+<li><strong>Themes</strong>, which define how the site looks: colors, typography, page layouts.</li>
+<li><strong>Plugins</strong>, which add features: forms, SEO, online store, caching, backups, multiple languages and much more.</li>
+</ul>
+<p>WordPress can be installed on your own hosting, with full control and full responsibility for updates, or used through services that host it for you, with less work and more limits on what you can install. Check the current terms of each plan before deciding.</p>
+<h2 id="when-wordpress-is-the-best-choice">When WordPress is the best choice</h2>
+<ul>
+<li><strong>An active blog or content section.</strong> If your strategy includes publishing articles regularly to attract visits from Google, the WordPress editor was built for that. The article on <a href="/en/blog/seo-for-business-websites/">SEO for business websites</a> explains why that content matters.</li>
+<li><strong>Content the team edits often.</strong> Menus, job openings, events, news, product catalogs. When several people need to update the site every week, an editing dashboard stops being a luxury.</li>
+<li><strong>A tight budget.</strong> With a well-chosen theme and few plugins, you can launch a functional site for less than a project designed from scratch. The article on <a href="/en/blog/how-much-does-a-website-cost/">how much a website costs</a> details what goes into that calculation.</li>
+<li><strong>Independence from the vendor.</strong> Because WordPress is so widespread, finding another professional to take over is usually simple.</li>
+</ul>
+<h2 id="limits-and-precautions-with-wordpress">Limits and precautions with WordPress</h2>
+<p>WordPress is a good tool, but it is not "install and forget." The most common problems show up after launch.</p>
+<h3 id="constant-updates">Constant updates</h3>
+<p>WordPress core, themes and plugins get frequent updates, many of them security-related, and each one can cause incompatibilities between pieces from different authors. Someone has to be responsible for updating, testing and keeping backups. The article on <a href="/en/blog/software-maintenance/">software maintenance</a> goes deeper into this.</p>
+<h3 id="plugin-security">Plugin security</h3>
+<p>Every plugin is third-party code running on your server. Plugins abandoned by their authors, downloaded from unofficial sources or left out of date are a common entry point for attacks. A few basic precautions:</p>
+<ul>
+<li>Install only what you need and remove what you do not use.</li>
+<li>Prefer plugins with recent updates and a good reputation.</li>
+<li>Never use "nulled" (pirated) versions of paid plugins or themes.</li>
+<li>Use strong passwords and two-factor authentication on the dashboard.</li>
+<li>Keep automatic backups stored outside the site's server.</li>
+</ul>
+<h3 id="performance-of-heavy-themes">Performance of heavy themes</h3>
+<p>"Multipurpose" themes, which promise to suit any kind of business, often load many scripts, fonts and styles the site never uses. Add several plugins and the result is a slow site, especially on mobile. That affects the visitor's experience and the metrics Google tracks, explained in the article on <a href="/en/blog/website-speed-core-web-vitals/">website speed and Core Web Vitals</a>. A fast WordPress site is possible, but it requires a lightweight theme, few plugins and well-configured caching.</p>
+<h3 id="hosting">Hosting</h3>
+<p>WordPress depends on PHP and a database, which calls for hosting with adequate resources. Very cheap, overcrowded plans make any site slow, no matter how good the theme is. It is also worth knowing who handles server updates and backups. The article on <a href="/en/blog/domain-and-hosting-explained/">domain and hosting</a> helps you understand what to buy.</p>
+<h2 id="when-a-custom-or-static-website-makes-more-sense">When a custom or static website makes more sense</h2>
+<p>A custom website is one whose code is written for the project, based on an original design. A common variation is the <strong>static site</strong>: pages are generated in advance as ready-made files and delivered to the visitor without querying a database on every visit. This reduces load time and eliminates many of the security gaps typical of an admin dashboard exposed to the internet.</p>
+<p>This path tends to be better when:</p>
+<ul>
+<li><strong>Performance is a priority.</strong> The site loads only the code it uses. There is no generic theme and no dozens of plugins competing for resources.</li>
+<li><strong>The design needs to be original.</strong> The company's visual identity is designed from scratch, without the limits of adapting an existing theme.</li>
+<li><strong>There are integrations.</strong> The site needs to check inventory, send leads straight to the CRM, display data from an internal system or connect to payments. Well-built integrations, like those described in the article on <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a>, are easier to control in custom code.</li>
+<li><strong>The content rarely changes.</strong> A business website that gets adjustments a few times a year does not need an editing dashboard that demands updates every week.</li>
+</ul>
+<p>One example is the business website for Safe Offshore, a maritime services company, which is among <a href="/en/#projects">PEROVANO's projects</a>.</p>
+<p>The point to watch is editing: without a dashboard, every text change goes through the developer. If you edit rarely, that is acceptable. If you publish every week, it becomes a bottleneck.</p>
+<h2 id="middle-ground-options">Middle-ground options</h2>
+<h3 id="headless-cms">Headless CMS</h3>
+<p>In a <strong>headless CMS</strong>, the editing dashboard is separate from the website. The team edits content in a dashboard, and the custom-built site fetches that content through an API (an interface that lets systems exchange data). WordPress itself can be used this way, and there are also CMSs built specifically for this model.</p>
+<p>The advantage is combining the best of both sides: the original design and performance of a custom site with the editing autonomy of a CMS. The downside is greater complexity, since there are two pieces to host and maintain. It makes sense for sites with plenty of content and high demands on performance or integration.</p>
+<h3 id="page-builders">Page builders</h3>
+<p><strong>Page builders</strong> let you assemble the layout by dragging blocks, either as a plugin inside WordPress or as a hosted website-building platform. They are quick to start with and give autonomy to people who do not code.</p>
+<p>In exchange, they tend to produce heavier pages, lock the site into the tool and limit integrations. They work well for validating an idea or for a simple campaign page, like those described in the article on <a href="/en/blog/what-is-a-landing-page/">landing pages</a>. The article on <a href="/en/blog/no-code-low-code-or-custom-development/">no-code, low-code or custom development</a> compares these paths in more detail.</p>
+<h2 id="questions-to-help-you-decide">Questions to help you decide</h2>
+<ol>
+<li>Who will edit the site, and how often? Every week or a few times a year?</li>
+<li>Will the site have a blog or another content section published regularly?</li>
+<li>Does the design need to be unique, or will an adapted theme do?</li>
+<li>Does the site need to integrate with a CRM, ERP, payments or other company systems?</li>
+<li>Who will handle updates, security and backups after launch?</li>
+<li>If you switch vendors, who keeps the code, the domain and the hosting?</li>
+</ol>
+<p>When requesting quotes, ask the vendor which technology they propose and why, how many plugins will be used, how maintenance will work and what happens if the contract ends. A good proposal explains the choice based on the answers above, not on the developer's preference. The guide on <a href="/en/blog/how-to-choose-a-software-development-company/">how to choose a software development company</a> offers more criteria.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="is-a-wordpress-site-insecure">Is a WordPress site insecure?</h3>
+<p>Not by nature. WordPress core is actively maintained and receives security fixes. The risk appears when the site piles up outdated plugins, weak passwords and no maintenance routine. With basic precautions and timely updates, WordPress can be quite secure.</p>
+<h3 id="is-a-custom-website-always-more-expensive-than-wordpress">Is a custom website always more expensive than WordPress?</h3>
+<p>In the upfront investment, usually yes, because the design and code are made for the project. Over time, the gap tends to narrow: a static site usually needs less maintenance, while a WordPress site with many plugins requires ongoing updates and testing, and some plugins are paid by subscription.</p>
+<h3 id="can-i-migrate-from-wordpress-to-a-custom-website-later">Can I migrate from WordPress to a custom website later?</h3>
+<p>Yes. The content can be exported and reused. The main precaution is to keep the same page addresses or set up redirects, so you do not lose the Google rankings you have already earned.</p>
+<h3 id="is-wordpress-good-for-seo">Is WordPress good for SEO?</h3>
+<p>It provides a good foundation, and there are plugins that make titles, descriptions and sitemaps easier. But SEO depends more on useful content, structure and speed than on the platform.</p>
+<p>If you are deciding between WordPress and a custom website, start with how the site will be used day to day, not with the technology. PEROVANO builds websites, works remotely and can help you assess, in English, which path makes sense for your company. <a href="/en/#contact">Contact us</a> to talk about your project.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22WordPress%20vs.%20custom%20website%3A%20how%20to%20choose%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Websites" data-search="local seo: how to show up on google maps how to show up on google maps: set up your google business profile, keep your name, address and phone consistent, and work on reviews, photos and your website. local seo, how to show up on google maps, google business profile, google business profile optimization">
+            <p class="post-card__meta"><span>Websites</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/local-seo-google-business-profile/">Local SEO: how to show up on Google Maps</a></h3>
+            <p class="post-card__excerpt">How to show up on Google Maps: set up your Google Business Profile, keep your name, address and phone consistent, and work on reviews, photos and your website.</p>
+          </article>
+          <article class="post-card" data-category="Websites" data-search="what a business website needs: a 12-point checklist what a business website needs: a clear offer, explained services, real proof, contact that works, mobile, speed, seo, privacy policy, https and analytics. what a business website needs, business website checklist, company website essentials, small business website must haves">
+            <p class="post-card__meta"><span>Websites</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/what-a-business-website-needs/">What a business website needs: a 12-point checklist</a></h3>
+            <p class="post-card__excerpt">What a business website needs: a clear offer, explained services, real proof, contact that works, mobile, speed, SEO, privacy policy, HTTPS and analytics.</p>
+          </article>
+          <article class="post-card" data-category="Websites" data-search="domain and hosting explained: what they are, how to choose the difference between a domain and web hosting, how to register a domain in your company&#x27;s name, what dns does and what to require from your website vendor. domain and hosting explained, difference between domain and hosting, how to register a domain for a business, types of web hosting">
+            <p class="post-card__meta"><span>Websites</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/domain-and-hosting-explained/">Domain and hosting explained: what they are, how to choose</a></h3>
+            <p class="post-card__excerpt">The difference between a domain and web hosting, how to register a domain in your company&#x27;s name, what DNS does and what to require from your website vendor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

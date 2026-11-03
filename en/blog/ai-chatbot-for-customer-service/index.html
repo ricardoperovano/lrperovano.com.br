@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI chatbot for customer service: uses and limits | PEROVANO</title>
+  <meta name="description" content="How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/chatbot-com-ia-para-atendimento/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="AI chatbot for customer service: uses and limits | PEROVANO">
+  <meta property="og:description" content="How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Artificial intelligence">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI chatbot for customer service: uses and limits",
+  "description": "How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Artificial intelligence",
+  "keywords": "AI chatbot for customer service, AI customer service chatbot, WhatsApp chatbot for business, virtual assistant for customer support",
+  "wordCount": 1668,
+  "image": "https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/",
+  "url": "https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/chatbot-com-ia-para-atendimento/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Artificial intelligence",
+      "item": "https://lrperovano.com.br/en/blog/category/artificial-intelligence/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AI chatbot for customer service: uses and limits",
+      "item": "https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does an AI chatbot replace the customer service team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It takes over repetitive questions and initial data collection. Complex cases, complaints and negotiations stay with people, who now receive conversations that are already organized."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the same chatbot on WhatsApp, my website and Instagram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and that's the recommended approach. With a single knowledge base and a system that centralizes conversations, the customer gets the same answer on any channel and the agent sees the full history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the chatbot gives a wrong answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It will happen at some point. That's why the assistant should answer only from the documents, say \"I don't know\" when it can't find the information, and conversations should be reviewed by sampling. Every error found becomes an adjustment to the knowledge base or the instructions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to launch an AI chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the integrations needed and the state of the knowledge base. An assistant that only answers questions from existing documents is simpler. Scheduling and order lookups require integration with other systems and take longer. If your customer service gets a lot of repeated questions and you want to see where an AI chatbot would help, we can look at your current conversations and design a pilot. PEROVANO works remotely and can run the project in English. Get in touch and tell us how your customer service works today."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/chatbot-com-ia-para-atendimento/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/artificial-intelligence/">Artificial intelligence</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">AI chatbot for customer service: uses and limits</h1>
+          <p class="post__lead">How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#menu-chatbot-or-generative-ai-assistant">Menu chatbot or generative AI assistant</a></li>
+              <li><a href="#where-the-chatbot-works">Where the chatbot works</a></li>
+              <li><a href="#what-an-ai-chatbot-handles-well">What an AI chatbot handles well</a></li>
+              <li><a href="#what-the-chatbot-should-not-do-on-its-own">What the chatbot should not do on its own</a></li>
+              <li><a href="#knowledge-base-where-the-answers-come-from">Knowledge base: where the answers come from</a></li>
+              <li><a href="#handoff-to-a-human-agent">Handoff to a human agent</a></li>
+              <li><a href="#tone-and-limits-of-the-assistant">Tone and limits of the assistant</a></li>
+              <li><a href="#how-to-measure-results">How to measure results</a></li>
+              <li><a href="#data-protection-and-privacy">Data protection and privacy</a></li>
+              <li><a href="#frequently-asked-questions-2">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>An AI chatbot for customer service is an assistant that understands a customer's message written in their own words, looks up the company's information and replies in natural language. It works well for frequently asked questions, triage, data collection and scheduling, in channels such as WhatsApp, website chat and Instagram.</p>
+<p>The difference from a traditional menu bot ("press 1 for billing") is that the customer doesn't have to adapt to the bot. They ask "do you deliver downtown on Saturday?" and get a direct answer, based on the rules the company has set up.</p>
+<p>The result depends less on the technology and more on the design: a well-maintained knowledge base, clear limits on what the assistant can do and a handoff to a human agent that works without friction.</p>
+<h2 id="menu-chatbot-or-generative-ai-assistant">Menu chatbot or generative AI assistant</h2>
+<p>A <strong>rule-based chatbot</strong> follows a fixed flow. Each option leads to another prewritten message. It is predictable, cheap to run and easy to audit. The problem shows up when the customer's question doesn't fit any option: they go back to the menu, get frustrated or give up.</p>
+<p>A <strong>generative AI assistant</strong> uses a language model, a system trained on large volumes of text that interprets and writes natural language. It understands different ways of asking the same question, copes with typos and can handle a conversation where one message carries more than one piece of information.</p>
+<p>In practice, the best projects combine the two. Critical flows, such as order confirmation or resending an invoice, follow fixed rules. AI comes in to understand what the customer wants, answer open questions and decide which flow to route them to. Our article on <a href="/en/blog/how-to-use-ai-in-business/">how to use AI in business</a> explains more broadly where AI helps and where traditional automation is the better choice.</p>
+<h2 id="where-the-chatbot-works">Where the chatbot works</h2>
+<ul>
+<li><strong>WhatsApp.</strong> In Brazil, it's the channel where most customers already are. To run a chatbot with multiple agents and integration with your systems, the route is the official API. Requirements and costs are covered in our article on <a href="/en/blog/whatsapp-business-api-integration/">WhatsApp Business API integration</a>.</li>
+<li><strong>Website chat.</strong> Useful for people researching before they buy. The assistant can answer questions about products, lead times and terms without the visitor leaving the page.</li>
+<li><strong>Instagram.</strong> Direct messages get a lot of questions about price, availability and opening hours. The integration follows the platform's rules, which change over time and should be checked at the time of the project.</li>
+</ul>
+<h2 id="what-an-ai-chatbot-handles-well">What an AI chatbot handles well</h2>
+<h3 id="frequently-asked-questions">Frequently asked questions</h3>
+<p>Opening hours, payment methods, delivery times, return policy, required documents. These are repeated questions with known answers, and they take up a good share of the team's time.</p>
+<h3 id="triage">Triage</h3>
+<p>The assistant identifies the topic, collects the basic information and routes the conversation to the right queue: sales, technical support, billing. The agent receives the conversation with context already in place, without having to ask everything again.</p>
+<h3 id="data-collection">Data collection</h3>
+<p>Name, tax ID (in Brazil, the CPF for individuals or CNPJ for companies), order number, address, a description of the problem. The chatbot can ask for this information conversationally and validate the format before saving it to the system.</p>
+<h3 id="scheduling">Scheduling</h3>
+<p>With access to the calendar, the assistant checks available slots, offers options and confirms the booking. For this, it needs to be integrated with the company's scheduling system.</p>
+<h2 id="what-the-chatbot-should-not-do-on-its-own">What the chatbot should not do on its own</h2>
+<p>Some limits protect both the customer and the company:</p>
+<ul>
+<li><strong>Negotiate prices, discounts or deadlines outside policy.</strong> The model can be talked into "making an exception" if the system doesn't enforce firm rules.</li>
+<li><strong>Make decisions with financial or legal impact</strong>, such as approving a refund, canceling a contract or giving an opinion on consumer rights.</li>
+<li><strong>Handle serious complaints or very unhappy customers.</strong> In those cases, insisting on automation makes things worse.</li>
+<li><strong>Answer questions that aren't covered by the knowledge base.</strong> If the information isn't in the documents, the assistant should say it doesn't know and transfer the conversation, instead of making something up.</li>
+</ul>
+<p>Actions that change data, such as canceling an order, should go through business rules in the system and not depend solely on the model's interpretation. When the assistant carries out multi-step tasks using company systems, it starts behaving like an agent, the subject of our article on <a href="/en/blog/ai-agents-for-business/">AI agents for business</a>.</p>
+<h2 id="knowledge-base-where-the-answers-come-from">Knowledge base: where the answers come from</h2>
+<p>A language model doesn't know your company's prices, lead times and rules. That information has to be handed to it at the moment of the question. The most widely used technique for this is RAG, in which the system searches the documents for relevant passages and the model answers based on them. How it works is explained in detail in our article on <a href="/en/blog/what-is-rag/">what RAG is</a>.</p>
+<p>For the knowledge base to work:</p>
+<ul>
+<li>Collect the answers your team already gives today. Past conversations show which questions come up most.</li>
+<li>Write each piece of information once, in one place. Two versions of the return policy produce contradictory answers.</li>
+<li>Assign someone to keep the base up to date. If the shipping fee changes, the document changes the same day.</li>
+<li>Separate public information from internal information. The chatbot should only have access to what can be told to the customer.</li>
+</ul>
+<h2 id="handoff-to-a-human-agent">Handoff to a human agent</h2>
+<p>The transfer is the part that most affects the customer's experience. It should happen when the customer asks for it, when the assistant can't find the answer, when the topic is sensitive or when the conversation goes in circles.</p>
+<p>A good handoff has three characteristics. The customer knows they are being transferred and, outside business hours, knows when they will get a reply. The agent receives a summary of what has been discussed and the data collected. And the customer doesn't have to repeat anything.</p>
+<p>Platforms like VipDesk, built by PEROVANO, bring WhatsApp, Instagram, email and phone together with a CRM and AI-powered automation, so the conversation can move from the assistant to the agent without losing its history. See other examples in our <a href="/en/#projects">projects</a>.</p>
+<h2 id="tone-and-limits-of-the-assistant">Tone and limits of the assistant</h2>
+<p>The chatbot's behavior is defined by written instructions that say how it should introduce itself, what tone to use and what it must never do. A few points deserve attention:</p>
+<ul>
+<li>Make it clear that the customer is talking to an automated assistant.</li>
+<li>Define the brand's tone with examples: formal or friendly, with or without emojis, short or detailed answers.</li>
+<li>Restrict the subject matter. A clinic's assistant shouldn't offer opinions on politics or write school essays.</li>
+<li>Forbid promises that aren't in the knowledge base, such as delivery dates or guarantees.</li>
+</ul>
+<p>Before going live, test with real questions and also with attempts to push the assistant off script.</p>
+<h2 id="how-to-measure-results">How to measure results</h2>
+<p>Without metrics, there is no way to know whether the chatbot is helping or just moving the problem elsewhere. The most useful indicators are:</p>
+<ul>
+<li><strong>Resolution rate without a human:</strong> the share of conversations closed by the assistant in which the customer didn't come back with the same question.</li>
+<li><strong>Transfer rate:</strong> how many conversations went to an agent and why. The reasons show what's missing from the knowledge base.</li>
+<li><strong>Satisfaction:</strong> a simple question at the end of the conversation, comparing conversations with and without the assistant.</li>
+<li><strong>Time to first response and time to resolution.</strong></li>
+<li><strong>Incorrect answers:</strong> review a sample of conversations every week, especially at the start.</li>
+</ul>
+<p>Measure the current situation before rolling it out. Without that baseline, any comparison afterward is guesswork.</p>
+<h2 id="data-protection-and-privacy">Data protection and privacy</h2>
+<p>The chatbot collects and processes personal data, and that has to comply with data protection law. In Brazil, this means the LGPD (Lei Geral de Proteção de Dados), Brazil's data protection law, similar in spirit to Europe's GDPR. Companies in other countries should check the data protection rules that apply to them. Ask only for the data the task requires. Tell customers, in the conversation or in your privacy policy, how that data is used. Check with the AI model provider where the data is processed, how long it is kept and whether it is used for other purposes, based on the terms of the plan you have contracted.</p>
+<p>Avoid having the assistant ask for or display sensitive data, such as health information, without need. And store conversations with access controls, so that only those who need to can view them. Our article on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">the LGPD for websites and software</a> covers legal bases, data subject rights and vendor responsibilities under Brazilian law.</p>
+<h2 id="frequently-asked-questions-2">Frequently asked questions</h2>
+<h3 id="does-an-ai-chatbot-replace-the-customer-service-team">Does an AI chatbot replace the customer service team?</h3>
+<p>No. It takes over repetitive questions and initial data collection. Complex cases, complaints and negotiations stay with people, who now receive conversations that are already organized.</p>
+<h3 id="can-i-use-the-same-chatbot-on-whatsapp-my-website-and-instagram">Can I use the same chatbot on WhatsApp, my website and Instagram?</h3>
+<p>Yes, and that's the recommended approach. With a single knowledge base and a system that centralizes conversations, the customer gets the same answer on any channel and the agent sees the full history.</p>
+<h3 id="what-if-the-chatbot-gives-a-wrong-answer">What if the chatbot gives a wrong answer?</h3>
+<p>It will happen at some point. That's why the assistant should answer only from the documents, say "I don't know" when it can't find the information, and conversations should be reviewed by sampling. Every error found becomes an adjustment to the knowledge base or the instructions.</p>
+<h3 id="how-long-does-it-take-to-launch-an-ai-chatbot">How long does it take to launch an AI chatbot?</h3>
+<p>It depends on the integrations needed and the state of the knowledge base. An assistant that only answers questions from existing documents is simpler. Scheduling and order lookups require integration with other systems and take longer.</p>
+<p>If your customer service gets a lot of repeated questions and you want to see where an AI chatbot would help, we can look at your current conversations and design a pilot. PEROVANO works remotely and can run the project in English. <a href="/en/#contact">Get in touch</a> and tell us how your customer service works today.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22AI%20chatbot%20for%20customer%20service%3A%20uses%20and%20limits%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Artificial intelligence" data-search="how to use chatgpt at work safely how to use chatgpt and other ai tools at work safely: productive uses, data leak risks, an internal ai use policy, business plans and data protection. using chatgpt at work safely, ai acceptable use policy, chatgpt risks for business, safe use of ai in the workplace">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/using-chatgpt-at-work-safely/">How to use ChatGPT at work safely</a></h3>
+            <p class="post-card__excerpt">How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="ai agents for business: what they are and how to use them what ai agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot. ai agents for business, what are ai agents, ai agent examples, ai that performs tasks">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/ai-agents-for-business/">AI agents for business: what they are and how to use them</a></h3>
+            <p class="post-card__excerpt">What AI agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="how to use ai in business: practical use cases practical ways to use ai in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot. how to use ai in business, ai use cases for business, generative ai for companies, ai for customer service">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-use-ai-in-business/">How to use AI in business: practical use cases</a></h3>
+            <p class="post-card__excerpt">Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

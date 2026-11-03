@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed-price vs. hourly software development: how to choose | PEROVANO</title>
+  <meta name="description" content="Fixed price or hourly? How each software development pricing model works, the risks of each, how to handle scope changes and what to put in the contract.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/escopo-fechado-ou-por-hora/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Fixed-price vs. hourly software development: how to choose | PEROVANO">
+  <meta property="og:description" content="Fixed price or hourly? How each software development pricing model works, the risks of each, how to handle scope changes and what to put in the contract.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Project management">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fixed-price vs. hourly software development: how to choose",
+  "description": "Fixed price or hourly? How each software development pricing model works, the risks of each, how to handle scope changes and what to put in the contract.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Project management",
+  "keywords": "fixed price vs time and materials, fixed-price software development, hourly software development, software development pricing models",
+  "wordCount": 1540,
+  "image": "https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/",
+  "url": "https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/escopo-fechado-ou-por-hora/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Project management",
+      "item": "https://lrperovano.com.br/en/blog/category/project-management/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Fixed-price vs. hourly software development: how to choose",
+      "item": "https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a fixed price cheaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. A fixed price includes a risk margin, and changes produce change orders. With hourly billing, the cost can be lower if the project goes well, or higher if the scope grows unchecked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep hours under control in the hourly model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask for periodic reports with hours per task, frequent deliveries you can test, an estimate per phase and, if it makes sense, a cap that triggers a review before it is exceeded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is paid discovery worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On projects with uncertainty, it usually is. Discovery turns ideas into a verifiable scope, which lets you compare proposals and reduce surprises. Agree in advance on which documents will be delivered and whether they can be used with another vendor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch models mid-project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as long as the change is recorded. A common switch is moving from a fixed price to hourly after launch, when development starts being guided by usage. PEROVANO builds websites, custom software and integrations and can help define the scope and the pricing model that fit your project's level of uncertainty. We work remotely and can run projects in English. If you are weighing how to contract the work, talk to us about the best path."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/escopo-fechado-ou-por-hora/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/project-management/">Project management</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Fixed-price vs. hourly software development: how to choose</h1>
+          <p class="post__lead">Fixed price or hourly? How each software development pricing model works, the risks of each, how to handle scope changes and what to put in the contract.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#how-each-model-works">How each model works</a></li>
+              <li><a href="#advantages-and-risks-of-each-model">Advantages and risks of each model</a></li>
+              <li><a href="#how-to-handle-scope-changes">How to handle scope changes</a></li>
+              <li><a href="#phased-delivery-and-acceptance-milestones">Phased delivery and acceptance milestones</a></li>
+              <li><a href="#what-the-proposal-and-contract-should-include">What the proposal and contract should include</a></li>
+              <li><a href="#which-to-choose-in-each-situation">Which to choose in each situation</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>A fixed price works best when what will be built can be described precisely before work starts: a business website, a well-defined integration, a small system with known rules. Price and timeline are agreed in advance, and the risk of the estimate being wrong sits with the vendor.</p>
+<p>Hourly billing, also called time and materials, works best when there is uncertainty: a new product, a system whose shape will become clear as people use it, an operation that changes often. The client pays for the time actually worked and gains the freedom to change priorities, but takes on the risk that the total will vary.</p>
+<p>Between the two extremes there are hybrid models, which tend to be the most balanced choice for medium and large projects: paid discovery to define the scope, followed by phases at a fixed price or with an hours budget per phase.</p>
+<h2 id="how-each-model-works">How each model works</h2>
+<h3 id="fixed-price-with-a-defined-scope">Fixed price with a defined scope</h3>
+<p>The vendor estimates the effort, adds a risk margin and proposes a price and a timeline to deliver a scope described in detail. Changes to that scope are handled separately, with a new quote.</p>
+<p>This model depends on a well-written scope. The vaguer the description, the larger the risk margin built into the price and the greater the chance of disputes about what was or was not included. A <a href="/en/blog/how-to-write-a-software-project-brief/">well-written brief</a> is the starting point.</p>
+<h3 id="time-and-materials-hourly">Time and materials (hourly)</h3>
+<p>The client pays for the hours worked at an agreed rate, plus direct costs such as infrastructure and third-party services, when there are any. There is usually an initial estimate, which serves as a reference, not a commitment.</p>
+<p>The work is typically organized in short cycles of one or two weeks, with a prioritized list of tasks called the backlog. At the end of each cycle, the client reviews what was delivered and decides what comes next.</p>
+<h3 id="dedicated-team">Dedicated team</h3>
+<p>The vendor assigns professionals to the client's project for a period, billed monthly per person or per team. The client is more involved in day-to-day management and sets the priorities. This is common for products in continuous development, when the company does not have an in-house team yet or wants to supplement it.</p>
+<h3 id="hybrid-models">Hybrid models</h3>
+<p>The most common ones:</p>
+<ul>
+<li><strong>Paid discovery followed by phases.</strong> An initial stage at a fixed price produces the detailed scope, the risks, the architecture and an estimate per phase. With that material, the client decides whether to proceed, with the same vendor or another one.</li>
+<li><strong>Fixed first phase, hourly afterward.</strong> The initial version, such as an <a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP</a>, ships with a defined scope and price. After launch, development continues hourly or with a dedicated team, guided by real usage.</li>
+<li><strong>Hourly with a cap.</strong> The client pays for the hours worked up to an agreed limit per phase. When the limit gets close, both sides review the scope before continuing.</li>
+</ul>
+<h2 id="advantages-and-risks-of-each-model">Advantages and risks of each model</h2>
+<h3 id="fixed-price">Fixed price</h3>
+<p>For the client, the advantage is predictability: the budget is approved and comparing proposals is simpler. The risk is rigidity. Every new idea becomes a change order, and it is common to discover mid-project that something important was not planned for. There is also the risk margin built into the price, which the client pays even if the surprises never happen.</p>
+<p>For the vendor, the advantage is being able to gain efficiency on projects it knows well. The risk is underestimating the effort. When that happens, schedule pressure can lead to cuts in testing, documentation or code quality, which surface later for the client.</p>
+<h3 id="hourly">Hourly</h3>
+<p>For the client, the advantage is flexibility: changing priorities without renegotiating the contract and paying only for what was done. The risk is the total cost ending up higher than expected, especially without close oversight. The model requires someone on the client side to take part in decisions frequently.</p>
+<p>For the vendor, the advantage is not carrying the estimation risk. The risk is the relationship wearing down if the client feels there is no control over the hours. Clear reports and frequent deliveries are how to avoid that.</p>
+<h3 id="dedicated-team-2">Dedicated team</h3>
+<p>For the client, the advantage is having a team that builds up knowledge about the product. The risk is paying for capacity even in periods of low demand. For the vendor, the model provides predictable revenue, with the risk of the team becoming dependent on a single client.</p>
+<h2 id="how-to-handle-scope-changes">How to handle scope changes</h2>
+<p>Changes will happen in any model. What needs to be agreed is the process:</p>
+<ol>
+<li>The change is recorded in writing, with a description of what is wanted.</li>
+<li>The vendor assesses the impact on timeline, cost and the work already done.</li>
+<li>The client approves it, rejects it, or swaps it for another item of the same size that leaves the scope.</li>
+<li>The decision is recorded, along with the new timeline, if there is one.</li>
+</ol>
+<p>With a fixed price, this usually produces a change order. In the hourly model, it is a reprioritization of the task list, but the budget impact should be communicated just the same.</p>
+<h2 id="phased-delivery-and-acceptance-milestones">Phased delivery and acceptance milestones</h2>
+<p>Splitting the project into phases reduces risk in both models. Each phase ends with a usable delivery and an acceptance milestone: the moment the client checks the delivery and formally approves it.</p>
+<p>An acceptance criterion is an objective description of what must work for a delivery to be approved. "Customer records working" is vague. "Create, edit and search customers by name or company tax ID (the CNPJ, in Brazil), with ID validation and export of the list to a spreadsheet" is verifiable.</p>
+<p>It is also worth agreeing on how long the client has to test and respond, and what happens if there is no response within that time. Tying payments to acceptance milestones aligns the interests of both sides.</p>
+<h2 id="what-the-proposal-and-contract-should-include">What the proposal and contract should include</h2>
+<p>This content is not legal advice. To draft or review a contract, consult a lawyer. From a project standpoint, these are the items that are most often missed when they are not in writing:</p>
+<ul>
+<li><strong>Deliverables.</strong> What will be delivered in each phase: features, screens, integrations, documentation, deployment.</li>
+<li><strong>Out of scope.</strong> What is explicitly not included.</li>
+<li><strong>Acceptance criteria</strong> and the period for validation.</li>
+<li><strong>Pricing model</strong>, the hourly rate when there is one, payment terms and milestones.</li>
+<li><strong>The scope change process.</strong></li>
+<li><strong>Code ownership</strong> and the transfer of the repository, domain and third-party accounts. The article on <a href="/en/blog/how-to-choose-a-software-development-company/">how to choose a software development company</a> covers this in detail.</li>
+<li><strong>Defect warranty</strong>, with the period and what it covers.</li>
+<li><strong>Support and maintenance</strong> after the warranty. See what to consider in <a href="/en/blog/software-maintenance/">software maintenance</a>.</li>
+<li><strong>Client responsibilities</strong>, such as providing content, access and approvals on time.</li>
+<li><strong>Personal data protection</strong>, when the system handles that kind of information. The guide on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD, Brazil's data protection law, for websites and software</a> helps define what to ask for. In other countries, check the rules that apply locally.</li>
+<li><strong>Termination</strong>, covering what is handed over and how the transition works if the contract ends early.</li>
+</ul>
+<h2 id="which-to-choose-in-each-situation">Which to choose in each situation</h2>
+<ul>
+<li><strong>Business website or landing page with defined content:</strong> fixed price. The article on <a href="/en/blog/how-much-does-a-website-cost/">how much a website costs</a> shows what usually goes into the price.</li>
+<li><strong>Integration between two systems with documented APIs:</strong> fixed price, ideally with an initial technical check of the APIs.</li>
+<li><strong>Custom software with rules still being defined:</strong> paid discovery and phases.</li>
+<li><strong>New product, such as an app or a <a href="/en/blog/how-to-build-a-saas/">SaaS</a>:</strong> an MVP at a fixed price, then hourly or a dedicated team.</li>
+<li><strong>Product in continuous development:</strong> a dedicated team or a monthly block of hours.</li>
+<li><strong>Fixes and small adjustments to an existing system:</strong> hourly or a maintenance contract.</li>
+</ul>
+<p>A rule of thumb: the greater the uncertainty, the less sense it makes to fix price and scope all at once. Instead of forcing a fixed estimate onto something nobody understands well yet, it is better to fix the price of the stage that reduces the uncertainty.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="is-a-fixed-price-cheaper">Is a fixed price cheaper?</h3>
+<p>Not necessarily. A fixed price includes a risk margin, and changes produce change orders. With hourly billing, the cost can be lower if the project goes well, or higher if the scope grows unchecked.</p>
+<h3 id="how-do-i-keep-hours-under-control-in-the-hourly-model">How do I keep hours under control in the hourly model?</h3>
+<p>Ask for periodic reports with hours per task, frequent deliveries you can test, an estimate per phase and, if it makes sense, a cap that triggers a review before it is exceeded.</p>
+<h3 id="is-paid-discovery-worth-it">Is paid discovery worth it?</h3>
+<p>On projects with uncertainty, it usually is. Discovery turns ideas into a verifiable scope, which lets you compare proposals and reduce surprises. Agree in advance on which documents will be delivered and whether they can be used with another vendor.</p>
+<h3 id="can-i-switch-models-mid-project">Can I switch models mid-project?</h3>
+<p>Yes, as long as the change is recorded. A common switch is moving from a fixed price to hourly after launch, when development starts being guided by usage.</p>
+<p>PEROVANO builds <a href="/en/#solutions">websites, custom software and integrations</a> and can help define the scope and the pricing model that fit your project's level of uncertainty. We work remotely and can run projects in English. If you are weighing how to contract the work, <a href="/en/#contact">talk to us</a> about the best path.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22Fixed-price%20vs.%20hourly%20software%20development%3A%20how%20to%20choose%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Project management" data-search="how to choose a software development company how to choose a software or web development company: what to evaluate, red flags, questions for the first call, and why your company must own the code. how to choose a software development company, hiring a web development company, how to evaluate a software vendor, questions to ask a software development company">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-choose-a-software-development-company/">How to choose a software development company</a></h3>
+            <p class="post-card__excerpt">How to choose a software or web development company: what to evaluate, red flags, questions for the first call, and why your company must own the code.</p>
+          </article>
+          <article class="post-card" data-category="Project management" data-search="how to write a software project brief: template and mistakes learn how to write a brief for a website or software project: what to include, a template you can copy, and the mistakes that lead to inaccurate quotes. how to write a software project brief, software project brief template, website brief template, project brief for software development">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-write-a-software-project-brief/">How to write a software project brief: template and mistakes</a></h3>
+            <p class="post-card__excerpt">Learn how to write a brief for a website or software project: what to include, a template you can copy, and the mistakes that lead to inaccurate quotes.</p>
+          </article>
+          <article class="post-card" data-category="Project management" data-search="mvp: how to turn a software idea into a real product learn what an mvp is, how to define the minimum scope of a software product, validate it with real users, what to leave for later and how to grow after launch. what is an mvp, minimum viable product, how to build an mvp, turn a software idea into a product">
+            <p class="post-card__meta"><span>Project management</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP: how to turn a software idea into a real product</a></h3>
+            <p class="post-card__excerpt">Learn what an MVP is, how to define the minimum scope of a software product, validate it with real users, what to leave for later and how to grow after launch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

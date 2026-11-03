@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to use ChatGPT at work safely | PEROVANO</title>
+  <meta name="description" content="How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="How to use ChatGPT at work safely | PEROVANO">
+  <meta property="og:description" content="How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Artificial intelligence">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to use ChatGPT at work safely",
+  "description": "How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Artificial intelligence",
+  "keywords": "using ChatGPT at work safely, AI acceptable use policy, ChatGPT risks for business, safe use of AI in the workplace",
+  "wordCount": 1519,
+  "image": "https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/",
+  "url": "https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Artificial intelligence",
+      "item": "https://lrperovano.com.br/en/blog/category/artificial-intelligence/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "How to use ChatGPT at work safely",
+      "item": "https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I ban ChatGPT at my company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A total ban tends to drive hidden use, on personal accounts and without guidance. In general, it works better to allow safe uses, define what must not be sent and provide an approved tool for work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a business plan eliminate all the risks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It improves account control and the contractual terms around data, but it doesn't prevent wrong answers, or stop someone from sending information they shouldn't. The use policy and human review are still necessary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use AI to analyze customer data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, provided there is a legal basis under the LGPD (or under the data protection law that applies in your country), the tool has appropriate contractual terms and only the necessary data is sent. Whenever possible, anonymize the data before analysis. If your company wants to organize how it uses AI, or bring that use into its systems with control over data and access, we can help you assess the situation. PEROVANO works remotely and can run the project in English. Explore our solutions or get in touch to talk."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/chatgpt-na-empresa-com-seguranca/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/artificial-intelligence/">Artificial intelligence</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">How to use ChatGPT at work safely</h1>
+          <p class="post__lead">How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#productive-everyday-uses">Productive everyday uses</a></li>
+              <li><a href="#the-risks-of-using-ai-without-guidance">The risks of using AI without guidance</a></li>
+              <li><a href="#an-internal-ai-use-policy">An internal AI use policy</a></li>
+              <li><a href="#free-personal-account-or-business-plan">Free personal account or business plan</a></li>
+              <li><a href="#data-protection-law-and-the-use-of-ai">Data protection law and the use of AI</a></li>
+              <li><a href="#when-it-makes-sense-to-integrate-ai-into-your-systems">When it makes sense to integrate AI into your systems</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Using ChatGPT and other AI tools safely at work comes down to three decisions: what can and cannot be sent to these tools, which tools and plans are approved for professional use, and in which situations an answer needs human review before it is used.</p>
+<p>Most companies already use AI, with or without permission. Employees paste emails, spreadsheets and contracts into public tools to save time. Banning everything rarely works and pushes usage underground. The more effective approach is to guide: allow the productive uses, block the risky ones and provide suitable tools.</p>
+<p>This can be handled with a short internal policy, a quick training session and, as usage grows, by choosing business plans or integrating AI into the company's systems.</p>
+<h2 id="productive-everyday-uses">Productive everyday uses</h2>
+<p>Tools such as ChatGPT, Claude, Gemini and Copilot are built on language models, systems trained on large volumes of text that read, summarize and write in natural language. In everyday work, they help with tasks such as:</p>
+<ul>
+<li>Drafting emails, announcements and replies to customers.</li>
+<li>Summarizing long texts, meeting minutes and reports.</li>
+<li>Checking grammar, clarity and tone.</li>
+<li>Generating ideas for campaigns, headlines and scripts.</li>
+<li>Explaining a technical concept or a spreadsheet formula.</li>
+<li>Translating texts and adapting language for different audiences.</li>
+<li>Helping write code, reviewed by someone who knows the system.</li>
+</ul>
+<p>What these have in common is that the person remains responsible for the result. AI produces a draft, and the user reviews, adjusts and decides. Our article on <a href="/en/blog/how-to-use-ai-in-business/">how to use AI in business</a> covers uses that go beyond individual work and are built into business processes.</p>
+<h2 id="the-risks-of-using-ai-without-guidance">The risks of using AI without guidance</h2>
+<h3 id="leaks-of-confidential-and-personal-data">Leaks of confidential and personal data</h3>
+<p>This is the most immediate risk. When someone pastes a customer contract, the payroll spreadsheet, the sales strategy or the system's source code into a public tool, that information leaves the company's control. Depending on the plan and settings, it may be stored by the vendor and, in some cases, used to improve its models.</p>
+<p>When the text contains personal data, such as names, ID numbers, phone numbers or health information about customers and employees, the problem is also a legal one. Sending that data to an external service is processing of personal data and must comply with data protection law. In Brazil, that law is the LGPD (Lei Geral de Proteção de Dados), Brazil's data protection law, similar in spirit to Europe's GDPR. Companies in other countries should check the data protection rules that apply to them.</p>
+<h3 id="wrong-answers-delivered-with-confidence">Wrong answers delivered with confidence</h3>
+<p>Language models can produce false information that looks true, which is called hallucination. They can cite a law that doesn't exist, get a calculation wrong or invent a reference. The text looks correct, and that's what lets the error slip through. On legal, tax, financial and technical topics, review by someone who knows the subject is mandatory.</p>
+<h3 id="copyright-and-intellectual-property">Copyright and intellectual property</h3>
+<p>Text, images and code generated by AI can resemble protected content. The issue is still being debated in many countries, and vendors' rules change. For public-facing materials, such as campaigns, marketing pieces and products, it's worth checking originality and reviewing the tool's terms of use. Sending a third party's material covered by a confidentiality agreement to an AI tool may also breach that agreement.</p>
+<h3 id="dependence-and-loss-of-know-how">Dependence and loss of know-how</h3>
+<p>If an important task comes to depend on someone who "asks the AI" without understanding the result, the company loses the ability to check what is being delivered. AI should speed up people who know how to do the work, not replace the knowledge needed to review it.</p>
+<h2 id="an-internal-ai-use-policy">An internal AI use policy</h2>
+<p>A use policy doesn't need to be long. One or two pages, in plain language, cover most cases. It should answer four questions.</p>
+<h3 id="what-can-be-sent">What can be sent</h3>
+<ul>
+<li>Public or general-purpose text, with no customer identification.</li>
+<li>Your own drafts, for writing review.</li>
+<li>Conceptual questions and requests for explanations.</li>
+<li>Anonymized data, from which no person or customer can be identified.</li>
+</ul>
+<h3 id="what-cannot-be-sent">What cannot be sent</h3>
+<ul>
+<li>Personal data of customers, employees or suppliers.</li>
+<li>Contracts, proposals and documents marked as confidential.</li>
+<li>Undisclosed financial information, strategy and sales data.</li>
+<li>Passwords, access keys, tokens and system credentials.</li>
+<li>Source code of internal systems, unless in a tool approved for that purpose.</li>
+</ul>
+<h3 id="which-tools-are-approved">Which tools are approved</h3>
+<p>List the authorized tools and plans. Decide whether use must happen through company accounts and who administers those accounts. Tools not on the list should be evaluated before they are used with company information.</p>
+<h3 id="when-human-review-is-mandatory">When human review is mandatory</h3>
+<p>All content sent to customers, published or used in a decision must be reviewed by a person. On legal, tax, health and safety topics, the review should be done by someone with technical knowledge of the area.</p>
+<blockquote><p>A practical rule for the team: if you wouldn't paste this text into an email to someone outside the company, don't paste it into an AI tool that hasn't been approved.</p></blockquote>
+<p>Beyond the document, a short training session with real examples from the company's day-to-day work, plus a channel for questions, goes a long way.</p>
+<h2 id="free-personal-account-or-business-plan">Free personal account or business plan</h2>
+<p>There is an important difference between an employee using a free personal account and the company contracting a business plan or using the API, the interface through which other systems access the model.</p>
+<p>Business plans usually offer centralized account management, control over who has access, specific contractual terms on data use and retention and, in many cases, security features such as single sign-on. Personal accounts are outside the company's control: when the employee leaves, the conversation history goes with them.</p>
+<p>Rules on data retention, use for training and privacy vary between vendors and between plans, and they change over time. So before approving a tool:</p>
+<ul>
+<li>Read the terms and privacy policy of the plan you will actually contract, not those of the free plan.</li>
+<li>Check whether the data you send can be used to train models and whether that can be turned off.</li>
+<li>Find out how long data is stored and where it is processed.</li>
+<li>See whether the vendor offers a data processing agreement compatible with the LGPD or with the data protection law that applies in your country.</li>
+</ul>
+<h2 id="data-protection-law-and-the-use-of-ai">Data protection law and the use of AI</h2>
+<p>Under the LGPD, the AI tool vendor generally acts as a processor (in the law's terms, an <em>operador</em>) of the data the company sends. The company remains responsible for having a legal basis for the processing, for sending only what is necessary and for ensuring security. If data is transferred outside Brazil, that transfer must also be covered under the law. If your company operates elsewhere, check how the data protection rules of your own country treat these points.</p>
+<p>In practice, the safest approach is to avoid sending personal data to general-purpose tools and, when a process requires it, to use a solution with an appropriate contract and access controls. Our article on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">the LGPD for websites and software</a> covers legal bases, processors and responsibilities under Brazilian law.</p>
+<h2 id="when-it-makes-sense-to-integrate-ai-into-your-systems">When it makes sense to integrate AI into your systems</h2>
+<p>Using AI through a chat window solves individual tasks. When the same kind of task repeats many times, with the same data, it makes sense to bring AI into the company's systems. Some signs:</p>
+<ul>
+<li>The team copies data from one system, pastes it into an AI tool and puts the result back into another system.</li>
+<li>Several people ask the same question about internal documents. In that case, an assistant built with <a href="/en/blog/what-is-rag/">RAG</a> answers from the documents and cites the source.</li>
+<li>Customer service gets repeated questions that an <a href="/en/blog/ai-chatbot-for-customer-service/">AI chatbot</a> could answer.</li>
+<li>There are multi-step tasks across different systems that could be candidates for <a href="/en/blog/ai-agents-for-business/">AI agents</a>.</li>
+</ul>
+<p>Integration through the API lets you control what data is sent, log every use, apply permission rules and measure cost. It also eliminates copy and paste, which is where many leaks happen.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="should-i-ban-chatgpt-at-my-company">Should I ban ChatGPT at my company?</h3>
+<p>A total ban tends to drive hidden use, on personal accounts and without guidance. In general, it works better to allow safe uses, define what must not be sent and provide an approved tool for work.</p>
+<h3 id="does-a-business-plan-eliminate-all-the-risks">Does a business plan eliminate all the risks?</h3>
+<p>No. It improves account control and the contractual terms around data, but it doesn't prevent wrong answers, or stop someone from sending information they shouldn't. The use policy and human review are still necessary.</p>
+<h3 id="can-i-use-ai-to-analyze-customer-data">Can I use AI to analyze customer data?</h3>
+<p>Yes, provided there is a legal basis under the LGPD (or under the data protection law that applies in your country), the tool has appropriate contractual terms and only the necessary data is sent. Whenever possible, anonymize the data before analysis.</p>
+<p>If your company wants to organize how it uses AI, or bring that use into its systems with control over data and access, we can help you assess the situation. PEROVANO works remotely and can run the project in English. Explore our <a href="/en/#solutions">solutions</a> or <a href="/en/#contact">get in touch</a> to talk.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22How%20to%20use%20ChatGPT%20at%20work%20safely%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Artificial intelligence" data-search="ai agents for business: what they are and how to use them what ai agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot. ai agents for business, what are ai agents, ai agent examples, ai that performs tasks">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/ai-agents-for-business/">AI agents for business: what they are and how to use them</a></h3>
+            <p class="post-card__excerpt">What AI agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="ai chatbot for customer service: uses and limits how an ai customer service chatbot works on whatsapp and your website, what it handles, when to hand off to a human, how to measure results and protect data. ai chatbot for customer service, ai customer service chatbot, whatsapp chatbot for business, virtual assistant for customer support">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/ai-chatbot-for-customer-service/">AI chatbot for customer service: uses and limits</a></h3>
+            <p class="post-card__excerpt">How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="how to use ai in business: practical use cases practical ways to use ai in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot. how to use ai in business, ai use cases for business, generative ai for companies, ai for customer service">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-use-ai-in-business/">How to use AI in business: practical use cases</a></h3>
+            <p class="post-card__excerpt">Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

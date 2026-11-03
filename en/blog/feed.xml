@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PEROVANO Blog</title>
+    <link>https://lrperovano.com.br/en/blog/</link>
+    <atom:link href="https://lrperovano.com.br/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Websites, custom software, integrations, automation and artificial intelligence for businesses.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 30 Oct 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>WordPress vs. custom website: how to choose</title>
+      <link>https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/wordpress-vs-custom-website/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>WordPress or a custom website? See when each makes sense, what to watch with plugins, security and performance, and middle-ground options like a headless CMS.</description>
+    </item>
+    <item>
+      <title>When to replace spreadsheets with software</title>
+      <link>https://lrperovano.com.br/en/blog/replace-spreadsheets-with-software/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/replace-spreadsheets-with-software/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>When to replace spreadsheets with software: warning signs, what changes day to day, how to migrate data without stopping work and which options to weigh.</description>
+    </item>
+    <item>
+      <title>WhatsApp Business API integration: how it works</title>
+      <link>https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automation</category>
+      <description>How WhatsApp Business API integration works: how it differs from the app, what it enables, the requirements, the costs and the risks of unofficial tools.</description>
+    </item>
+    <item>
+      <title>What is a landing page and when your business needs one</title>
+      <link>https://lrperovano.com.br/en/blog/what-is-a-landing-page/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/what-is-a-landing-page/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>A landing page has one goal, such as generating leads or sales. Learn how it differs from a website, when to use one, its key elements and how to measure it.</description>
+    </item>
+    <item>
+      <title>What is a PWA (progressive web app) and when is it worth it</title>
+      <link>https://lrperovano.com.br/en/blog/what-is-a-pwa/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/what-is-a-pwa/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.</description>
+    </item>
+    <item>
+      <title>What is RAG (retrieval-augmented generation)?</title>
+      <link>https://lrperovano.com.br/en/blog/what-is-rag/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/what-is-rag/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Artificial intelligence</category>
+      <description>What RAG is: how AI searches your company documents to answer with sources, how it works step by step, use cases, pitfalls and how it differs from fine-tuning.</description>
+    </item>
+    <item>
+      <title>What a business website needs: a 12-point checklist</title>
+      <link>https://lrperovano.com.br/en/blog/what-a-business-website-needs/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/what-a-business-website-needs/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>What a business website needs: a clear offer, explained services, real proof, contact that works, mobile, speed, SEO, privacy policy, HTTPS and analytics.</description>
+    </item>
+    <item>
+      <title>Website speed and Core Web Vitals: what to fix first</title>
+      <link>https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>How website speed affects sales and SEO, what LCP, INP and CLS measure, how to test your site in PageSpeed Insights and which fixes to prioritize first.</description>
+    </item>
+    <item>
+      <title>System integration with APIs: a guide for managers</title>
+      <link>https://lrperovano.com.br/en/blog/system-integration-with-apis/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/system-integration-with-apis/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automation</category>
+      <description>Understand system integration with APIs: what it is, why integrate, REST and webhooks, what to ask your vendor and the risks the project has to plan for.</description>
+    </item>
+    <item>
+      <title>Software maintenance: what it includes and why you need it</title>
+      <link>https://lrperovano.com.br/en/blog/software-maintenance/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/software-maintenance/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Project management</category>
+      <description>Software maintenance explained: corrective, adaptive, perfective and preventive work, monitoring, backups, contract models and what to define in the agreement.</description>
+    </item>
+    <item>
+      <title>SEO for business websites: what it takes to rank on Google</title>
+      <link>https://lrperovano.com.br/en/blog/seo-for-business-websites/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/seo-for-business-websites/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>What a business website needs to show up on Google: indexing, Search Console, titles, speed, mobile, useful content and a Google Business Profile.</description>
+    </item>
+    <item>
+      <title>No-code, low-code or custom development?</title>
+      <link>https://lrperovano.com.br/en/blog/no-code-low-code-or-custom-development/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/no-code-low-code-or-custom-development/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automation</category>
+      <description>No-code, low-code or custom development? See when each one works, the limits on cost, data and privacy, and the signs that it is time to migrate.</description>
+    </item>
+    <item>
+      <title>MVP: how to turn a software idea into a real product</title>
+      <link>https://lrperovano.com.br/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Project management</category>
+      <description>Learn what an MVP is, how to define the minimum scope of a software product, validate it with real users, what to leave for later and how to grow after launch.</description>
+    </item>
+    <item>
+      <title>Local SEO: how to show up on Google Maps</title>
+      <link>https://lrperovano.com.br/en/blog/local-seo-google-business-profile/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/local-seo-google-business-profile/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>How to show up on Google Maps: set up your Google Business Profile, keep your name, address and phone consistent, and work on reviews, photos and your website.</description>
+    </item>
+    <item>
+      <title>LGPD: Brazil&#x27;s data protection law for websites and software</title>
+      <link>https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>What Brazil&#x27;s LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.</description>
+    </item>
+    <item>
+      <title>How to write a software project brief: template and mistakes</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-write-a-software-project-brief/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-write-a-software-project-brief/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Project management</category>
+      <description>Learn how to write a brief for a website or software project: what to include, a template you can copy, and the mistakes that lead to inaccurate quotes.</description>
+    </item>
+    <item>
+      <title>How to use ChatGPT at work safely</title>
+      <link>https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/using-chatgpt-at-work-safely/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Artificial intelligence</category>
+      <description>How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.</description>
+    </item>
+    <item>
+      <title>How to use AI in business: practical use cases</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Artificial intelligence</category>
+      <description>Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.</description>
+    </item>
+    <item>
+      <title>How to integrate Pix and payments into your system</title>
+      <link>https://lrperovano.com.br/en/blog/pix-and-payment-integration/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/pix-and-payment-integration/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automation</category>
+      <description>How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.</description>
+    </item>
+    <item>
+      <title>How to choose a software development company</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-choose-a-software-development-company/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-choose-a-software-development-company/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Project management</category>
+      <description>How to choose a software or web development company: what to evaluate, red flags, questions for the first call, and why your company must own the code.</description>
+    </item>
+    <item>
+      <title>How to build an app for your business, step by step</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.</description>
+    </item>
+    <item>
+      <title>How to build a SaaS: from business model to architecture</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-build-a-saas/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-build-a-saas/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.</description>
+    </item>
+    <item>
+      <title>How to automate business processes, step by step</title>
+      <link>https://lrperovano.com.br/en/blog/how-to-automate-business-processes/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-to-automate-business-processes/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Automation</category>
+      <description>How to automate business processes: pick what to automate, map it first, start small, see practical examples, measure the gains and avoid common pitfalls.</description>
+    </item>
+    <item>
+      <title>How much does it cost to build an app? What drives the price</title>
+      <link>https://lrperovano.com.br/en/blog/how-much-does-it-cost-to-build-an-app/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-much-does-it-cost-to-build-an-app/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>How much does it cost to build an app? Learn the factors that shape the price, the recurring costs after launch, and how an MVP keeps the budget in check.</description>
+    </item>
+    <item>
+      <title>How much does a website cost and what drives the price</title>
+      <link>https://lrperovano.com.br/en/blog/how-much-does-a-website-cost/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/how-much-does-a-website-cost/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>What drives the cost of a professional website: type, pages, content, design, integrations, SEO and maintenance, and how to compare quotes with confidence.</description>
+    </item>
+    <item>
+      <title>Fixed-price vs. hourly software development: how to choose</title>
+      <link>https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/fixed-price-vs-hourly-software-development/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Project management</category>
+      <description>Fixed price or hourly? How each software development pricing model works, the risks of each, how to handle scope changes and what to put in the contract.</description>
+    </item>
+    <item>
+      <title>Domain and hosting explained: what they are, how to choose</title>
+      <link>https://lrperovano.com.br/en/blog/domain-and-hosting-explained/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/domain-and-hosting-explained/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Websites</category>
+      <description>The difference between a domain and web hosting, how to register a domain in your company&#x27;s name, what DNS does and what to require from your website vendor.</description>
+    </item>
+    <item>
+      <title>Custom software vs off-the-shelf: how to decide</title>
+      <link>https://lrperovano.com.br/en/blog/custom-software-vs-off-the-shelf/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/custom-software-vs-off-the-shelf/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Software</category>
+      <description>Custom software or off-the-shelf? Compare total cost over time, process fit and vendor lock-in, and see when a hybrid approach is the better choice.</description>
+    </item>
+    <item>
+      <title>AI chatbot for customer service: uses and limits</title>
+      <link>https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/ai-chatbot-for-customer-service/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Artificial intelligence</category>
+      <description>How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.</description>
+    </item>
+    <item>
+      <title>AI agents for business: what they are and how to use them</title>
+      <link>https://lrperovano.com.br/en/blog/ai-agents-for-business/</link>
+      <guid isPermaLink="true">https://lrperovano.com.br/en/blog/ai-agents-for-business/</guid>
+      <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+      <category>Artificial intelligence</category>
+      <description>What AI agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot.</description>
+    </item>
+  </channel>
+</rss>

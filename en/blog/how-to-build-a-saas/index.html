@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to build a SaaS: from business model to architecture | PEROVANO</title>
+  <meta name="description" content="How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/how-to-build-a-saas/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/como-criar-um-saas/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/how-to-build-a-saas/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/how-to-build-a-saas/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="How to build a SaaS: from business model to architecture | PEROVANO">
+  <meta property="og:description" content="How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/how-to-build-a-saas/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/how-to-build-a-saas/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/how-to-build-a-saas/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Software">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to build a SaaS: from business model to architecture",
+  "description": "How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Software",
+  "keywords": "how to build a saas, software as a service development, multi-tenant architecture, saas recurring billing",
+  "wordCount": 1638,
+  "image": "https://lrperovano.com.br/en/blog/how-to-build-a-saas/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/how-to-build-a-saas/",
+  "url": "https://lrperovano.com.br/en/blog/how-to-build-a-saas/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/como-criar-um-saas/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Software",
+      "item": "https://lrperovano.com.br/en/blog/category/software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "How to build a SaaS: from business model to architecture",
+      "item": "https://lrperovano.com.br/en/blog/how-to-build-a-saas/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I turn an internal system into a SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is possible, but it is rarely just a matter of opening it up to other customers. Data isolation, sign-up, plans, billing and support have to be added, and rules built for a single company need to become settings. A technical assessment of the current system shows whether it is worth adapting or rebuilding parts of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a SaaS need a mobile app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Many SaaS products work only in the browser. PaceOn, Estudatta and Portal da Igreja are examples of web products built by PEROVANO; see our projects. An app makes sense when mobile use is central for the customer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the biggest technical mistake when building a SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leaving data isolation between customers for later. Fixing it with the system in production is expensive and risky, because it means touching every query and migrating every customer's data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take for a SaaS to pay off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the market, the price and the ability to retain customers. Because it is subscription-based, the return usually builds up over time rather than arriving at the moment of sale. If you have a SaaS idea and want to assess the technical foundation and the scope of the first version, a good place to start is a conversation about the problem and the audience. PEROVANO works remotely and can run the project in English. Talk to PEROVANO to discuss your project."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/como-criar-um-saas/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/software/">Software</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">How to build a SaaS: from business model to architecture</h1>
+          <p class="post__lead">How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#what-saas-is">What SaaS is</a></li>
+              <li><a href="#what-changes-compared-to-an-internal-system">What changes compared to an internal system</a></li>
+              <li><a href="#essential-technical-decisions">Essential technical decisions</a></li>
+              <li><a href="#recurring-billing-and-failed-payments">Recurring billing and failed payments</a></li>
+              <li><a href="#data-protection-in-a-saas">Data protection in a SaaS</a></li>
+              <li><a href="#how-to-validate-before-building-everything">How to validate before building everything</a></li>
+              <li><a href="#metrics-that-matter">Metrics that matter</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Building a SaaS means building software that many customers use at the same time, over the internet, paying a subscription. That is why it requires decisions an internal system does not: how to keep each customer's data separate, how to bill every month and deal with those who do not pay, and how to let someone sign up and start using the product without talking to anyone.</p>
+<p>The safest path has four parts. Validate that there is a problem people will pay to solve. Build a lean first version, but with the right technical foundation, especially data isolation between customers. Automate recurring billing. And track retention metrics from the very first customer.</p>
+<h2 id="what-saas-is">What SaaS is</h2>
+<p>SaaS stands for <em>software as a service</em>. Instead of buying a license and installing the program, the customer accesses the system through a browser or an app and pays a subscription for as long as they use it. The provider takes care of servers, updates, backups and security.</p>
+<p>Tools for financial management, customer support, scheduling and electronic signatures often follow this model. If you are on the other side, deciding whether to subscribe to an existing product or build your own, the article on <a href="/en/blog/custom-software-vs-off-the-shelf/">custom software vs. off-the-shelf</a> helps with that decision.</p>
+<h2 id="what-changes-compared-to-an-internal-system">What changes compared to an internal system</h2>
+<h3 id="many-customers-in-the-same-system">Many customers in the same system</h3>
+<p>An internal system serves one company. A SaaS serves many, on the same installation. Each customer company is called a <strong>tenant</strong>, and an architecture that serves many of them is called <strong>multi-tenant</strong>. One customer's data must never be visible to another.</p>
+<h3 id="sign-up-and-free-trial">Sign-up and free trial</h3>
+<p>In a SaaS, customers usually sign up on their own, set up the account and try the product before paying. That requires a very well-designed onboarding flow: account creation, email confirmation, initial setup and some kind of getting-started guide. If customers get lost in the first few minutes, they rarely come back.</p>
+<h3 id="plan-tiers">Plan tiers</h3>
+<p>Different plans mean different limits: number of users, records or storage, or access to certain modules. The system needs to know these limits, enforce them and let customers switch plans without manual intervention.</p>
+<h3 id="recurring-billing">Recurring billing</h3>
+<p>Revenue comes from automated monthly or yearly payments. That involves integrating with payment methods, issuing invoices and handling failures, a topic covered in its own section below.</p>
+<h3 id="support">Support</h3>
+<p>With many customers, support has to scale. A help center, in-app messages and internal tools that let your team look up a customer's account, with a log of who accessed what, are all part of the product.</p>
+<h2 id="essential-technical-decisions">Essential technical decisions</h2>
+<h3 id="data-isolation-between-customers">Data isolation between customers</h3>
+<p>This is the most important decision and the most expensive one to change later. The most common approaches are:</p>
+<ul>
+<li><strong>A separate database per customer:</strong> strong isolation, but operations get more demanding as the number of customers grows.</li>
+<li><strong>A separate schema per customer:</strong> one database with separate areas for each tenant. It sits in the middle.</li>
+<li><strong>Shared tables with a customer identifier:</strong> all the data lives together, and each record carries the tenant it belongs to. This is the simplest option to operate and scale, but it demands strict discipline.</li>
+</ul>
+<p>With the third approach, the customer filter cannot depend on every developer remembering to apply it in every query. It must be enforced in a central layer of the system or by the database itself. Some databases, such as PostgreSQL, offer row-level security, a feature that applies this rule automatically. Automated tests that try to access another tenant's data also help.</p>
+<h3 id="security">Security</h3>
+<p>Beyond isolation, a SaaS needs robust authentication with an option for two-factor verification, role-based permissions within each customer account, encrypted communication, tested backups and a log of important actions. Integration credentials must be kept out of the code.</p>
+<h3 id="realistic-scalability">Realistic scalability</h3>
+<p>Scalability is the ability to serve more customers without losing performance. Designing for millions of users from day one is usually wasteful. What matters is not creating obvious bottlenecks: queries with proper indexes, slow tasks run in the background and an architecture that lets you add capacity when the numbers call for it.</p>
+<h3 id="observability">Observability</h3>
+<p>Observability is the ability to know what is happening in the system in production: event logs, error monitoring, response times and alerts. In a SaaS, a problem affects many customers at once. Finding a failure through monitoring, rather than through a customer complaint, makes a difference to trust in the product.</p>
+<h2 id="recurring-billing-and-failed-payments">Recurring billing and failed payments</h2>
+<p>Recurring billing usually relies on credit cards with automatic charges and, in Brazil, also on boleto (a bank payment slip widely used in the country) or Pix (Brazil's instant payment system, run by the Central Bank). The available methods vary by country. Payment gateways offer subscription features that handle part of the work, but the system still has to react to every event: payment approved, declined, refunded, subscription canceled. The article on <a href="/en/blog/pix-and-payment-integration/">Pix and payment integration</a> explains how these confirmations work.</p>
+<p>Failed payments are part of the model. Cards expire, limits are reached, payment slips are forgotten. A clear policy prevents both lost revenue and losing customers over a one-off problem:</p>
+<ul>
+<li>Automatic retries on different days.</li>
+<li>Notices by email and inside the product, with a link to update the payment method.</li>
+<li>A grace period before restricting access.</li>
+<li>Gradual restriction, for example switching to read-only before blocking.</li>
+<li>Clear rules on how long data is kept after cancellation.</li>
+</ul>
+<p>Check the current terms, the recurring payment methods available and the fees with the gateway you choose.</p>
+<h2 id="data-protection-in-a-saas">Data protection in a SaaS</h2>
+<p>In Brazil, a SaaS company usually plays two roles under the LGPD (Lei Geral de Proteção de Dados), Brazil's data protection law, similar in spirit to Europe's GDPR. For its own customers' data, such as account and billing details, it decides how the data is processed. For the data customers put into the system, such as information about their own clients, it generally processes that data on their behalf, following their instructions. Other countries have their own rules, so check the ones that apply to you and to your customers.</p>
+<p>In practice, this calls for a contract and terms of use that make these roles clear, access control, a log of who views the data, an incident response plan and ways to export and delete data on request. The article on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD for websites and software</a> goes deeper into each of these points.</p>
+<h2 id="how-to-validate-before-building-everything">How to validate before building everything</h2>
+<p>The biggest risk for a SaaS is not technical. It is building something nobody pays to use. Before investing in the full product:</p>
+<ul>
+<li>Talk to potential customers about the problem, not the solution. Ask how they handle it today and what it costs them in time or money.</li>
+<li>Offer a presale or a waiting list with a set price. Interest that does not turn into commitment is a weak signal.</li>
+<li>Serve the first customers partly by hand, if possible, to understand the process before automating it.</li>
+<li>Launch an <a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP</a> with the main flow working end to end.</li>
+</ul>
+<p>Even when lean, a SaaS MVP should not give up data isolation and security. Features can wait; the foundation cannot. No-code tools can help test interest, and the article on <a href="/en/blog/no-code-low-code-or-custom-development/">no-code, low-code or custom development</a> helps you see how far they go.</p>
+<h2 id="metrics-that-matter">Metrics that matter</h2>
+<p>A few metrics show whether a SaaS is healthy:</p>
+<ul>
+<li><strong>Recurring revenue:</strong> how much comes in every month from active subscriptions. It shows the predictable base of the business.</li>
+<li><strong>Churn:</strong> the share of customers or revenue lost in a period. High churn cancels out sales efforts, because customers leave as fast as they arrive.</li>
+<li><strong>Retention:</strong> how many customers keep using and paying over time. Tracking it by cohorts of customers who joined in the same month shows whether the product is improving.</li>
+<li><strong>Trial-to-paid conversion:</strong> how many of those who try the product become subscribers. It indicates whether the product delivers value quickly enough.</li>
+<li><strong>Active usage:</strong> how many customers actually use the core features. Customers who pay but do not use the product tend to cancel.</li>
+</ul>
+<p>There is no universal ideal number. Values vary with the market, the price and the type of customer. What matters is measuring from the start and following the trend.</p>
+<blockquote><p>In a SaaS, keeping a customer is often as important as winning a new one.</p></blockquote>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="can-i-turn-an-internal-system-into-a-saas">Can I turn an internal system into a SaaS?</h3>
+<p>It is possible, but it is rarely just a matter of opening it up to other customers. Data isolation, sign-up, plans, billing and support have to be added, and rules built for a single company need to become settings. A technical assessment of the current system shows whether it is worth adapting or rebuilding parts of it.</p>
+<h3 id="does-a-saas-need-a-mobile-app">Does a SaaS need a mobile app?</h3>
+<p>No. Many SaaS products work only in the browser. PaceOn, Estudatta and Portal da Igreja are examples of web products built by PEROVANO; see our <a href="/en/#projects">projects</a>. An app makes sense when mobile use is central for the customer.</p>
+<h3 id="what-is-the-biggest-technical-mistake-when-building-a-saas">What is the biggest technical mistake when building a SaaS?</h3>
+<p>Leaving data isolation between customers for later. Fixing it with the system in production is expensive and risky, because it means touching every query and migrating every customer's data.</p>
+<h3 id="how-long-does-it-take-for-a-saas-to-pay-off">How long does it take for a SaaS to pay off?</h3>
+<p>It depends on the market, the price and the ability to retain customers. Because it is subscription-based, the return usually builds up over time rather than arriving at the moment of sale.</p>
+<p>If you have a SaaS idea and want to assess the technical foundation and the scope of the first version, a good place to start is a conversation about the problem and the audience. PEROVANO works remotely and can run the project in English. <a href="/en/#contact">Talk to PEROVANO</a> to discuss your project.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22How%20to%20build%20a%20SaaS%3A%20from%20business%20model%20to%20architecture%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Software" data-search="how much does it cost to build an app? what drives the price how much does it cost to build an app? learn the factors that shape the price, the recurring costs after launch, and how an mvp keeps the budget in check. how much does it cost to build an app, app development cost, cost to develop a mobile app, app development budget">
+            <p class="post-card__meta"><span>Software</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-much-does-it-cost-to-build-an-app/">How much does it cost to build an app? What drives the price</a></h3>
+            <p class="post-card__excerpt">How much does it cost to build an app? Learn the factors that shape the price, the recurring costs after launch, and how an MVP keeps the budget in check.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="how to build an app for your business, step by step how to build an app for your business: the steps from goal to launch on google play and the app store, who is involved, what to provide and common mistakes. how to build an app for your business, how to create a business app, app development process, publish an app on the app store and google play">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-build-an-app-for-your-business/">How to build an app for your business, step by step</a></h3>
+            <p class="post-card__excerpt">How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="what is a pwa (progressive web app) and when is it worth it what is a pwa? a website you can install like an app that also works offline. see the benefits, the limits on android and iphone, and when to choose native. what is a pwa, progressive web app, pwa vs native app, pwa advantages and disadvantages">
+            <p class="post-card__meta"><span>Software</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/what-is-a-pwa/">What is a PWA (progressive web app) and when is it worth it</a></h3>
+            <p class="post-card__excerpt">What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

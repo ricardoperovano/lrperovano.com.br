@@ -18,7 +18,8 @@
       'These cookies are only enabled if you accept. <a href="/en/privacy.html#cookies">Privacy policy</a>',
     accept: 'Accept',
     decline: 'Decline',
-    cookiePrefs: 'Cookie preferences'
+    cookiePrefs: 'Cookie preferences',
+    searchEmpty: function (q) { return 'No articles found for “' + q + '”. Try another term or pick a category.'; }
   } : {
     openMenu: 'Abrir menu',
     closeMenu: 'Fechar menu',
@@ -27,7 +28,8 @@
       'Esses cookies só são ativados se você aceitar. <a href="/privacy.html#cookies">Política de privacidade</a>',
     accept: 'Aceitar',
     decline: 'Recusar',
-    cookiePrefs: 'Preferências de cookies'
+    cookiePrefs: 'Preferências de cookies',
+    searchEmpty: function (q) { return 'Nenhum artigo encontrado para “' + q + '”. Tente outro termo ou escolha uma categoria.'; }
   };
 
   // Seletor PT/EN: a escolha manual vale mais que o idioma do navegador
@@ -216,7 +218,7 @@
       if (emptyMsg) {
         emptyMsg.hidden = total !== 0;
         emptyMsg.textContent = total === 0
-          ? 'Nenhum artigo encontrado para “' + state.query + '”. Tente outro termo ou escolha uma categoria.'
+          ? T.searchEmpty(state.query)
           : '';
       }
     };

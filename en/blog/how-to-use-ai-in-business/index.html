@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to use AI in business: practical use cases | PEROVANO</title>
+  <meta name="description" content="Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="How to use AI in business: practical use cases | PEROVANO">
+  <meta property="og:description" content="Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Artificial intelligence">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to use AI in business: practical use cases",
+  "description": "Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Artificial intelligence",
+  "keywords": "how to use AI in business, AI use cases for business, generative AI for companies, AI for customer service",
+  "wordCount": 1617,
+  "image": "https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/",
+  "url": "https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Artificial intelligence",
+      "item": "https://lrperovano.com.br/en/blog/category/artificial-intelligence/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "How to use AI in business: practical use cases",
+      "item": "https://lrperovano.com.br/en/blog/how-to-use-ai-in-business/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to train my own model to use AI in my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, no. Off-the-shelf models, combined with RAG and good instructions, cover most business needs. Training or fine-tuning a model only makes sense in specific situations, with a lot of proprietary data and a well-defined goal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will AI replace my customer service team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common use is taking repetitive tasks off people's plates, such as classifying, summarizing and answering simple questions. Complex cases, negotiations and sensitive situations still need a human. The expected result is a team that spends more time on work that requires judgment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to implement AI in a business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the scope, the integration with existing systems and the volume of use. There is the development cost, concentrated at the start, and the recurring cost of using the model, which varies with volume. A small pilot helps estimate both before a larger investment. If you have a process that looks like a good candidate for AI and want to find out whether it makes sense, we can talk through your situation and what a pilot could look like. PEROVANO works remotely and can run the project in English. Get in touch and tell us how the process works today."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/inteligencia-artificial-nas-empresas/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/artificial-intelligence/">Artificial intelligence</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">How to use AI in business: practical use cases</h1>
+          <p class="post__lead">Practical ways to use AI in business, when not to use it, how to handle errors, data protection and cost, and how to start with a small, measurable pilot.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#what-generative-ai-does-well">What generative AI does well</a></li>
+              <li><a href="#practical-ai-use-cases-in-business">Practical AI use cases in business</a></li>
+              <li><a href="#when-not-to-use-ai">When not to use AI</a></li>
+              <li><a href="#what-to-check-before-putting-ai-into-production">What to check before putting AI into production</a></li>
+              <li><a href="#how-to-start-with-a-small-pilot">How to start with a small pilot</a></li>
+              <li><a href="#ai-inside-the-system-not-next-to-it">AI inside the system, not next to it</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Using AI in business pays off when it solves a specific, repetitive, text-based task: answering questions from internal documents, summarizing and classifying support requests, pulling data out of documents and helping with writing. In those cases, AI cuts manual work and leaves people free for the decisions that need context.</p>
+<p>It is not the best choice for everything. Processes with fixed rules, low volume or high risk without human review usually work better with traditional automation, or simply with the current process well organized.</p>
+<p>The safest path is to start with a small pilot, in a single process, with a metric defined up front. If the pilot shows a real gain, then it makes sense to expand.</p>
+<h2 id="what-generative-ai-does-well">What generative AI does well</h2>
+<p>When people talk about AI in business today, they almost always mean <strong>large language models</strong> (LLMs): systems trained on large volumes of text that read, summarize, classify and write in natural language. They handle messy information well, such as emails, chat messages and contracts.</p>
+<p>On the other hand, they don't "know" anything about your company unless that information is handed to them at the moment of the question. They can also be wrong with great confidence. Those two facts define where AI helps and where it needs care.</p>
+<h2 id="practical-ai-use-cases-in-business">Practical AI use cases in business</h2>
+<h3 id="an-assistant-that-answers-from-company-documents">An assistant that answers from company documents</h3>
+<p>One of the most useful applications is an assistant that answers questions using manuals, policies, price lists, standard contracts and the support knowledge base. The most common technique for this is called <strong>RAG</strong> (<em>retrieval-augmented generation</em>).</p>
+<p>In plain terms, it works like this:</p>
+<ol>
+<li>The company's documents are split into passages and indexed for search.</li>
+<li>When someone asks a question, the system finds the most relevant passages.</li>
+<li>Those passages are sent to the model along with the question, with the instruction to answer only from them.</li>
+<li>The answer can point to the document the information came from, so people can check it.</li>
+</ol>
+<p>The advantage is that the model answers with the company's current content, without being retrained. If a policy changes, you just update the document. The catch is the quality of the knowledge base: outdated or contradictory documents produce outdated or contradictory answers.</p>
+<h3 id="triage-and-summaries-of-support-conversations">Triage and summaries of support conversations</h3>
+<p>In high-volume channels such as WhatsApp, email and chat, AI can read an incoming message, identify the topic, suggest a priority and route it to the right queue. When the conversation ends, it can write a summary for the customer's history.</p>
+<p>You can see this in platforms like VipDesk, built by PEROVANO, which brings WhatsApp, Instagram, email and phone together with a CRM and AI-powered automation (see our <a href="/en/#projects">projects</a>). If WhatsApp is your company's main channel, it is worth first understanding how <a href="/en/blog/whatsapp-business-api-integration/">WhatsApp Business API integration</a> works.</p>
+<h3 id="extracting-data-from-documents">Extracting data from documents</h3>
+<p>Invoices, purchase orders, receipts, résumés and completed forms arrive in all kinds of formats. AI can read these documents and return the fields you need in a structured format, ready to go into your system. The gain is eliminating manual data entry.</p>
+<p>The caveat is that extracted data must be validated. Critical fields, such as amounts and tax IDs (in Brazil, for example, the CNPJ company registration number), should go through automatic checks (totals, check digits, format) and, when something doesn't match, through human review.</p>
+<h3 id="help-with-writing">Help with writing</h3>
+<p>Drafting proposals, replying to emails, writing product descriptions and internal reports are tasks where AI saves time. A person reviews, adjusts the tone and approves. It works well when there are reference examples and clear guidelines on the company's style.</p>
+<h2 id="when-not-to-use-ai">When not to use AI</h2>
+<p>Not every problem needs AI. In some cases it adds cost and uncertainty with no benefit.</p>
+<ul>
+<li><strong>Deterministic rules.</strong> If a decision follows fixed rules ("orders above a certain amount go to approval"), simple code handles it in a predictable, auditable way. That is traditional <a href="/en/blog/how-to-automate-business-processes/">process automation</a>, not AI.</li>
+<li><strong>Low volume.</strong> If the task happens a few times a week, the effort to build, test and maintain the solution may not pay off.</li>
+<li><strong>High risk without human review.</strong> Credit decisions, diagnoses, legal opinions or messages sent to customers without checking should not depend on a model's answer alone.</li>
+<li><strong>Data that is already structured.</strong> If the information already lives in a database or another system, the most reliable route is usually an <a href="/en/blog/system-integration-with-apis/">API integration</a>, not a model interpreting text.</li>
+</ul>
+<p>A useful question for deciding: if a wrong answer reaches the customer, what is the impact? The bigger the impact, the stronger the controls need to be.</p>
+<h2 id="what-to-check-before-putting-ai-into-production">What to check before putting AI into production</h2>
+<h3 id="errors-and-hallucinations">Errors and hallucinations</h3>
+<p>Language models can produce answers that sound plausible and are wrong, which is called <strong>hallucination</strong>. Good techniques such as RAG, clear instructions and a limited scope reduce it, but don't eliminate it. The system has to be designed on the assumption that errors will happen: let the assistant say "I don't know," show the source of each answer and log interactions for review.</p>
+<h3 id="human-review">Human review</h3>
+<p>In sensitive tasks, AI should suggest and a person should decide. A common pattern is for AI to prepare the draft or the classification and for an agent to approve it with one click. Over time, the approval and correction data show where the model gets it right and where it needs adjustments.</p>
+<h3 id="sensitive-data-and-data-protection-law">Sensitive data and data protection law</h3>
+<p>Sending customer data to an AI service is processing of personal data, and it has to comply with data protection law. In Brazil, that means the LGPD (Lei Geral de Proteção de Dados), the country's data protection law, similar in spirit to Europe's GDPR. Companies elsewhere should check the data protection rules that apply in their own country. In any case, you need to know what data is sent, whether the vendor uses it to train models, where it is stored and for how long. Whenever possible, send only what is necessary and strip out information that makes no difference to the task. The topic is covered in more detail in our article on <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">the LGPD for websites and software</a>.</p>
+<h3 id="usage-based-cost">Usage-based cost</h3>
+<p>Most AI services charge by usage, usually by the volume of text processed as input and output. Cost grows with the number of requests, the size of the documents sent and the model chosen. Larger models tend to be more expensive and aren't always necessary. Estimating volume during the pilot avoids surprises when the solution is scaled up.</p>
+<h2 id="how-to-start-with-a-small-pilot">How to start with a small pilot</h2>
+<p>A well-run pilot answers one simple question: does this solution save enough time or improve quality enough to justify the cost?</p>
+<ol>
+<li><strong>Pick one process.</strong> Choose something repetitive, with reasonable volume and controlled risk, such as triaging messages or answering internal questions about company policies.</li>
+<li><strong>Measure the current situation.</strong> Average time per task, monthly volume, error or rework rate. Without that number, there is nothing to compare against later.</li>
+<li><strong>Define the success criterion.</strong> For example: reduce triage time, or increase the share of internal questions resolved without pulling in another person.</li>
+<li><strong>Limit the scope.</strong> One type of document, one support queue, one group of users.</li>
+<li><strong>Keep human review at the start.</strong> It protects the customer and generates data to evaluate quality.</li>
+<li><strong>Evaluate and decide.</strong> At the end of the agreed period, compare with the starting point and decide whether to expand, adjust or stop.</li>
+</ol>
+<p>A pilot like this follows the same logic as an <a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP</a>: build the minimum that lets you learn, with real data. To align expectations with whoever will build it, a good <a href="/en/blog/how-to-write-a-software-project-brief/">project brief</a> helps document the current process, the available data and the expected result.</p>
+<blockquote><p>The right question isn't "where can we use AI?" but "which task costs the most time today and can be checked easily?"</p></blockquote>
+<h2 id="ai-inside-the-system-not-next-to-it">AI inside the system, not next to it</h2>
+<p>The solutions that work best are built into the workflow. A conversation summary is more useful in the customer's history, inside the CRM, than in a separate tool.</p>
+<p>One example is PaceOn, an AI running coach built by PEROVANO, which connects to Strava and recalculates the training plan after every workout. The AI doesn't sit in isolation: it uses the data that arrives through the integration and returns a result inside the product itself. You can explore other <a href="/en/#solutions">solutions</a> built with this approach.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="do-i-need-to-train-my-own-model-to-use-ai-in-my-business">Do I need to train my own model to use AI in my business?</h3>
+<p>In most cases, no. Off-the-shelf models, combined with RAG and good instructions, cover most business needs. Training or fine-tuning a model only makes sense in specific situations, with a lot of proprietary data and a well-defined goal.</p>
+<h3 id="will-ai-replace-my-customer-service-team">Will AI replace my customer service team?</h3>
+<p>The most common use is taking repetitive tasks off people's plates, such as classifying, summarizing and answering simple questions. Complex cases, negotiations and sensitive situations still need a human. The expected result is a team that spends more time on work that requires judgment.</p>
+<h3 id="how-much-does-it-cost-to-implement-ai-in-a-business">How much does it cost to implement AI in a business?</h3>
+<p>It depends on the scope, the integration with existing systems and the volume of use. There is the development cost, concentrated at the start, and the recurring cost of using the model, which varies with volume. A small pilot helps estimate both before a larger investment.</p>
+<p>If you have a process that looks like a good candidate for AI and want to find out whether it makes sense, we can talk through your situation and what a pilot could look like. PEROVANO works remotely and can run the project in English. <a href="/en/#contact">Get in touch</a> and tell us how the process works today.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22How%20to%20use%20AI%20in%20business%3A%20practical%20use%20cases%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Artificial intelligence" data-search="ai agents for business: what they are and how to use them what ai agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot. ai agents for business, what are ai agents, ai agent examples, ai that performs tasks">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/ai-agents-for-business/">AI agents for business: what they are and how to use them</a></h3>
+            <p class="post-card__excerpt">What AI agents are, how they differ from a chat, practical business examples, how they connect to your systems, risks, controls and how to start with a pilot.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="ai chatbot for customer service: uses and limits how an ai customer service chatbot works on whatsapp and your website, what it handles, when to hand off to a human, how to measure results and protect data. ai chatbot for customer service, ai customer service chatbot, whatsapp chatbot for business, virtual assistant for customer support">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/ai-chatbot-for-customer-service/">AI chatbot for customer service: uses and limits</a></h3>
+            <p class="post-card__excerpt">How an AI customer service chatbot works on WhatsApp and your website, what it handles, when to hand off to a human, how to measure results and protect data.</p>
+          </article>
+          <article class="post-card" data-category="Artificial intelligence" data-search="how to use chatgpt at work safely how to use chatgpt and other ai tools at work safely: productive uses, data leak risks, an internal ai use policy, business plans and data protection. using chatgpt at work safely, ai acceptable use policy, chatgpt risks for business, safe use of ai in the workplace">
+            <p class="post-card__meta"><span>Artificial intelligence</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/using-chatgpt-at-work-safely/">How to use ChatGPT at work safely</a></h3>
+            <p class="post-card__excerpt">How to use ChatGPT and other AI tools at work safely: productive uses, data leak risks, an internal AI use policy, business plans and data protection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

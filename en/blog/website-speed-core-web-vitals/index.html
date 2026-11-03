@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website speed and Core Web Vitals: what to fix first | PEROVANO</title>
+  <meta name="description" content="How website speed affects sales and SEO, what LCP, INP and CLS measure, how to test your site in PageSpeed Insights and which fixes to prioritize first.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="Website speed and Core Web Vitals: what to fix first | PEROVANO">
+  <meta property="og:description" content="How website speed affects sales and SEO, what LCP, INP and CLS measure, how to test your site in PageSpeed Insights and which fixes to prioritize first.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Websites">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Website speed and Core Web Vitals: what to fix first",
+  "description": "How website speed affects sales and SEO, what LCP, INP and CLS measure, how to test your site in PageSpeed Insights and which fixes to prioritize first.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Websites",
+  "keywords": "website speed, core web vitals, slow website, pagespeed insights",
+  "wordCount": 1562,
+  "image": "https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/",
+  "url": "https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Websites",
+      "item": "https://lrperovano.com.br/en/blog/category/websites/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Website speed and Core Web Vitals: what to fix first",
+      "item": "https://lrperovano.com.br/en/blog/website-speed-core-web-vitals/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a low PageSpeed Insights score mean the site is slow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. The 0 to 100 score comes from the lab test, a simulation under specific conditions. What Google uses to assess the experience is field data from real users. A site can have an average lab score and good Core Web Vitals in the field, and vice versa. Use the score as a diagnostic, not as a target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does improving speed guarantee a higher Google ranking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Core Web Vitals are one of the signals considered, and content relevance still weighs more. A fast site with weak content is unlikely to beat a page that answers the search better. The most direct gain is in conversion: more people see the offer and are able to act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will switching hosting fix everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rarely. Hosting affects the server's response time, but heavy images, third-party scripts and bloated themes keep weighing on the visitor's browser. Switching is worth it when the diagnosis shows the server is the bottleneck. If your site is slow and it is not clear where the problem lies, a technical review helps separate quick fixes from changes that require a new foundation. PEROVANO works remotely and can run the review in English. Talk to PEROVANO and tell us how your site is doing today."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/velocidade-do-site-core-web-vitals/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/websites/">Websites</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">Website speed and Core Web Vitals: what to fix first</h1>
+          <p class="post__lead">How website speed affects sales and SEO, what LCP, INP and CLS measure, how to test your site in PageSpeed Insights and which fixes to prioritize first.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#why-speed-affects-conversion-and-seo">Why speed affects conversion and SEO</a></li>
+              <li><a href="#lcp-inp-and-cls-in-plain-business-language">LCP, INP and CLS in plain business language</a></li>
+              <li><a href="#how-to-measure-website-speed">How to measure website speed</a></li>
+              <li><a href="#common-causes-of-slowness">Common causes of slowness</a></li>
+              <li><a href="#what-to-fix-first">What to fix first</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Website speed affects two things that matter to anyone selling: the experience of the people who arrive and the way Google evaluates the page. A site that takes a while to show its content, freezes when you tap a button or "jumps" while loading loses visitors before they read the offer. And every lost visitor is a lead that never happens.</p>
+<p>Google measures this experience with the Core Web Vitals, a set of three metrics: <strong>LCP</strong> (how long the main content takes to appear), <strong>INP</strong> (how long the page takes to respond to an action) and <strong>CLS</strong> (how much the layout moves on its own). They are part of the page experience signals considered in search. They do not replace relevant content, but they can weigh for or against you when competing pages are similar.</p>
+<p>The causes of slowness are usually well known: heavy images, too many third-party scripts, weak hosting and bloated themes. You can measure them with free tools and fix them in order, starting with what has the most impact.</p>
+<h2 id="why-speed-affects-conversion-and-seo">Why speed affects conversion and SEO</h2>
+<p>A conversion is when the visitor does what the page proposes: request a quote, send a message on WhatsApp, buy. For that to happen, they need to see the offer and be able to act without friction. Think of someone arriving on a phone, with a spotty signal, from a paid ad. If the first screen stays blank for several seconds, some of those people go back to the search results. The company paid for the click and never got the chance to present its service.</p>
+<p>In SEO (the set of practices for showing up on Google), speed comes in through the Core Web Vitals as an experience signal. The guide to <a href="/en/blog/seo-for-business-websites/">SEO for business websites</a> shows how the technical side combines with content and authority.</p>
+<p>On <a href="/en/blog/what-is-a-landing-page/">landing pages</a>, pages built for a single action, the effect is often even more visible, because almost all the traffic comes from campaigns and every second of waiting has a direct cost.</p>
+<h2 id="lcp-inp-and-cls-in-plain-business-language">LCP, INP and CLS in plain business language</h2>
+<h3 id="lcp-did-the-main-content-show-up">LCP: did the main content show up?</h3>
+<p>LCP stands for <em>Largest Contentful Paint</em>. It measures how long it takes for the largest visible element on the first screen to appear, usually the hero image or the main headline. It is the metric that captures the feeling that "the site has opened."</p>
+<p><strong>Good:</strong> 2.5 seconds or less. Above 4 seconds, Google considers it poor.</p>
+<h3 id="inp-did-the-site-respond-when-i-clicked">INP: did the site respond when I clicked?</h3>
+<p>INP stands for <em>Interaction to Next Paint</em>. It measures the time between a user action, such as tapping a button, opening a menu or typing in a field, and the page's visual response. In 2024, INP replaced FID, an earlier metric that only assessed the first interaction.</p>
+<p><strong>Good:</strong> 200 milliseconds or less. A high INP shows up as that button that seems not to work and makes people tap again.</p>
+<h3 id="cls-did-the-page-stay-still">CLS: did the page stay still?</h3>
+<p>CLS stands for <em>Cumulative Layout Shift</em>. It measures how much elements move around on their own while the page loads. The classic example: someone is about to tap a link, a banner loads above it and they end up clicking something else.</p>
+<p><strong>Good:</strong> 0.1 or less. It is a unitless score; the lower it is, the more stable the page.</p>
+<blockquote><p>The three metrics answer simple questions: did the content appear quickly, did the site respond when I tapped, and did the page stay still while I was reading?</p></blockquote>
+<h2 id="how-to-measure-website-speed">How to measure website speed</h2>
+<h3 id="pagespeed-insights">PageSpeed Insights</h3>
+<p>PageSpeed Insights is a free Google tool. Just paste in the page's address. The report shows two kinds of data, and the difference between them matters:</p>
+<ul>
+<li><strong>Field data:</strong> comes from real Chrome users who visited the page over the last 28 days. This is what Google uses to assess the Core Web Vitals. Low-traffic sites may not have this data.</li>
+<li><strong>Lab data:</strong> a simulation run on the spot, under controlled conditions. It is useful for diagnosing problems and testing fixes, but it does not exactly reflect the real experience.</li>
+</ul>
+<p>Below the score, the tool lists improvement opportunities, such as images that are too large. Do not chase a lab score of 100; what matters is that the field data falls in the "good" range. Test the mobile version, which is usually more demanding, and several pages, not just the home page.</p>
+<h3 id="google-search-console">Google Search Console</h3>
+<p>Search Console is Google's free dashboard for tracking how a site appears in search. It has a Core Web Vitals report that groups the site's pages into "good," "needs improvement" and "poor," with mobile and desktop shown separately. It lets you see the problem at scale and follow the effect of your fixes.</p>
+<h2 id="common-causes-of-slowness">Common causes of slowness</h2>
+<h3 id="heavy-images">Heavy images</h3>
+<p>This is one of the most frequent causes. Photos are uploaded at their original size, much larger than the screen will display. The fixes are well known: resize to the size actually used, use modern formats such as WebP or AVIF, serve different versions for mobile and desktop, and defer loading of images that are below the first screen.</p>
+<p>One caveat: the main image, the one that defines the LCP, should not be lazy-loaded. It needs to arrive as soon as possible.</p>
+<h3 id="third-party-scripts">Third-party scripts</h3>
+<p>Chat widgets, ad pixels, embedded maps, videos, heatmap tools, review widgets. Each one adds code that the browser has to download and run, and many directly affect INP. It is common to find tools installed for an old campaign that nobody uses anymore.</p>
+<p>Take an inventory: what is installed, who uses it and for what. Anything without an owner can go. What stays can be loaded after the main content or only when the user interacts.</p>
+<h3 id="hosting">Hosting</h3>
+<p>If the server takes a long time to start responding, everything else is delayed. Very cheap shared hosting, servers far from the audience and no caching (ready-made copies of pages that can be served faster) are typical causes. A CDN, a network of servers that delivers files from the location closest to the visitor, usually helps.</p>
+<h3 id="bloated-themes-and-page-builders">Bloated themes and page builders</h3>
+<p>Ready-made themes and visual page builders come with features to handle any kind of site, and many load all that code on every page. Add to that the plugins accumulated over the years.</p>
+<p>In those cases, optimization has limits. Sometimes the most efficient fix is to rebuild the site on a leaner foundation, and that decision belongs in the calculation of <a href="/en/blog/how-much-does-a-website-cost/">how much a website costs</a>.</p>
+<h3 id="fonts-and-elements-without-reserved-space">Fonts and elements without reserved space</h3>
+<p>Poorly configured custom fonts delay the display of text. Images, ads and banners without defined dimensions cause layout shifts and worsen CLS. These are small fixes, but they make a difference.</p>
+<h2 id="what-to-fix-first">What to fix first</h2>
+<p>With the diagnosis in hand, the order below usually brings the best return for the effort:</p>
+<ol>
+<li><strong>Start with the pages that bring in business.</strong> The home page, service pages and campaign landing pages come before the blog or the "about us" page.</li>
+<li><strong>Optimize images.</strong> It is the cheapest fix and usually the one with the biggest effect on LCP.</li>
+<li><strong>Remove unused third-party scripts</strong> and defer the loading of the ones that stay. This mainly helps INP.</li>
+<li><strong>Reserve space for images, videos and banners</strong> by setting their dimensions. This solves most CLS problems.</li>
+<li><strong>Review hosting, caching and CDN</strong> if the server is slow to respond even when the pages are light.</li>
+<li><strong>Assess the site's foundation.</strong> If the previous steps were not enough, the problem may be the theme or the platform.</li>
+</ol>
+<p>After each change, check in PageSpeed Insights and follow up in Search Console. Remember that field data covers a 28-day period, so the improvement takes a few weeks to show fully.</p>
+<p>Speed is not a one-time adjustment: every new marketing tool or plugin can undo the work. It is worth including a periodic check in the site's maintenance. Our <a href="/en/#solutions">solutions</a> include building websites on this performance foundation and reviewing existing ones.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="does-a-low-pagespeed-insights-score-mean-the-site-is-slow">Does a low PageSpeed Insights score mean the site is slow?</h3>
+<p>Not necessarily. The 0 to 100 score comes from the lab test, a simulation under specific conditions. What Google uses to assess the experience is field data from real users.</p>
+<p>A site can have an average lab score and good Core Web Vitals in the field, and vice versa. Use the score as a diagnostic, not as a target.</p>
+<h3 id="does-improving-speed-guarantee-a-higher-google-ranking">Does improving speed guarantee a higher Google ranking?</h3>
+<p>No. The Core Web Vitals are one of the signals considered, and content relevance still weighs more. A fast site with weak content is unlikely to beat a page that answers the search better.</p>
+<p>The most direct gain is in conversion: more people see the offer and are able to act.</p>
+<h3 id="will-switching-hosting-fix-everything">Will switching hosting fix everything?</h3>
+<p>Rarely. Hosting affects the server's response time, but heavy images, third-party scripts and bloated themes keep weighing on the visitor's browser. Switching is worth it when the diagnosis shows the server is the bottleneck.</p>
+<p>If your site is slow and it is not clear where the problem lies, a technical review helps separate quick fixes from changes that require a new foundation. PEROVANO works remotely and can run the review in English. <a href="/en/#contact">Talk to PEROVANO</a> and tell us how your site is doing today.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22Website%20speed%20and%20Core%20Web%20Vitals%3A%20what%20to%20fix%20first%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Websites" data-search="domain and hosting explained: what they are, how to choose the difference between a domain and web hosting, how to register a domain in your company&#x27;s name, what dns does and what to require from your website vendor. domain and hosting explained, difference between domain and hosting, how to register a domain for a business, types of web hosting">
+            <p class="post-card__meta"><span>Websites</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/domain-and-hosting-explained/">Domain and hosting explained: what they are, how to choose</a></h3>
+            <p class="post-card__excerpt">The difference between a domain and web hosting, how to register a domain in your company&#x27;s name, what DNS does and what to require from your website vendor.</p>
+          </article>
+          <article class="post-card" data-category="Websites" data-search="local seo: how to show up on google maps how to show up on google maps: set up your google business profile, keep your name, address and phone consistent, and work on reviews, photos and your website. local seo, how to show up on google maps, google business profile, google business profile optimization">
+            <p class="post-card__meta"><span>Websites</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/local-seo-google-business-profile/">Local SEO: how to show up on Google Maps</a></h3>
+            <p class="post-card__excerpt">How to show up on Google Maps: set up your Google Business Profile, keep your name, address and phone consistent, and work on reviews, photos and your website.</p>
+          </article>
+          <article class="post-card" data-category="Websites" data-search="what a business website needs: a 12-point checklist what a business website needs: a clear offer, explained services, real proof, contact that works, mobile, speed, seo, privacy policy, https and analytics. what a business website needs, business website checklist, company website essentials, small business website must haves">
+            <p class="post-card__meta"><span>Websites</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/what-a-business-website-needs/">What a business website needs: a 12-point checklist</a></h3>
+            <p class="post-card__excerpt">What a business website needs: a clear offer, explained services, real proof, contact that works, mobile, speed, SEO, privacy policy, HTTPS and analytics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

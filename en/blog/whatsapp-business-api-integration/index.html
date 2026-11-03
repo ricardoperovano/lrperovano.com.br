@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Business API integration: how it works | PEROVANO</title>
+  <meta name="description" content="How WhatsApp Business API integration works: how it differs from the app, what it enables, the requirements, the costs and the risks of unofficial tools.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/whatsapp-business-api-integracao/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="WhatsApp Business API integration: how it works | PEROVANO">
+  <meta property="og:description" content="How WhatsApp Business API integration works: how it differs from the app, what it enables, the requirements, the costs and the risks of unofficial tools.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Automation">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WhatsApp Business API integration: how it works",
+  "description": "How WhatsApp Business API integration works: how it differs from the app, what it enables, the requirements, the costs and the risks of unofficial tools.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Automation",
+  "keywords": "whatsapp business api integration, official whatsapp api, whatsapp business platform, whatsapp crm integration",
+  "wordCount": 1475,
+  "image": "https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/",
+  "url": "https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/whatsapp-business-api-integracao/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automation",
+      "item": "https://lrperovano.com.br/en/blog/category/automation/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "WhatsApp Business API integration: how it works",
+      "item": "https://lrperovano.com.br/en/blog/whatsapp-business-api-integration/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I use the WhatsApp API without a system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in practice. The API has no user interface. You need a customer service platform or a purpose-built system to send, receive and organize the messages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send bulk messages through the official API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can send messages to many customers, as long as they have agreed to be contacted and approved templates are used. There are sending limits that increase based on the number's history and quality. Messages that lead to blocks and reports hurt that quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I lose old conversations when migrating to the API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how the migration is done and which number is used. This should be assessed before the switch, to decide whether the history needs to be exported and stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the chatbot replace human agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It handles the repetitive part, such as collecting data and answering common questions. Cases that require analysis or negotiation should be handed over to a person, with the conversation history available. If your company already serves customers on WhatsApp and wants to integrate that channel with its system or CRM, we can assess the scenario and the most suitable path. PEROVANO works remotely and can run the project in English. Get in touch and tell us how your customer service works today."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/whatsapp-business-api-integracao/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/automation/">Automation</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">WhatsApp Business API integration: how it works</h1>
+          <p class="post__lead">How WhatsApp Business API integration works: how it differs from the app, what it enables, the requirements, the costs and the risks of unofficial tools.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#whatsapp-business-app-or-official-api">WhatsApp Business app or official API</a></li>
+              <li><a href="#what-the-integration-enables">What the integration enables</a></li>
+              <li><a href="#requirements-for-using-the-official-api">Requirements for using the official API</a></li>
+              <li><a href="#how-the-costs-work">How the costs work</a></li>
+              <li><a href="#risks-of-unofficial-solutions">Risks of unofficial solutions</a></li>
+              <li><a href="#how-to-plan-the-integration">How to plan the integration</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>A WhatsApp Business API integration connects your company's WhatsApp to its systems: CRM, ERP, online store or customer service platform. With it, several agents use the same number, conversations are recorded in one place and the system sends automatic messages, such as order confirmations and reminders.</p>
+<p>The official API is part of the <strong>WhatsApp Business Platform</strong>, maintained by Meta. It is different from the WhatsApp Business app you install on a phone. The app is designed for direct use by small operations. The API is an interface for systems, with no screen of its own, and it needs software to send and receive messages.</p>
+<p>Using the API takes some care: a verified business account, a dedicated number, approved message templates to start conversations and attention to Meta's pricing rules. In return, the company gains scale, control and an operation that does not depend on any one phone.</p>
+<h2 id="whatsapp-business-app-or-official-api">WhatsApp Business app or official API</h2>
+<p>The <strong>WhatsApp Business app</strong> is free and works like regular WhatsApp, with extra features: a business profile, a catalog, quick replies, labels and away messages. It works well when one or a few people handle customer service and the volume can be managed by hand.</p>
+<p>The <strong>API</strong> is the way to go when the company needs:</p>
+<ul>
+<li>Multiple agents on the same number, with conversations routed between them.</li>
+<li>Conversations integrated with a CRM or an internal system.</li>
+<li>Automatic notifications triggered by the system.</li>
+<li>Chatbots or AI for the first stage of customer service.</li>
+<li>A centralized history and reports.</li>
+</ul>
+<p>A simple test: if customer service depends on someone handing the phone to a colleague, copying conversation details into the system by hand or scrolling through old messages to find out what was agreed, the operation has already outgrown what the app offers.</p>
+<h2 id="what-the-integration-enables">What the integration enables</h2>
+<h3 id="multiple-agents-on-the-same-number">Multiple agents on the same number</h3>
+<p>With the API, agent access is managed by the customer service platform, which allows several users on the same number. You can create queues by department, transfer conversations between agents and see who replied what.</p>
+<h3 id="integration-with-crm-and-internal-systems">Integration with CRM and internal systems</h3>
+<p>When a message arrives, the system can identify the customer by phone number, show their purchase or ticket history and log the conversation in their record. It also works the other way around: a status change in the system triggers a message to the customer. This kind of connection follows the same principles as any <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a>.</p>
+<h3 id="automatic-notifications">Automatic notifications</h3>
+<p>Order confirmations, delivery updates, appointment reminders, a duplicate copy of a boleto (a Brazilian bank payment slip) and due-date reminders are examples of messages the system sends without human intervention. They use approved message templates, explained further below.</p>
+<h3 id="chatbots-and-artificial-intelligence">Chatbots and artificial intelligence</h3>
+<p>A chatbot can collect initial information, answer frequently asked questions and route the customer to the right department. With AI, it is possible to understand freely written messages, summarize the conversation for the agent and suggest replies based on company documents. What it takes for this to work well is covered in the article on <a href="/en/blog/how-to-use-ai-in-business/">how to use AI in business</a>.</p>
+<h3 id="centralized-history">Centralized history</h3>
+<p>All conversations are stored in the company's system instead of being scattered across employees' phones. If an agent leaves the company, the history remains available. This also makes auditing, service metrics and the management of personal data easier, a point directly tied to <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD, Brazil's data protection law, for websites and software</a>. Outside Brazil, check the rules that apply in your country.</p>
+<p>One example is VipDesk, a customer service platform built by PEROVANO that brings WhatsApp, Instagram, email and phone together in one place, with a CRM and AI-powered automation. It is among the company's <a href="/en/#projects">projects</a>.</p>
+<h2 id="requirements-for-using-the-official-api">Requirements for using the official API</h2>
+<p>The details change over time and should be confirmed at implementation, but the general requirements are these.</p>
+<h3 id="verified-business-account">Verified business account</h3>
+<p>The company needs an account in Meta's business manager and, in general, has to go through business verification, submitting documents that prove the business exists. The display name shown on WhatsApp is also reviewed.</p>
+<h3 id="dedicated-number">Dedicated number</h3>
+<p>The number used with the API is usually dedicated to it. Traditionally, a number active on the API could not be used in the regular app at the same time. Meta has been expanding ways to use it alongside the WhatsApp Business app in some scenarios, with limitations. That is why it is worth deciding at the start of the project which number will be used and what happens to the current conversation history.</p>
+<h3 id="approved-message-templates">Approved message templates</h3>
+<p>To start a conversation with a customer, the company must use a <strong>message template</strong>: a standard text with variable fields such as name and order number, submitted in advance for Meta's approval. Templates are grouped into categories, such as marketing, utility (updates about orders and accounts, for example) and authentication (verification codes).</p>
+<p>In addition, the customer must have agreed to receive messages from the company on WhatsApp, which is known as <em>opt-in</em>. That consent record should be stored in the system.</p>
+<h3 id="customer-service-window">Customer service window</h3>
+<p>When a customer sends a message, a 24-hour <strong>customer service window</strong> opens. Within it, the company can reply with free-form messages, without a template. Outside it, contact can only be started with an approved template. The system needs to track this window to avoid failed sends.</p>
+<h2 id="how-the-costs-work">How the costs work</h2>
+<p>The costs come in two parts.</p>
+<p>The first is the use of Meta's platform. Meta charges for API usage according to the type of message, and the price varies by category and by the recipient's country. The rate card and the pricing model have changed more than once, so the recommendation is to check the current terms when estimating the budget. Replies within the customer service window are treated differently from messages the company initiates.</p>
+<p>The second is the software that uses the API: an off-the-shelf customer service platform with a monthly fee, or custom development integrated with the company's systems. The choice follows the same logic as deciding between <a href="/en/blog/custom-software-vs-off-the-shelf/">custom software and off-the-shelf</a>. The factors that weigh most are the number of agents, the message volume, the required integrations and the level of automation.</p>
+<h2 id="risks-of-unofficial-solutions">Risks of unofficial solutions</h2>
+<p>Some tools automate WhatsApp without the official API, usually by simulating WhatsApp Web or the app. They look simpler and cheaper at first, but carry serious risks:</p>
+<ul>
+<li><strong>Number bans.</strong> Unauthorized automation violates WhatsApp's terms and can get the number banned, cutting off contact with your customers.</li>
+<li><strong>Instability.</strong> A WhatsApp update can break things without warning.</li>
+<li><strong>No support.</strong> There is no official channel for solving problems.</li>
+<li><strong>Security and privacy.</strong> Conversations go through a connection that does not follow the official model, which makes it harder to guarantee data protection.</li>
+</ul>
+<blockquote><p>For an operation that depends on WhatsApp to sell or serve customers, the number is a business asset. Putting it at risk to save on implementation rarely pays off.</p></blockquote>
+<h2 id="how-to-plan-the-integration">How to plan the integration</h2>
+<ol>
+<li><strong>Map your current customer service.</strong> How many people handle it, what kinds of conversations come in and what information they look up in other systems.</li>
+<li><strong>List the automatic messages.</strong> Which notifications make sense and at what point in the process.</li>
+<li><strong>Define the integrations.</strong> CRM, ERP, scheduling, billing system.</li>
+<li><strong>Choose the number and prepare the account.</strong> Business verification, profile and message templates.</li>
+<li><strong>Start with the essentials.</strong> Multi-agent service and centralized history first, then notifications and automation.</li>
+</ol>
+<p>This planning ties in with <a href="/en/blog/how-to-automate-business-processes/">how to automate business processes</a>: organize the workflow first, then automate it.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="can-i-use-the-whatsapp-api-without-a-system">Can I use the WhatsApp API without a system?</h3>
+<p>Not in practice. The API has no user interface. You need a customer service platform or a purpose-built system to send, receive and organize the messages.</p>
+<h3 id="can-i-send-bulk-messages-through-the-official-api">Can I send bulk messages through the official API?</h3>
+<p>You can send messages to many customers, as long as they have agreed to be contacted and approved templates are used. There are sending limits that increase based on the number's history and quality. Messages that lead to blocks and reports hurt that quality.</p>
+<h3 id="will-i-lose-old-conversations-when-migrating-to-the-api">Will I lose old conversations when migrating to the API?</h3>
+<p>It depends on how the migration is done and which number is used. This should be assessed before the switch, to decide whether the history needs to be exported and stored.</p>
+<h3 id="does-the-chatbot-replace-human-agents">Does the chatbot replace human agents?</h3>
+<p>It handles the repetitive part, such as collecting data and answering common questions. Cases that require analysis or negotiation should be handed over to a person, with the conversation history available.</p>
+<p>If your company already serves customers on WhatsApp and wants to integrate that channel with its system or CRM, we can assess the scenario and the most suitable path. PEROVANO works remotely and can run the project in English. <a href="/en/#contact">Get in touch</a> and tell us how your customer service works today.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22WhatsApp%20Business%20API%20integration%3A%20how%20it%20works%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Automation" data-search="how to integrate pix and payments into your system how to integrate pix, boleto and cards into your system: gateway or bank, dynamic qr codes with webhooks, pix automático, reconciliation, refunds and security. payment gateway integration, how to integrate payments into software, pix api integration, recurring billing integration">
+            <p class="post-card__meta"><span>Automation</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/pix-and-payment-integration/">How to integrate Pix and payments into your system</a></h3>
+            <p class="post-card__excerpt">How to integrate Pix, boleto and cards into your system: gateway or bank, dynamic QR codes with webhooks, Pix Automático, reconciliation, refunds and security.</p>
+          </article>
+          <article class="post-card" data-category="Automation" data-search="no-code, low-code or custom development? no-code, low-code or custom development? see when each one works, the limits on cost, data and privacy, and the signs that it is time to migrate. no-code vs low-code, no-code vs custom development, when to move off no-code, no-code automation tools">
+            <p class="post-card__meta"><span>Automation</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/no-code-low-code-or-custom-development/">No-code, low-code or custom development?</a></h3>
+            <p class="post-card__excerpt">No-code, low-code or custom development? See when each one works, the limits on cost, data and privacy, and the signs that it is time to migrate.</p>
+          </article>
+          <article class="post-card" data-category="Automation" data-search="how to automate business processes, step by step how to automate business processes: pick what to automate, map it first, start small, see practical examples, measure the gains and avoid common pitfalls. how to automate business processes, business process automation, automate repetitive tasks, workflow automation for small business">
+            <p class="post-card__meta"><span>Automation</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-automate-business-processes/">How to automate business processes, step by step</a></h3>
+            <p class="post-card__excerpt">How to automate business processes: pick what to automate, map it first, start small, see practical examples, measure the gains and avoid common pitfalls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

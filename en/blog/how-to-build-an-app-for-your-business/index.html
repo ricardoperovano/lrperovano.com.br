@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to build an app for your business, step by step | PEROVANO</title>
+  <meta name="description" content="How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/como-criar-um-aplicativo/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="How to build an app for your business, step by step | PEROVANO">
+  <meta property="og:description" content="How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Software">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to build an app for your business, step by step",
+  "description": "How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Software",
+  "keywords": "how to build an app for your business, how to create a business app, app development process, publish an app on the App Store and Google Play",
+  "wordCount": 1641,
+  "image": "https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/",
+  "url": "https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/como-criar-um-aplicativo/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Software",
+      "item": "https://lrperovano.com.br/en/blog/category/software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "How to build an app for your business, step by step",
+      "item": "https://lrperovano.com.br/en/blog/how-to-build-an-app-for-your-business/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need technical knowledge to build an app for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The technical knowledge comes from the development team. What your company needs is a good understanding of the problem, the audience and the business rules, plus someone available to make decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I publish the app in just one store first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Some companies launch on one platform to test and then publish on the other. With cross-platform technology, the second release usually takes less effort, but it still goes through testing and the store's review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the store rejects the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The store tells you why. In most cases, the fix is an adjustment to the app, the store listing or the privacy disclosures, followed by a new submission. Building some slack into the schedule avoids launch delays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should own the source code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally, the company hiring the work owns the code and has access to the repository, with this written into the contract. That way, maintenance can continue even if the vendor changes. If your company has an app idea and wants to know where to start, a conversation about the problem and the audience already helps define the first step. PEROVANO works remotely and can run projects in English. See our projects and get in touch whenever you are ready."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/como-criar-um-aplicativo/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/software/">Software</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">How to build an app for your business, step by step</h1>
+          <p class="post__lead">How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#step-1-goal-and-audience">Step 1: goal and audience</a></li>
+              <li><a href="#step-2-mvp-scope">Step 2: MVP scope</a></li>
+              <li><a href="#step-3-prototype-and-validation">Step 3: prototype and validation</a></li>
+              <li><a href="#step-4-choosing-the-technology">Step 4: choosing the technology</a></li>
+              <li><a href="#step-5-development-in-deliveries">Step 5: development in deliveries</a></li>
+              <li><a href="#step-6-testing-on-real-devices">Step 6: testing on real devices</a></li>
+              <li><a href="#step-7-publishing-on-google-play-and-the-app-store">Step 7: publishing on Google Play and the App Store</a></li>
+              <li><a href="#step-8-tracking-and-evolution">Step 8: tracking and evolution</a></li>
+              <li><a href="#who-takes-part-in-the-project">Who takes part in the project</a></li>
+              <li><a href="#what-your-company-needs-to-provide">What your company needs to provide</a></li>
+              <li><a href="#common-mistakes">Common mistakes</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>Building an app for your business involves eight steps: define the goal and the audience, set the scope of the first version, prototype and validate, choose the technology, develop in short deliveries, test on real devices, publish on Google Play and the App Store and, after launch, track usage and keep improving.</p>
+<p>Your company does not need to know how to code, but it does need to take part. Decisions about business rules, priorities and approval of each delivery belong to you. You are also the one who must provide accounts, content and access that the vendor cannot create on your behalf.</p>
+<p>If your main question is budget, the article on <a href="/en/blog/how-much-does-it-cost-to-build-an-app/">how much it costs to build an app</a> explains the factors that shape the price. Here the focus is the process.</p>
+<h2 id="step-1-goal-and-audience">Step 1: goal and audience</h2>
+<p>Start with the simplest and most neglected question: what does the app need to solve, and for whom? "Having an app" is not a goal. "Letting repeat customers reorder in a few taps" is.</p>
+<p>Also decide how success will be measured. It might be the number of orders placed through the app, fewer calls to customer service or the time your field team saves each day.</p>
+<p>It is also worth confirming whether the problem really calls for an app store app. If usage is occasional or happens mostly on a computer, a web application or a <a href="/en/blog/what-is-a-pwa/">PWA</a> may do the job with less effort. An installed app makes more sense when usage is frequent, when you need access to device features or when notifications are central to the experience.</p>
+<h2 id="step-2-mvp-scope">Step 2: MVP scope</h2>
+<p>An MVP is a minimum viable product: the first version with the smallest set of features that solves the main problem end to end. List everything the app could do and separate what is indispensable for the first real use. The rest goes on a list for future versions.</p>
+<p>The guide on <a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">building an MVP</a> offers criteria for making that cut. Writing the scope down in a <a href="/en/blog/how-to-write-a-software-project-brief/">software project brief</a> helps the vendor understand the project and reduces misunderstandings.</p>
+<h2 id="step-3-prototype-and-validation">Step 3: prototype and validation</h2>
+<p>A prototype is a clickable simulation of the screens, with no code behind it. It lets you tap the buttons, follow the flows and see whether the sequence makes sense.</p>
+<p>Show the prototype to people from your target audience and watch, without explaining. Where do they hesitate? What do they look for and not find? Adjusting a flow at this stage takes hours. After development, it can take weeks.</p>
+<p>This step also aligns internal expectations. Leadership, customer service and operations look at the same design and point out disagreements before they turn into code.</p>
+<h2 id="step-4-choosing-the-technology">Step 4: choosing the technology</h2>
+<p>The main decision is between a native app (built separately for Android and iOS), a cross-platform app (one codebase for both, with frameworks such as Flutter or React Native) or a PWA. For most business apps, cross-platform offers a good balance.</p>
+<p>This is also when you define the back end, the part that runs on servers and stores the data, the admin panel your team will use and the integrations with existing systems such as an ERP or CRM. The article on <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a> helps you know what to ask about your current systems.</p>
+<p>Prefer mainstream technologies with an active community and available professionals. That reduces your dependence on a single vendor.</p>
+<h2 id="step-5-development-in-deliveries">Step 5: development in deliveries</h2>
+<p>Instead of waiting months for a single delivery, development should be split into short cycles. At the end of each cycle, your company receives an installable test version and reviews what was done.</p>
+<p>This approach has two advantages. Problems show up early, when they are cheap to fix. And you can reprioritize along the way, swapping one feature for another that turned out to be more important.</p>
+<p>To distribute test versions, the stores themselves offer internal testing channels that let you install the app on selected devices before it goes public.</p>
+<h2 id="step-6-testing-on-real-devices">Step 6: testing on real devices</h2>
+<p>Emulators help during development, but they do not replace real devices. Test on phones from different brands, with different screen sizes and operating system versions, including older models your audience still uses.</p>
+<p>Some scenarios are often forgotten:</p>
+<ul>
+<li>Slow, unstable or missing connection.</li>
+<li>Denied permissions, such as camera or location.</li>
+<li>The app interrupted by a phone call or sent to the background in the middle of an operation.</li>
+<li>Enlarged fonts in the accessibility settings.</li>
+<li>Updating from a previous version of the app, with data already saved.</li>
+</ul>
+<p>Set aside people from your company to test real workflows with data similar to production data. People who know the operation find problems an outside tester would miss.</p>
+<h2 id="step-7-publishing-on-google-play-and-the-app-store">Step 7: publishing on Google Play and the App Store</h2>
+<p>Each store requires a developer account, ideally in your company's name, and an app listing with a name, description, icon, screenshots, category and age rating. Both ask for a privacy policy and disclosures about what data the app collects and what it is used for.</p>
+<p>Before it becomes available, the app goes through the store's review. Among other things, the review checks whether the app works, whether the listing matches what it does and whether the privacy and payment rules are followed. It is common for the store to request changes and a new submission. For the review to happen, reviewers need access: if the app requires login, provide a demo account.</p>
+<p>Rules and review times change over time and differ between the stores. Check each store's current requirements when you plan the launch date, and do not schedule a launch event for the same day as the submission.</p>
+<h2 id="step-8-tracking-and-evolution">Step 8: tracking and evolution</h2>
+<p>After launch comes the most informative phase of the project. Track:</p>
+<ul>
+<li>Crash reports, which show on which devices and screens the app failed.</li>
+<li>Usage metrics, such as how many people complete the main flow and where they drop off.</li>
+<li>Ratings and reviews in the stores.</li>
+<li>The success indicator you defined in step 1.</li>
+</ul>
+<p>With this data, the list of future versions gets revised. Beyond new features, the app needs ongoing maintenance to keep up with the yearly Android and iOS releases and the stores' requirements. The article on <a href="/en/blog/software-maintenance/">software maintenance</a> explains how to organize it.</p>
+<h2 id="who-takes-part-in-the-project">Who takes part in the project</h2>
+<p>On the vendor's side, the most common roles are:</p>
+<ul>
+<li><strong>Project or product manager:</strong> organizes priorities, deadlines and communication.</li>
+<li><strong>UI and UX designer:</strong> creates the flows, the prototype and the visual design.</li>
+<li><strong>Developers:</strong> build the app, the back end and the admin panel.</li>
+<li><strong>QA tester:</strong> checks features and error scenarios.</li>
+</ul>
+<p>In smaller teams, one person may cover several roles. What matters is that all of them are covered.</p>
+<p>On your company's side, it is essential to have a <strong>product owner</strong>: someone with the authority to decide rules, approve deliveries and answer questions promptly. Without that person, the project stalls waiting for decisions.</p>
+<h2 id="what-your-company-needs-to-provide">What your company needs to provide</h2>
+<ul>
+<li>Developer accounts on Google Play and the App Store, in your company's name. Verification may require company documents and take a few days.</li>
+<li>Domain, hosting and third-party service accounts, also in your company's name.</li>
+<li>Visual identity: logo, colors and fonts.</li>
+<li>The text, images and content that will appear in the app.</li>
+<li>A privacy policy and terms of use, reviewed against the data protection rules that apply to you. In Brazil that means the <a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD</a> (Lei Geral de Proteção de Dados), Brazil's data protection law, similar in spirit to Europe's GDPR; elsewhere, check the rules that apply in your country.</li>
+<li>Access to and documentation for the systems that will be integrated.</li>
+<li>People available to validate prototypes and test versions.</li>
+</ul>
+<p>Keeping the accounts in your company's name ensures the app stays under your control even if you change vendors.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Starting with the look instead of the problem.</strong> Beautiful screens will not save an app that solves nothing relevant.</li>
+<li><strong>Too much scope in the first version.</strong> It delays the launch and spends budget on features nobody may use.</li>
+<li><strong>Forgetting the back end and the admin panel.</strong> The app on the phone is only one part of the system.</li>
+<li><strong>Registering the store accounts in the vendor's name.</strong> Transferring an app later is possible, but it takes work.</li>
+<li><strong>Testing only on the owner's phone.</strong> Your audience uses other models, other networks and other settings.</li>
+<li><strong>Treating the project as finished at launch.</strong> Without tracking and maintenance, the app loses quality over time.</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="do-i-need-technical-knowledge-to-build-an-app-for-my-business">Do I need technical knowledge to build an app for my business?</h3>
+<p>No. The technical knowledge comes from the development team. What your company needs is a good understanding of the problem, the audience and the business rules, plus someone available to make decisions.</p>
+<h3 id="can-i-publish-the-app-in-just-one-store-first">Can I publish the app in just one store first?</h3>
+<p>Yes. Some companies launch on one platform to test and then publish on the other. With cross-platform technology, the second release usually takes less effort, but it still goes through testing and the store's review.</p>
+<h3 id="what-happens-if-the-store-rejects-the-app">What happens if the store rejects the app?</h3>
+<p>The store tells you why. In most cases, the fix is an adjustment to the app, the store listing or the privacy disclosures, followed by a new submission. Building some slack into the schedule avoids launch delays.</p>
+<h3 id="who-should-own-the-source-code">Who should own the source code?</h3>
+<p>Ideally, the company hiring the work owns the code and has access to the repository, with this written into the contract. That way, maintenance can continue even if the vendor changes.</p>
+<p>If your company has an app idea and wants to know where to start, a conversation about the problem and the audience already helps define the first step. PEROVANO works remotely and can run projects in English. See our <a href="/en/#projects">projects</a> and <a href="/en/#contact">get in touch</a> whenever you are ready.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22How%20to%20build%20an%20app%20for%20your%20business%2C%20step%20by%20step%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Software" data-search="custom software vs off-the-shelf: how to decide custom software or off-the-shelf? compare total cost over time, process fit and vendor lock-in, and see when a hybrid approach is the better choice. custom software vs off the shelf, build vs buy software, custom software development, when to build your own software">
+            <p class="post-card__meta"><span>Software</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/custom-software-vs-off-the-shelf/">Custom software vs off-the-shelf: how to decide</a></h3>
+            <p class="post-card__excerpt">Custom software or off-the-shelf? Compare total cost over time, process fit and vendor lock-in, and see when a hybrid approach is the better choice.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="how to build a saas: from business model to architecture how to build a saas: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics. how to build a saas, software as a service development, multi-tenant architecture, saas recurring billing">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-build-a-saas/">How to build a SaaS: from business model to architecture</a></h3>
+            <p class="post-card__excerpt">How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="when to replace spreadsheets with software when to replace spreadsheets with software: warning signs, what changes day to day, how to migrate data without stopping work and which options to weigh. replace spreadsheets with software, moving off spreadsheets, replace excel with a database, business management software for small business">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/replace-spreadsheets-with-software/">When to replace spreadsheets with software</a></h3>
+            <p class="post-card__excerpt">When to replace spreadsheets with software: warning signs, what changes day to day, how to migrate data without stopping work and which options to weigh.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

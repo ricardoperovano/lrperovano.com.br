@@ -25,9 +25,10 @@ Os caminhos são absolutos (`/assets/...`), então abra pelo servidor, não por 
 | `assets/img/favicon.svg` | Ícone provisório neutro (origem de `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`) |
 | `og-image.png` | Imagem de compartilhamento 1200×630 |
 | `assets/img/portfolio/` | Capturas dos sites do portfólio (`*-hero.webp` na abertura, `*-full.webp` nas janelas) |
-| `_conteudo/artigos/*.md` | Fonte dos artigos do blog (não é publicada) |
-| `scripts/build_blog.py` | Gera `blog/`, `sitemap.xml`, `robots.txt`, `blog/feed.xml` e o bloco de artigos da home |
-| `blog/` | Saída gerada — não edite à mão |
+| `_conteudo/artigos/*.md` | Fonte dos artigos do blog em português (não é publicada) |
+| `_conteudo/en/articles/*.md` | Fonte das traduções em inglês (não é publicada) |
+| `scripts/build_blog.py` | Gera os dois blogs, `sitemap.xml`, `robots.txt`, os feeds RSS e o bloco de artigos das duas homes |
+| `blog/`, `en/blog/` | Saída gerada — não edite à mão |
 
 Contatos (WhatsApp, e-mail, LinkedIn, GitHub) aparecem em dois blocos do `index.html`: seção `#contato` e rodapé.
 Ao alterar um contato, busque pelo valor antigo no projeto para atualizar todas as ocorrências (inclusive `privacy.html`).
@@ -36,12 +37,14 @@ Ao alterar um contato, busque pelo valor antigo no projeto para atualizar todas 
 
 ## Versão em inglês
 
-- **Quem vai para `/en/`:** a home em português (`/`) redireciona para `/en/` quem usa o navegador em um idioma que não é português. Navegadores em português (Brasil ou Portugal) ficam em `/`. O site é estático (GitHub Pages), então não há detecção de país pelo IP; o idioma do navegador é o critério.
-- **Escolha manual:** o seletor PT/EN do cabeçalho grava a escolha em `localStorage` (`perovano-lang`), e ela passa a valer mais que o idioma do navegador. O link para o português usa `/?lang=pt`, que funciona mesmo sem `localStorage`.
-- **Buscadores:** robôs (Googlebot e outros) não são redirecionados. As duas versões se apontam com `hreflang` (`pt-BR`, `en` e `x-default` = inglês) no `<head>` e no `sitemap.xml`.
-- **Só a home é redirecionada.** Links diretos para `/en/`, para a política de privacidade ou para o blog abrem como estão.
-- **Manutenção:** `en/index.html` é uma tradução da home em português. Ao mudar textos, seções ou contatos em `index.html`, aplique a mesma mudança em `en/index.html` (as âncoras em inglês são `#projects`, `#solutions`, `#how-we-work`, `#about` e `#contact`). Textos de interface do JavaScript (menu e aviso de cookies) ficam no objeto `T` de `assets/js/site.js`.
-- **Blog:** os artigos existem só em português; a versão em inglês não tem seção de blog.
+O site inteiro existe nos dois idiomas: home, política de privacidade, os 30 artigos, o índice do blog, as páginas de categoria e o RSS (`/en/blog/feed.xml`).
+
+- **Quem vai para o inglês:** as páginas em português redirecionam para a tradução quem usa o navegador em um idioma que não é português. Navegadores em português (Brasil ou Portugal) ficam no português. O site é estático (GitHub Pages), então não há detecção de país pelo IP; o idioma do navegador é o critério.
+- **Escolha manual:** o seletor PT/EN do cabeçalho leva à página equivalente no outro idioma e grava a escolha em `localStorage` (`perovano-lang`), que passa a valer mais que o idioma do navegador. Os links para o português usam `?lang=pt`, que funciona mesmo sem `localStorage`.
+- **Buscadores:** robôs (Googlebot e outros) não são redirecionados. Cada página declara a sua tradução com `hreflang` (`pt-BR`, `en` e `x-default` = inglês), no `<head>` e no `sitemap.xml`.
+- **Home e privacidade:** `en/index.html` e `en/privacy.html` são traduções mantidas à mão. Ao mudar textos, seções ou contatos em `index.html` ou `privacy.html`, aplique a mesma mudança na versão em inglês (as âncoras em inglês são `#projects`, `#solutions`, `#how-we-work`, `#about` e `#contact`). Textos de interface do JavaScript (menu, aviso de cookies, busca) ficam no objeto `T` de `assets/js/site.js`.
+- **Artigos:** cada tradução fica em `_conteudo/en/articles/<slug-em-ingles>.md` e aponta o original com `pt: "<slug-em-portugues>"` no front matter. Categorias em inglês: `Websites`, `Software`, `Automation`, `Artificial intelligence`, `Project management` (na mesma ordem das portuguesas). Links internos de um artigo em inglês usam `/en/blog/...` e `/en/#...`; o gerador avisa se algum apontar para o português. A seção de perguntas frequentes em inglês se chama `## Frequently asked questions`.
+- **Novo artigo:** publique o português e a tradução juntos. Um artigo sem tradução funciona, mas fica sem `hreflang` e o build avisa "(sem tradução)".
 
 ## Blog
 
@@ -92,4 +95,4 @@ O gerador também cria uma página por categoria (`/blog/categoria/<categoria>/`
 11. **Google Search Console.** Verificar a propriedade `lrperovano.com.br` e enviar `https://lrperovano.com.br/sitemap.xml`. Opcional: Bing Webmaster Tools.
 12. **Artigos (30).** Revisar os textos antes de publicar — em especial LGPD, WhatsApp, Pix, domínio/Registro.br, SEO local e os pontos jurídicos de escopo/contratação, cujas regras de terceiros mudam com o tempo e manter um ritmo de publicação (ex.: 1 artigo por semana) — conteúdo novo e atualizado pesa mais que volume publicado de uma vez.
 13. **Google Analytics (G-KGNMPTML28).** Só carrega depois de "Aceitar" no aviso de cookies (Consent Mode do Google, com padrão negado). A escolha fica em `localStorage` (`perovano-cookies`) e pode ser revista em "Preferências de cookies", no rodapé. Cliques em WhatsApp e e-mail geram o evento `generate_lead`; marque-o como evento-chave no GA4 para medir conversões. O código do GA está no `<head>` de `index.html`, `privacy.html` e em `GA_TAG` de `scripts/build_blog.py`. A política de privacidade foi atualizada para refletir isso — vale uma revisão jurídica.
-14. **Versão em inglês.** Revisar os textos de `en/index.html` e `en/privacy.html`. Confirmar a frase "Projects are run remotely and can be conducted in English", na seção About. A política em inglês declara que, se houver diferença, vale a versão em português.
+14. **Versão em inglês.** Revisar os textos de `en/index.html`, `en/privacy.html` e dos 30 artigos em inglês. Confirmar a frase "Projects are run remotely and can be conducted in English" (seção About) e a menção, no fim de cada artigo, de que a PEROVANO trabalha remotamente e conduz projetos em inglês. A política em inglês declara que, se houver diferença, vale a versão em português. Pontos a conferir nas traduções: a seção "Who the LGPD applies to" (acrescentada no artigo de LGPD), o exemplo de busca trocado de Vitória para Chicago no artigo de SEO e as explicações de Pix, boleto e CPF/CNPJ para leitores estrangeiros.

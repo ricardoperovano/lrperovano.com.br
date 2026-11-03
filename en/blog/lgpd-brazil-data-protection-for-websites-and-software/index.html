@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGPD: Brazil&#x27;s data protection law for websites and software | PEROVANO</title>
+  <meta name="description" content="What Brazil&#x27;s LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="LGPD: Brazil&#x27;s data protection law for websites and software | PEROVANO">
+  <meta property="og:description" content="What Brazil&#x27;s LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Software">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LGPD: Brazil's data protection law for websites and software",
+  "description": "What Brazil's LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Software",
+  "keywords": "lgpd brazil, lgpd compliance, brazil data protection law, lgpd for websites, lgpd software development",
+  "wordCount": 1694,
+  "image": "https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/",
+  "url": "https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Software",
+      "item": "https://lrperovano.com.br/en/blog/category/software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "LGPD: Brazil's data protection law for websites and software",
+      "item": "https://lrperovano.com.br/en/blog/lgpd-brazil-data-protection-for-websites-and-software/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a simple business website need to comply with the LGPD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if it collects any personal data from people covered by the law, even just a name and email in a contact form, or if it uses analytics or advertising cookies. The effort is smaller than for a full system, but a privacy policy, data minimization and a cookie banner are still necessary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is publishing a privacy policy enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The policy describes what happens, but the website and the software have to work the way it says. If the policy says marketing cookies depend on consent, they can't load before the visitor accepts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is responsible if the software vendor leaks the data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The law divides responsibilities between controller and processor according to each one's role. That's why clear contracts and vendors with good practices matter. Any specific case should be assessed with legal advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to delete all the data when a customer asks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. Some data must be kept because of legal obligations, such as tax records. The system should delete or anonymize what can be removed and keep, securely, what the law requires. If you're planning a website or software product and want data protection built into the design from the beginning, let's talk about the project. PEROVANO works remotely and can run projects in English. Get in touch and tell us what you need built."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/lgpd-em-sites-e-sistemas/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/software/">Software</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">LGPD: Brazil&#x27;s data protection law for websites and software</h1>
+          <p class="post__lead">What Brazil&#x27;s LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>9 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#who-the-lgpd-applies-to">Who the LGPD applies to</a></li>
+              <li><a href="#key-concepts">Key concepts</a></li>
+              <li><a href="#legal-bases-every-use-of-data-needs-a-justification">Legal bases: every use of data needs a justification</a></li>
+              <li><a href="#collect-only-what-you-need">Collect only what you need</a></li>
+              <li><a href="#a-clear-privacy-policy">A clear privacy policy</a></li>
+              <li><a href="#consent-and-the-cookie-banner">Consent and the cookie banner</a></li>
+              <li><a href="#data-subject-rights">Data subject rights</a></li>
+              <li><a href="#security-and-access-control">Security and access control</a></li>
+              <li><a href="#security-incidents">Security incidents</a></li>
+              <li><a href="#the-role-of-the-data-protection-officer-dpo">The role of the data protection officer (DPO)</a></li>
+              <li><a href="#processors-and-vendors">Processors and vendors</a></li>
+              <li><a href="#privacy-by-design">Privacy by design</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>The LGPD (Lei Geral de Proteção de Dados Pessoais, Law No. 13,709/2018) is Brazil's general data protection law, similar in spirit to Europe's GDPR. It applies to company websites and software that collect or use data about individuals, such as a name, email, phone number, CPF (Brazil's individual taxpayer number), address or purchase history. In practice, a company must know what data it collects, why, on what legal basis, for how long, who it shares it with and how it protects it.</p>
+<p>For a website, that means forms that ask only for what's needed, a clear privacy policy, a cookie banner that actually works and a channel for people to exercise their rights. For software, it also means access control, a record of who accesses what, an incident response plan and contracts with vendors that process data on the company's behalf.</p>
+<p>This article is informational and technical. It is not legal advice and does not replace guidance from a legal professional, who should assess your company's specific situation.</p>
+<h2 id="who-the-lgpd-applies-to">Who the LGPD applies to</h2>
+<p>The LGPD covers personal data processing by companies, organizations and public bodies, online or offline, and is not limited to companies based in Brazil. In general terms, it can apply when the processing takes place in Brazil, when the purpose is to offer goods or services to people located in Brazil or to process their data, or when the data was collected in Brazil. A foreign company with customers or users in Brazil may therefore need to comply. There are exceptions, such as purely personal, non-commercial use. If you operate in other countries, their own data protection rules may apply as well, so check the rules where you do business.</p>
+<h2 id="key-concepts">Key concepts</h2>
+<p>A few terms come up constantly:</p>
+<ul>
+<li><strong>Personal data:</strong> any information that identifies a person or makes it possible to identify them.</li>
+<li><strong>Sensitive personal data:</strong> data about health, racial or ethnic origin, religion, political opinion, union membership, sex life, and genetic or biometric data. It calls for extra care.</li>
+<li><strong>Data subject:</strong> the person the data refers to.</li>
+<li><strong>Processing:</strong> any operation involving data, such as collecting, storing, viewing, sharing or deleting it.</li>
+<li><strong>Controller:</strong> whoever makes decisions about the processing. Usually, the company that owns the website or software.</li>
+<li><strong>Processor:</strong> whoever processes data on the controller's behalf, such as the hosting company, the email marketing platform or the software vendor.</li>
+</ul>
+<h2 id="legal-bases-every-use-of-data-needs-a-justification">Legal bases: every use of data needs a justification</h2>
+<p>The LGPD lists the circumstances that authorize processing data, called <strong>legal bases</strong>. They include the data subject's consent, performance of a contract, compliance with a legal or regulatory obligation and the controller's legitimate interest, among others set out in the law.</p>
+<p>In practice, each purpose must be tied to an appropriate legal basis. A delivery address for an order is justified by performance of the contract. Issuing a nota fiscal (the Brazilian electronic invoice) is justified by a legal obligation. Sending a newsletter usually depends on consent. Choosing the right legal basis for each case is a decision that should involve legal advice.</p>
+<p>A common mistake is treating consent as the answer to everything. It is one of the bases, and not always the most appropriate.</p>
+<h2 id="collect-only-what-you-need">Collect only what you need</h2>
+<p>The necessity principle calls for collecting the minimum data required for the purpose. On a website, that means reviewing every form:</p>
+<ul>
+<li>Does a contact form need a CPF? Almost never.</li>
+<li>Is the date of birth used for anything? If not, remove it from the form.</li>
+<li>Is the phone number required or optional?</li>
+</ul>
+<p>Less data collected means less risk if there's a breach. This review is easiest during planning, so include it in the <a href="/en/blog/how-to-write-a-software-project-brief/">project brief</a>.</p>
+<h2 id="a-clear-privacy-policy">A clear privacy policy</h2>
+<p>The privacy policy explains to data subjects, in understandable language, how their data is handled. At a minimum, it should state:</p>
+<ul>
+<li>what data is collected and how;</li>
+<li>for what purposes;</li>
+<li>who it is shared with, such as vendors and partners;</li>
+<li>how long it is kept;</li>
+<li>what the data subject's rights are and how to exercise them;</li>
+<li>who the controller is and how to contact the data protection officer.</li>
+</ul>
+<p>Copying another site's policy is a problem: it has to describe what your site actually does, including traffic analytics tools and advertising pixels.</p>
+<h2 id="consent-and-the-cookie-banner">Consent and the cookie banner</h2>
+<p>When consent is the applicable legal basis, it must be free, informed and unambiguous, for a specific purpose. Pre-checked boxes and vague text like "I accept everything" don't meet that standard. People must also be able to withdraw consent easily.</p>
+<p>Cookies are small files a website stores in the browser. Some are necessary for the site to work, such as keeping a user logged in. Others are used for audience analytics or advertising and generally depend on consent.</p>
+<p>A cookie banner that actually works:</p>
+<ul>
+<li>groups cookies by category (necessary, analytics, marketing);</li>
+<li>loads optional scripts only after the visitor accepts;</li>
+<li>makes declining as easy as accepting;</li>
+<li>lets the visitor change their choice later.</li>
+</ul>
+<p>The most frequent mistake is the decorative banner, which appears after the tracking scripts have already loaded. Controlling those scripts also helps your <a href="/en/blog/website-speed-core-web-vitals/">website speed</a>.</p>
+<h2 id="data-subject-rights">Data subject rights</h2>
+<p>The law grants data subjects a set of rights, including: confirming whether the company processes their data, accessing that data, correcting inaccurate information, requesting deletion of data processed on the basis of consent, requesting portability, knowing who the data has been shared with and withdrawing consent.</p>
+<p>Your software must be able to locate all of a person's data, export it, correct it and delete or anonymize it when appropriate. With data scattered across spreadsheets and disconnected systems, a simple request turns into slow manual work. Good <a href="/en/blog/system-integration-with-apis/">system integration with APIs</a> helps keep data organized and traceable.</p>
+<h2 id="security-and-access-control">Security and access control</h2>
+<p>The LGPD requires technical and administrative measures to protect data. In software, that includes, among other things:</p>
+<ul>
+<li><strong>Role-based access control:</strong> each person sees only what they need for their job. A support agent doesn't need to see financial data, for example.</li>
+<li><strong>Strong authentication:</strong> passwords stored as hashes using algorithms designed for that purpose (never in plain text) and, for administrative access, two-factor verification.</li>
+<li><strong>Encryption in transit:</strong> HTTPS across the whole site and on every integration.</li>
+<li><strong>Protected and tested backups.</strong></li>
+<li><strong>Security updates</strong> for the server, the framework and the libraries.</li>
+</ul>
+<h3 id="recording-who-accesses-what">Recording who accesses what</h3>
+<p>Keeping <strong>access logs</strong>, meaning records of who viewed or changed a given piece of data and when, helps investigate incidents, spot improper access and demonstrate good practices. Those logs need protection too.</p>
+<h2 id="security-incidents">Security incidents</h2>
+<p>An incident is any event that compromises the confidentiality, integrity or availability of data, such as a leak, unauthorized access or the loss of a database.</p>
+<p>When an incident may cause significant risk or harm to data subjects, the law requires notifying the ANPD (Autoridade Nacional de Proteção de Dados, Brazil's national data protection authority) and the affected data subjects. That's why the plan has to exist beforehand: who gets called, how to contain the problem, how to assess the impact and how to document what happened.</p>
+<h2 id="the-role-of-the-data-protection-officer-dpo">The role of the data protection officer (DPO)</h2>
+<p>The <strong>encarregado</strong>, the LGPD's term for what is commonly called the DPO (data protection officer), is the person or company appointed by the controller as the point of contact with data subjects and with the ANPD. They receive requests and complaints and guide the team on good practices.</p>
+<p>The DPO's identity and contact details must be clearly available, usually in the privacy policy. There are specific, simplified rules for small businesses, which should be checked with legal counsel.</p>
+<h2 id="processors-and-vendors">Processors and vendors</h2>
+<p>Almost every website and system depends on third parties: hosting, email, payment gateway, CRM, AI services. Each one that processes data on the company's behalf is a processor.</p>
+<p>In practice, you need to:</p>
+<ul>
+<li>map which vendors receive personal data;</li>
+<li>check where that data is stored and whether it is transferred to other countries;</li>
+<li>have contract clauses covering data protection;</li>
+<li>confirm the vendor's security measures.</li>
+</ul>
+<p>The same applies to whoever develops your software. When deciding between <a href="/en/blog/custom-software-vs-off-the-shelf/">custom software and an off-the-shelf product</a>, ask who has access to the production environment and how backups work. Projects involving <a href="/en/blog/how-to-use-ai-in-business/">artificial intelligence</a> call for the same care.</p>
+<h2 id="privacy-by-design">Privacy by design</h2>
+<p>Retrofitting an existing system is usually more work than building it with privacy in mind from the start. Defining access roles, retention periods and logs during the design phase avoids rework. See the <a href="/en/#solutions">solutions</a> we build for websites and software.</p>
+<blockquote><p>LGPD compliance is not a document posted in the website footer. It is the sum of technical and process decisions that have to hold up day to day.</p></blockquote>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="does-a-simple-business-website-need-to-comply-with-the-lgpd">Does a simple business website need to comply with the LGPD?</h3>
+<p>Yes, if it collects any personal data from people covered by the law, even just a name and email in a contact form, or if it uses analytics or advertising cookies. The effort is smaller than for a full system, but a privacy policy, data minimization and a cookie banner are still necessary.</p>
+<h3 id="is-publishing-a-privacy-policy-enough">Is publishing a privacy policy enough?</h3>
+<p>No. The policy describes what happens, but the website and the software have to work the way it says. If the policy says marketing cookies depend on consent, they can't load before the visitor accepts.</p>
+<h3 id="who-is-responsible-if-the-software-vendor-leaks-the-data">Who is responsible if the software vendor leaks the data?</h3>
+<p>The law divides responsibilities between controller and processor according to each one's role. That's why clear contracts and vendors with good practices matter. Any specific case should be assessed with legal advice.</p>
+<h3 id="do-i-have-to-delete-all-the-data-when-a-customer-asks">Do I have to delete all the data when a customer asks?</h3>
+<p>Not always. Some data must be kept because of legal obligations, such as tax records. The system should delete or anonymize what can be removed and keep, securely, what the law requires.</p>
+<p>If you're planning a website or software product and want data protection built into the design from the beginning, let's talk about the project. PEROVANO works remotely and can run projects in English. <a href="/en/#contact">Get in touch</a> and tell us what you need built.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22LGPD%3A%20Brazil%27s%20data%20protection%20law%20for%20websites%20and%20software%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Software" data-search="how much does it cost to build an app? what drives the price how much does it cost to build an app? learn the factors that shape the price, the recurring costs after launch, and how an mvp keeps the budget in check. how much does it cost to build an app, app development cost, cost to develop a mobile app, app development budget">
+            <p class="post-card__meta"><span>Software</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-much-does-it-cost-to-build-an-app/">How much does it cost to build an app? What drives the price</a></h3>
+            <p class="post-card__excerpt">How much does it cost to build an app? Learn the factors that shape the price, the recurring costs after launch, and how an MVP keeps the budget in check.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="how to build a saas: from business model to architecture how to build a saas: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics. how to build a saas, software as a service development, multi-tenant architecture, saas recurring billing">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-build-a-saas/">How to build a SaaS: from business model to architecture</a></h3>
+            <p class="post-card__excerpt">How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="how to build an app for your business, step by step how to build an app for your business: the steps from goal to launch on google play and the app store, who is involved, what to provide and common mistakes. how to build an app for your business, how to create a business app, app development process, publish an app on the app store and google play">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-build-an-app-for-your-business/">How to build an app for your business, step by step</a></h3>
+            <p class="post-card__excerpt">How to build an app for your business: the steps from goal to launch on Google Play and the App Store, who is involved, what to provide and common mistakes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

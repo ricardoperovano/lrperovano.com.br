@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is a PWA (progressive web app) and when is it worth it | PEROVANO</title>
+  <meta name="description" content="What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/blog/what-is-a-pwa/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/blog/o-que-e-pwa/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/blog/what-is-a-pwa/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/blog/what-is-a-pwa/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="PEROVANO Blog" href="/en/blog/feed.xml">
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="What is a PWA (progressive web app) and when is it worth it | PEROVANO">
+  <meta property="og:description" content="What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/blog/what-is-a-pwa/">
+  <meta property="og:image" content="https://lrperovano.com.br/en/blog/what-is-a-pwa/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/en/blog/what-is-a-pwa/og.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta property="article:section" content="Software">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What is a PWA (progressive web app) and when is it worth it",
+  "description": "What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "en",
+  "articleSection": "Software",
+  "keywords": "what is a PWA, progressive web app, PWA vs native app, PWA advantages and disadvantages",
+  "wordCount": 1489,
+  "image": "https://lrperovano.com.br/en/blog/what-is-a-pwa/og.png",
+  "mainEntityOfPage": "https://lrperovano.com.br/en/blog/what-is-a-pwa/",
+  "url": "https://lrperovano.com.br/en/blog/what-is-a-pwa/",
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Perovano",
+    "url": "https://lrperovano.com.br/en/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://lrperovano.com.br/#organizacao",
+    "name": "PEROVANO",
+    "legalName": "L R PEROVANO LTDA",
+    "url": "https://lrperovano.com.br/",
+    "logo": "https://lrperovano.com.br/apple-touch-icon.png"
+  },
+  "translationOfWork": {
+    "@id": "https://lrperovano.com.br/blog/o-que-e-pwa/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lrperovano.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://lrperovano.com.br/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Software",
+      "item": "https://lrperovano.com.br/en/blog/category/software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "What is a PWA (progressive web app) and when is it worth it",
+      "item": "https://lrperovano.com.br/en/blog/what-is-a-pwa/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a PWA the same as a responsive website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A responsive website adapts to different screen sizes. A PWA is responsive too, but it goes further: it can be installed, open full screen, work offline and send notifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a PWA work on the iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Users install it from the browser's share menu. Some features are restricted on iOS, and push notifications only work with the PWA installed on the home screen, starting with iOS 16.4."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I turn my current website into a PWA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In many cases, yes. Adding a manifest and a service worker is relatively simple. The bigger job is adapting the navigation to feel like an app and deciding what works offline. Very old or slow websites may need a redesign first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a PWA replace an app store app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a lot of business software, yes. For products that depend on app store presence or advanced device features, no. In those cases, the PWA can be the first step, with the store app coming later. If you are weighing a PWA against a native or cross-platform app, the safest approach is to start from the features your product really needs. PEROVANO works remotely, can run the project in English and can help you assess your case and recommend the best option. Get in touch to talk about your project."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="/en/#projects">Projects</a></li>
+          <li><a href="/en/#solutions">Solutions</a></li>
+          <li><a href="/en/#how-we-work">How we work</a></li>
+          <li><a href="/en/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/en/#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/blog/o-que-e-pwa/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="/en/#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="post">
+      <header class="post__header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/blog/">Blog</a></li>
+              <li><a href="/en/blog/category/software/">Software</a></li>
+            </ol>
+          </nav>
+          <h1 class="post__title">What is a PWA (progressive web app) and when is it worth it</h1>
+          <p class="post__lead">What is a PWA? A website you can install like an app that also works offline. See the benefits, the limits on Android and iPhone, and when to choose native.</p>
+          <p class="post__meta">
+            <span>By Ricardo Perovano</span>
+            <span><time datetime="2026-10-30">October 30, 2026</time></span>
+            <span>8 min read</span>
+          </p>
+        </div>
+      </header>
+
+      <div class="container post__layout">
+        <aside class="post__toc" aria-labelledby="toc-titulo">
+          <h2 id="toc-titulo">In this article</h2>
+          <ol>
+              <li><a href="#how-a-pwa-works">How a PWA works</a></li>
+              <li><a href="#advantages-of-a-pwa">Advantages of a PWA</a></li>
+              <li><a href="#limitations-you-need-to-factor-in">Limitations you need to factor in</a></li>
+              <li><a href="#pwa-native-app-or-cross-platform-how-to-choose">PWA, native app or cross-platform: how to choose</a></li>
+              <li><a href="#what-to-ask-your-vendor">What to ask your vendor</a></li>
+              <li><a href="#frequently-asked-questions">Frequently asked questions</a></li>
+          </ol>
+        </aside>
+
+        <div class="post__body prose-article">
+<p>A PWA, short for progressive web app, is a website built to behave like an app. Users open it in the browser and, if they want, install it on the home screen of their phone or computer. From then on, the PWA opens with its own icon, full screen, without the address bar, and it can keep working even without an internet connection.</p>
+<p>In practice, it is a single product that works as both a website and an app. Nobody needs to download anything from a store to start using it, and anyone who prefers can install it with one tap. Updates arrive as soon as they are published on the server, without waiting for store approval or for the user to tap "update".</p>
+<p>A PWA is usually a good choice for frequently used business software, customer portals, internal tools and products that need to be found on Google. It falls behind a native app when the project depends on advanced device features, heavy processing or a strong presence in the app stores.</p>
+<h2 id="how-a-pwa-works">How a PWA works</h2>
+<p>Three pieces turn an ordinary website into a PWA:</p>
+<ul>
+<li><strong>HTTPS</strong>: the site must be served over a secure connection, which is already standard in any serious project.</li>
+<li><strong>Manifest</strong>: a file that tells the device the app's name, icon and colors, and how it should open, for example full screen.</li>
+<li><strong>Service worker</strong>: a script that runs in the background in the browser, between the app and the internet. It stores screens and data on the device, lets the app open without a connection and receives notifications.</li>
+</ul>
+<p>With these pieces in place, the browser recognizes the site as installable. On Android, browsers such as Chrome usually offer installation directly. On the iPhone, the path is the browser's share menu, using the option to add to the home screen.</p>
+<p>Offline support is not automatic. The project has to decide what is available without internet: only screens already visited, an entire catalog, or forms that users fill out offline and that are sent once the connection returns. Each level takes more development and testing work.</p>
+<h2 id="advantages-of-a-pwa">Advantages of a PWA</h2>
+<h3 id="one-codebase-for-every-device">One codebase for every device</h3>
+<p>The same PWA runs on Android, iPhone, desktop and tablet. Instead of maintaining an Android app, an iOS app and a separate website, the team maintains a single codebase. That reduces development, testing and maintenance effort over the years.</p>
+<h3 id="updates-without-the-app-store">Updates without the app store</h3>
+<p>Fixes and new features go live as soon as they are published. There is no store review queue and no users stuck on old versions. For software whose business rules change often, that makes a difference.</p>
+<h3 id="lower-cost-than-two-native-apps">Lower cost than two native apps</h3>
+<p>Building two native apps generally means two codebases, two publishing routines and often professionals with different specialties. A PWA tends to cost less because everything lives in one web project. The article on <a href="/en/blog/how-much-does-it-cost-to-build-an-app/">how much it costs to build an app</a> details the factors that weigh most on the budget.</p>
+<h3 id="it-can-be-found-on-google">It can be found on Google</h3>
+<p>Because a PWA is a website, its public pages can be indexed by search engines. A native app lives inside the store, and its content does not show up in search the same way. For products that depend on organic traffic, this matters. Good practices for <a href="/en/blog/seo-for-business-websites/">SEO for business websites</a> and <a href="/en/blog/website-speed-core-web-vitals/">website speed and Core Web Vitals</a> apply directly.</p>
+<h3 id="no-friction-to-get-started">No friction to get started</h3>
+<p>Users can try the product from a link, without downloading anything. Installing becomes a later choice for those who have already seen the value. For new products, this lowers the barrier to entry.</p>
+<h2 id="limitations-you-need-to-factor-in">Limitations you need to factor in</h2>
+<h3 id="access-to-device-features">Access to device features</h3>
+<p>Modern browsers allow the use of the camera, microphone, geolocation, notifications and sharing. But some features are still restricted or unavailable to web applications, especially outside Android: communication with certain Bluetooth accessories, NFC reading, long-running background tasks and deep integration with the operating system. If your product depends on something like this, confirm compatibility before deciding.</p>
+<h3 id="differences-between-android-and-iphone">Differences between Android and iPhone</h3>
+<p>Android, with Chrome, usually offers broader support for PWA features. On the iPhone, browsers generally use the same engine as Safari, and Apple has historically been more cautious about releasing web features.</p>
+<p>Push notifications are one example. iOS started supporting push notifications for PWAs installed on the home screen in version 16.4. In other words, on the iPhone the user has to install the PWA and allow notifications; a site opened only in the browser does not receive them. Details like this change with new system versions, so it is best to test on your audience's real devices before promising a feature.</p>
+<h3 id="app-store-presence">App store presence</h3>
+<p>Many people look for apps directly on Google Play or the App Store. A PWA does not appear there by default. You can package a PWA to publish on Google Play, and there are routes to the App Store, but Apple tends to require the app to offer more than a website inside a frame. If being in the stores is part of your marketing strategy, plan for it from the start.</p>
+<h3 id="performance-in-extreme-cases">Performance in extreme cases</h3>
+<p>For most business software, such as records management, scheduling, dashboards and orders, a well-built PWA is fast enough. Games with heavy graphics, video editing and intensive on-device processing remain native app territory.</p>
+<h2 id="pwa-native-app-or-cross-platform-how-to-choose">PWA, native app or cross-platform: how to choose</h2>
+<p>There are three main paths, and each one fits a different set of needs.</p>
+<p>A <strong>PWA</strong> fits when:</p>
+<ul>
+<li>the product needs to work well on both phone and computer</li>
+<li>being found on Google matters</li>
+<li>the rules change often and updates need to be immediate</li>
+<li>the device features required are the common ones, such as camera, location and notifications</li>
+<li>the budget calls for a single codebase</li>
+</ul>
+<p>A <strong>native app</strong>, built separately for Android and iOS with each platform's tools, fits when:</p>
+<ul>
+<li>performance is critical, as in games or media processing</li>
+<li>the app depends on specific system features or accessories</li>
+<li>the experience must follow each platform's visual conventions closely</li>
+</ul>
+<p><strong>Cross-platform</strong>, with technologies such as React Native or Flutter, produces store-installable apps for Android and iOS from shared code. It fits when:</p>
+<ul>
+<li>being in the app stores is a must</li>
+<li>the app needs device features the web does not support well on the iPhone</li>
+<li>the budget cannot cover two native apps</li>
+</ul>
+<blockquote><p>The central question is not which technology is best, but which features the product needs in its first year and where your audience will look for it.</p></blockquote>
+<p>A common strategy is to start with a PWA to validate the product with real users, in the spirit of an <a href="/en/blog/mvp-how-to-turn-a-software-idea-into-a-product/">MVP</a>, and move to an app store app only when there is clear demand. Since the back end (the part of the system that runs on the server, with the rules and the database) can be reused, migrating does not mean starting from scratch. The guide on <a href="/en/blog/how-to-build-an-app-for-your-business/">how to build an app for your business</a> walks through the project steps for any of these paths.</p>
+<h2 id="what-to-ask-your-vendor">What to ask your vendor</h2>
+<ul>
+<li>Which features will work offline, and what happens to data entered without a connection?</li>
+<li>Will notifications work on iPhone and Android? Under what conditions?</li>
+<li>On which devices and browsers will the PWA be tested?</li>
+<li>Is there a plan to publish in the app stores, if that becomes necessary later?</li>
+<li>How will the back end be built so it can also serve a future native app?</li>
+</ul>
+<p>PEROVANO builds web applications, PWAs and mobile apps, and our <a href="/en/#solutions">solutions</a> describe each area of work.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="is-a-pwa-the-same-as-a-responsive-website">Is a PWA the same as a responsive website?</h3>
+<p>No. A responsive website adapts to different screen sizes. A PWA is responsive too, but it goes further: it can be installed, open full screen, work offline and send notifications.</p>
+<h3 id="does-a-pwa-work-on-the-iphone">Does a PWA work on the iPhone?</h3>
+<p>Yes. Users install it from the browser's share menu. Some features are restricted on iOS, and push notifications only work with the PWA installed on the home screen, starting with iOS 16.4.</p>
+<h3 id="can-i-turn-my-current-website-into-a-pwa">Can I turn my current website into a PWA?</h3>
+<p>In many cases, yes. Adding a manifest and a service worker is relatively simple. The bigger job is adapting the navigation to feel like an app and deciding what works offline. Very old or slow websites may need a redesign first.</p>
+<h3 id="can-a-pwa-replace-an-app-store-app">Can a PWA replace an app store app?</h3>
+<p>For a lot of business software, yes. For products that depend on app store presence or advanced device features, no. In those cases, the PWA can be the first step, with the store app coming later.</p>
+<p>If you are weighing a PWA against a native or cross-platform app, the safest approach is to start from the features your product really needs. PEROVANO works remotely, can run the project in English and can help you assess your case and recommend the best option. <a href="/en/#contact">Get in touch</a> to talk about your project.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="post-cta on-dark" aria-labelledby="cta-titulo">
+      <div class="container post-cta__inner">
+        <div>
+          <h2 id="cta-titulo">Want to apply this to your business?</h2>
+          <p>Tell us about your challenge. The first conversation is about understanding your context and pointing to the best path — whether it's a website, a software system or an automation. We work remotely and run projects in English.</p>
+        </div>
+        <div class="post-cta__actions">
+          <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi%21%20I%20read%20the%20article%20%22What%20is%20a%20PWA%20%28progressive%20web%20app%29%20and%20when%20is%20it%20worth%20it%22%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline-light" href="/en/#projects">See live projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section related" aria-labelledby="relacionados-titulo">
+      <div class="container">
+        <h2 id="relacionados-titulo" class="related__title">Keep reading</h2>
+        <div class="post-grid">
+          <article class="post-card" data-category="Software" data-search="custom software vs off-the-shelf: how to decide custom software or off-the-shelf? compare total cost over time, process fit and vendor lock-in, and see when a hybrid approach is the better choice. custom software vs off the shelf, build vs buy software, custom software development, when to build your own software">
+            <p class="post-card__meta"><span>Software</span><span>8 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/custom-software-vs-off-the-shelf/">Custom software vs off-the-shelf: how to decide</a></h3>
+            <p class="post-card__excerpt">Custom software or off-the-shelf? Compare total cost over time, process fit and vendor lock-in, and see when a hybrid approach is the better choice.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="how to build a saas: from business model to architecture how to build a saas: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics. how to build a saas, software as a service development, multi-tenant architecture, saas recurring billing">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/how-to-build-a-saas/">How to build a SaaS: from business model to architecture</a></h3>
+            <p class="post-card__excerpt">How to build a SaaS: what changes from internal software, multi-tenancy, data isolation, recurring billing, data protection, validation and the key metrics.</p>
+          </article>
+          <article class="post-card" data-category="Software" data-search="lgpd: brazil&#x27;s data protection law for websites and software what brazil&#x27;s lgpd requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors. lgpd brazil, lgpd compliance, brazil data protection law, lgpd for websites, lgpd software development">
+            <p class="post-card__meta"><span>Software</span><span>9 min read</span></p>
+            <h3 class="post-card__title"><a href="/en/blog/lgpd-brazil-data-protection-for-websites-and-software/">LGPD: Brazil&#x27;s data protection law for websites and software</a></h3>
+            <p class="post-card__excerpt">What Brazil&#x27;s LGPD requires of websites and software: who it applies to, legal bases, minimal data, privacy policy, cookies, rights, security and vendors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/en/" aria-label="PEROVANO — Software engineering, home page">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="/en/#projects">Projects</a></li>
+            <li><a href="/en/#solutions">Solutions</a></li>
+            <li><a href="/en/#how-we-work">How we work</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
