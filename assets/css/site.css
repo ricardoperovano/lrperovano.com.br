@@ -1333,3 +1333,21 @@ h3 {
   .contact__form-panel {padding:22px 18px;}
   .contact__title {font-size:clamp(2.25rem,9vw,3.5rem);}
 }
+
+
+/* PEROVANO Core 07 — brand lockups */
+.site-header .brand,
+.site-footer .brand { display:inline-flex; align-items:center; justify-content:center; line-height:1; flex:0 0 auto; }
+.site-header .brand__logo { display:block; width:clamp(208px,21vw,266px); height:auto; max-width:100%; }
+.site-footer .brand__logo { display:block; width:clamp(235px,26vw,305px); height:auto; max-width:100%; }
+.site-header .brand__logo,
+.site-footer .brand__logo { transition:opacity .2s ease; }
+.site-header .brand:hover .brand__logo,
+.site-footer .brand:hover .brand__logo { opacity:.88; }
+@media(max-width:600px) {
+  .site-header .brand__logo {width:205px;}
+  .site-footer .brand__logo {width:245px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .site-header .brand__logo,.site-footer .brand__logo { transition:none; }
+}
