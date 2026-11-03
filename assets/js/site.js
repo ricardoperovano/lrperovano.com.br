@@ -1,4 +1,4 @@
-// PEROVANO — comportamento do site. Tudo aqui é melhoria progressiva:
+// PERVOX — comportamento do site. Tudo aqui é melhoria progressiva:
 // sem JS o conteúdo, os links e a navegação continuam funcionando.
 (function () {
   'use strict';

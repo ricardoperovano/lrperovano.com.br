@@ -509,7 +509,7 @@ def head(lang: Lang, title: str, description: str, path: str, *, other_path: str
   <meta name="description" content="{e(description)}">
   <meta name="theme-color" content="#143C3A">
   <link rel="canonical" href="{e(canonical)}">
-{alternates(pt_url, en_url)}  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+{alternates(pt_url, en_url)}  <link rel="icon" type="image/svg+xml" href="/assets/brand/pervox-favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="{e(lang.t['blog_name'])}" href="{lang.blog}feed.xml">
