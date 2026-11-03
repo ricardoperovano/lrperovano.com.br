@@ -1294,3 +1294,42 @@ h3 {
   .consulting-expertise__card h3 {margin-top:40px;}
 }
 @media(prefers-reduced-motion:reduce){.consulting-expertise__card,.consulting-expertise__card a {transition:none;}}
+
+
+/* VipDesk widget embedded in corporate contact section */
+.contact > .container {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 450px);
+  align-items: center;
+  gap: clamp(32px, 5vw, 96px);
+}
+.contact__inner { min-width: 0; }
+.contact__title { font-size: clamp(2.7rem, 4.3vw, 5.25rem); }
+.contact .lead { max-width: 48ch; line-height: 1.7; }
+.contact__form-panel {
+  min-width: 0; padding: clamp(20px, 3vw, 34px);
+  background: #fff; color: #182436;
+  border: 1px solid #e0e6ed; border-radius: 12px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .18);
+}
+.contact__form-header { margin-bottom: 22px; }
+.contact__form-eyebrow { display:block; margin-bottom:12px; font-size:.67rem; letter-spacing:.15em; font-weight:700; color:#8d6c3e; }
+.contact__form-header h3 { margin:0 0 8px; color:#101b2b; font-size:clamp(1.4rem,2vw,1.75rem); letter-spacing:-.035em; }
+.contact__form-header p { color:#5c6979; font-size:.875rem; line-height:1.55; }
+.contact__widget { min-width:0; max-width:100%; }
+.contact__widget .vd-lpform {
+  max-width:100%; width:100%; margin:0; padding:0; border:0;
+  border-radius:0; box-shadow:none; background:transparent;
+}
+.contact__widget .vd-lpform::before { display:none; }
+.contact__widget :is(input,select,textarea,button) { max-width:100%; }
+@media(max-width:1000px) {
+  .contact > .container {grid-template-columns:minmax(0,1fr);gap:42px;}
+  .contact__form-panel {width:100%;max-width:600px;}
+  .contact__details {margin-top:40px;}
+}
+@media(max-width:600px) {
+  .contact__form-panel {padding:22px 18px;}
+  .contact__title {font-size:clamp(2.25rem,9vw,3.5rem);}
+}
