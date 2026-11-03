@@ -1,248 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog da PEROVANO</title>
-    <link>https://lrperovano.com.br/blog/</link>
-    <atom:link href="https://lrperovano.com.br/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <title>Blog da PERVOX</title>
+    <link>https://pervox.tech/blog/</link>
+    <atom:link href="https://pervox.tech/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Sites, sistemas sob medida, integrações, automação e inteligência artificial para empresas.</description>
     <language>pt-BR</language>
     <lastBuildDate>Fri, 30 Oct 2026 09:00:00 +0000</lastBuildDate>
     <item>
       <title>WordPress ou site sob medida: como escolher</title>
-      <link>https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/wordpress-ou-site-sob-medida/</guid>
+      <link>https://pervox.tech/blog/wordpress-ou-site-sob-medida/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/wordpress-ou-site-sob-medida/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>WordPress ou site sob medida? Veja quando cada um faz sentido, os cuidados com plugins, segurança e desempenho, e as opções intermediárias, como CMS headless.</description>
     </item>
     <item>
       <title>Velocidade do site e Core Web Vitals: o que corrigir</title>
-      <link>https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/velocidade-do-site-core-web-vitals/</guid>
+      <link>https://pervox.tech/blog/velocidade-do-site-core-web-vitals/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/velocidade-do-site-core-web-vitals/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Entenda como a velocidade do site afeta vendas e SEO, o que medem LCP, INP e CLS, como avaliar no PageSpeed Insights e quais correções priorizar.</description>
     </item>
     <item>
       <title>Sistema sob medida ou software pronto: como decidir</title>
-      <link>https://lrperovano.com.br/blog/sistema-sob-medida-ou-software-pronto/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/sistema-sob-medida-ou-software-pronto/</guid>
+      <link>https://pervox.tech/blog/sistema-sob-medida-ou-software-pronto/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/sistema-sob-medida-ou-software-pronto/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Sistema sob medida ou software pronto? Compare custos ao longo do tempo, aderência ao processo, dependência de fornecedor e quando o caminho híbrido é melhor.</description>
     </item>
     <item>
       <title>SEO para sites de empresas: o que é preciso para aparecer</title>
-      <link>https://lrperovano.com.br/blog/seo-para-sites-de-empresas/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/seo-para-sites-de-empresas/</guid>
+      <link>https://pervox.tech/blog/seo-para-sites-de-empresas/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/seo-para-sites-de-empresas/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Saiba o que um site de empresa precisa para aparecer no Google: indexação, Search Console, títulos, velocidade, mobile, conteúdo útil e perfil da empresa.</description>
     </item>
     <item>
       <title>SEO local: como aparecer no Google Maps</title>
-      <link>https://lrperovano.com.br/blog/seo-local-google-business-profile/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/seo-local-google-business-profile/</guid>
+      <link>https://pervox.tech/blog/seo-local-google-business-profile/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/seo-local-google-business-profile/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Como aparecer no Google Maps: configure o Perfil da Empresa no Google, mantenha nome, endereço e telefone consistentes e trabalhe avaliações, fotos e site.</description>
     </item>
     <item>
       <title>Quanto custa um site profissional e o que define o preço</title>
-      <link>https://lrperovano.com.br/blog/quanto-custa-um-site-profissional/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/quanto-custa-um-site-profissional/</guid>
+      <link>https://pervox.tech/blog/quanto-custa-um-site-profissional/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/quanto-custa-um-site-profissional/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Veja o que forma o preço de um site profissional: tipo, páginas, conteúdo, design, integrações, SEO e manutenção, e como comparar propostas com segurança.</description>
     </item>
     <item>
       <title>Quanto custa desenvolver um aplicativo: o que define o preço</title>
-      <link>https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/quanto-custa-desenvolver-um-aplicativo/</guid>
+      <link>https://pervox.tech/blog/quanto-custa-desenvolver-um-aplicativo/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/quanto-custa-desenvolver-um-aplicativo/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Quanto custa desenvolver um aplicativo? Veja os fatores que formam o preço, os custos recorrentes depois do lançamento e como reduzir o valor com um MVP.</description>
     </item>
     <item>
       <title>Quando trocar a planilha por um sistema</title>
-      <link>https://lrperovano.com.br/blog/trocar-planilha-por-sistema/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/trocar-planilha-por-sistema/</guid>
+      <link>https://pervox.tech/blog/trocar-planilha-por-sistema/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/trocar-planilha-por-sistema/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Saiba quando trocar a planilha por um sistema: sinais de gargalo, o que muda na operação, como migrar os dados sem parar a empresa e quais opções avaliar.</description>
     </item>
     <item>
       <title>O que é landing page e quando usar na sua empresa</title>
-      <link>https://lrperovano.com.br/blog/o-que-e-landing-page/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/o-que-e-landing-page/</guid>
+      <link>https://pervox.tech/blog/o-que-e-landing-page/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/o-que-e-landing-page/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Landing page é uma página com um único objetivo, como gerar contatos ou vendas. Veja a diferença para o site, quando usar, elementos essenciais e como medir.</description>
     </item>
     <item>
       <title>O que é RAG (geração aumentada por recuperação)</title>
-      <link>https://lrperovano.com.br/blog/o-que-e-rag/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/o-que-e-rag/</guid>
+      <link>https://pervox.tech/blog/o-que-e-rag/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/o-que-e-rag/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Inteligência artificial</category>
       <description>O que é RAG: como a IA busca trechos nos documentos da empresa para responder com fonte, como funciona, casos de uso, cuidados e a diferença para fine-tuning.</description>
     </item>
     <item>
       <title>O que é PWA (Progressive Web App) e quando vale a pena</title>
-      <link>https://lrperovano.com.br/blog/o-que-e-pwa/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/o-que-e-pwa/</guid>
+      <link>https://pervox.tech/blog/o-que-e-pwa/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/o-que-e-pwa/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Entenda o que é PWA, o site que se instala como aplicativo e funciona offline. Veja vantagens, limitações no Android e no iPhone e quando escolher app nativo.</description>
     </item>
     <item>
       <title>O que um site institucional precisa ter: checklist</title>
-      <link>https://lrperovano.com.br/blog/o-que-um-site-institucional-precisa-ter/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/o-que-um-site-institucional-precisa-ter/</guid>
+      <link>https://pervox.tech/blog/o-que-um-site-institucional-precisa-ter/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/o-que-um-site-institucional-precisa-ter/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Checklist do que um site institucional precisa ter: proposta clara, serviços, provas, contato que funciona, celular, velocidade, SEO, LGPD, HTTPS e medição.</description>
     </item>
     <item>
       <title>No-code, low-code ou desenvolvimento sob medida?</title>
-      <link>https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/no-code-low-code-ou-desenvolvimento/</guid>
+      <link>https://pervox.tech/blog/no-code-low-code-ou-desenvolvimento/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/no-code-low-code-ou-desenvolvimento/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Automação</category>
       <description>No-code, low-code ou desenvolvimento sob medida? Veja quando cada um funciona, os limites de custo, dados e LGPD e os sinais de que é hora de migrar.</description>
     </item>
     <item>
       <title>Manutenção de software: o que inclui e por que é necessária</title>
-      <link>https://lrperovano.com.br/blog/manutencao-de-software/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/manutencao-de-software/</guid>
+      <link>https://pervox.tech/blog/manutencao-de-software/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/manutencao-de-software/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Gestão de projetos</category>
       <description>Manutenção de software: tipos (corretiva, adaptativa, evolutiva e preventiva), monitoramento, backups, modelos de contrato e o que definir no acordo.</description>
     </item>
     <item>
       <title>MVP: como tirar uma ideia de sistema do papel</title>
-      <link>https://lrperovano.com.br/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</guid>
+      <link>https://pervox.tech/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/mvp-como-tirar-ideia-de-sistema-do-papel/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Gestão de projetos</category>
       <description>Entenda o que é MVP, como definir o escopo mínimo de um sistema, validar com usuários reais, o que deixar para depois e como evoluir após o lançamento.</description>
     </item>
     <item>
       <title>LGPD em sites e sistemas: o que a lei exige na prática</title>
-      <link>https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/lgpd-em-sites-e-sistemas/</guid>
+      <link>https://pervox.tech/blog/lgpd-em-sites-e-sistemas/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/lgpd-em-sites-e-sistemas/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>O que a LGPD exige de sites e sistemas: bases legais, coleta mínima, política de privacidade, cookies, direitos do titular, segurança, incidentes e terceiros.</description>
     </item>
     <item>
       <title>Integração de sistemas via API: guia para gestores</title>
-      <link>https://lrperovano.com.br/blog/integracao-de-sistemas-api/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/integracao-de-sistemas-api/</guid>
+      <link>https://pervox.tech/blog/integracao-de-sistemas-api/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/integracao-de-sistemas-api/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Automação</category>
       <description>Entenda a integração de sistemas via API: o que é, por que integrar, REST e webhooks, o que perguntar ao fornecedor e os riscos que o projeto precisa prever.</description>
     </item>
     <item>
       <title>Integração com a API do WhatsApp Business: como funciona</title>
-      <link>https://lrperovano.com.br/blog/whatsapp-business-api-integracao/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/whatsapp-business-api-integracao/</guid>
+      <link>https://pervox.tech/blog/whatsapp-business-api-integracao/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/whatsapp-business-api-integracao/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Automação</category>
       <description>Entenda a integração com a API do WhatsApp Business: diferença para o app, o que permite, requisitos, custos e riscos de soluções não oficiais.</description>
     </item>
     <item>
       <title>Escopo fechado ou por hora: como contratar software</title>
-      <link>https://lrperovano.com.br/blog/escopo-fechado-ou-por-hora/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/escopo-fechado-ou-por-hora/</guid>
+      <link>https://pervox.tech/blog/escopo-fechado-ou-por-hora/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/escopo-fechado-ou-por-hora/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Gestão de projetos</category>
       <description>Escopo fechado ou por hora? Veja como funciona cada modelo de contratação de software, os riscos de cada um, mudanças de escopo e o que pôr no contrato.</description>
     </item>
     <item>
       <title>Domínio e hospedagem: o que são e como escolher</title>
-      <link>https://lrperovano.com.br/blog/dominio-e-hospedagem/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/dominio-e-hospedagem/</guid>
+      <link>https://pervox.tech/blog/dominio-e-hospedagem/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/dominio-e-hospedagem/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sites</category>
       <description>Entenda a diferença entre domínio e hospedagem, como registrar um .com.br no nome da empresa, o que é DNS e quais cuidados exigir do fornecedor do site.</description>
     </item>
     <item>
       <title>Como usar o ChatGPT na empresa com segurança</title>
-      <link>https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/chatgpt-na-empresa-com-seguranca/</guid>
+      <link>https://pervox.tech/blog/chatgpt-na-empresa-com-seguranca/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/chatgpt-na-empresa-com-seguranca/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Inteligência artificial</category>
       <description>Como usar o ChatGPT e outras IAs na empresa com segurança: usos produtivos, riscos de vazamento de dados, política interna de uso, planos corporativos e LGPD.</description>
     </item>
     <item>
       <title>Como usar inteligência artificial na empresa, na prática</title>
-      <link>https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/inteligencia-artificial-nas-empresas/</guid>
+      <link>https://pervox.tech/blog/inteligencia-artificial-nas-empresas/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/inteligencia-artificial-nas-empresas/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Inteligência artificial</category>
       <description>Casos práticos de inteligência artificial na empresa, quando não usar, cuidados com erros, LGPD e custo, e como começar com um piloto pequeno e mensurável.</description>
     </item>
     <item>
       <title>Como integrar Pix e pagamentos ao seu sistema</title>
-      <link>https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/integracao-com-pix-e-pagamentos/</guid>
+      <link>https://pervox.tech/blog/integracao-com-pix-e-pagamentos/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/integracao-com-pix-e-pagamentos/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Automação</category>
       <description>Como integrar Pix, boleto e cartão ao seu sistema: gateway ou banco, QR Code dinâmico com webhook, Pix Automático, conciliação, estornos e segurança.</description>
     </item>
     <item>
       <title>Como fazer briefing de site ou sistema: modelo e erros</title>
-      <link>https://lrperovano.com.br/blog/como-fazer-briefing-de-software/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-fazer-briefing-de-software/</guid>
+      <link>https://pervox.tech/blog/como-fazer-briefing-de-software/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/como-fazer-briefing-de-software/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Gestão de projetos</category>
       <description>Saiba como fazer um briefing de site ou sistema: o que informar, um modelo pronto para copiar e os erros que geram orçamentos imprecisos e retrabalho.</description>
     </item>
     <item>
       <title>Como escolher uma empresa de desenvolvimento de software</title>
-      <link>https://lrperovano.com.br/blog/como-escolher-empresa-de-desenvolvimento/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-escolher-empresa-de-desenvolvimento/</guid>
+      <link>https://pervox.tech/blog/como-escolher-empresa-de-desenvolvimento/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/como-escolher-empresa-de-desenvolvimento/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Gestão de projetos</category>
       <description>Como escolher uma empresa de desenvolvimento de software ou de sites: o que avaliar, sinais de alerta, perguntas para a primeira conversa e a posse do código.</description>
     </item>
     <item>
       <title>Como criar um aplicativo para a sua empresa, passo a passo</title>
-      <link>https://lrperovano.com.br/blog/como-criar-um-aplicativo/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-criar-um-aplicativo/</guid>
+      <link>https://pervox.tech/blog/como-criar-um-aplicativo/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/como-criar-um-aplicativo/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Como criar um aplicativo para a sua empresa: etapas do objetivo à publicação na Google Play e na App Store, quem participa, o que providenciar e erros comuns.</description>
     </item>
     <item>
       <title>Como criar um SaaS: do modelo à arquitetura</title>
-      <link>https://lrperovano.com.br/blog/como-criar-um-saas/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-criar-um-saas/</guid>
+      <link>https://pervox.tech/blog/como-criar-um-saas/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/como-criar-um-saas/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Sistemas</category>
       <description>Como criar um SaaS: o que muda em relação a um sistema interno, multi-tenant, isolamento de dados, cobrança recorrente, LGPD, validação e métricas que importam.</description>
     </item>
     <item>
       <title>Como automatizar processos na empresa, passo a passo</title>
-      <link>https://lrperovano.com.br/blog/como-automatizar-processos-na-empresa/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/como-automatizar-processos-na-empresa/</guid>
+      <link>https://pervox.tech/blog/como-automatizar-processos-na-empresa/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/como-automatizar-processos-na-empresa/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Automação</category>
       <description>Como automatizar processos na empresa: escolha o que automatizar, mapeie antes, comece pequeno, veja exemplos práticos e saiba medir o ganho e evitar falhas.</description>
     </item>
     <item>
       <title>Chatbot com IA para atendimento: o que resolve e os limites</title>
-      <link>https://lrperovano.com.br/blog/chatbot-com-ia-para-atendimento/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/chatbot-com-ia-para-atendimento/</guid>
+      <link>https://pervox.tech/blog/chatbot-com-ia-para-atendimento/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/chatbot-com-ia-para-atendimento/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Inteligência artificial</category>
       <description>Como funciona um chatbot com IA para atendimento no WhatsApp e no site, o que ele resolve, quando passar para um humano, como medir resultados e cuidar da LGPD.</description>
     </item>
     <item>
       <title>Agentes de IA: o que são e como usar na empresa</title>
-      <link>https://lrperovano.com.br/blog/agentes-de-ia-para-empresas/</link>
-      <guid isPermaLink="true">https://lrperovano.com.br/blog/agentes-de-ia-para-empresas/</guid>
+      <link>https://pervox.tech/blog/agentes-de-ia-para-empresas/</link>
+      <guid isPermaLink="true">https://pervox.tech/blog/agentes-de-ia-para-empresas/</guid>
       <pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
       <category>Inteligência artificial</category>
       <description>O que são agentes de IA, a diferença para um chat, exemplos práticos em empresas, como se conectam aos sistemas, riscos, controles e como começar com um piloto.</description>
