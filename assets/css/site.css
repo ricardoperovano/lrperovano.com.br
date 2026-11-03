@@ -1335,19 +1335,83 @@ h3 {
 }
 
 
-/* PEROVANO Core 07 — brand lockups */
+/* PEROVANO Core 07 — legible responsive brand lockups.
+   Keep the mark separate from live text to avoid scaling tiny SVG typography. */
 .site-header .brand,
-.site-footer .brand { display:inline-flex; align-items:center; justify-content:center; line-height:1; flex:0 0 auto; }
-.site-header .brand__logo { display:block; width:clamp(208px,21vw,266px); height:auto; max-width:100%; }
-.site-footer .brand__logo { display:block; width:clamp(235px,26vw,305px); height:auto; max-width:100%; }
-.site-header .brand__logo,
-.site-footer .brand__logo { transition:opacity .2s ease; }
-.site-header .brand:hover .brand__logo,
-.site-footer .brand:hover .brand__logo { opacity:.88; }
-@media(max-width:600px) {
-  .site-header .brand__logo {width:205px;}
-  .site-footer .brand__logo {width:245px;}
+.site-footer .brand {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  line-height: 1;
+  flex: 0 1 auto;
+  min-width: 0;
 }
-@media(prefers-reduced-motion:reduce) {
-  .site-header .brand__logo,.site-footer .brand__logo { transition:none; }
+.site-header .brand__symbol {
+  display: block;
+  width: 51px;
+  height: 51px;
+  flex: 0 0 51px;
+  object-fit: contain;
+}
+.site-footer .brand__symbol {
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  object-fit: contain;
+}
+.brand__text {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  white-space: nowrap;
+}
+.site-header .brand__name {
+  font-size: 1.65rem;
+  line-height: 1;
+  letter-spacing: .075em;
+  font-weight: 750;
+  color: #fff;
+}
+.site-header .brand__descriptor {
+  font-size: .655rem;
+  line-height: 1.3;
+  letter-spacing: .055em;
+  font-weight: 650;
+  color: #d4b284;
+}
+.site-footer .brand__name {
+  font-size: 1.95rem;
+  line-height: 1;
+  letter-spacing: .075em;
+  color: #101b2b;
+}
+.site-footer .brand__descriptor {
+  font-size: .72rem;
+  line-height: 1.3;
+  letter-spacing: .055em;
+  color: #526173;
+}
+.site-header .brand__symbol,
+.site-footer .brand__symbol { transition: opacity .2s ease; }
+.site-header .brand:hover .brand__symbol,
+.site-footer .brand:hover .brand__symbol { opacity: .85; }
+@media (max-width: 1100px) {
+  .site-header .brand { gap: 9px; }
+  .site-header .brand__symbol { width: 45px; height: 45px; flex-basis: 45px; }
+  .site-header .brand__name { font-size: 1.45rem; }
+  .site-header .brand__descriptor { font-size: .59rem; letter-spacing: .025em; }
+}
+@media (max-width: 410px) {
+  .site-header .brand { gap: 7px; }
+  .site-header .brand__symbol { width: 39px; height: 39px; flex-basis: 39px; }
+  .site-header .brand__name { font-size: 1.25rem; }
+  .site-header .brand__descriptor { font-size: .52rem; letter-spacing: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand__symbol,
+  .site-footer .brand__symbol { transition: none; }
 }
