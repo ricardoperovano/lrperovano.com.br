@@ -126,55 +126,47 @@
 
   <main id="content">
     <!-- ===== Hero ===== -->
-    <section class="hero on-dark" id="top" aria-labelledby="main-title">
-      <!-- Decorative wall with real screenshots of portfolio projects. -->
-      <div class="wall" aria-hidden="true">
-        <div class="wall__plane">
-            <div class="wall__col"><div class="wall__track">
-              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
-              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
-            </div></div>
-            <div class="wall__col"><div class="wall__track">
-              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
-              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
-            </div></div>
-            <div class="wall__col"><div class="wall__track">
-              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
-              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
-              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
-            </div></div>
+    <section class="hero hero--consulting on-dark" id="top" aria-labelledby="main-title">
+      <div class="container consulting-hero">
+        <div class="consulting-hero__copy">
+          <p class="hero__eyebrow">INDEPENDENT TECHNOLOGY CONSULTING · BRAZIL & BEYOND</p>
+          <h1 class="hero__title" id="main-title"><span>Complex challenges.</span><span class="consulting-hero__accent">Engineered solutions.</span></h1>
+          <p class="hero__lead">We partner with organizations to architect, build and evolve reliable software — connecting technology decisions to measurable business priorities.</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#contact">Discuss your project<span aria-hidden="true">↗</span></a>
+            <a class="btn btn--outline-light" href="#projects">Explore selected work<span aria-hidden="true">→</span></a>
+          </div>
+          <p class="consulting-hero__footnote"><span class="consulting-hero__dot" aria-hidden="true"></span>TECHNOLOGY BUILT WITH PURPOSE</p>
+        </div>
+        <div class="consulting-hero__visual" aria-label="Selected software interfaces from our portfolio">
+          <div class="consulting-hero__grid" aria-hidden="true"></div>
+          <span class="consulting-hero__visual-label">PEROVANO <span> / ENGINEERING</span></span>
+          <div class="consulting-hero__screen consulting-hero__screen--main"><img src="/assets/img/portfolio/vipdesk-full.webp" width="1080" height="675" loading="eager" decoding="async" alt="VipDesk software platform interface"></div>
+          <div class="consulting-hero__screen consulting-hero__screen--secondary"><img src="/assets/img/portfolio/paceon-hero.webp" width="720" height="450" loading="lazy" decoding="async" alt="PaceOn application interface"></div>
+          <span class="consulting-hero__index">01 — 03 / DIGITAL PRODUCTS</span>
         </div>
       </div>
-
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="hero__eyebrow">STRATEGY · ENGINEERING · INNOVATION</p>
-          <h1 class="hero__title" id="main-title">
-            <span class="hero__line"><span>Complex challenges.</span></span>
-            <span class="hero__line"><span>Engineered solutions.</span></span>
-          </h1>
-          <p class="hero__lead">Technology consulting and software engineering for organizations ready to modernize, integrate and scale. We design and deliver reliable digital solutions with business outcomes in mind.</p>
-          <div class="hero__actions">
-            <a class="btn btn--accent" href="#contact">Discuss a project</a>
-            <a class="btn btn--outline-light" href="#projects">Explore our work</a>
-          </div>
+      <div class="container consulting-hero__footer" aria-label="Core competencies">
+        <span>Custom platforms</span><span>Systems & integrations</span><span>AI & automation</span>
+      </div>
+    </section>
+    <section class="consulting-intro" aria-label="From strategic decisions to production-ready software.">
+      <div class="container consulting-intro__inner">
+        <p class="consulting-intro__overline">TECHNOLOGY BUILT WITH PURPOSE</p>
+        <h2>From strategic decisions to production-ready software.</h2>
+        <p>A practical engineering partner for critical digital initiatives.</p>
+      </div>
+    </section>
+    <section class="consulting-expertise section" aria-labelledby="consulting-expertise-title">
+      <div class="container">
+        <div class="consulting-expertise__heading">
+          <div><span class="kicker">OUR EXPERTISE</span><h2 id="consulting-expertise-title">Engineering capabilities for what comes next.</h2></div>
+          <p class="lead">From architecture to delivery, solutions are shaped around the way your organization operates.</p>
+        </div>
+        <div class="consulting-expertise__grid">
+          <article class="consulting-expertise__card"><span class="consulting-expertise__number">01 / 03</span><h3>Technology Advisory</h3><p>Technical discovery, architecture assessment and pragmatic roadmaps for modernization.</p><a href="#solutions" aria-label="Explore expertise in Technology Advisory">↗</a></article>
+          <article class="consulting-expertise__card"><span class="consulting-expertise__number">02 / 03</span><h3>Software Engineering</h3><p>Business platforms, SaaS products, APIs and custom applications designed for long-term evolution.</p><a href="#solutions" aria-label="Explore expertise in Software Engineering">↗</a></article>
+          <article class="consulting-expertise__card"><span class="consulting-expertise__number">03 / 03</span><h3>AI & Automation</h3><p>Applied artificial intelligence, system integrations and workflows that reduce operational friction.</p><a href="#solutions" aria-label="Explore expertise in AI & Automation">↗</a></article>
         </div>
       </div>
     </section>
