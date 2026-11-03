@@ -1199,3 +1199,98 @@ h3 {
 .btn--accent { box-shadow: 0 8px 28px rgba(0,0,0,.12); }
 .section__head .kicker { letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; }
 @media (max-width: 700px) { .hero__eyebrow { letter-spacing: .105em; line-height: 1.6; } .brand__descriptor { font-size: .51rem; letter-spacing: .07em; } }
+
+
+/* ========================================================================
+   PEROVANO — corporate consulting redesign / homepage
+   ======================================================================== */
+.hero--consulting {
+  display: block;
+  min-height: auto;
+  padding-top: clamp(56px,6vw,104px);
+  background: #101b2b;
+  background-image: radial-gradient(ellipse at 78% 20%, rgba(70,101,135,.24), transparent 50%);
+}
+.consulting-hero {
+  display: grid;
+  grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr);
+  align-items: center;
+  gap: clamp(48px,6vw,112px);
+  min-height: 600px;
+}
+.consulting-hero__copy { position:relative; z-index:2; padding: 0 0 48px; }
+.hero--consulting .hero__title {
+  font-size:clamp(3.2rem,5.7vw,6.65rem);
+  letter-spacing:-.069em;
+  line-height:1.035;
+  max-width: 11.6ch;
+}
+.hero--consulting .hero__title span { display:block; }
+.hero--consulting .hero__title .consulting-hero__accent { color:#d4b284; }
+.hero--consulting .hero__lead { max-width:55ch; font-size:clamp(1.05rem,1.5vw,1.3rem); line-height:1.75; }
+.hero--consulting .hero__actions .btn { gap:18px; }
+.consulting-hero__footnote { display:flex; align-items:center; gap:12px; margin-top:clamp(50px,7vw,96px); color:#a3b5c9; font-size:.7rem; letter-spacing:.15em; font-weight:700; }
+.consulting-hero__dot { width:7px; height:7px; background:#d4b284; border-radius:50%; box-shadow:0 0 0 5px rgba(212,178,132,.1); }
+.consulting-hero__visual {
+  position:relative; min-width:0; height:clamp(390px,40vw,570px);
+  border:1px solid rgba(223,231,241,.14);
+  background:linear-gradient(145deg,#1c3048,#101c2d 74%);
+  overflow:hidden;
+  isolation:isolate;
+}
+.consulting-hero__visual::after { content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(110deg,transparent 45%,rgba(212,178,132,.07)); }
+.consulting-hero__grid { position:absolute;inset:0;background-image:linear-gradient(rgba(199,217,235,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(199,217,235,.065) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000,transparent 95%); }
+.consulting-hero__visual-label,.consulting-hero__index { position:absolute;color:#e0e8f2;z-index:5;letter-spacing:.13em;font-size:.66rem;font-weight:700; }
+.consulting-hero__visual-label {left:28px;top:28px; }
+.consulting-hero__visual-label span {color:#9cb0c5;}
+.consulting-hero__index {right:28px;bottom:26px;color:#d4b284;}
+.consulting-hero__screen { position:absolute;overflow:hidden;background:#fff;border:6px solid #dce5ee;border-radius:7px;box-shadow:0 34px 75px rgba(0,0,0,.44); }
+.consulting-hero__screen img { width:100%;height:100%;object-fit:cover;object-position:top left; }
+.consulting-hero__screen--main {left:13%;top:23%;width:88%;aspect-ratio:1.45;transform:perspective(1100px) rotateY(-13deg) rotateX(4deg);}
+.consulting-hero__screen--secondary {left:-3%;bottom:14%;width:48%;aspect-ratio:1.45;transform:perspective(900px) rotateY(-9deg) rotateZ(-5deg);border-width:4px;}
+.consulting-hero__footer { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(225,236,245,.19);margin-top:30px; }
+.consulting-hero__footer span { padding:21px 20px 23px 0;text-transform:uppercase;letter-spacing:.13em;font-size:.68rem;font-weight:700;color:#bdcbd9; }
+.consulting-hero__footer span+span {border-left:1px solid rgba(225,236,245,.19);padding-left:28px;}
+.consulting-intro { background:#e9eef2; color:#132237; padding:clamp(48px,6vw,90px) 0; }
+.consulting-intro__inner { display:grid;grid-template-columns:1fr 2.1fr 1fr;gap:clamp(20px,3vw,65px);align-items:start;}
+.consulting-intro__overline {font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#7c674f;}
+.consulting-intro h2 {font-size:clamp(1.55rem,2.4vw,2.75rem);letter-spacing:-.045em;line-height:1.15;}
+.consulting-intro__inner>p:last-child {color:#526173;font-size:.93rem;line-height:1.65;border-left:2px solid #b38c54;padding-left:20px;}
+.consulting-expertise {background:#fff;}
+.consulting-expertise__heading {display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:48px;align-items:end;margin-bottom:clamp(40px,5vw,70px);}
+.consulting-expertise__heading h2 {max-width:16ch;}
+.consulting-expertise__heading .lead {max-width:34ch;}
+.consulting-expertise__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.consulting-expertise__card {display:flex;flex-direction:column;align-items:flex-start;min-height:310px;background:#f3f5f7;border:1px solid #e0e6ec;padding:clamp(22px,2.7vw,40px);transition:transform .25s,border-color .25s,box-shadow .25s;}
+.consulting-expertise__card:hover {transform:translateY(-5px);border-color:#afbbca;box-shadow:0 20px 38px rgba(14,31,51,.07);}
+.consulting-expertise__number {font-size:.72rem;letter-spacing:.15em;color:#987447;font-weight:700;margin-bottom:auto;}
+.consulting-expertise__card h3 {font-size:clamp(1.4rem,2vw,2rem);margin-top:58px;margin-bottom:14px;letter-spacing:-.035em;}
+.consulting-expertise__card p {font-size:.94rem;color:#566579;line-height:1.6;}
+.consulting-expertise__card a {font-size:1.5rem;line-height:1;text-decoration:none;color:#987447;margin-top:25px;transition:transform .2s;}
+.consulting-expertise__card a:hover {transform:translate(3px,-3px);}
+@media(max-width:1100px) {
+  .consulting-hero {gap:35px;}
+  .hero--consulting .hero__title {font-size:clamp(2.9rem,5.4vw,5.8rem);}
+  .consulting-intro__inner {grid-template-columns:1fr 2fr;}
+  .consulting-intro__inner>p:last-child {grid-column:2;}
+}
+@media(max-width:760px) {
+  .hero--consulting {padding-top:52px;}
+  .consulting-hero {display:flex;flex-direction:column;gap:30px;min-height:0;align-items:stretch;}
+  .consulting-hero__copy {padding:0;}
+  .hero--consulting .hero__title {font-size:clamp(2.85rem,10vw,5rem);max-width:12ch;}
+  .hero--consulting .hero__lead {max-width:55ch;}
+  .consulting-hero__footnote {margin-top:40px;}
+  .consulting-hero__visual {height:clamp(315px,76vw,480px);}
+  .consulting-hero__footer {margin-top:26px;}
+  .consulting-hero__footer span {font-size:.6rem;letter-spacing:.05em;padding:15px 8px 15px 0;}
+  .consulting-hero__footer span+span {padding-left:12px;}
+  .consulting-intro__inner,.consulting-expertise__heading {display:block;}
+  .consulting-intro__overline {margin-bottom:18px;}
+  .consulting-intro__inner>p:last-child {margin-top:24px;}
+  .consulting-expertise__heading .lead {margin-top:22px;}
+  .consulting-expertise__grid {grid-template-columns:1fr;}
+  .consulting-expertise__card {min-height:250px;}
+  .consulting-expertise__card h3 {margin-top:40px;}
+}
+@media(prefers-reduced-motion:reduce){.consulting-expertise__card,.consulting-expertise__card a {transition:none;}}
