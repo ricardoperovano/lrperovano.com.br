@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with consent: Analytics only loads after "Accept" in the cookie notice (see assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEROVANO — Custom websites and software from Brazil</title>
+  <meta name="description" content="PEROVANO is a software engineering company from Brazil. Websites, custom software, integrations, automation and applied AI, built on demand for real business challenges.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://lrperovano.com.br/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/">
+
+  <!-- Provisional icons until the final symbol is ready. See README.md. -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:title" content="PEROVANO — Custom websites and software from Brazil">
+  <meta property="og:description" content="Well-built software. Businesses ready to grow. Websites, custom software, automation and artificial intelligence, built on demand.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://lrperovano.com.br/en/">
+  <meta property="og:image" content="https://lrperovano.com.br/og-image-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PEROVANO — Software engineering">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lrperovano.com.br/og-image-en.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://lrperovano.com.br/#organizacao",
+        "name": "PEROVANO",
+        "legalName": "L R PEROVANO LTDA",
+        "url": "https://lrperovano.com.br/",
+        "logo": "https://lrperovano.com.br/apple-touch-icon.png",
+        "email": "contato@lrperovano.com.br",
+        "description": "Software engineering from Brazil: websites, custom software, integrations, automation and applied artificial intelligence.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-27-99855-3591",
+          "contactType": "sales",
+          "availableLanguage": ["Portuguese", "English"]
+        },
+        "sameAs": ["https://www.linkedin.com/in/xhricardo/", "https://github.com/ricardoperovano"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lrperovano.com.br/en/#site",
+        "url": "https://lrperovano.com.br/en/",
+        "name": "PEROVANO",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://lrperovano.com.br/#organizacao" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- Brand: provisional text signature. Replace with the final SVG when available. -->
+      <a class="brand" href="#top" aria-label="PEROVANO — Software engineering, home">
+        <span class="brand__name">PEROVANO</span>
+        <span class="brand__descriptor">Software engineering</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#how-we-work">How we work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="lang-switch" href="/?lang=pt" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span aria-hidden="true">PT</span><span class="sr-only">Versão em português</span></a>
+        <a class="btn btn--accent btn--small" href="#contact">Let's talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- ===== Hero ===== -->
+    <section class="hero on-dark" id="top" aria-labelledby="main-title">
+      <!-- Decorative wall with real screenshots of portfolio projects. -->
+      <div class="wall" aria-hidden="true">
+        <div class="wall__plane">
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async" fetchpriority="high">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" decoding="async">
+            </div></div>
+        </div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title" id="main-title">
+            <span class="hero__line"><span>Well-built software.</span></span>
+            <span class="hero__line"><span>Businesses ready to grow.</span></span>
+          </h1>
+          <p class="hero__lead">Websites, custom software, integrations and artificial intelligence, built on demand to solve the real challenges of your business.</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#contact">Let's talk</a>
+            <a class="btn btn--outline-light" href="#projects">See live projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Portfolio</span>
+          <h2 id="projects-title">Live projects, used every day.</h2>
+          <p class="lead">Platforms and websites built by PEROVANO. As you scroll, each window runs through the real site from top to bottom. The sites are in Portuguese, built for the Brazilian market.</p>
+        </div>
+
+        <div class="works">
+          <article class="work">
+            <a class="work__frame" href="https://paceon.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>paceon.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/paceon-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the PaceOn website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">AI-powered platform</p>
+              <h3>PaceOn</h3>
+              <p>An AI running coach. It connects to Strava, builds a training plan from the runner's history and recalculates it after every workout.</p>
+              <a class="work__link" href="https://paceon.com.br/" target="_blank" rel="noopener">Visit paceon.com.br<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://vipdesk.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>vipdesk.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/vipdesk-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the VipDesk website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Customer service platform</p>
+              <h3>VipDesk</h3>
+              <p>Omnichannel customer service with CRM and AI. It brings WhatsApp, Instagram, email and phone together, organizes the team, tracks sales and automates replies.</p>
+              <a class="work__link" href="https://vipdesk.com.br/" target="_blank" rel="noopener">Visit vipdesk.com.br<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://portaldaigreja.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>portaldaigreja.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/portaldaigreja-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the Portal da Igreja website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Management system</p>
+              <h3>Portal da Igreja</h3>
+              <p>Complete management for churches: donations through Pix (Brazil's instant payment system) with QR codes, members, finances, monthly closing and a church website included.</p>
+              <a class="work__link" href="https://portaldaigreja.com.br/" target="_blank" rel="noopener">Visit portaldaigreja.com.br<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://estudatta.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>estudatta.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/estudatta-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the Estudatta website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Study app</p>
+              <h3>Estudatta</h3>
+              <p>A daily plan with a minutes goal, timer, spaced reviews, practice questions and mock exams. When a student falls behind, the pending time becomes a catch-up session.</p>
+              <a class="work__link" href="https://estudatta.com.br/" target="_blank" rel="noopener">Visit estudatta.com.br<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://minhaos.app/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>minhaos.app</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/minhaos-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the MinhaOS App website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">App for independent professionals</p>
+              <h3>MinhaOS App</h3>
+              <p>Logs completed jobs, closes the month per client and sends a billing statement with a link and payment confirmation.</p>
+              <a class="work__link" href="https://minhaos.app/" target="_blank" rel="noopener">Visit minhaos.app<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__frame" href="https://safeoffshore.com.br/" target="_blank" rel="noopener" data-pan>
+              <span class="work__bar" aria-hidden="true"><span class="work__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>safeoffshore.com.br</span></span>
+              <span class="work__screen"><img src="/assets/img/portfolio/safeoffshore-full.webp" alt="" width="880" height="2640" loading="lazy" decoding="async"></span>
+              <span class="sr-only">Open the Safe Offshore website (new tab)</span>
+            </a>
+            <div class="work__meta">
+              <p class="work__kind">Corporate website</p>
+              <h3>Safe Offshore</h3>
+              <p>Website for a company specialized in nautical signaling, buoy marking, underwater support and maritime services in Espírito Santo, Brazil.</p>
+              <a class="work__link" href="https://safeoffshore.com.br/" target="_blank" rel="noopener">Visit safeoffshore.com.br<span class="sr-only"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Manifesto: words light up as you scroll ===== -->
+    <section class="manifesto" aria-label="How we think">
+      <div class="container">
+        <p class="manifesto__text" data-words>Every project starts with the problem, not the technology. We learn how your business works, choose the simplest path that solves it and build with the care of someone who will maintain the system afterwards.</p>
+      </div>
+    </section>
+
+    <!-- ===== Solutions: showcase with mini-interfaces that change as you scroll ===== -->
+    <section class="section section--surface solutions" id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">Solutions</span>
+          <h2 id="solutions-title">From the website that introduces you to the system that runs your business.</h2>
+        </div>
+
+        <div class="showcase">
+          <!-- Illustrative stage (decorative): one scene per solution. -->
+          <div class="showcase__stage" aria-hidden="true">
+            <div class="scene scene--site is-active" data-scene="site">
+              <div class="mock-browser">
+                <div class="mock-browser__bar"><span></span><span></span><span></span><i>yourcompany.com</i></div>
+                <div class="mock-site">
+                  <div class="ms-nav"><b></b><span></span><span></span><span></span><em></em></div>
+                  <div class="ms-hero">
+                    <div class="ms-copy">
+                      <div class="ms-h1"></div>
+                      <div class="ms-h1 ms-h1--short"></div>
+                      <div class="ms-p"></div>
+                      <div class="ms-p ms-p--short"></div>
+                      <div class="ms-btn">Request a quote</div>
+                    </div>
+                    <div class="ms-img"></div>
+                  </div>
+                  <div class="ms-cards"><div></div><div></div><div></div></div>
+                </div>
+                <div class="ms-cursor"></div>
+                <div class="ms-toast"><span></span>New quote request received</div>
+              </div>
+            </div>
+
+            <div class="scene scene--app" data-scene="app">
+              <div class="mock-app">
+                <div class="ma-side"><b></b><span class="is-on"></span><span></span><span></span><span></span></div>
+                <div class="ma-main">
+                  <div class="ma-top"><strong>Orders dashboard</strong><em>Today</em></div>
+                  <div class="ma-kpis">
+                    <div><small>New</small><strong data-count="128">128</strong></div>
+                    <div><small>In progress</small><strong data-count="42">42</strong></div>
+                    <div><small>Delivered</small><strong data-count="86">86</strong></div>
+                  </div>
+                  <div class="ma-chart">
+                    <span style="--h:42%"></span><span style="--h:58%"></span><span style="--h:36%"></span><span style="--h:70%"></span><span style="--h:54%"></span><span style="--h:82%"></span><span style="--h:64%"></span><span style="--h:92%"></span>
+                  </div>
+                  <ul class="ma-rows">
+                    <li><b>#1042</b><span>Central Market</span><i class="ok">Approved</i></li>
+                    <li><b>#1041</b><span>Vida Clinic</span><i class="wait">In review</i></li>
+                    <li><b>#1040</b><span>North Garage</span><i class="ok">Approved</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="scene scene--flow" data-scene="flow">
+              <ol class="flow">
+                <li><span class="flow__icon">1</span><div><strong>New order in the online store</strong><small>received through the integration</small></div><em>✓</em></li>
+                <li><span class="flow__icon">2</span><div><strong>Inventory updated in the ERP</strong><small>no retyping</small></div><em>✓</em></li>
+                <li><span class="flow__icon">3</span><div><strong>Invoice issued</strong><small>with the order data</small></div><em>✓</em></li>
+                <li><span class="flow__icon">4</span><div><strong>Customer notified on WhatsApp</strong><small>with the tracking link</small></div><em>✓</em></li>
+              </ol>
+            </div>
+
+            <div class="scene scene--ai" data-scene="ai">
+              <div class="mock-chat">
+                <div class="mc-head"><b></b><div><strong>Company assistant</strong><small>answers from internal documents</small></div></div>
+                <div class="mc-body">
+                  <p class="mc-msg mc-msg--user">What is the warranty period for the X200 model?</p>
+                  <p class="mc-typing"><span></span><span></span><span></span></p>
+                  <div class="mc-msg mc-msg--bot">
+                    <p class="mc-text">The X200 warranty lasts 12 months from the invoice date and covers manufacturing defects.</p>
+                    <p class="mc-source">Source: X200 manual, section 7</p>
+                  </div>
+                  <p class="mc-actions"><span>Open document</span><span>Talk to an agent</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase__list">
+            <article class="solution-item is-active" data-scene="site">
+              <h3>Websites and landing pages</h3>
+              <p>Corporate websites and landing pages that are fast, well structured for Google and designed to turn visits into inquiries.</p>
+              <div class="solution__when">
+                <span class="solution__when-label">A good fit when</span>
+                <ul>
+                  <li>your company has no website yet, or has one that doesn't inspire trust;</li>
+                  <li>a new product or service needs a page to present and sell it;</li>
+                  <li>your current website barely generates inquiries.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="solution-item" data-scene="app">
+              <h3>Custom software</h3>
+              <p>Web applications, dashboards, APIs and complete platforms — with login, customer area and payments — designed around the way your company works.</p>
+              <div class="solution__when">
+                <span class="solution__when-label">A good fit when</span>
+                <ul>
+                  <li>an important process depends on spreadsheets or manual controls;</li>
+                  <li>your current system can't keep up with your business rules;</li>
+                  <li>you need to offer data or services to partners through an API — the door through which systems exchange information.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="solution-item" data-scene="flow">
+              <h3>Integrations and automation</h3>
+              <p>We connect the systems your company already uses so information flows without retyping, and we automate repetitive tasks that eat up your team's time.</p>
+              <div class="solution__when">
+                <span class="solution__when-label">A good fit when</span>
+                <ul>
+                  <li>the same information is typed into more than one system;</li>
+                  <li>reports and reconciliations are put together by hand;</li>
+                  <li>handing information between departments causes errors and rework.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="solution-item" data-scene="ai">
+              <h3>Applied artificial intelligence</h3>
+              <p>Assistants, search across your company's documents and knowledge bases, and AI-powered automation — adopted when they are the right path for the problem.</p>
+              <div class="solution__when">
+                <span class="solution__when-label">A good fit when</span>
+                <ul>
+                  <li>your team spends time looking for answers in documents and records;</li>
+                  <li>customer service or triage follows patterns an assistant can support;</li>
+                  <li>there are too many texts or documents to analyze manually.</li>
+                </ul>
+              </div>
+              <p class="solution__note">When a simpler solution does the job, that's what we recommend.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How we work ===== -->
+    <section class="section section--dark on-dark" id="how-we-work" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">How we work</span>
+          <h2 id="process-title">From diagnosis to evolution, with clarity at every step.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__index" aria-hidden="true">01</span>
+            <h3>Understanding the challenge</h3>
+            <p>We start by understanding your operation, the problem and what needs to change.</p>
+            <dl class="step__outcome">
+              <dt>What you get</dt>
+              <dd>A shared understanding of the challenge and the priorities.</dd>
+            </dl>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">02</span>
+            <h3>Defining the solution</h3>
+            <p>We turn the diagnosis into a scope proposal: what will be built, in what order and why.</p>
+            <dl class="step__outcome">
+              <dt>What you get</dt>
+              <dd>A scope proposal so you can decide with clarity.</dd>
+            </dl>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">03</span>
+            <h3>Development and validation</h3>
+            <p>We build in increments you can follow and test, adjusting course based on real use.</p>
+            <dl class="step__outcome">
+              <dt>What you get</dt>
+              <dd>Working software, validated with the people who will use it.</dd>
+            </dl>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">04</span>
+            <h3>Evolution</h3>
+            <p>After delivery, the solution evolves within the agreed scope as your business changes.</p>
+            <dl class="step__outcome">
+              <dt>What you get</dt>
+              <dd>Improvements and adjustments within what was agreed.</dd>
+            </dl>
+          </li>
+        </ol>
+
+        <p class="steps-note">Timelines, follow-up format and terms are defined in each proposal, according to scope.</p>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container split">
+        <div class="split__aside">
+          <span class="kicker">About</span>
+          <h2 id="about-title">A close technical partner, from problem to solution.</h2>
+        </div>
+        <div class="split__main">
+          <div class="prose">
+            <p>PEROVANO is a software engineering company based in Brazil. We build websites, custom software, integrations, automation and artificial intelligence solutions for companies that need to create or evolve their digital products.</p>
+            <p>We work with judgment: we explain the problem, the approach and the expected benefit in language decision-makers understand — and we only recommend a technology when it fits the challenge. Projects are run remotely and can be conducted in English.</p>
+          </div>
+
+          <dl class="principles">
+            <div>
+              <dt>Clarity</dt>
+              <dd>Scope, decisions and limits explained without unnecessary jargon.</dd>
+            </div>
+            <div>
+              <dt>Accountability</dt>
+              <dd>Commitment to what was agreed and transparency about what changes along the way.</dd>
+            </div>
+            <div>
+              <dt>Precision</dt>
+              <dd>Careful engineering, from solution design to code.</dd>
+            </div>
+            <div>
+              <dt>Close collaboration</dt>
+              <dd>Direct conversation throughout the project.</dd>
+            </div>
+          </dl>
+
+          <p class="profiles">
+            <span class="profiles__name">Ricardo Perovano</span>
+            <a class="text-link" href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+            <a class="text-link" href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--dark on-dark contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__inner">
+          <span class="kicker">Contact</span>
+          <h2 class="contact__title" id="contact-title">The next project to go live could be yours.</h2>
+          <p class="lead">Tell us what you need — a website, a software system or the automation of a process. The first conversation is about understanding your context and pointing to the best path.</p>
+
+          <div class="contact__actions">
+            <a class="btn btn--accent" href="https://wa.me/5527998553591?text=Hi!%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">
+              Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+            <a class="btn btn--outline-light" href="mailto:contato@lrperovano.com.br?subject=Project%20inquiry">Send an email</a>
+          </div>
+
+          <dl class="contact__details">
+            <div>
+              <dt>WhatsApp</dt>
+              <dd><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">+55 27 99855-3591</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div class="wall wall--contact" aria-hidden="true">
+        <div class="wall__plane">
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/safeoffshore-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/minhaos-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+            </div></div>
+            <div class="wall__col"><div class="wall__track">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/portaldaigreja-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/vipdesk-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/estudatta-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+              <img src="/assets/img/portfolio/paceon-hero.webp" alt="" width="720" height="450" loading="lazy" decoding="async">
+            </div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="#top" aria-label="PEROVANO — Software engineering, back to top">
+            <span class="brand__name">PEROVANO</span>
+            <span class="brand__descriptor">Software engineering</span>
+          </a>
+          <p class="site-footer__legal">L R PEROVANO LTDA</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#how-we-work">How we work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://wa.me/5527998553591" target="_blank" rel="noopener">WhatsApp: +55 27 99855-3591<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+            <li><a href="https://www.linkedin.com/in/xhricardo/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/ricardoperovano" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p>lrperovano.com.br</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

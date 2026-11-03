@@ -353,6 +353,7 @@ HEADER = """  <header class="site-header">
           <li><a href="/blog/"{blog_current}>Blog</a></li>
           <li><a href="/#contato">Contato</a></li>
         </ul>
+        <a class="lang-switch" href="/en/" hreflang="en" lang="en" data-lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English version (home page)</span></a>
         <a class="btn btn--accent btn--small" href="/#contato">Vamos conversar</a>
       </nav>
     </div>
@@ -759,17 +760,30 @@ def render_feed(articles: list[Article]) -> str:
 
 def render_sitemap(articles: list[Article]) -> str:
     last = max((a.updated for a in articles), default=date.today()).isoformat()
-    urls = [(f"{SITE}/", last), (f"{SITE}/blog/", last), (f"{SITE}/privacy.html", None)]
+    # Páginas com versão em inglês: (pt, en). Cada uma declara a outra como alternativa.
+    pairs = [(f"{SITE}/", f"{SITE}/en/"), (f"{SITE}/privacy.html", f"{SITE}/en/privacy.html")]
+
+    def alternates(pt: str, en: str) -> str:
+        return (f'<xhtml:link rel="alternate" hreflang="pt-BR" href="{pt}"/>'
+                f'<xhtml:link rel="alternate" hreflang="en" href="{en}"/>'
+                f'<xhtml:link rel="alternate" hreflang="x-default" href="{en}"/>')
+
+    entries = []
+    for pt, en in pairs:
+        lm = f"<lastmod>{last}</lastmod>" if pt == f"{SITE}/" else ""
+        entries.append(f"  <url><loc>{pt}</loc>{lm}{alternates(pt, en)}</url>")
+        entries.append(f"  <url><loc>{en}</loc>{lm}{alternates(pt, en)}</url>")
+    urls = [(f"{SITE}/blog/", last)]
     for c in CATEGORIES:
         dates = [a.updated for a in articles if a.category == c]
         if dates:
             urls.append((f"{SITE}{category_url(c)}", max(dates).isoformat()))
     urls += [(f"{SITE}{a.url}", a.updated.isoformat()) for a in articles]
-    body = "\n".join(
-        f"  <url><loc>{loc}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>"
-        for loc, lm in urls
-    )
-    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
+    entries += [f"  <url><loc>{loc}</loc><lastmod>{lm}</lastmod></url>" for loc, lm in urls]
+    body = "\n".join(entries)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+            f"{body}\n</urlset>\n")
 
 
 # ---------------------------------------------------------------------------

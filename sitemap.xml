@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lrperovano.com.br/</loc><lastmod>2026-10-30</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://lrperovano.com.br/</loc><lastmod>2026-10-30</lastmod><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/"/><xhtml:link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/"/></url>
+  <url><loc>https://lrperovano.com.br/en/</loc><lastmod>2026-10-30</lastmod><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/"/><xhtml:link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/"/></url>
+  <url><loc>https://lrperovano.com.br/privacy.html</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/privacy.html"/><xhtml:link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/privacy.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/privacy.html"/></url>
+  <url><loc>https://lrperovano.com.br/en/privacy.html</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/privacy.html"/><xhtml:link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/privacy.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/privacy.html"/></url>
   <url><loc>https://lrperovano.com.br/blog/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://lrperovano.com.br/privacy.html</loc></url>
   <url><loc>https://lrperovano.com.br/blog/categoria/sites/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lrperovano.com.br/blog/categoria/sistemas/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lrperovano.com.br/blog/categoria/automacao/</loc><lastmod>2026-10-30</lastmod></url>

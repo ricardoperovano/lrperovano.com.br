@@ -8,8 +8,38 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Âncoras do site anterior que podem ter links externos.
-  var legacyAnchors = { '#servicos': '#solucoes', '#top': '#inicio' };
+  // Textos de interface nos dois idiomas (a página define o idioma em <html lang>).
+  var EN = /^en\b/i.test(root.lang);
+  var T = EN ? {
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    cookieTitle: 'Analytics cookies',
+    cookieText: 'We use Google Analytics to measure site traffic and understand which content is useful. ' +
+      'These cookies are only enabled if you accept. <a href="/en/privacy.html#cookies">Privacy policy</a>',
+    accept: 'Accept',
+    decline: 'Decline',
+    cookiePrefs: 'Cookie preferences'
+  } : {
+    openMenu: 'Abrir menu',
+    closeMenu: 'Fechar menu',
+    cookieTitle: 'Cookies de medição',
+    cookieText: 'Usamos o Google Analytics para medir a audiência do site e entender quais conteúdos são úteis. ' +
+      'Esses cookies só são ativados se você aceitar. <a href="/privacy.html#cookies">Política de privacidade</a>',
+    accept: 'Aceitar',
+    decline: 'Recusar',
+    cookiePrefs: 'Preferências de cookies'
+  };
+
+  // Seletor PT/EN: a escolha manual vale mais que o idioma do navegador
+  // (o redirecionamento automático fica no <head> da home em português).
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('[data-lang]');
+    if (!link) return;
+    try { localStorage.setItem('perovano-lang', link.getAttribute('data-lang')); } catch (e) { /* segue pelo link */ }
+  });
+
+  // Âncoras do site anterior que podem ter links externos (só na versão em português).
+  var legacyAnchors = EN ? {} : { '#servicos': '#solucoes', '#top': '#inicio' };
   var redirectLegacyAnchor = function () {
     if (legacyAnchors[location.hash]) location.replace(legacyAnchors[location.hash]);
   };
@@ -39,7 +69,7 @@
     var setOpen = function (open) {
       nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      if (label) label.textContent = open ? 'Fechar menu' : 'Abrir menu';
+      if (label) label.textContent = open ? T.closeMenu : T.openMenu;
     };
 
     toggle.addEventListener('click', function () {
@@ -59,7 +89,7 @@
         setOpen(false);
       }
     });
-    window.matchMedia('(min-width: 961px)').addEventListener('change', function (mq) {
+    window.matchMedia('(min-width: 1101px)').addEventListener('change', function (mq) {
       if (mq.matches) setOpen(false);
     });
   }
@@ -97,12 +127,11 @@
     banner.className = 'cookie-banner';
     banner.setAttribute('aria-labelledby', 'cookie-titulo');
     banner.innerHTML =
-      '<h2 class="cookie-banner__title" id="cookie-titulo">Cookies de medição</h2>' +
-      '<p class="cookie-banner__text">Usamos o Google Analytics para medir a audiência do site e entender quais conteúdos são úteis. ' +
-      'Esses cookies só são ativados se você aceitar. <a href="/privacy.html#cookies">Política de privacidade</a></p>' +
+      '<h2 class="cookie-banner__title" id="cookie-titulo">' + T.cookieTitle + '</h2>' +
+      '<p class="cookie-banner__text">' + T.cookieText + '</p>' +
       '<div class="cookie-banner__actions">' +
-      '<button type="button" class="btn btn--primary btn--small" data-consent="aceito">Aceitar</button>' +
-      '<button type="button" class="btn btn--secondary btn--small" data-consent="recusado">Recusar</button>' +
+      '<button type="button" class="btn btn--primary btn--small" data-consent="aceito">' + T.accept + '</button>' +
+      '<button type="button" class="btn btn--secondary btn--small" data-consent="recusado">' + T.decline + '</button>' +
       '</div>';
     banner.addEventListener('click', function (event) {
       var button = event.target.closest('[data-consent]');
@@ -131,7 +160,7 @@
     var button = document.createElement('button');
     button.type = 'button';
     button.className = 'link-button';
-    button.textContent = 'Preferências de cookies';
+    button.textContent = T.cookiePrefs;
     button.addEventListener('click', function () { openBanner(true); });
     var holder = document.createElement('p');
     holder.appendChild(button);

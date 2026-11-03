@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Idioma: navegador em outro idioma abre /en/. Robôs de busca não são redirecionados;
+       a escolha manual (seletor PT/EN ou ?lang=pt) fica salva e tem prioridade. -->
+  <script>
+    (function () {
+      try {
+        var KEY = 'perovano-lang';
+        if (/[?&]lang=pt(&|$)/.test(location.search)) { localStorage.setItem(KEY, 'pt'); return; }
+        var pref = localStorage.getItem(KEY);
+        if (pref === 'pt') return;
+        if (/bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|telegram|lighthouse/i.test(navigator.userAgent)) return;
+        var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+        var readsPt = langs.some(function (l) { return /^pt(-|$)/i.test(l); });
+        if (pref === 'en' || !readsPt) {
+          var map = { '#projetos': '#projects', '#solucoes': '#solutions', '#como-trabalhamos': '#how-we-work', '#sobre': '#about', '#contato': '#contact', '#inicio': '#top' };
+          location.replace('/en/' + (map[location.hash] || ''));
+        }
+      } catch (e) {}
+    })();
+  </script>
   <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,6 +49,9 @@
   <meta name="description" content="PEROVANO — engenharia de software. Sites, sistemas sob medida, integrações, automações e inteligência artificial, desenvolvidos sob demanda para desafios reais de negócio.">
   <meta name="theme-color" content="#143C3A">
   <link rel="canonical" href="https://lrperovano.com.br/">
+  <link rel="alternate" hreflang="pt-BR" href="https://lrperovano.com.br/">
+  <link rel="alternate" hreflang="en" href="https://lrperovano.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://lrperovano.com.br/en/">
 
   <!-- Ícones provisórios (neutros) até a finalização do símbolo. Ver README.md › Pendências. -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
@@ -41,6 +63,7 @@
   <meta property="og:description" content="Software bem construído. Negócios preparados para crescer. Sites, sistemas, automações e inteligência artificial sob demanda.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://lrperovano.com.br/">
   <meta property="og:image" content="https://lrperovano.com.br/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -114,6 +137,7 @@
           <li><a href="/blog/">Blog</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
+        <a class="lang-switch" href="/en/" hreflang="en" lang="en" data-lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English version</span></a>
         <a class="btn btn--accent btn--small" href="#contato">Vamos conversar</a>
       </nav>
     </div>
