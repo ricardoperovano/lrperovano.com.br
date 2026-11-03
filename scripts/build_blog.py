@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera o blog estático da PEROVANO, em português e em inglês.
+"""Gera o blog estático da PERVOX, em português e em inglês.
 
 Fontes:
   _conteudo/artigos/*.md      → /blog/<slug>/        (português)
@@ -32,7 +32,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://lrperovano.com.br"
+SITE = "https://pervox.tech"
 AUTHOR = "Ricardo Perovano"
 WHATSAPP = "5527998553591"
 EMAIL = "contato@lrperovano.com.br"
@@ -91,7 +91,7 @@ PT = Lang(
     t={
         "skip": "Pular para o conteúdo",
         "brand_desc": "Engenharia de software",
-        "brand_label": "PEROVANO — Engenharia de software, página inicial",
+        "brand_label": "PERVOX — Engenharia de software, página inicial",
         "open_menu": "Abrir menu",
         "nav_main": "Principal",
         "nav_projects": "Projetos", "nav_solutions": "Soluções", "nav_how": "Como trabalhamos",
@@ -116,14 +116,14 @@ PT = Lang(
         "categories": "Categorias",
         "search_label": "Buscar artigos",
         "search_placeholder": "Ex.: aplicativo, Pix, chatbot, SEO",
-        "blog_name": "Blog da PEROVANO",
-        "index_title": "Blog | PEROVANO — sites, sistemas, automação e IA",
+        "blog_name": "Blog da PERVOX",
+        "index_title": "Blog | PERVOX — sites, sistemas, automação e IA",
         "index_description": "Artigos práticos sobre sites, sistemas sob medida, aplicativos, integrações, automação e inteligência artificial para quem precisa decidir e contratar tecnologia.",
         "index_h1": "Tecnologia explicada para quem decide.",
         "index_lead": "{n} artigos práticos sobre sites, sistemas sob medida, aplicativos, integrações, automação e inteligência artificial — com critérios para decidir, contratar e acompanhar um projeto.",
         "group_link": "{n} artigos sobre {c}",
-        "category_title": "{c}: artigos e guias práticos | PEROVANO",
-        "category_description": "{intro} {n} artigos da PEROVANO sobre {c}.",
+        "category_title": "{c}: artigos e guias práticos | PERVOX",
+        "category_description": "{intro} {n} artigos da PERVOX sobre {c}.",
         "see_all": "Ver todos os artigos",
         "home_blog_id": "titulo-blog",
         "feed_description": "Sites, sistemas sob medida, integrações, automação e inteligência artificial para empresas.",
@@ -152,7 +152,7 @@ EN = Lang(
     t={
         "skip": "Skip to content",
         "brand_desc": "Software engineering",
-        "brand_label": "PEROVANO — Software engineering, home page",
+        "brand_label": "PERVOX — Software engineering, home page",
         "open_menu": "Open menu",
         "nav_main": "Main",
         "nav_projects": "Projects", "nav_solutions": "Solutions", "nav_how": "How we work",
@@ -177,14 +177,14 @@ EN = Lang(
         "categories": "Categories",
         "search_label": "Search articles",
         "search_placeholder": "E.g. app, chatbot, SEO, API",
-        "blog_name": "PEROVANO Blog",
-        "index_title": "Blog | PEROVANO — websites, software, automation and AI",
+        "blog_name": "PERVOX Blog",
+        "index_title": "Blog | PERVOX — websites, software, automation and AI",
         "index_description": "Practical articles on websites, custom software, apps, integrations, automation and artificial intelligence for people who need to decide on and hire technology.",
         "index_h1": "Technology explained for decision-makers.",
         "index_lead": "{n} practical articles on websites, custom software, apps, integrations, automation and artificial intelligence — with criteria to decide, hire and follow a project.",
         "group_link": "{n} articles on {c}",
-        "category_title": "{c}: articles and practical guides | PEROVANO",
-        "category_description": "{intro} {n} PEROVANO articles on {c}.",
+        "category_title": "{c}: articles and practical guides | PERVOX",
+        "category_description": "{intro} {n} PERVOX articles on {c}.",
         "see_all": "See all articles",
         "home_blog_id": "blog-title",
         "feed_description": "Websites, custom software, integrations, automation and artificial intelligence for businesses.",
@@ -509,11 +509,11 @@ def head(lang: Lang, title: str, description: str, path: str, *, other_path: str
   <meta name="description" content="{e(description)}">
   <meta name="theme-color" content="#143C3A">
   <link rel="canonical" href="{e(canonical)}">
-{alternates(pt_url, en_url)}  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+{alternates(pt_url, en_url)}  <link rel="icon" type="image/svg+xml" href="/assets/brand/pervox-favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="{e(lang.t['blog_name'])}" href="{lang.blog}feed.xml">
-  <meta property="og:site_name" content="PEROVANO">
+  <meta property="og:site_name" content="PERVOX">
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:type" content="{og_type}">
@@ -546,7 +546,7 @@ def header(lang: Lang, other_path: str | None) -> str:
     return f"""  <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="{home}" aria-label="{e(t['brand_label'])}">
-        <span class="brand__name">PEROVANO</span>
+        <span class="brand__name">PERVOX</span>
         <span class="brand__descriptor">{t['brand_desc']}</span>
       </a>
 
@@ -578,7 +578,7 @@ def footer(lang: Lang) -> str:
       <div class="site-footer__top">
         <div>
           <a class="brand brand--footer" href="{home}" aria-label="{e(t['brand_label'])}">
-            <span class="brand__name">PEROVANO</span>
+            <span class="brand__name">PERVOX</span>
             <span class="brand__descriptor">{t['brand_desc']}</span>
           </a>
           <p class="site-footer__legal">L R PEROVANO LTDA</p>
@@ -609,7 +609,7 @@ def footer(lang: Lang) -> str:
 
       <div class="site-footer__bottom">
         <p>© <span data-year>{date.today().year}</span> L R PEROVANO LTDA</p>
-        <p>lrperovano.com.br</p>
+        <p>pervox.tech</p>
       </div>
     </div>
   </footer>
@@ -626,7 +626,7 @@ def json_ld(data: object) -> str:
 ORG = {
     "@type": "Organization",
     "@id": f"{SITE}/#organizacao",
-    "name": "PEROVANO",
+    "name": "PERVOX",
     "legalName": "L R PEROVANO LTDA",
     "url": f"{SITE}/",
     "logo": f"{SITE}/apple-touch-icon.png",
@@ -710,7 +710,7 @@ def render_article(art: Article, articles: list[Article]) -> str:
     updated = (f' <span>{t["updated"]} <time datetime="{art.updated.isoformat()}">{lang.fmt_date(art.updated)}</time></span>'
                if art.updated != art.date else "")
     return (
-        head(lang, f"{art.title} | PEROVANO", art.description, art.url, other_path=other_path,
+        head(lang, f"{art.title} | PERVOX", art.description, art.url, other_path=other_path,
              og_type="article", og_image=art.og_image, extra=extra)
         + header(lang, other_path)
         + f"""
@@ -1026,7 +1026,7 @@ html,body{{margin:0;width:1200px;height:630px;overflow:hidden;background:#143C3A
 h1{{position:absolute;left:88px;right:300px;bottom:84px;margin:0;font-size:{size}px;line-height:1.06;letter-spacing:-.035em;font-weight:700}}
 svg{{position:absolute;right:0;bottom:0;width:260px;height:164px}}
 </style></head><body>
-<div class="b"><div class="n">PEROVANO</div><div class="d">{descriptor}</div></div>
+<div class="b"><div class="n">PERVOX</div><div class="d">{descriptor}</div></div>
 <div class="c">{category}</div>
 <h1>{title}</h1>
 <svg viewBox="0 0 380 240"><path fill="#D7E6A5" d="M0 240V110Q0 0 110 0H380V240Z"/></svg>
