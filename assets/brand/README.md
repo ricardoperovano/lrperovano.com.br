@@ -5,8 +5,8 @@ PERVOX combines PER, from the founder's surname Perovano, with VOX (Latin: voice
 Colors: Navy #101B2B, Steel #263B52, Gold #B38C54, Champagne #D4B284.
 
 Assets:
-- pervox-symbol.svg: geometric V symbol and central cube
-- pervox-favicon.svg: navy square icon
+- pervox-symbol.svg: original Core 07 geometric P symbol and central cube
+- pervox-favicon.svg: navy original Core 07 P icon on navy square
 - pervox-horizontal-dark.svg and pervox-horizontal-light.svg: branded horizontal lockups
 - /assets/img/favicon.svg: replacement compatibility favicon for article pages
 
