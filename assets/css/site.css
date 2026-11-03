@@ -6,24 +6,24 @@
 
 :root {
   /* Tokens de marca */
-  --brand-primary: #143C3A;
-  --brand-background: #e4dfcf;
-  --brand-text: #1D2424;
-  --brand-accent: #D7E6A5;
+  --brand-primary: #101B2B;
+  --brand-background: #F3F5F7;
+  --brand-text: #182436;
+  --brand-accent: #D4B284;
 
   /* Derivados para superfícies, estados e hierarquia */
-  --surface: #F4F2EB;
-  --brand-primary-deep: #0F302E;
-  --brand-primary-hover: #0E2D2B;
-  --brand-accent-hover: #E4EFC0;
-  --text-muted: #56615F;
-  --on-dark: #e4dfcf;
-  --on-dark-strong: #F4F2EB;
-  --on-dark-muted: rgba(244, 242, 235, 0.74);
-  --line: rgba(29, 36, 36, 0.16);
-  --line-on-dark: rgba(244, 242, 235, 0.18);
-  --disabled-bg: #D2CDBE;
-  --disabled-text: #737B79;
+  --surface: #FFFFFF;
+  --brand-primary-deep: #0B1421;
+  --brand-primary-hover: #243952;
+  --brand-accent-hover: #E9CEA4;
+  --text-muted: #586779;
+  --on-dark: #EDF2F7;
+  --on-dark-strong: #FFFFFF;
+  --on-dark-muted: rgba(237, 242, 247, 0.78);
+  --line: rgba(24, 36, 54, 0.14);
+  --line-on-dark: rgba(237, 242, 247, 0.2);
+  --disabled-bg: #DCE2E8;
+  --disabled-text: #657386;
 
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
@@ -1188,3 +1188,14 @@ h3 {
 @media (max-width: 1100px) {
   .js .site-nav .lang-switch { align-self: flex-start; min-height: 44px; padding-inline: 16px; }
 }
+
+/* PEROVANO 2026 — international consulting identity */
+.hero__eyebrow { margin: 0 0 22px; color: var(--brand-accent); font-size: clamp(.72rem, .8vw, .875rem); font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.hero__title { max-width: 1050px; letter-spacing: -.055em; }
+.brand__descriptor { letter-spacing: .135em; }
+.site-header .brand__descriptor { color: #D4B284; }
+.hero { background-color: #101B2B; }
+.hero::after { pointer-events: none; }
+.btn--accent { box-shadow: 0 8px 28px rgba(0,0,0,.12); }
+.section__head .kicker { letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; }
+@media (max-width: 700px) { .hero__eyebrow { letter-spacing: .105em; line-height: 1.6; } .brand__descriptor { font-size: .51rem; letter-spacing: .07em; } }
