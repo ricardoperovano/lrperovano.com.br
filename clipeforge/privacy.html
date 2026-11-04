@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) com consentimento: o Analytics só carrega após "Aceitar" no aviso de cookies (ver assets/js/site.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.loadAnalytics = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      gtag('js', new Date());
+      gtag('config', 'G-KGNMPTML28');
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KGNMPTML28';
+      document.head.appendChild(s);
+    };
+    try { if (localStorage.getItem('perovano-cookies') === 'aceito') window.loadAnalytics(); } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade do Clipe Forge — PERVOX</title>
+  <meta name="description" content="Como o Clipe Forge trata os dados da sua conta do TikTok e os vídeos que você publica.">
+  <meta name="theme-color" content="#143C3A">
+  <link rel="canonical" href="https://pervox.tech/clipeforge/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://pervox.tech/clipeforge/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://pervox.tech/en/clipeforge/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://pervox.tech/en/clipeforge/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="PERVOX">
+        <span class="brand__name">PERVOX</span>
+        <span class="brand__descriptor">Engenharia de software</span>
+      </a>
+      <div class="site-header__actions">
+        <a class="lang-switch" href="/en/clipeforge/privacy.html" hreflang="en" lang="en" data-lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English version</span></a>
+        <a class="text-link" href="/">Voltar ao site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal" id="conteudo">
+    <div class="container"><div class="legal__inner">
+    <div class="legal__head">
+      <span class="eyebrow">Clipe Forge · Legal</span>
+      <h1>Política de Privacidade do Clipe Forge</h1>
+      <p class="legal__updated">Última atualização: 4 de novembro de 2026</p>
+    </div>
+
+    <div class="callout">
+    <strong>Resumo:</strong> o Clipe Forge usa a sua conta do TikTok só para publicar os vídeos que <strong>você</strong> escolher, com a legenda e as opções que você definir. Não lemos os seus vídeos, seguidores nem mensagens, não vendemos dados e não usamos nada para publicidade. Você pode desconectar e apagar tudo quando quiser.
+    </div>
+
+    <h2>1. Quem somos</h2>
+    <p>O <strong>Clipe Forge</strong> é um aplicativo web da <strong>PERVOX</strong> (L R PEROVANO LTDA; "nós") que ajuda criadores a produzir vídeos verticais curtos e a publicá-los na conta do TikTok que o próprio criador conectar. O Clipe Forge não é afiliado, patrocinado nem endossado pelo TikTok.</p>
+
+    <h2>2. Dados que recebemos do TikTok</h2>
+    <p>Quando você conecta a sua conta pelo Login Kit do TikTok e autoriza o acesso, recebemos apenas:</p>
+    <ul>
+    <li class="dot"><strong>Informações básicas do perfil</strong> (escopo <code>user.info.basic</code>): identificador da conta (open_id), nome de exibição e foto de perfil, para mostrar qual conta está conectada;</li>
+    <li class="dot"><strong>Tokens de acesso e de atualização</strong>, que permitem enviar vídeos em seu nome (escopos <code>video.upload</code> e <code>video.publish</code>);</li>
+    <li class="dot"><strong>Informações do criador</strong> fornecidas pela API no momento do envio (apelido, opções de privacidade permitidas, duração máxima de vídeo e se comentários, duetos e stitch estão disponíveis), usadas só para montar a tela de publicação;</li>
+    <li class="dot"><strong>Identificador e status de cada publicação feita pelo Clipe Forge</strong>, para mostrar o histórico de envios.</li>
+    </ul>
+    <ul>
+    <li class="no">Não acessamos os seus outros vídeos, seguidores, curtidas, comentários ou mensagens</li>
+    <li class="no">Não publicamos nada sem uma ação sua</li>
+    <li class="no">Não vendemos, alugamos nem compartilhamos esses dados com anunciantes</li>
+    </ul>
+
+    <h2>3. Como usamos os dados</h2>
+    <p>Usamos os dados do TikTok <strong>exclusivamente</strong> para: mostrar a conta conectada; enviar ao TikTok os vídeos que você escolher, como rascunho na sua caixa de entrada ou como publicação direta, com a legenda, a privacidade, as opções de interação e as declarações que você definir na tela de envio; e mostrar o status desses envios. Os dados da sua conta do TikTok não são enviados a provedores de inteligência artificial.</p>
+
+    <h2>4. Conteúdo que você cria e envia</h2>
+    <p>Os vídeos, capas e legendas que você cria no Clipe Forge ficam guardados nos nossos servidores para que você possa revisá-los, agendá-los e enviá-los. Você pode apagá-los a qualquer momento. Partes do conteúdo (roteiro, narração e imagens) podem ser geradas com ferramentas de inteligência artificial a seu pedido; por isso, os vídeos podem ser marcados como conteúdo gerado por IA ao serem publicados.</p>
+
+    <h2>5. Armazenamento e segurança</h2>
+    <p>Os tokens do TikTok são guardados <strong>criptografados</strong> e nunca são enviados ao navegador. A comunicação com o app e com o TikTok usa HTTPS, e o acesso aos servidores é restrito.</p>
+
+    <h2>6. Retenção, desconexão e exclusão</h2>
+    <ul>
+    <li class="dot">Você pode <strong>desconectar</strong> a conta do TikTok no Clipe Forge a qualquer momento: revogamos o acesso junto ao TikTok e apagamos os tokens.</li>
+    <li class="dot">Você também pode remover o acesso pelo próprio app do TikTok, nas configurações de segurança e permissões de apps.</li>
+    <li class="dot">Para apagar todos os seus dados (conta, vídeos e histórico de envios), escreva para o e-mail abaixo. Atendemos em até 30 dias.</li>
+    <li class="dot">Mantemos o histórico de envios enquanto a sua conta existir.</li>
+    </ul>
+
+    <h2>7. Serviços de terceiros</h2>
+    <p>O Clipe Forge usa a API do TikTok (sujeita aos <a href="https://www.tiktok.com/legal/terms-of-service">Termos de Serviço</a> e à <a href="https://www.tiktok.com/legal/privacy-policy">Política de Privacidade</a> do TikTok) e provedores de infraestrutura para hospedagem e armazenamento dos arquivos.</p>
+
+    <h2>8. Idade mínima</h2>
+    <p>O Clipe Forge é destinado a maiores de 18 anos. Não coletamos intencionalmente dados de menores.</p>
+
+    <h2>9. Seus direitos</h2>
+    <p>Nos termos da <strong>LGPD</strong> (Brasil) e do <strong>GDPR</strong> (Europa), você pode pedir acesso, correção, portabilidade ou exclusão dos seus dados e revogar o consentimento a qualquer momento, pelo e-mail abaixo.</p>
+
+    <h2>10. Alterações nesta política</h2>
+    <p>Podemos atualizar esta política; a data no topo indica a última versão. Mudanças relevantes serão avisadas no app.</p>
+
+    <h2>11. Contato</h2>
+    <ul>
+    <li class="dot"><strong>E-mail:</strong> <a href="mailto:contato@lrperovano.com.br">contato@lrperovano.com.br</a></li>
+    <li class="dot"><strong>Website:</strong> <a href="https://pervox.tech">pervox.tech</a></li>
+    </ul>
+
+    </div></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__bottom" style="margin-top:0">
+        <p>© <span data-year>2026</span> L R PEROVANO LTDA</p>
+        <p><a class="text-link" href="/">Voltar ao site</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
